@@ -1,0 +1,14 @@
+::: {.content-visible when-format="html"}
+
+Understanding and interpreting quantitative data is fundamental for modern zoological research. “Biostatistics and Data Analysis for Zoologists (BDAZ)” serves as a comprehensive, practical textbook that introduces statistical concepts and data analysis techniques specifically designed for zoologists, wildlife biologists, and ecology researchers.  Each topic in this book includes a practical session using R.
+
+:::
+
+# Copyright notice {-}
+
+```{r}
+#| output: asis
+cat("Produced on",format(Sys.Date(), "%e %B %Y.\n\n"))
+cat("© {{< meta author >}} (",format(Sys.Date(), "%Y"),").", sep="")
+```
+

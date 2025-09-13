@@ -1,0 +1,42 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Biostatistics and Data Analysis for Zoologists",
+    "section": "",
+    "text": "Understanding and interpreting quantitative data is fundamental for modern zoological research. “Biostatistics and Data Analysis for Zoologists (BDAZ)” serves as a comprehensive, practical textbook that introduces statistical concepts and data analysis techniques specifically designed for zoologists, wildlife biologists, and ecology researchers. Each topic in this book includes a practical session using R.\nCopyright notice\nProduced on 13 September 2025.\n© Thiyanga S. Talagala (2025).",
+    "crumbs": [
+      "Front matter"
+    ]
+  },
+  {
+    "objectID": "01-chap1.html",
+    "href": "01-chap1.html",
+    "title": "Specialized Fields of Statistics",
+    "section": "",
+    "text": "1.1 What is Statistics?\nThe science of collecting, organizing, and analyzing data, and presenting and interpreting the results derived from that data to gain insights and make informed decisions.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Specialized Fields of Statistics</span>"
+    ]
+  },
+  {
+    "objectID": "01-chap1.html#what-is-biostatistics",
+    "href": "01-chap1.html#what-is-biostatistics",
+    "title": "Specialized Fields of Statistics",
+    "section": "\n1.2 What is Biostatistics?",
+    "text": "1.2 What is Biostatistics?\nWhen statistical methods are applied to specific fields, the discipline often takes on a specialized name. When statistical methods are applied to biological and medical sciences, it is called Biostatistics. Table 1 shows Specialized fields where statistics is applied.\n\n\n\nSpecialized fields where statistics is applied\n\nField\nDescription\n\n\n\nEpidemiology\nThe study and analysis of the patterns, causes, and effects of health and disease conditions in populations.\n\n\nAstrostatistics\nApplies statistical analysis to the understanding of astronomical data.\n\n\nBiostatistics\nStudies biological phenomena and provides statistical methods for analysis of biological data.\n\n\nDemography\nStatistical study of all populations, including size, distribution, and structure.\n\n\nSocial statistics\nStudy of human behavior in a social environment using statistical methods.\n\n\nChemometrics\nScience of extracting information from chemical systems by data-driven means.\n\n\nEconometrics\nUses economic theory, mathematics, and statistical inference to quantify economic phenomena.\n\n\nPsychometrics\nApplies statistical methods to psychological measurements, tests, and surveys.\n\n\nPharmacometrics\nModeling drug dose-response relationships, pharmacokinetics, and pharmacodynamics.\n\n\nBioinformatics / Biostatistics in Molecular Biology\nAnalyzes DNA, RNA, protein data, sequence alignments, and gene expression patterns.\n\n\nAgrimetrics / Agricultural Statistics\nStatistics applied to agriculture — crop yield trials, soil studies, plant breeding, pest control.\n\n\nEcological Statistics / Biostatistics in Ecology\nStatistics applied to ecology and wildlife studies — population surveys, species distribution, biodiversity indices.\n\n\nActuarial Statistics\nDiscipline that deals with assessing the risks in insurance and finance.\n\n\nForensic Statistics\nApplies statistics to analyze forensic data, including DNA testing results.\n\n\nSpatial Statistics\nAnalysis of spatially referenced data to detect patterns or relationships.\n\n\nJurimetrics\nApplication of probability and statistics to law and legal decisions.\n\n\nSports Analytics / Sports Statistics\nStatistics applied to sports — analyzing player performance, game strategies, and injury risks.\n\n\nEnvironmental Statistics\nStatistics in environmental science — air/water quality, climate data, pollution modeling, conservation research.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Specialized Fields of Statistics</span>"
+    ]
+  },
+  {
+    "objectID": "01-chap1.html#role-of-statistics-in-zoology-and-biological-sciences",
+    "href": "01-chap1.html#role-of-statistics-in-zoology-and-biological-sciences",
+    "title": "Specialized Fields of Statistics",
+    "section": "\n1.3 Role of statistics in zoology and biological sciences",
+    "text": "1.3 Role of statistics in zoology and biological sciences\nStatistics play a vital role in every aspect of zoological research, helping scientists design studies, analyze data, and make informed conclusions.\nExamples in zoology include:\n\nPopulation estimation – Using sampling and statistical models to estimate the number of elephants in a forest or birds in a wetland.\nMorphometric analysis – Comparing body size, wing length, or foot circumference among different species or populations.\nBehavioral studies – Analyzing patterns such as feeding, or migration behaviors using observational data.\nEcological modeling – Studying the relationships between species distribution and environmental factors like habitat type, climate, or human disturbance.\nConservation planning – Assessing risk factors for endangered species and predicting population trends using statistical models.\nExperimental studies - effects of temperature on insect development.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Specialized Fields of Statistics</span>"
+    ]
+  }
+]
