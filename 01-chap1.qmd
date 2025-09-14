@@ -1,4 +1,4 @@
-# Introdiction to Statistics {#sec-intro}
+# Introdiction to Statistics {#sec-chap1}
 
 ```{r}
 #| label: load_packages
@@ -17,13 +17,8 @@ The science of collecting, organizing, and analyzing data, and presenting and in
 
 ## What is Biostatistics?
 
-When statistical methods are applied to specific fields, the discipline often takes on a specialized name. When statistical methods are applied to biological and medical sciences, it is called Biostatistics. Table 1 shows Specialized fields where statistics is applied.
+When statistical methods are applied to specific fields, the discipline often takes on a specialized name. When statistical methods are applied to biological and medical sciences, it is called "Biostatistics". Table 1 shows Specialized fields where statistics is applied.
 
-
----
-title: "Specialized Fields of Statistics"
-format: html
----
 
 ```{r, tab.cap="Specialized fields where statistics is applied"}
 library(knitr)
@@ -87,17 +82,19 @@ Statistics play a vital role in every aspect of zoological research, helping sci
 
 Examples in zoology include:
 
-- Population estimation – Using sampling and statistical models to estimate the number of elephants in a forest or birds in a wetland.
+- Population estimation – Using sampling and statistical methods to estimate the number of elephants in a forest or birds in a wetland.
 
-- Morphometric analysis – Comparing body size, wing length, or foot circumference among different species or populations.
+- Morphometric analysis – Comparing body size, wing length, or foot circumference among different species  populations.
 
 - Behavioral studies – Analyzing patterns such as feeding,  or migration behaviors using observational data.
 
-- Ecological modeling – Studying the relationships between species distribution and environmental factors like habitat type, climate, or human disturbance.
+- Ecological modeling – Assessing habitat preferences and species distribution using statistical models, Studying climate change impacts on migration, breeding, and survival, Measuring pollution and environmental stress effects on animal health.
 
 - Conservation planning – Assessing risk factors for endangered species and predicting population trends using statistical models.
 
 
-- Experimental studies - effects of temperature on insect development.
+- Experimental studies - Effects of temperature on insect development.
+
+- Genetics and Evolutionary Biology Studies - Statistical analysis of genetic variation within and between populations.
 
 
