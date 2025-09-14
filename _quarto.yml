@@ -1,5 +1,5 @@
 project:
-  type: website
+  type: book
   output-dir: docs
 
 book:
@@ -19,4 +19,4 @@ csl: american-statistical-association.csl
 
 format:
   monashthesis-html: default
-  monashthesis-pdf: default
+

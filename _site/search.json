@@ -1,0 +1,30 @@
+[
+  {
+    "objectID": "refs.html",
+    "href": "refs.html",
+    "title": "Bibliography",
+    "section": "",
+    "text": "Bibliography"
+  },
+  {
+    "objectID": "A-appA.html",
+    "href": "A-appA.html",
+    "title": "1 Additional stuff",
+    "section": "",
+    "text": "1 Additional stuff\nYou might put some computer output here, or maybe additional tables. It is possible to have multiple appendices. Just list them in the appropriate place within _quarto.yml."
+  },
+  {
+    "objectID": "02-chap2.html",
+    "href": "02-chap2.html",
+    "title": "1 Data Collection and Sampling",
+    "section": "",
+    "text": "1 Data Collection and Sampling"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Copyright notice",
+    "section": "",
+    "text": "Understanding and interpreting quantitative data is fundamental for modern zoological research. “Biostatistics and Data Analysis for Zoologists (BDAZ)” serves as a comprehensive, practical textbook that introduces statistical concepts and data analysis techniques specifically designed for zoologists, wildlife biologists, and ecology researchers. Each topic in this book includes a practical session using R.\nCopyright notice\nProduced on 14 September 2025.\n© ?meta:author (2025)."
+  }
+]
