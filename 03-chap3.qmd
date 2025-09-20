@@ -98,8 +98,10 @@ Creating an R Project means setting up a working directory where all your relate
 *File -> New* Project and follow the below steops
 
 ![](img/rw8.png)
+Click on "New Directory".
 
 ![](img/rw9.png)
+Click on "New Project".
 
 ![](img/rw10.png)
 
@@ -122,27 +124,27 @@ This will give you the current working directory. The working directory is the f
 Let's type some simple commands. Type these in the console.
 
 ```{r}
-#|echo: TRUE
+#| echo: true
 1 + 2
 ```
 
 ```{r}
-#|echo: TRUE
+#| echo: true
 1 * 100
 ```
 
 ```{r}
-#|echo: TRUE
+#| echo: true
 1 / 100
 ```
 
 ```{r}
-#|echo: TRUE
+#| echo: true
 rnorm(50)
 ```
 
 ```{r}
-#|echo: TRUE
+#| echo: true
 hist(rnorm(50))
 ```
 
@@ -153,7 +155,7 @@ In R, square brackets [ ] indicate the index or position of an element in a vect
 Commenting in R is adding notes or explanations in your code using #; comments are ignored when the code runs but help you and others understand the code.
 
 ```{r}
-#|echo: TRUE
+#| echo: true
 # create a vector
 vec <- c(1, 2, 3, 4, 5) 
 mean(vec)    # mean of vector
@@ -207,7 +209,7 @@ head(df)     # first few rows
 A vector in R is a sequence of elements of the same type (numeric, character, or logical), and it is one of the basic data structures used to store and manipulate data.
 
 ```{r}
-#|echo: TRUE
+#| echo: true
 # Create a numeric vector
 numbers <- c(1, 2, 3, 4, 5)
 
@@ -286,7 +288,7 @@ To use a package in R, you first need to load it. Whenever you want to access a 
 For example to work with functions in tidyverse packages
 
 ```{r}
-#|echo: TRUE
+#| echo: true
 library(tidyverse)
 ```
 
@@ -294,7 +296,7 @@ TO work with palmerpenguins
 
 
 ```{r}
-#|echo: TRUE
+#| echo: true
 library(palmerpenguins)
 ```
 
@@ -303,7 +305,7 @@ library(palmerpenguins)
 A factor in R is used to represent categorical data. It stores both the values and the set of possible levels (categories) for the variable.
 
 ```{r}
-#|echo: TRUE
+#| echo: true
 # Create a factor
 gender <- factor(c("Male", "Female", "Female", "Male"))
 
@@ -325,7 +327,7 @@ Create the `gender` vector as a character vector, then run `table(gender)` and `
 ## Create a tibble
 
 ```{r}
-#|echo: TRUE
+#| echo: true
 library(tibble)
 ID <- 1:10
 gender <- c(rep("male", 5), rep("female", 5))
@@ -341,7 +343,7 @@ data
 Some functions that we can use with tibbles
 
 ```{r}
-#|echo: TRUE
+#| echo: true
 head(data)
 tail(data)
 glimpse(data)

@@ -258,8 +258,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Creating an R Project means setting up a working directory where all your related files, such as scripts, data, and outputs are organized and stored together.</p>
 <p><strong>Steps:</strong></p>
 <p><em>File -&gt; New</em> Project and follow the below steops</p>
-<p><img src="img/rw8.png" class="img-fluid"></p>
-<p><img src="img/rw9.png" class="img-fluid"></p>
+<p><img src="img/rw8.png" class="img-fluid"> Click on “New Directory”.</p>
+<p><img src="img/rw9.png" class="img-fluid"> Click on “New Project”.</p>
 <p><img src="img/rw10.png" class="img-fluid"></p>
 <p><img src="img/rw11.png" class="img-fluid"></p>
 <p>Give a project name and location to create project folder.</p>
@@ -271,34 +271,39 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span class="header-section-number">3.6</span> R as a calculator</h2>
 <p>Let’s type some simple commands. Type these in the console.</p>
 <div class="cell">
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fl">1</span> <span class="op">+</span> <span class="fl">2</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 3</code></pre>
 </div>
 </div>
 <div class="cell">
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fl">1</span> <span class="op">*</span> <span class="fl">100</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 100</code></pre>
 </div>
 </div>
 <div class="cell">
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fl">1</span> <span class="op">/</span> <span class="fl">100</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 0.01</code></pre>
 </div>
 </div>
 <div class="cell">
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/stats/Normal.html">rnorm</a></span><span class="op">(</span><span class="fl">50</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code> [1]  0.15890854 -0.80912112 -1.74620780 -1.01589683 -0.24016239 -0.16984901
- [7] -2.65781902 -0.81594270 -0.80903656 -2.43277390 -1.09211619  0.93945282
-[13]  0.07951464 -0.87402510 -0.18756695  0.76958998  1.41612598 -0.14797052
-[19]  0.88573395 -1.87736848 -0.81130150  1.64844134  0.80620637 -0.98552805
-[25] -1.80498428 -0.71831727 -1.78919021 -0.53482129  1.85204628 -0.06494345
-[31]  1.68924135  1.33387059 -1.96524234 -1.39668797 -0.19497268 -0.30040082
-[37]  0.39985305 -1.66686929 -0.42462608 -0.35028017 -1.57951576  0.68236928
-[43]  0.86090897  2.32847579 -1.01623305  0.57427954  1.36189013 -0.38736247
-[49]  0.21443356 -1.10939444</code></pre>
+<pre><code> [1] -0.58460908  0.74867860 -0.71091483  1.25992400  2.25728506  0.96538709
+ [7]  1.23497441 -1.62189733 -2.22448637 -0.45604804  0.03454995 -0.23000078
+[13]  0.81233226 -1.38788999  0.05472745 -0.74863056 -0.56943181  0.72116248
+[19]  0.38031107  0.09190570  1.20338422  1.11237646 -0.55944035 -0.91989564
+[25] -0.52896725  1.97056411  1.92646572  0.97849567  0.23862513 -0.71523013
+[31]  1.80660163 -0.59505858 -0.07332159 -1.72524809  1.97930878  0.45792845
+[37]  0.48028798 -0.47729198  1.65858870 -0.13899625 -0.76344839  0.68319421
+[43]  1.94923588 -0.93798951 -0.71491514 -2.31997392 -0.65696631 -0.52499075
+[49] -0.47812138 -0.37817012</code></pre>
 </div>
 </div>
 <div class="cell">
+<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/graphics/hist.html">hist</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/Normal.html">rnorm</a></span><span class="op">(</span><span class="fl">50</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure"><p><img src="03-chap3_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid figure-img" width="768"></p>
@@ -311,6 +316,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span class="header-section-number">3.7</span> Commenting</h2>
 <p>Commenting in R is adding notes or explanations in your code using #; comments are ignored when the code runs but help you and others understand the code.</p>
 <div class="cell">
+<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># create a vector</span></span>
+<span><span class="va">vec</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span>, <span class="fl">3</span>, <span class="fl">4</span>, <span class="fl">5</span><span class="op">)</span> </span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">vec</span><span class="op">)</span>    <span class="co"># mean of vector</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 3</code></pre>
 </div>
@@ -320,7 +328,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span class="header-section-number">3.8</span> Working on a script file</h2>
 <p>A script file is a text file where you write and save R code so it can be run multiple times without retyping.</p>
 <p>Open a script file and save it as “script1.R”. Type the following in the script file.</p>
-<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># 1. Assign values</span></span>
+<div class="sourceCode" id="cb13"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># 1. Assign values</span></span>
 <span><span class="va">x</span> <span class="op">&lt;-</span> <span class="fl">10</span></span>
 <span><span class="va">y</span> <span class="op">&lt;-</span> <span class="fl">5</span></span>
 <span></span>
@@ -355,26 +363,41 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span class="header-section-number">3.9</span> Working with vectors</h2>
 <p>A vector in R is a sequence of elements of the same type (numeric, character, or logical), and it is one of the basic data structures used to store and manipulate data.</p>
 <div class="cell">
+<div class="sourceCode" id="cb14"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Create a numeric vector</span></span>
+<span><span class="va">numbers</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span>, <span class="fl">3</span>, <span class="fl">4</span>, <span class="fl">5</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Create a character vector</span></span>
+<span><span class="va">fruits</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"apple"</span>, <span class="st">"banana"</span>, <span class="st">"cherry"</span>, <span class="st">"apple"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Access elements</span></span>
+<span><span class="va">numbers</span><span class="op">[</span><span class="fl">1</span><span class="op">]</span>      <span class="co"># first element</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 1</code></pre>
 </div>
+<div class="sourceCode" id="cb16"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">fruits</span><span class="op">[</span><span class="fl">2</span><span class="op">:</span><span class="fl">3</span><span class="op">]</span>     <span class="co"># second and third elements</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "banana" "cherry"</code></pre>
 </div>
+<div class="sourceCode" id="cb18"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Basic operations</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/sum.html">sum</a></span><span class="op">(</span><span class="va">numbers</span><span class="op">)</span>    <span class="co"># sum of all numbers</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 15</code></pre>
 </div>
+<div class="sourceCode" id="cb20"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/summary.html">summary</a></span><span class="op">(</span><span class="va">numbers</span><span class="op">)</span> <span class="co"># summary statistics</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
       1       2       3       3       4       5 </code></pre>
 </div>
+<div class="sourceCode" id="cb22"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/length.html">length</a></span><span class="op">(</span><span class="va">fruits</span><span class="op">)</span>  <span class="co"># number of elements</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 4</code></pre>
 </div>
+<div class="sourceCode" id="cb24"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/summary.html">summary</a></span><span class="op">(</span><span class="va">fruits</span><span class="op">)</span> <span class="co"># summary statistics</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>   Length     Class      Mode 
         4 character character </code></pre>
 </div>
+<div class="sourceCode" id="cb26"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/table.html">table</a></span><span class="op">(</span><span class="va">fruits</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>fruits
  apple banana cherry 
@@ -385,7 +408,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span class="header-section-number">3.10</span> Access help file</h2>
 <p>Functions in R tell R to perform a specific task. To learn more about a function, type <code>?function_name</code> in the console—this will open the function’s help file.</p>
 <p>Example</p>
-<div class="sourceCode" id="cb15"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="op">?</span><span class="va">mean</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb28"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="op">?</span><span class="va">mean</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><img src="img/help.png" class="img-fluid"></p>
 <p>In the help file, mean {base} indicates that the mean function is part of the base package. You can think of packages in R like apps on your mobile phone: the default installation provides some basic packages, and for additional functionality, you can install extra packages just like installing new apps on your phone.</p>
 </section><section id="installing-packages" class="level2" data-number="3.11"><h2 data-number="3.11" class="anchored" data-anchor-id="installing-packages">
@@ -400,32 +423,48 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><strong>Method 2</strong></p>
 <p>Type the following command on the console.</p>
 <p>To install <code>tidyverse</code> package.</p>
-<div class="sourceCode" id="cb16"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"tidyverse"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb29"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"tidyverse"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>To install <code>palmerpenguins</code> package.</p>
-<div class="sourceCode" id="cb17"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"palmerpenguins"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb30"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"palmerpenguins"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>General format: Replace “xxx” with the name of the package you need to install.</p>
 <p>install.packages(“xxx”)</p>
 </section><section id="working-with-packages" class="level2" data-number="3.12"><h2 data-number="3.12" class="anchored" data-anchor-id="working-with-packages">
 <span class="header-section-number">3.12</span> Working with packages</h2>
 <p>To use a package in R, you first need to load it. Whenever you want to access a function from that package, use the following command.</p>
 <p>For example to work with functions in tidyverse packages</p>
+<div class="cell">
+<div class="sourceCode" id="cb31"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <p>TO work with palmerpenguins</p>
+<div class="cell">
+<div class="sourceCode" id="cb32"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://allisonhorst.github.io/palmerpenguins/">palmerpenguins</a></span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </section><section id="factors" class="level2" data-number="3.13"><h2 data-number="3.13" class="anchored" data-anchor-id="factors">
 <span class="header-section-number">3.13</span> Factors</h2>
 <p>A factor in R is used to represent categorical data. It stores both the values and the set of possible levels (categories) for the variable.</p>
 <div class="cell">
+<div class="sourceCode" id="cb33"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Create a factor</span></span>
+<span><span class="va">gender</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html">factor</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"Male"</span>, <span class="st">"Female"</span>, <span class="st">"Female"</span>, <span class="st">"Male"</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># View the factor</span></span>
+<span><span class="va">gender</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] Male   Female Female Male  
 Levels: Female Male</code></pre>
 </div>
+<div class="sourceCode" id="cb35"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Check the levels</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/levels.html">levels</a></span><span class="op">(</span><span class="va">gender</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "Female" "Male"  </code></pre>
 </div>
+<div class="sourceCode" id="cb37"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Count occurrences of each level</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/table.html">table</a></span><span class="op">(</span><span class="va">gender</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>gender
 Female   Male 
      2      2 </code></pre>
 </div>
+<div class="sourceCode" id="cb39"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/summary.html">summary</a></span><span class="op">(</span><span class="va">gender</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Female   Male 
      2      2 </code></pre>
@@ -436,6 +475,16 @@ Female   Male
 </section><section id="create-a-tibble" class="level2" data-number="3.14"><h2 data-number="3.14" class="anchored" data-anchor-id="create-a-tibble">
 <span class="header-section-number">3.14</span> Create a tibble</h2>
 <div class="cell">
+<div class="sourceCode" id="cb41"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tibble.tidyverse.org/">tibble</a></span><span class="op">)</span></span>
+<span><span class="va">ID</span> <span class="op">&lt;-</span> <span class="fl">1</span><span class="op">:</span><span class="fl">10</span></span>
+<span><span class="va">gender</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/rep.html">rep</a></span><span class="op">(</span><span class="st">"male"</span>, <span class="fl">5</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/rep.html">rep</a></span><span class="op">(</span><span class="st">"female"</span>, <span class="fl">5</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="va">height</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">10</span>, <span class="fl">20</span>, <span class="fl">30</span>, <span class="fl">14</span>, <span class="fl">15</span>, <span class="fl">21</span>, <span class="fl">17</span>, <span class="fl">12</span>, <span class="fl">16</span>, <span class="fl">23</span><span class="op">)</span></span>
+<span><span class="va">weight</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">5</span>, <span class="fl">10</span>, <span class="fl">15</span>, <span class="fl">7</span>, <span class="fl">7.5</span>, <span class="fl">10.5</span>, <span class="fl">8.5</span>, <span class="fl">6</span>, <span class="fl">8</span>, <span class="fl">11.5</span><span class="op">)</span></span>
+<span><span class="va">data</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://tibble.tidyverse.org/reference/tibble.html">tibble</a></span><span class="op">(</span>ID<span class="op">=</span><span class="va">ID</span>,</span>
+<span>               Gender<span class="op">=</span><span class="va">gender</span>,</span>
+<span>               Weight<span class="op">=</span><span class="va">weight</span>,</span>
+<span>               Height<span class="op">=</span><span class="va">height</span><span class="op">)</span></span>
+<span><span class="va">data</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 10 × 4
       ID Gender Weight Height
@@ -454,6 +503,7 @@ Female   Male
 </div>
 <p>Some functions that we can use with tibbles</p>
 <div class="cell">
+<div class="sourceCode" id="cb43"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span><span class="op">(</span><span class="va">data</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 6 × 4
      ID Gender Weight Height
@@ -465,6 +515,7 @@ Female   Male
 5     5 male      7.5     15
 6     6 female   10.5     21</code></pre>
 </div>
+<div class="sourceCode" id="cb45"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/head.html">tail</a></span><span class="op">(</span><span class="va">data</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 6 × 4
      ID Gender Weight Height
@@ -476,6 +527,7 @@ Female   Male
 5     9 female    8       16
 6    10 female   11.5     23</code></pre>
 </div>
+<div class="sourceCode" id="cb47"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://pillar.r-lib.org/reference/glimpse.html">glimpse</a></span><span class="op">(</span><span class="va">data</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Rows: 10
 Columns: 4
@@ -484,6 +536,7 @@ $ Gender &lt;chr&gt; "male", "male", "male", "male", "male", "female", "female",
 $ Weight &lt;dbl&gt; 5.0, 10.0, 15.0, 7.0, 7.5, 10.5, 8.5, 6.0, 8.0, 11.5
 $ Height &lt;dbl&gt; 10, 20, 30, 14, 15, 21, 17, 12, 16, 23</code></pre>
 </div>
+<div class="sourceCode" id="cb49"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/summary.html">summary</a></span><span class="op">(</span><span class="va">data</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>       ID           Gender              Weight           Height     
  Min.   : 1.00   Length:10          Min.   : 5.000   Min.   :10.00  
@@ -493,6 +546,7 @@ $ Height &lt;dbl&gt; 10, 20, 30, 14, 15, 21, 17, 12, 16, 23</code></pre>
  3rd Qu.: 7.75                      3rd Qu.:10.375   3rd Qu.:20.75  
  Max.   :10.00                      Max.   :15.000   Max.   :30.00  </code></pre>
 </div>
+<div class="sourceCode" id="cb51"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/dim.html">dim</a></span><span class="op">(</span><span class="va">data</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 10  4</code></pre>
 </div>
