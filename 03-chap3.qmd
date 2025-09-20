@@ -70,7 +70,268 @@ For example:
 1.  Run the downloaded .exe file and follow the installer prompts, typically accepting the default options and installation directory.
 
 
-## Download and Installing R and R Studio
+## Introduction to R Studio Panes 
+
+**Steps**
+
+1. Double click the RStudio icon. You will see a window like this.
+
+![](img/rw1.png)
+2. Go to File -> New File -> RScript
+
+![](img/rw5.png)
+
+**Source/Script:** Where you write and save your R code.
+
+**Console:** Where the code is executed and results are displayed.
+
+**Environment, History, Connections, Build, Tutorial:** Where objects, past commands, database connections, projects, and learning aids are managed.
+
+**Files, Plots, Packages, Help, Viewer, Presentation:** Where you browse files, view plots, manage packages, access help, preview outputs, and create presentations.
+
+## Creating an R Project
+
+Creating an R Project means setting up a working directory where all your related files, such as scripts, data, and outputs are organized and stored together.
+
+**Steps:**
+
+*File -> New* Project and follow the below steops
+
+![](img/rw8.png)
+
+![](img/rw9.png)
+
+![](img/rw10.png)
+
+![](img/rw11.png)
+
+Give a project name and location to create project folder.
+
+Once you have created a project, Windows users will see the project name displayed in the top-right corner of RStudio; for other operating systems, the location may vary but it will still be visible in the RStudio interface.
+
+Type the following command on the console to view the project location.
+
+```r
+getwd()
+```
+
+This will give you the current working directory. The working directory is the folder where R reads and saves files. When you create an R Project, the project folder itself becomes the working directory, so the project and working directory are essentially the same.
+
+## R as a calculator
+
+Let's type some simple commands. Type these in the console.
+
+```{r}
+1 + 2
+```
+
+```{r}
+1 * 100
+```
+
+```{r}
+1 / 100
+```
+
+```{r}
+rnorm(50)
+```
+
+```{r}
+hist(rnorm(50))
+```
+
+In R, square brackets [ ] indicate the index or position of an element in a vector, list, or other data structure.
+
+## Commenting
+
+Commenting in R is adding notes or explanations in your code using #; comments are ignored when the code runs but help you and others understand the code.
+
+```{r}
+# create a vector
+vec <- c(1, 2, 3, 4, 5) 
+mean(vec)    # mean of vector
+```
+
+## Working on a script file
+
+A script file is a text file where you write and save R code so it can be run multiple times without retyping.
+
+Open a script file and save it as "script1.R". Type the following in the script file. 
+
+```r
+# 1. Assign values
+x <- 10
+y <- 5
+
+# 2. Basic arithmetic
+sum <- x + y
+diff <- x - y
+prod <- x * y
+quot <- x / y
+
+# 3. Create a vector
+vec <- c(1, 2, 3, 4, 5)
+
+# 4. Access elements (indexing)
+vec[1]       # first element
+vec[2:4]     # elements 2 to 4
+
+# 5. Basic functions
+mean(vec)    # mean of vector
+sum(vec)     # sum of elements
+length(vec)  # number of elements
+
+# 6. Create a simple data frame
+df <- data.frame(Name = c("A","B","C"), Score = c(10, 15, 20))
+
+# 7. View data
+df
+head(df)     # first few rows
+
+# 8. Help
+?mean        # get help for a function
+
+```
+
+## Working with vectors
+
+A vector in R is a sequence of elements of the same type (numeric, character, or logical), and it is one of the basic data structures used to store and manipulate data.
+
+```{r}
+# Create a numeric vector
+numbers <- c(1, 2, 3, 4, 5)
+
+# Create a character vector
+fruits <- c("apple", "banana", "cherry", "apple")
+
+# Access elements
+numbers[1]      # first element
+fruits[2:3]     # second and third elements
+
+# Basic operations
+sum(numbers)    # sum of all numbers
+summary(numbers) # summary statistics
+length(fruits)  # number of elements
+summary(fruits) # summary statistics
+table(fruits)
+```
+
+## Access help file
+
+Functions in R tell R to perform a specific task. To learn more about a function, type `?function_name` in the console—this will open the function’s help file.
+
+Example
+
+```r
+?mean
+```
+
+![](img/help.png)
 
 
+In the help file, mean {base} indicates that the mean function is part of the base package. You can think of packages in R like apps on your mobile phone: the default installation provides some basic packages, and for additional functionality, you can install extra packages just like installing new apps on your phone.
+
+## Installing packages
+
+There are two ways that we can use to install packages.
+
+**Method 1**
+
+Go to the "Packages" tab and click install.
+
+
+![](img/pkg1.png)
+
+Then, type the names of the packages you need to install and click "install".
+
+![](img/pkg2.png)
+
+The installation process will then start, and you will see progress messages displayed in the console.
+
+**Method 2**
+
+Type the following command on the console. 
+
+To install `tidyverse` package.
+
+```r
+install.packages("tidyverse")
+```
+
+To install `palmerpenguins` package.
+
+```r
+install.packages("palmerpenguins")
+```
+
+General format: Replace "xxx" with the name of the package you need to install.
+
+install.packages("xxx")
+
+
+## Working with packages
+
+To use a package in R, you first need to load it. Whenever you want to access a function from that package, use the following command.
+
+For example to work with functions in tidyverse packages
+
+```{r}
+library(tidyverse)
+```
+
+TO work with palmerpenguins 
+
+
+```{r}
+library(palmerpenguins)
+```
+
+## Factors
+
+A factor in R is used to represent categorical data. It stores both the values and the set of possible levels (categories) for the variable.
+
+```{r}
+# Create a factor
+gender <- factor(c("Male", "Female", "Female", "Male"))
+
+# View the factor
+gender
+
+# Check the levels
+levels(gender)
+
+# Count occurrences of each level
+table(gender)
+summary(gender)
+```
+
+Your turn: 
+
+Create the `gender` vector as a character vector, then run `table(gender)` and `summary(gender)`. Observe the differences in the outputs compared to when gender is a factor.
+
+## Create a tibble
+
+```{r}
+library(tibble)
+ID <- 1:10
+gender <- c(rep("male", 5), rep("female", 5))
+height <- c(10, 20, 30, 14, 15, 21, 17, 12, 16, 23)
+weight <- c(5, 10, 15, 7, 7.5, 10.5, 8.5, 6, 8, 11.5)
+data <- tibble(ID=ID,
+               Gender=gender,
+               Weight=weight,
+               Height=height)
+data
+```
+
+Some functions that we can use with tibbles
+
+```{r}
+head(data)
+tail(data)
+glimpse(data)
+summary(data)
+dim(data)
+```
 
