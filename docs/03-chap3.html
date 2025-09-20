@@ -178,6 +178,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#working-with-packages" id="toc-working-with-packages" class="nav-link" data-scroll-target="#working-with-packages"><span class="header-section-number">3.12</span> Working with packages</a></li>
   <li><a href="#factors" id="toc-factors" class="nav-link" data-scroll-target="#factors"><span class="header-section-number">3.13</span> Factors</a></li>
   <li><a href="#create-a-tibble" id="toc-create-a-tibble" class="nav-link" data-scroll-target="#create-a-tibble"><span class="header-section-number">3.14</span> Create a tibble</a></li>
+  <li><a href="#working-with-built-in-datasets-in-r" id="toc-working-with-built-in-datasets-in-r" class="nav-link" data-scroll-target="#working-with-built-in-datasets-in-r"><span class="header-section-number">3.15</span> Working with built in datasets in R</a></li>
+  <li><a href="#pipe-operators" id="toc-pipe-operators" class="nav-link" data-scroll-target="#pipe-operators"><span class="header-section-number">3.16</span> Pipe operators</a></li>
+  <li><a href="#data-manipulation-with-dplyr" id="toc-data-manipulation-with-dplyr" class="nav-link" data-scroll-target="#data-manipulation-with-dplyr"><span class="header-section-number">3.17</span> Data manipulation with dplyr</a></li>
   </ul></nav>
     </div>
 <!-- main -->
@@ -291,15 +294,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell">
 <div class="sourceCode" id="cb8"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/stats/Normal.html">rnorm</a></span><span class="op">(</span><span class="fl">50</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code> [1] -0.58460908  0.74867860 -0.71091483  1.25992400  2.25728506  0.96538709
- [7]  1.23497441 -1.62189733 -2.22448637 -0.45604804  0.03454995 -0.23000078
-[13]  0.81233226 -1.38788999  0.05472745 -0.74863056 -0.56943181  0.72116248
-[19]  0.38031107  0.09190570  1.20338422  1.11237646 -0.55944035 -0.91989564
-[25] -0.52896725  1.97056411  1.92646572  0.97849567  0.23862513 -0.71523013
-[31]  1.80660163 -0.59505858 -0.07332159 -1.72524809  1.97930878  0.45792845
-[37]  0.48028798 -0.47729198  1.65858870 -0.13899625 -0.76344839  0.68319421
-[43]  1.94923588 -0.93798951 -0.71491514 -2.31997392 -0.65696631 -0.52499075
-[49] -0.47812138 -0.37817012</code></pre>
+<pre><code> [1] -0.74515809 -0.48392936 -0.07116476 -1.87194430 -0.09568957  1.18765856
+ [7]  1.19006655  0.37527361 -0.71931310  1.61343240  1.36799830 -0.35427711
+[13] -0.12659376  1.26202323  0.89990473 -1.03705938  1.35552094 -0.78406351
+[19]  0.06257110  1.04515588 -0.83621479  0.16573931  0.79359047 -0.03023787
+[25] -0.60448605 -1.10349020 -0.04156491 -0.86745770 -0.38112680 -1.95739337
+[31] -0.67762867  0.77933703 -0.82970448 -0.11202830  0.06532624 -0.26166063
+[37]  1.25979094  1.14231072  2.05097581 -0.57239823  0.70375374  0.14003665
+[43] -0.16509296 -0.95649913 -0.28249536 -1.60291155  0.93001328 -2.39677192
+[49] -0.10108335  1.44662942</code></pre>
 </div>
 </div>
 <div class="cell">
@@ -549,6 +552,358 @@ $ Height &lt;dbl&gt; 10, 20, 30, 14, 15, 21, 17, 12, 16, 23</code></pre>
 <div class="sourceCode" id="cb51"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/dim.html">dim</a></span><span class="op">(</span><span class="va">data</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 10  4</code></pre>
+</div>
+</div>
+<p>Convert <code>gender</code> into factor</p>
+<div class="cell">
+<div class="sourceCode" id="cb53"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">data</span><span class="op">$</span><span class="va">Gender</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://forcats.tidyverse.org/reference/as_factor.html">as_factor</a></span><span class="op">(</span><span class="va">data</span><span class="op">$</span><span class="va">Gender</span><span class="op">)</span></span>
+<span><span class="va">data</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 10 × 4
+      ID Gender Weight Height
+   &lt;int&gt; &lt;fct&gt;   &lt;dbl&gt;  &lt;dbl&gt;
+ 1     1 male      5       10
+ 2     2 male     10       20
+ 3     3 male     15       30
+ 4     4 male      7       14
+ 5     5 male      7.5     15
+ 6     6 female   10.5     21
+ 7     7 female    8.5     17
+ 8     8 female    6       12
+ 9     9 female    8       16
+10    10 female   11.5     23</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode" id="cb55"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://pillar.r-lib.org/reference/glimpse.html">glimpse</a></span><span class="op">(</span><span class="va">data</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows: 10
+Columns: 4
+$ ID     &lt;int&gt; 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+$ Gender &lt;fct&gt; male, male, male, male, male, female, female, female, female, f…
+$ Weight &lt;dbl&gt; 5.0, 10.0, 15.0, 7.0, 7.5, 10.5, 8.5, 6.0, 8.0, 11.5
+$ Height &lt;dbl&gt; 10, 20, 30, 14, 15, 21, 17, 12, 16, 23</code></pre>
+</div>
+<div class="sourceCode" id="cb57"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/summary.html">summary</a></span><span class="op">(</span><span class="va">data</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>       ID           Gender      Weight           Height     
+ Min.   : 1.00   male  :5   Min.   : 5.000   Min.   :10.00  
+ 1st Qu.: 3.25   female:5   1st Qu.: 7.125   1st Qu.:14.25  
+ Median : 5.50              Median : 8.250   Median :16.50  
+ Mean   : 5.50              Mean   : 8.900   Mean   :17.80  
+ 3rd Qu.: 7.75              3rd Qu.:10.375   3rd Qu.:20.75  
+ Max.   :10.00              Max.   :15.000   Max.   :30.00  </code></pre>
+</div>
+</div>
+<p>When you convert a charactor variable into factor you can see the counts.</p>
+</section><section id="working-with-built-in-datasets-in-r" class="level2" data-number="3.15"><h2 data-number="3.15" class="anchored" data-anchor-id="working-with-built-in-datasets-in-r">
+<span class="header-section-number">3.15</span> Working with built in datasets in R</h2>
+<p>Built-in datasets in R are preloaded or easily accessible datasets that come with R or its packages. They are mainly used for learning, practicing, and demonstrating data analysis techniques. You don’t need to import or download them. They are ready to use.</p>
+<p><code>iris</code> and <code>penguins</code> are two popular built-in-data sets in R</p>
+<div class="cell">
+<div class="sourceCode" id="cb59"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/data.html">data</a></span><span class="op">(</span><span class="va">iris</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span><span class="op">(</span><span class="va">iris</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  Sepal.Length Sepal.Width Petal.Length Petal.Width Species
+1          5.1         3.5          1.4         0.2  setosa
+2          4.9         3.0          1.4         0.2  setosa
+3          4.7         3.2          1.3         0.2  setosa
+4          4.6         3.1          1.5         0.2  setosa
+5          5.0         3.6          1.4         0.2  setosa
+6          5.4         3.9          1.7         0.4  setosa</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode" id="cb61"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/data.html">data</a></span><span class="op">(</span><span class="st">"penguins"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span><span class="op">(</span><span class="va">penguins</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 8
+  species island    bill_length_mm bill_depth_mm flipper_length_mm body_mass_g
+  &lt;fct&gt;   &lt;fct&gt;              &lt;dbl&gt;         &lt;dbl&gt;             &lt;int&gt;       &lt;int&gt;
+1 Adelie  Torgersen           39.1          18.7               181        3750
+2 Adelie  Torgersen           39.5          17.4               186        3800
+3 Adelie  Torgersen           40.3          18                 195        3250
+4 Adelie  Torgersen           NA            NA                  NA          NA
+5 Adelie  Torgersen           36.7          19.3               193        3450
+6 Adelie  Torgersen           39.3          20.6               190        3650
+# ℹ 2 more variables: sex &lt;fct&gt;, year &lt;int&gt;</code></pre>
+</div>
+</div>
+<p>To view all built-in-datasets, type</p>
+<div class="cell">
+<div class="sourceCode" id="cb63"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/data.html">data</a></span><span class="op">(</span><span class="op">)</span>  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section><section id="pipe-operators" class="level2" data-number="3.16"><h2 data-number="3.16" class="anchored" data-anchor-id="pipe-operators">
+<span class="header-section-number">3.16</span> Pipe operators</h2>
+<p>Pipe operator (<code>|&gt;</code> or <code>%&gt;%</code>) makes your codes more readable.</p>
+<p>The following code</p>
+<div class="cell">
+<div class="sourceCode" id="cb64"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">10</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 5.5</code></pre>
+</div>
+</div>
+<p>can be written as</p>
+<div class="cell">
+<div class="sourceCode" id="cb66"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fl">1</span><span class="op">:</span><span class="fl">10</span> <span class="op">|&gt;</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 5.5</code></pre>
+</div>
+</div>
+<p>If you are using ‘%&gt;%’ pipe operator you need to install <code>magrittr</code> package in R.</p>
+</section><section id="data-manipulation-with-dplyr" class="level2" data-number="3.17"><h2 data-number="3.17" class="anchored" data-anchor-id="data-manipulation-with-dplyr">
+<span class="header-section-number">3.17</span> Data manipulation with dplyr</h2>
+<p>Data manipulation is the process of changing, organizing, or summarizing data so it becomes easier to analyze, interpret, or visualize. We are going to learn 8 main data manipulation functions in the <code>dplyr</code> package.</p>
+<div class="cell">
+<div class="sourceCode" id="cb68"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://allisonhorst.github.io/palmerpenguins/">palmerpenguins</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://dplyr.tidyverse.org">dplyr</a></span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/utils/data.html">data</a></span><span class="op">(</span><span class="st">"penguins"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode" id="cb69"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">penguins</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 344 × 8
+   species island    bill_length_mm bill_depth_mm flipper_length_mm body_mass_g
+   &lt;fct&gt;   &lt;fct&gt;              &lt;dbl&gt;         &lt;dbl&gt;             &lt;int&gt;       &lt;int&gt;
+ 1 Adelie  Torgersen           39.1          18.7               181        3750
+ 2 Adelie  Torgersen           39.5          17.4               186        3800
+ 3 Adelie  Torgersen           40.3          18                 195        3250
+ 4 Adelie  Torgersen           NA            NA                  NA          NA
+ 5 Adelie  Torgersen           36.7          19.3               193        3450
+ 6 Adelie  Torgersen           39.3          20.6               190        3650
+ 7 Adelie  Torgersen           38.9          17.8               181        3625
+ 8 Adelie  Torgersen           39.2          19.6               195        4675
+ 9 Adelie  Torgersen           34.1          18.1               193        3475
+10 Adelie  Torgersen           42            20.2               190        4250
+# ℹ 334 more rows
+# ℹ 2 more variables: sex &lt;fct&gt;, year &lt;int&gt;</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode" id="cb71"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/colnames.html">colnames</a></span><span class="op">(</span><span class="va">penguins</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "species"           "island"            "bill_length_mm"   
+[4] "bill_depth_mm"     "flipper_length_mm" "body_mass_g"      
+[7] "sex"               "year"             </code></pre>
+</div>
+</div>
+<p>Type the following code to view the full data set.</p>
+<div class="sourceCode" id="cb73"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/View.html">View</a></span><span class="op">(</span><span class="va">penguins</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ol type="1">
+<li>
+<strong>filter()</strong> – Select rows based on conditions</li>
+</ol>
+<div class="cell">
+<div class="sourceCode" id="cb74"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">penguins</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">species</span> <span class="op">==</span> <span class="st">"Adelie"</span>, <span class="va">sex</span> <span class="op">==</span> <span class="st">"female"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 73 × 8
+   species island    bill_length_mm bill_depth_mm flipper_length_mm body_mass_g
+   &lt;fct&gt;   &lt;fct&gt;              &lt;dbl&gt;         &lt;dbl&gt;             &lt;int&gt;       &lt;int&gt;
+ 1 Adelie  Torgersen           39.5          17.4               186        3800
+ 2 Adelie  Torgersen           40.3          18                 195        3250
+ 3 Adelie  Torgersen           36.7          19.3               193        3450
+ 4 Adelie  Torgersen           38.9          17.8               181        3625
+ 5 Adelie  Torgersen           41.1          17.6               182        3200
+ 6 Adelie  Torgersen           36.6          17.8               185        3700
+ 7 Adelie  Torgersen           38.7          19                 195        3450
+ 8 Adelie  Torgersen           34.4          18.4               184        3325
+ 9 Adelie  Biscoe              37.8          18.3               174        3400
+10 Adelie  Biscoe              35.9          19.2               189        3800
+# ℹ 63 more rows
+# ℹ 2 more variables: sex &lt;fct&gt;, year &lt;int&gt;</code></pre>
+</div>
+</div>
+<p>Selects only female Adelie penguins.</p>
+<ol start="2" type="1">
+<li>
+<strong>select()</strong> – Choose columns</li>
+</ol>
+<div class="cell">
+<div class="sourceCode" id="cb76"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">penguins</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="va">species</span>, <span class="va">island</span>, <span class="va">body_mass_g</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 344 × 3
+   species island    body_mass_g
+   &lt;fct&gt;   &lt;fct&gt;           &lt;int&gt;
+ 1 Adelie  Torgersen        3750
+ 2 Adelie  Torgersen        3800
+ 3 Adelie  Torgersen        3250
+ 4 Adelie  Torgersen          NA
+ 5 Adelie  Torgersen        3450
+ 6 Adelie  Torgersen        3650
+ 7 Adelie  Torgersen        3625
+ 8 Adelie  Torgersen        4675
+ 9 Adelie  Torgersen        3475
+10 Adelie  Torgersen        4250
+# ℹ 334 more rows</code></pre>
+</div>
+</div>
+<ol start="3" type="1">
+<li>
+<strong>arrange()</strong> – Sort rows</li>
+</ol>
+<div class="cell">
+<div class="sourceCode" id="cb78"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">penguins</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/arrange.html">arrange</a></span><span class="op">(</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/desc.html">desc</a></span><span class="op">(</span><span class="va">body_mass_g</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 344 × 8
+   species island bill_length_mm bill_depth_mm flipper_length_mm body_mass_g
+   &lt;fct&gt;   &lt;fct&gt;           &lt;dbl&gt;         &lt;dbl&gt;             &lt;int&gt;       &lt;int&gt;
+ 1 Gentoo  Biscoe           49.2          15.2               221        6300
+ 2 Gentoo  Biscoe           59.6          17                 230        6050
+ 3 Gentoo  Biscoe           51.1          16.3               220        6000
+ 4 Gentoo  Biscoe           48.8          16.2               222        6000
+ 5 Gentoo  Biscoe           45.2          16.4               223        5950
+ 6 Gentoo  Biscoe           49.8          15.9               229        5950
+ 7 Gentoo  Biscoe           48.4          14.6               213        5850
+ 8 Gentoo  Biscoe           49.3          15.7               217        5850
+ 9 Gentoo  Biscoe           55.1          16                 230        5850
+10 Gentoo  Biscoe           49.5          16.2               229        5800
+# ℹ 334 more rows
+# ℹ 2 more variables: sex &lt;fct&gt;, year &lt;int&gt;</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode" id="cb80"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">penguins</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/arrange.html">arrange</a></span><span class="op">(</span><span class="va">body_mass_g</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 344 × 8
+   species   island   bill_length_mm bill_depth_mm flipper_length_mm body_mass_g
+   &lt;fct&gt;     &lt;fct&gt;             &lt;dbl&gt;         &lt;dbl&gt;             &lt;int&gt;       &lt;int&gt;
+ 1 Chinstrap Dream              46.9          16.6               192        2700
+ 2 Adelie    Biscoe             36.5          16.6               181        2850
+ 3 Adelie    Biscoe             36.4          17.1               184        2850
+ 4 Adelie    Biscoe             34.5          18.1               187        2900
+ 5 Adelie    Dream              33.1          16.1               178        2900
+ 6 Adelie    Torgers…           38.6          17                 188        2900
+ 7 Chinstrap Dream              43.2          16.6               187        2900
+ 8 Adelie    Biscoe             37.9          18.6               193        2925
+ 9 Adelie    Dream              37.5          18.9               179        2975
+10 Adelie    Dream              37            16.9               185        3000
+# ℹ 334 more rows
+# ℹ 2 more variables: sex &lt;fct&gt;, year &lt;int&gt;</code></pre>
+</div>
+</div>
+<ol start="4" type="1">
+<li>
+<strong>mutate()</strong> – Add or modify variables</li>
+</ol>
+<div class="cell">
+<div class="sourceCode" id="cb82"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">penguins</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>body_mass_kg <span class="op">=</span> <span class="va">body_mass_g</span> <span class="op">/</span> <span class="fl">1000</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 344 × 9
+   species island    bill_length_mm bill_depth_mm flipper_length_mm body_mass_g
+   &lt;fct&gt;   &lt;fct&gt;              &lt;dbl&gt;         &lt;dbl&gt;             &lt;int&gt;       &lt;int&gt;
+ 1 Adelie  Torgersen           39.1          18.7               181        3750
+ 2 Adelie  Torgersen           39.5          17.4               186        3800
+ 3 Adelie  Torgersen           40.3          18                 195        3250
+ 4 Adelie  Torgersen           NA            NA                  NA          NA
+ 5 Adelie  Torgersen           36.7          19.3               193        3450
+ 6 Adelie  Torgersen           39.3          20.6               190        3650
+ 7 Adelie  Torgersen           38.9          17.8               181        3625
+ 8 Adelie  Torgersen           39.2          19.6               195        4675
+ 9 Adelie  Torgersen           34.1          18.1               193        3475
+10 Adelie  Torgersen           42            20.2               190        4250
+# ℹ 334 more rows
+# ℹ 3 more variables: sex &lt;fct&gt;, year &lt;int&gt;, body_mass_kg &lt;dbl&gt;</code></pre>
+</div>
+</div>
+<ol start="5" type="1">
+<li>
+<strong>summarise() / summarize()</strong> – Aggregate data</li>
+</ol>
+<div class="cell">
+<div class="sourceCode" id="cb84"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">penguins</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarise</a></span><span class="op">(</span>mean_mass <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">body_mass_g</span>, na.rm <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 1
+  mean_mass
+      &lt;dbl&gt;
+1     4202.</code></pre>
+</div>
+</div>
+<ol start="6" type="1">
+<li>
+<strong>group_by()</strong> – Group data for aggregation</li>
+</ol>
+<div class="cell">
+<div class="sourceCode" id="cb86"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">penguins</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="va">species</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarise</a></span><span class="op">(</span>mean_mass <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">body_mass_g</span>, na.rm <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 3 × 2
+  species   mean_mass
+  &lt;fct&gt;         &lt;dbl&gt;
+1 Adelie        3701.
+2 Chinstrap     3733.
+3 Gentoo        5076.</code></pre>
+</div>
+</div>
+<ol start="7" type="1">
+<li>
+<strong>rename()</strong> – Rename columns</li>
+</ol>
+<div class="cell">
+<div class="sourceCode" id="cb88"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">penguins</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/rename.html">rename</a></span><span class="op">(</span>Mass_g <span class="op">=</span> <span class="va">body_mass_g</span>, Flipper_cm <span class="op">=</span> <span class="va">flipper_length_mm</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 344 × 8
+   species island    bill_length_mm bill_depth_mm Flipper_cm Mass_g sex     year
+   &lt;fct&gt;   &lt;fct&gt;              &lt;dbl&gt;         &lt;dbl&gt;      &lt;int&gt;  &lt;int&gt; &lt;fct&gt;  &lt;int&gt;
+ 1 Adelie  Torgersen           39.1          18.7        181   3750 male    2007
+ 2 Adelie  Torgersen           39.5          17.4        186   3800 female  2007
+ 3 Adelie  Torgersen           40.3          18          195   3250 female  2007
+ 4 Adelie  Torgersen           NA            NA           NA     NA &lt;NA&gt;    2007
+ 5 Adelie  Torgersen           36.7          19.3        193   3450 female  2007
+ 6 Adelie  Torgersen           39.3          20.6        190   3650 male    2007
+ 7 Adelie  Torgersen           38.9          17.8        181   3625 female  2007
+ 8 Adelie  Torgersen           39.2          19.6        195   4675 male    2007
+ 9 Adelie  Torgersen           34.1          18.1        193   3475 &lt;NA&gt;    2007
+10 Adelie  Torgersen           42            20.2        190   4250 &lt;NA&gt;    2007
+# ℹ 334 more rows</code></pre>
+</div>
+</div>
+<p>if you want to keep the changes</p>
+<div class="cell">
+<div class="sourceCode" id="cb90"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">penguins</span> <span class="op">&lt;-</span> <span class="va">penguins</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/rename.html">rename</a></span><span class="op">(</span>Mass_g <span class="op">=</span> <span class="va">body_mass_g</span>, Flipper_cm <span class="op">=</span> <span class="va">flipper_length_mm</span><span class="op">)</span></span>
+<span><span class="va">penguins</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 344 × 8
+   species island    bill_length_mm bill_depth_mm Flipper_cm Mass_g sex     year
+   &lt;fct&gt;   &lt;fct&gt;              &lt;dbl&gt;         &lt;dbl&gt;      &lt;int&gt;  &lt;int&gt; &lt;fct&gt;  &lt;int&gt;
+ 1 Adelie  Torgersen           39.1          18.7        181   3750 male    2007
+ 2 Adelie  Torgersen           39.5          17.4        186   3800 female  2007
+ 3 Adelie  Torgersen           40.3          18          195   3250 female  2007
+ 4 Adelie  Torgersen           NA            NA           NA     NA &lt;NA&gt;    2007
+ 5 Adelie  Torgersen           36.7          19.3        193   3450 female  2007
+ 6 Adelie  Torgersen           39.3          20.6        190   3650 male    2007
+ 7 Adelie  Torgersen           38.9          17.8        181   3625 female  2007
+ 8 Adelie  Torgersen           39.2          19.6        195   4675 male    2007
+ 9 Adelie  Torgersen           34.1          18.1        193   3475 &lt;NA&gt;    2007
+10 Adelie  Torgersen           42            20.2        190   4250 &lt;NA&gt;    2007
+# ℹ 334 more rows</code></pre>
+</div>
+</div>
+<ol start="8" type="1">
+<li>
+<strong>slice()</strong> – Select rows by position</li>
+</ol>
+<div class="cell">
+<div class="sourceCode" id="cb92"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">penguins</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/slice.html">slice</a></span><span class="op">(</span><span class="fl">5</span><span class="op">:</span><span class="fl">10</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 8
+  species island    bill_length_mm bill_depth_mm Flipper_cm Mass_g sex     year
+  &lt;fct&gt;   &lt;fct&gt;              &lt;dbl&gt;         &lt;dbl&gt;      &lt;int&gt;  &lt;int&gt; &lt;fct&gt;  &lt;int&gt;
+1 Adelie  Torgersen           36.7          19.3        193   3450 female  2007
+2 Adelie  Torgersen           39.3          20.6        190   3650 male    2007
+3 Adelie  Torgersen           38.9          17.8        181   3625 female  2007
+4 Adelie  Torgersen           39.2          19.6        195   4675 male    2007
+5 Adelie  Torgersen           34.1          18.1        193   3475 &lt;NA&gt;    2007
+6 Adelie  Torgersen           42            20.2        190   4250 &lt;NA&gt;    2007</code></pre>
 </div>
 </div>
 

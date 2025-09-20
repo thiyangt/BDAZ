@@ -351,3 +351,187 @@ summary(data)
 dim(data)
 ```
 
+Convert `gender` into factor
+
+```{r}
+#| echo: true
+data$Gender <- as_factor(data$Gender)
+data
+```
+
+
+```{r}
+#| echo: true
+glimpse(data)
+summary(data)
+```
+
+When you convert a charactor variable into factor you can see the counts.
+
+## Working with built in datasets in R
+
+Built-in datasets in R are preloaded or easily accessible datasets that come with R or its packages. They are mainly used for learning, practicing, and demonstrating data analysis techniques. You don’t need to import or download them. They are ready to use.
+
+`iris` and `penguins` are two popular built-in-data sets in R
+
+```{r}
+#| echo: true
+data(iris)
+head(iris)
+```
+
+
+
+```{r}
+#| echo: true
+data("penguins")
+head(penguins)
+```
+
+To view all built-in-datasets, type
+
+```{r}
+#| echo: true
+data()  
+```
+
+## Pipe operators
+
+Pipe operator (`|>` or `%>%`) makes your codes more readable.
+
+The following code
+
+```{r}
+#| echo: true
+mean(1:10)
+```
+
+can be written as 
+
+```{r}
+#| echo: true
+1:10 |> mean()
+```
+
+If you are using '%>%' pipe operator you need to install `magrittr` package in R.
+
+## Data manipulation with dplyr
+
+Data manipulation is the process of changing, organizing, or summarizing data so it becomes easier to analyze, interpret, or visualize. We are going to learn 8 main data manipulation functions in the `dplyr` package.
+
+```{r}
+#| echo: true
+library(palmerpenguins)
+library(dplyr)
+data("penguins")
+```
+
+```{r}
+#| echo: true
+penguins
+```
+
+```{r}
+#| echo: true
+colnames(penguins)
+```
+
+Type the following code to view the full data set.
+
+```r
+View(penguins)
+```
+
+1. **filter()** – Select rows based on conditions
+
+
+```{r}
+#| echo: true
+penguins |> 
+  filter(species == "Adelie", sex == "female")
+```
+
+
+Selects only female Adelie penguins.
+
+2. **select()** – Choose columns
+
+```{r}
+#| echo: true
+penguins |>
+  select(species, island, body_mass_g)
+
+```
+
+3. **arrange()** – Sort rows
+
+```{r}
+#| echo: true
+penguins |>
+  arrange(desc(body_mass_g))
+
+```
+
+```{r}
+#| echo: true
+penguins |> 
+  arrange(body_mass_g)
+
+```
+
+4. **mutate()** – Add or modify variables
+
+```{r}
+#| echo: true
+penguins |> 
+  mutate(body_mass_kg = body_mass_g / 1000)
+
+```
+
+
+5. **summarise() / summarize()** – Aggregate data
+
+```{r}
+#| echo: true
+penguins |>
+  summarise(mean_mass = mean(body_mass_g, na.rm = TRUE))
+
+```
+
+6. **group_by()** – Group data for aggregation
+
+```{r}
+#| echo: true
+penguins |>
+  group_by(species) |>
+  summarise(mean_mass = mean(body_mass_g, na.rm = TRUE))
+
+```
+
+
+7. **rename()** – Rename columns
+
+```{r}
+#| echo: true
+penguins |>
+  rename(Mass_g = body_mass_g, Flipper_cm = flipper_length_mm)
+
+```
+
+if you want to keep the changes
+
+```{r}
+#| echo: true
+penguins <- penguins |>
+  rename(Mass_g = body_mass_g, Flipper_cm = flipper_length_mm)
+penguins
+```
+
+
+8. **slice()** – Select rows by position
+
+```{r}
+#| echo: true
+penguins |>
+  slice(5:10)
+```
