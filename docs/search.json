@@ -1,65 +1,5 @@
 [
   {
-    "objectID": "03-chap3.html",
-    "href": "03-chap3.html",
-    "title": "3  Introduction to R programming basics and R studio",
-    "section": "",
-    "text": "3.1 What is R and RStudio?\nR is a programming language and software environment designed mainly for statistical computing, data analysis, and visualization.",
-    "crumbs": [
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Introduction to R programming basics and R studio</span>"
-    ]
-  },
-  {
-    "objectID": "03-chap3.html#what-is-r-and-rstudio",
-    "href": "03-chap3.html#what-is-r-and-rstudio",
-    "title": "3  Introduction to R programming basics and R studio",
-    "section": "",
-    "text": "Why R?\n\nFree and Open-Source\nRapidly developing\nExcellent for Visualization and statistical data analysis\nActive community of users and developers",
-    "crumbs": [
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Introduction to R programming basics and R studio</span>"
-    ]
-  },
-  {
-    "objectID": "03-chap3.html#what-is-rstudio",
-    "href": "03-chap3.html#what-is-rstudio",
-    "title": "3  Introduction to R programming basics and R studio",
-    "section": "3.2 What is RStudio?",
-    "text": "3.2 What is RStudio?\nAn Integrated Development Environment (IDE) for R.\n\nWhy RStudio?\nMakes working with R much easier.",
-    "crumbs": [
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Introduction to R programming basics and R studio</span>"
-    ]
-  },
-  {
-    "objectID": "03-chap3.html#download-and-installing-r-rstudio-and-rtools",
-    "href": "03-chap3.html#download-and-installing-r-rstudio-and-rtools",
-    "title": "3  Introduction to R programming basics and R studio",
-    "section": "3.3 Download and Installing R, RStudio and Rtools",
-    "text": "3.3 Download and Installing R, RStudio and Rtools\nVisit the website https://posit.co/download/rstudio-desktop/ and download the latest version of R and RStudio software.\nIf you are a Windows user, you will also need to install an additional software package: Rtools.\nNote:\n\nDouble-click the R software .exe file, follow the installation wizard by keeping the default settings and clicking Next, and finally click Finish to complete the installation.\nAfter installing R, double-click the RStudio .exe file, follow the installation wizard by keeping the default settings and clicking Next, and then click Finish to complete the setup.\nPlease ensure that you install R before installing RStudio.\nAfter installing both R and RStudio, double-click the RStudio icon to open it. In the console, type the following command:\n\nR.version.string\nPress Enter, and note down the displayed R version in your notebook.\n\nTo install Rtools\n\nDownload Rtools from here https://cran.r-project.org/bin/windows/Rtools/\nDownload the correct Rtools installer for your R version from the official Comprehensive R Archive Network (CRAN) page.\n\nFor example:\n\nIf your R version is 4.5.x, download Rtools45quarto render\n\n\n\nIf your R version is 4.4.x, download Rtools44\nIf your R version is 4.3.x, download Rtools43\nIf your R version is 4.2.x, download Rtools42\nIf your R version is 4.0–4.1.x, download Rtools40\n\n\nRun the downloaded .exe file and follow the installer prompts, typically accepting the default options and installation directory.",
-    "crumbs": [
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Introduction to R programming basics and R studio</span>"
-    ]
-  },
-  {
-    "objectID": "03-chap3.html#introduction-to-r-studio-panes",
-    "href": "03-chap3.html#introduction-to-r-studio-panes",
-    "title": "3  Introduction to R programming basics and R studio",
-    "section": "3.4 Introduction to R Studio Panes",
-    "text": "3.4 Introduction to R Studio Panes\nSteps\n\nDouble click the RStudio icon. You will see a window like this.\n\n 2. Go to File -&gt; New File -&gt; RScript\n\nSource/Script: Where you write and save your R code.\nConsole: Where the code is executed and results are displayed.\nEnvironment, History, Connections, Build, Tutorial: Where objects, past commands, database connections, projects, and learning aids are managed.\nFiles, Plots, Packages, Help, Viewer, Presentation: Where you browse files, view plots, manage packages, access help, preview outputs, and create presentations.",
-    "crumbs": [
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Introduction to R programming basics and R studio</span>"
-    ]
-  },
-  {
-    "objectID": "03-chap3.html#creating-an-r-project",
-    "href": "03-chap3.html#creating-an-r-project",
-    "title": "3  Introduction to R programming basics and R studio",
-    "section": "3.5 Creating an R Project",
-    "text": "3.5 Creating an R Project\nCreating an R Project means setting up a working directory where all your related files, such as scripts, data, and outputs are organized and stored together.\nSteps:\nFile -&gt; New Project and follow the below steops",
-    "crumbs": [
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Introduction to R programming basics and R studio</span>"
-    ]
-  },
-  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Biostatistics and Data Analysis for Zoologists",
@@ -67,6 +7,36 @@
     "text": "Understanding and interpreting quantitative data is fundamental for modern zoological research. “Biostatistics and Data Analysis for Zoologists (BDAZ)” serves as a comprehensive, practical textbook that introduces statistical concepts and data analysis techniques specifically designed for zoologists, wildlife biologists, and ecology researchers. Each topic in this book includes a practical session using R.\nCopyright notice\nProduced on 20 September 2025.\n© Thiyanga S. Talagala (2025).",
     "crumbs": [
       "Front matter"
+    ]
+  },
+  {
+    "objectID": "01-chap1.html",
+    "href": "01-chap1.html",
+    "title": "1  Introdiction to Statistics",
+    "section": "",
+    "text": "1.1 What is Statistics?\nThe science of collecting, organizing, and analyzing data, and presenting and interpreting the results derived from that data to gain insights and make informed decisions.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introdiction to Statistics</span>"
+    ]
+  },
+  {
+    "objectID": "01-chap1.html#what-is-biostatistics",
+    "href": "01-chap1.html#what-is-biostatistics",
+    "title": "1  Introdiction to Statistics",
+    "section": "\n1.2 What is Biostatistics?",
+    "text": "1.2 What is Biostatistics?\nWhen statistical methods are applied to specific fields, the discipline often takes on a specialized name. When statistical methods are applied to biological and medical sciences, it is called “Biostatistics”. Table 1 shows Specialized fields where statistics is applied.\n\n\n\nSpecialized fields where statistics is applied\n\nField\nDescription\n\n\n\nEpidemiology\nThe study and analysis of the patterns, causes, and effects of health and disease conditions in populations.\n\n\nAstrostatistics\nApplies statistical analysis to the understanding of astronomical data.\n\n\nBiostatistics\nStudies biological phenomena and provides statistical methods for analysis of biological data.\n\n\nDemography\nStatistical study of all populations, including size, distribution, and structure.\n\n\nSocial statistics\nStudy of human behavior in a social environment using statistical methods.\n\n\nChemometrics\nScience of extracting information from chemical systems by data-driven means.\n\n\nEconometrics\nUses economic theory, mathematics, and statistical inference to quantify economic phenomena.\n\n\nPsychometrics\nApplies statistical methods to psychological measurements, tests, and surveys.\n\n\nPharmacometrics\nModeling drug dose-response relationships, pharmacokinetics, and pharmacodynamics.\n\n\nBioinformatics / Biostatistics in Molecular Biology\nAnalyzes DNA, RNA, protein data, sequence alignments, and gene expression patterns.\n\n\nAgrimetrics / Agricultural Statistics\nStatistics applied to agriculture — crop yield trials, soil studies, plant breeding, pest control.\n\n\nEcological Statistics / Biostatistics in Ecology\nStatistics applied to ecology and wildlife studies — population surveys, species distribution, biodiversity indices.\n\n\nActuarial Statistics\nDiscipline that deals with assessing the risks in insurance and finance.\n\n\nForensic Statistics\nApplies statistics to analyze forensic data, including DNA testing results.\n\n\nSpatial Statistics\nAnalysis of spatially referenced data to detect patterns or relationships.\n\n\nJurimetrics\nApplication of probability and statistics to law and legal decisions.\n\n\nSports Analytics / Sports Statistics\nStatistics applied to sports — analyzing player performance, game strategies, and injury risks.\n\n\nEnvironmental Statistics\nStatistics in environmental science — air/water quality, climate data, pollution modeling, conservation research.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introdiction to Statistics</span>"
+    ]
+  },
+  {
+    "objectID": "01-chap1.html#role-of-statistics-in-zoology-and-biological-sciences",
+    "href": "01-chap1.html#role-of-statistics-in-zoology-and-biological-sciences",
+    "title": "1  Introdiction to Statistics",
+    "section": "\n1.3 Role of statistics in zoology and biological sciences",
+    "text": "1.3 Role of statistics in zoology and biological sciences\nStatistics play a vital role in every aspect of zoological research, helping scientists design studies, analyze data, and make informed conclusions.\nExamples in zoology include:\n\nPopulation estimation – Using sampling and statistical methods to estimate the number of elephants in a forest or birds in a wetland.\nMorphometric analysis – Comparing body size, wing length, or foot circumference among different species populations.\nBehavioral studies – Analyzing patterns such as feeding, or migration behaviors using observational data.\nEcological modeling – Assessing habitat preferences and species distribution using statistical models, Studying climate change impacts on migration, breeding, and survival, Measuring pollution and environmental stress effects on animal health.\nConservation planning – Assessing risk factors for endangered species and predicting population trends using statistical models.\nExperimental studies - Effects of temperature on insect development.\nGenetics and Evolutionary Biology Studies - Statistical analysis of genetic variation within and between populations.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introdiction to Statistics</span>"
     ]
   },
   {
@@ -200,33 +170,153 @@
     ]
   },
   {
-    "objectID": "01-chap1.html",
-    "href": "01-chap1.html",
-    "title": "1  Introdiction to Statistics",
+    "objectID": "03-chap3.html",
+    "href": "03-chap3.html",
+    "title": "3  Introduction to R programming basics and R studio",
     "section": "",
-    "text": "1.1 What is Statistics?\nThe science of collecting, organizing, and analyzing data, and presenting and interpreting the results derived from that data to gain insights and make informed decisions.",
+    "text": "3.1 What is R and RStudio?\nR is a programming language and software environment designed mainly for statistical computing, data analysis, and visualization.",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introdiction to Statistics</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Introduction to R programming basics and R studio</span>"
     ]
   },
   {
-    "objectID": "01-chap1.html#what-is-biostatistics",
-    "href": "01-chap1.html#what-is-biostatistics",
-    "title": "1  Introdiction to Statistics",
-    "section": "\n1.2 What is Biostatistics?",
-    "text": "1.2 What is Biostatistics?\nWhen statistical methods are applied to specific fields, the discipline often takes on a specialized name. When statistical methods are applied to biological and medical sciences, it is called “Biostatistics”. Table 1 shows Specialized fields where statistics is applied.\n\n\n\nSpecialized fields where statistics is applied\n\nField\nDescription\n\n\n\nEpidemiology\nThe study and analysis of the patterns, causes, and effects of health and disease conditions in populations.\n\n\nAstrostatistics\nApplies statistical analysis to the understanding of astronomical data.\n\n\nBiostatistics\nStudies biological phenomena and provides statistical methods for analysis of biological data.\n\n\nDemography\nStatistical study of all populations, including size, distribution, and structure.\n\n\nSocial statistics\nStudy of human behavior in a social environment using statistical methods.\n\n\nChemometrics\nScience of extracting information from chemical systems by data-driven means.\n\n\nEconometrics\nUses economic theory, mathematics, and statistical inference to quantify economic phenomena.\n\n\nPsychometrics\nApplies statistical methods to psychological measurements, tests, and surveys.\n\n\nPharmacometrics\nModeling drug dose-response relationships, pharmacokinetics, and pharmacodynamics.\n\n\nBioinformatics / Biostatistics in Molecular Biology\nAnalyzes DNA, RNA, protein data, sequence alignments, and gene expression patterns.\n\n\nAgrimetrics / Agricultural Statistics\nStatistics applied to agriculture — crop yield trials, soil studies, plant breeding, pest control.\n\n\nEcological Statistics / Biostatistics in Ecology\nStatistics applied to ecology and wildlife studies — population surveys, species distribution, biodiversity indices.\n\n\nActuarial Statistics\nDiscipline that deals with assessing the risks in insurance and finance.\n\n\nForensic Statistics\nApplies statistics to analyze forensic data, including DNA testing results.\n\n\nSpatial Statistics\nAnalysis of spatially referenced data to detect patterns or relationships.\n\n\nJurimetrics\nApplication of probability and statistics to law and legal decisions.\n\n\nSports Analytics / Sports Statistics\nStatistics applied to sports — analyzing player performance, game strategies, and injury risks.\n\n\nEnvironmental Statistics\nStatistics in environmental science — air/water quality, climate data, pollution modeling, conservation research.",
+    "objectID": "03-chap3.html#what-is-r-and-rstudio",
+    "href": "03-chap3.html#what-is-r-and-rstudio",
+    "title": "3  Introduction to R programming basics and R studio",
+    "section": "",
+    "text": "Why R?\n\nFree and Open-Source\nRapidly developing\nExcellent for Visualization and statistical data analysis\nActive community of users and developers",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introdiction to Statistics</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Introduction to R programming basics and R studio</span>"
     ]
   },
   {
-    "objectID": "01-chap1.html#role-of-statistics-in-zoology-and-biological-sciences",
-    "href": "01-chap1.html#role-of-statistics-in-zoology-and-biological-sciences",
-    "title": "1  Introdiction to Statistics",
-    "section": "\n1.3 Role of statistics in zoology and biological sciences",
-    "text": "1.3 Role of statistics in zoology and biological sciences\nStatistics play a vital role in every aspect of zoological research, helping scientists design studies, analyze data, and make informed conclusions.\nExamples in zoology include:\n\nPopulation estimation – Using sampling and statistical methods to estimate the number of elephants in a forest or birds in a wetland.\nMorphometric analysis – Comparing body size, wing length, or foot circumference among different species populations.\nBehavioral studies – Analyzing patterns such as feeding, or migration behaviors using observational data.\nEcological modeling – Assessing habitat preferences and species distribution using statistical models, Studying climate change impacts on migration, breeding, and survival, Measuring pollution and environmental stress effects on animal health.\nConservation planning – Assessing risk factors for endangered species and predicting population trends using statistical models.\nExperimental studies - Effects of temperature on insect development.\nGenetics and Evolutionary Biology Studies - Statistical analysis of genetic variation within and between populations.",
+    "objectID": "03-chap3.html#what-is-rstudio",
+    "href": "03-chap3.html#what-is-rstudio",
+    "title": "3  Introduction to R programming basics and R studio",
+    "section": "\n3.2 What is RStudio?",
+    "text": "3.2 What is RStudio?\nAn Integrated Development Environment (IDE) for R.\nWhy RStudio?\nMakes working with R much easier.",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introdiction to Statistics</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Introduction to R programming basics and R studio</span>"
+    ]
+  },
+  {
+    "objectID": "03-chap3.html#download-and-installing-r-rstudio-and-rtools",
+    "href": "03-chap3.html#download-and-installing-r-rstudio-and-rtools",
+    "title": "3  Introduction to R programming basics and R studio",
+    "section": "\n3.3 Download and Installing R, RStudio and Rtools",
+    "text": "3.3 Download and Installing R, RStudio and Rtools\nVisit the website https://posit.co/download/rstudio-desktop/ and download the latest version of R and RStudio software.\nIf you are a Windows user, you will also need to install an additional software package: Rtools.\nNote:\n\nDouble-click the R software .exe file, follow the installation wizard by keeping the default settings and clicking Next, and finally click Finish to complete the installation.\nAfter installing R, double-click the RStudio .exe file, follow the installation wizard by keeping the default settings and clicking Next, and then click Finish to complete the setup.\nPlease ensure that you install R before installing RStudio.\nAfter installing both R and RStudio, double-click the RStudio icon to open it. In the console, type the following command:\n\nR.version.string\nPress Enter, and note down the displayed R version in your notebook.\n\nTo install Rtools\n\nDownload Rtools from here https://cran.r-project.org/bin/windows/Rtools/\nDownload the correct Rtools installer for your R version from the official Comprehensive R Archive Network (CRAN) page.\n\nFor example:\n\nIf your R version is 4.5.x, download Rtools45quarto render\n\n\nIf your R version is 4.4.x, download Rtools44\nIf your R version is 4.3.x, download Rtools43\nIf your R version is 4.2.x, download Rtools42\nIf your R version is 4.0–4.1.x, download Rtools40\n\n\nRun the downloaded .exe file and follow the installer prompts, typically accepting the default options and installation directory.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Introduction to R programming basics and R studio</span>"
+    ]
+  },
+  {
+    "objectID": "03-chap3.html#introduction-to-r-studio-panes",
+    "href": "03-chap3.html#introduction-to-r-studio-panes",
+    "title": "3  Introduction to R programming basics and R studio",
+    "section": "\n3.4 Introduction to R Studio Panes",
+    "text": "3.4 Introduction to R Studio Panes\nSteps\n\nDouble click the RStudio icon. You will see a window like this.\n\n 2. Go to File -&gt; New File -&gt; RScript\n\nSource/Script: Where you write and save your R code.\nConsole: Where the code is executed and results are displayed.\nEnvironment, History, Connections, Build, Tutorial: Where objects, past commands, database connections, projects, and learning aids are managed.\nFiles, Plots, Packages, Help, Viewer, Presentation: Where you browse files, view plots, manage packages, access help, preview outputs, and create presentations.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Introduction to R programming basics and R studio</span>"
+    ]
+  },
+  {
+    "objectID": "03-chap3.html#creating-an-r-project",
+    "href": "03-chap3.html#creating-an-r-project",
+    "title": "3  Introduction to R programming basics and R studio",
+    "section": "\n3.5 Creating an R Project",
+    "text": "3.5 Creating an R Project\nCreating an R Project means setting up a working directory where all your related files, such as scripts, data, and outputs are organized and stored together.\nSteps:\nFile -&gt; New Project and follow the below steops\n\n\n\n\nGive a project name and location to create project folder.\nOnce you have created a project, Windows users will see the project name displayed in the top-right corner of RStudio; for other operating systems, the location may vary but it will still be visible in the RStudio interface.\nType the following command on the console to view the project location.\ngetwd()\nThis will give you the current working directory. The working directory is the folder where R reads and saves files. When you create an R Project, the project folder itself becomes the working directory, so the project and working directory are essentially the same.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Introduction to R programming basics and R studio</span>"
+    ]
+  },
+  {
+    "objectID": "03-chap3.html#r-as-a-calculator",
+    "href": "03-chap3.html#r-as-a-calculator",
+    "title": "3  Introduction to R programming basics and R studio",
+    "section": "\n3.6 R as a calculator",
+    "text": "3.6 R as a calculator\nLet’s type some simple commands. Type these in the console.\n\n\n[1] 3\n\n\n\n\n[1] 100\n\n\n\n\n[1] 0.01\n\n\n\n\n [1]  0.15890854 -0.80912112 -1.74620780 -1.01589683 -0.24016239 -0.16984901\n [7] -2.65781902 -0.81594270 -0.80903656 -2.43277390 -1.09211619  0.93945282\n[13]  0.07951464 -0.87402510 -0.18756695  0.76958998  1.41612598 -0.14797052\n[19]  0.88573395 -1.87736848 -0.81130150  1.64844134  0.80620637 -0.98552805\n[25] -1.80498428 -0.71831727 -1.78919021 -0.53482129  1.85204628 -0.06494345\n[31]  1.68924135  1.33387059 -1.96524234 -1.39668797 -0.19497268 -0.30040082\n[37]  0.39985305 -1.66686929 -0.42462608 -0.35028017 -1.57951576  0.68236928\n[43]  0.86090897  2.32847579 -1.01623305  0.57427954  1.36189013 -0.38736247\n[49]  0.21443356 -1.10939444\n\n\n\n\n\n\n\n\n\n\nIn R, square brackets [ ] indicate the index or position of an element in a vector, list, or other data structure.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Introduction to R programming basics and R studio</span>"
+    ]
+  },
+  {
+    "objectID": "03-chap3.html#commenting",
+    "href": "03-chap3.html#commenting",
+    "title": "3  Introduction to R programming basics and R studio",
+    "section": "\n3.7 Commenting",
+    "text": "3.7 Commenting\nCommenting in R is adding notes or explanations in your code using #; comments are ignored when the code runs but help you and others understand the code.\n\n\n[1] 3\n\n\nNotice the changes in the “History” and “Environment” tabs.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Introduction to R programming basics and R studio</span>"
+    ]
+  },
+  {
+    "objectID": "03-chap3.html#working-on-a-script-file",
+    "href": "03-chap3.html#working-on-a-script-file",
+    "title": "3  Introduction to R programming basics and R studio",
+    "section": "\n3.8 Working on a script file",
+    "text": "3.8 Working on a script file\nA script file is a text file where you write and save R code so it can be run multiple times without retyping.\nOpen a script file and save it as “script1.R”. Type the following in the script file.\n# 1. Assign values\nx &lt;- 10\ny &lt;- 5\n\n# 2. Basic arithmetic\nsum &lt;- x + y\ndiff &lt;- x - y\nprod &lt;- x * y\nquot &lt;- x / y\n\n# 3. Create a vector\nvec &lt;- c(1, 2, 3, 4, 5)\n\n# 4. Access elements (indexing)\nvec[1]       # first element\nvec[2:4]     # elements 2 to 4\n\n# 5. Basic functions\nmean(vec)    # mean of vector\nsum(vec)     # sum of elements\nlength(vec)  # number of elements\n\n# 6. Create a simple data frame\ndf &lt;- data.frame(Name = c(\"A\",\"B\",\"C\"), Score = c(10, 15, 20))\n\n# 7. View data\ndf\nhead(df)     # first few rows\n\n# 8. Help\n?mean        # get help for a function",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Introduction to R programming basics and R studio</span>"
+    ]
+  },
+  {
+    "objectID": "03-chap3.html#working-with-vectors",
+    "href": "03-chap3.html#working-with-vectors",
+    "title": "3  Introduction to R programming basics and R studio",
+    "section": "\n3.9 Working with vectors",
+    "text": "3.9 Working with vectors\nA vector in R is a sequence of elements of the same type (numeric, character, or logical), and it is one of the basic data structures used to store and manipulate data.\n\n\n[1] 1\n\n\n[1] \"banana\" \"cherry\"\n\n\n[1] 15\n\n\n   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. \n      1       2       3       3       4       5 \n\n\n[1] 4\n\n\n   Length     Class      Mode \n        4 character character \n\n\nfruits\n apple banana cherry \n     2      1      1",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Introduction to R programming basics and R studio</span>"
+    ]
+  },
+  {
+    "objectID": "03-chap3.html#access-help-file",
+    "href": "03-chap3.html#access-help-file",
+    "title": "3  Introduction to R programming basics and R studio",
+    "section": "\n3.10 Access help file",
+    "text": "3.10 Access help file\nFunctions in R tell R to perform a specific task. To learn more about a function, type ?function_name in the console—this will open the function’s help file.\nExample\n?mean\n\nIn the help file, mean {base} indicates that the mean function is part of the base package. You can think of packages in R like apps on your mobile phone: the default installation provides some basic packages, and for additional functionality, you can install extra packages just like installing new apps on your phone.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Introduction to R programming basics and R studio</span>"
+    ]
+  },
+  {
+    "objectID": "03-chap3.html#installing-packages",
+    "href": "03-chap3.html#installing-packages",
+    "title": "3  Introduction to R programming basics and R studio",
+    "section": "\n3.11 Installing packages",
+    "text": "3.11 Installing packages\nThere are two ways that we can use to install packages.\nMethod 1\nGo to the “Packages” tab and click install.\n\nThen, type the names of the packages you need to install and click “install”.\n\nThe installation process will then start, and you will see progress messages displayed in the console.\nMethod 2\nType the following command on the console.\nTo install tidyverse package.\ninstall.packages(\"tidyverse\")\nTo install palmerpenguins package.\ninstall.packages(\"palmerpenguins\")\nGeneral format: Replace “xxx” with the name of the package you need to install.\ninstall.packages(“xxx”)",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Introduction to R programming basics and R studio</span>"
+    ]
+  },
+  {
+    "objectID": "03-chap3.html#working-with-packages",
+    "href": "03-chap3.html#working-with-packages",
+    "title": "3  Introduction to R programming basics and R studio",
+    "section": "\n3.12 Working with packages",
+    "text": "3.12 Working with packages\nTo use a package in R, you first need to load it. Whenever you want to access a function from that package, use the following command.\nFor example to work with functions in tidyverse packages\nTO work with palmerpenguins",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Introduction to R programming basics and R studio</span>"
+    ]
+  },
+  {
+    "objectID": "03-chap3.html#factors",
+    "href": "03-chap3.html#factors",
+    "title": "3  Introduction to R programming basics and R studio",
+    "section": "\n3.13 Factors",
+    "text": "3.13 Factors\nA factor in R is used to represent categorical data. It stores both the values and the set of possible levels (categories) for the variable.\n\n\n[1] Male   Female Female Male  \nLevels: Female Male\n\n\n[1] \"Female\" \"Male\"  \n\n\ngender\nFemale   Male \n     2      2 \n\n\nFemale   Male \n     2      2 \n\n\nYour turn:\nCreate the gender vector as a character vector, then run table(gender) and summary(gender). Observe the differences in the outputs compared to when gender is a factor.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Introduction to R programming basics and R studio</span>"
+    ]
+  },
+  {
+    "objectID": "03-chap3.html#create-a-tibble",
+    "href": "03-chap3.html#create-a-tibble",
+    "title": "3  Introduction to R programming basics and R studio",
+    "section": "\n3.14 Create a tibble",
+    "text": "3.14 Create a tibble\n\n\n# A tibble: 10 × 4\n      ID Gender Weight Height\n   &lt;int&gt; &lt;chr&gt;   &lt;dbl&gt;  &lt;dbl&gt;\n 1     1 male      5       10\n 2     2 male     10       20\n 3     3 male     15       30\n 4     4 male      7       14\n 5     5 male      7.5     15\n 6     6 female   10.5     21\n 7     7 female    8.5     17\n 8     8 female    6       12\n 9     9 female    8       16\n10    10 female   11.5     23\n\n\nSome functions that we can use with tibbles\n\n\n# A tibble: 6 × 4\n     ID Gender Weight Height\n  &lt;int&gt; &lt;chr&gt;   &lt;dbl&gt;  &lt;dbl&gt;\n1     1 male      5       10\n2     2 male     10       20\n3     3 male     15       30\n4     4 male      7       14\n5     5 male      7.5     15\n6     6 female   10.5     21\n\n\n# A tibble: 6 × 4\n     ID Gender Weight Height\n  &lt;int&gt; &lt;chr&gt;   &lt;dbl&gt;  &lt;dbl&gt;\n1     5 male      7.5     15\n2     6 female   10.5     21\n3     7 female    8.5     17\n4     8 female    6       12\n5     9 female    8       16\n6    10 female   11.5     23\n\n\nRows: 10\nColumns: 4\n$ ID     &lt;int&gt; 1, 2, 3, 4, 5, 6, 7, 8, 9, 10\n$ Gender &lt;chr&gt; \"male\", \"male\", \"male\", \"male\", \"male\", \"female\", \"female\", \"fe…\n$ Weight &lt;dbl&gt; 5.0, 10.0, 15.0, 7.0, 7.5, 10.5, 8.5, 6.0, 8.0, 11.5\n$ Height &lt;dbl&gt; 10, 20, 30, 14, 15, 21, 17, 12, 16, 23\n\n\n       ID           Gender              Weight           Height     \n Min.   : 1.00   Length:10          Min.   : 5.000   Min.   :10.00  \n 1st Qu.: 3.25   Class :character   1st Qu.: 7.125   1st Qu.:14.25  \n Median : 5.50   Mode  :character   Median : 8.250   Median :16.50  \n Mean   : 5.50                      Mean   : 8.900   Mean   :17.80  \n 3rd Qu.: 7.75                      3rd Qu.:10.375   3rd Qu.:20.75  \n Max.   :10.00                      Max.   :15.000   Max.   :30.00  \n\n\n[1] 10  4",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Introduction to R programming basics and R studio</span>"
     ]
   }
 ]
