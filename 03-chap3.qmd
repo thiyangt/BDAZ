@@ -1,0 +1,76 @@
+# Introduction to R programming basics and R studio {#sec-chap3}
+
+## What is R and RStudio?
+
+R is a programming language and software environment designed mainly for statistical computing, data analysis, and visualization.
+
+#### Why R?
+
+- Free and Open-Source
+
+- Rapidly developing
+
+- Excellent for Visualization and statistical data analysis
+
+- Active community of users and developers
+
+## What is RStudio?
+
+An Integrated Development Environment (IDE) for R.
+
+#### Why RStudio?
+
+Makes working with R much easier.
+
+## Download and Installing R, RStudio and Rtools 
+
+Visit the website [https://posit.co/download/rstudio-desktop/](https://posit.co/download/rstudio-desktop/) and download the latest version of R and RStudio software.
+
+
+If you are a Windows user, you will also need to install an additional software package: **Rtools**.
+
+
+
+Note:
+
+- Double-click the R software .exe file, follow the installation wizard by keeping the default settings and clicking Next, and finally click Finish to complete the installation.
+
+- After installing R, double-click the RStudio .exe file, follow the installation wizard by keeping the default settings and clicking Next, and then click Finish to complete the setup.
+
+-   Please ensure that you install R before installing RStudio.
+
+-   After installing both R and RStudio, double-click the RStudio icon to open it. In the console, type the following command:
+
+`R.version.string`
+
+Press Enter, and note down the displayed R version in your notebook.
+
+![](img1.png)
+
+To install **Rtools**
+
+1.  Download Rtools from here <https://cran.r-project.org/bin/windows/Rtools/>
+
+2.  Download the correct Rtools installer for your R version from the official Comprehensive R Archive Network (CRAN) page.
+
+For example:
+
+-   If your R version is 4.5.x, download Rtools45quarto render
+
+<!-- -->
+
+-   If your R version is 4.4.x, download Rtools44
+
+-   If your R version is 4.3.x, download Rtools43
+
+-   If your R version is 4.2.x, download Rtools42
+
+-   If your R version is 4.0–4.1.x, download Rtools40
+
+1.  Run the downloaded .exe file and follow the installer prompts, typically accepting the default options and installation directory.
+
+
+## Download and Installing R and R Studio
+
+
+

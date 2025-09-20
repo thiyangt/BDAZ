@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.6.42">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-<meta name="author" content="Thiyanga S. Talagala">
-<title>Biostatistics and Data Analysis for Zoologists</title>
+
+
+<title>3&nbsp; Introduction to R programming basics and R studio – Biostatistics and Data Analysis for Zoologists</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,6 +22,7 @@ ul.task-list li input[type="checkbox"] {
 }
 </style>
 
+
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="site_libs/quarto-nav/headroom.min.js"></script>
 <script src="site_libs/clipboard/clipboard.min.js"></script>
@@ -27,7 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./01-chap1.html" rel="next">
+<link href="./refs.html" rel="next">
+<link href="./02-chap2.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -36,7 +40,8 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-47708def744f7d6bf9e6ade08d3fbeef.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-dcaec5c8d80e8fa62fc25e24c15f567a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
+<link href="site_libs/bootstrap/bootstrap-dcaec5c8d80e8fa62fc25e24c15f567a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
   "collapse-after": 3,
@@ -62,25 +67,35 @@ ul.task-list li input[type="checkbox"] {
     "search-submit-button-title": "Submit",
     "search-label": "Search"
   }
-}</script><link href="https://fonts.googleapis.com/css?family=Fira+Sans|Merriweather|Source%20Code%20Pro" rel="stylesheet">
+}</script>
+<link href="https://fonts.googleapis.com/css?family=Fira+Sans|Merriweather|Source Code Pro" rel="stylesheet">
+
+
 </head>
+
 <body class="nav-sidebar docked">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top"><nav class="quarto-secondary-nav"><div class="container-fluid d-flex">
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Front matter</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./03-chap3.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Introduction to R programming basics and R studio</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
-  </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto"><div class="pt-lg-2 mt-2 text-left sidebar-header">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="./">Biostatistics and Data Analysis for Zoologists</a> 
     </div>
@@ -92,22 +107,28 @@ ul.task-list li input[type="checkbox"] {
         </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
-<li class="sidebar-item">
+        <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Front matter</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./01-chap1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introdiction to Statistics</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./02-chap2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Literature Review</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Key Statistical Terminologies</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./03-chap3.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Introduction to R programming basics and R studio</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -117,31 +138,34 @@ ul.task-list li input[type="checkbox"] {
   </div>
 </li>
     </ul>
-</div>
-</nav><div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title"><b>Sections</b></h2>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title"><b>Sections</b></h2>
    
   <ul class="collapse">
-<li><a href="#copyright-notice" id="toc-copyright-notice" class="nav-link active" data-scroll-target="#copyright-notice">Copyright notice</a></li>
-  </ul></nav>
+  <li><a href="#what-is-r-and-rstudio" id="toc-what-is-r-and-rstudio" class="nav-link active" data-scroll-target="#what-is-r-and-rstudio"><span class="header-section-number">3.1</span> What is R and RStudio?</a></li>
+  <li><a href="#what-is-rstudio" id="toc-what-is-rstudio" class="nav-link" data-scroll-target="#what-is-rstudio"><span class="header-section-number">3.2</span> What is RStudio?</a></li>
+  <li><a href="#download-and-installing-r-rstudio-and-rtools" id="toc-download-and-installing-r-rstudio-and-rtools" class="nav-link" data-scroll-target="#download-and-installing-r-rstudio-and-rtools"><span class="header-section-number">3.3</span> Download and Installing R, RStudio and Rtools</a></li>
+  <li><a href="#download-and-installing-r-and-r-studio" id="toc-download-and-installing-r-and-r-studio" class="nav-link" data-scroll-target="#download-and-installing-r-and-r-studio"><span class="header-section-number">3.4</span> Download and Installing R and R Studio</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
-<h1 class="title">Biostatistics and Data Analysis for Zoologists</h1>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span id="sec-chap3" class="quarto-section-identifier"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Introduction to R programming basics and R studio</span></span></h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Thiyanga S. Talagala </p>
-          </div>
-  </div>
     
   
     
@@ -149,13 +173,72 @@ ul.task-list li input[type="checkbox"] {
   
 
 
-</header><p>Understanding and interpreting quantitative data is fundamental for modern zoological research. “Biostatistics and Data Analysis for Zoologists (BDAZ)” serves as a comprehensive, practical textbook that introduces statistical concepts and data analysis techniques specifically designed for zoologists, wildlife biologists, and ecology researchers. Each topic in this book includes a practical session using R.</p>
-<section id="copyright-notice" class="level1 unnumbered"><h1 class="unnumbered">Copyright notice</h1>
-<p>Produced on 13 September 2025.</p>
-<p>© Thiyanga S. Talagala (2025).</p>
+</header>
 
 
-</section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+<section id="what-is-r-and-rstudio" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="what-is-r-and-rstudio"><span class="header-section-number">3.1</span> What is R and RStudio?</h2>
+<p>R is a programming language and software environment designed mainly for statistical computing, data analysis, and visualization.</p>
+<section id="why-r" class="level4">
+<h4 class="anchored" data-anchor-id="why-r">Why R?</h4>
+<ul>
+<li><p>Free and Open-Source</p></li>
+<li><p>Rapidly developing</p></li>
+<li><p>Excellent for Visualization and statistical data analysis</p></li>
+<li><p>Active community of users and developers</p></li>
+</ul>
+</section>
+</section>
+<section id="what-is-rstudio" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="what-is-rstudio"><span class="header-section-number">3.2</span> What is RStudio?</h2>
+<p>An Integrated Development Environment (IDE) for R.</p>
+<section id="why-rstudio" class="level4">
+<h4 class="anchored" data-anchor-id="why-rstudio">Why RStudio?</h4>
+<p>Makes working with R much easier.</p>
+</section>
+</section>
+<section id="download-and-installing-r-rstudio-and-rtools" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="download-and-installing-r-rstudio-and-rtools"><span class="header-section-number">3.3</span> Download and Installing R, RStudio and Rtools</h2>
+<p>Visit the website <a href="https://posit.co/download/rstudio-desktop/">https://posit.co/download/rstudio-desktop/</a> and download the latest version of R and RStudio software.</p>
+<p>If you are a Windows user, you will also need to install an additional software package: <strong>Rtools</strong>.</p>
+<p>Note:</p>
+<ul>
+<li><p>Double-click the R software .exe file, follow the installation wizard by keeping the default settings and clicking Next, and finally click Finish to complete the installation.</p></li>
+<li><p>After installing R, double-click the RStudio .exe file, follow the installation wizard by keeping the default settings and clicking Next, and then click Finish to complete the setup.</p></li>
+<li><p>Please ensure that you install R before installing RStudio.</p></li>
+<li><p>After installing both R and RStudio, double-click the RStudio icon to open it. In the console, type the following command:</p></li>
+</ul>
+<p><code>R.version.string</code></p>
+<p>Press Enter, and note down the displayed R version in your notebook.</p>
+<p><img src="img1.png" class="img-fluid"></p>
+<p>To install <strong>Rtools</strong></p>
+<ol type="1">
+<li><p>Download Rtools from here <a href="https://cran.r-project.org/bin/windows/Rtools/" class="uri">https://cran.r-project.org/bin/windows/Rtools/</a></p></li>
+<li><p>Download the correct Rtools installer for your R version from the official Comprehensive R Archive Network (CRAN) page.</p></li>
+</ol>
+<p>For example:</p>
+<ul>
+<li>If your R version is 4.5.x, download Rtools45quarto render</li>
+</ul>
+<!-- -->
+<ul>
+<li><p>If your R version is 4.4.x, download Rtools44</p></li>
+<li><p>If your R version is 4.3.x, download Rtools43</p></li>
+<li><p>If your R version is 4.2.x, download Rtools42</p></li>
+<li><p>If your R version is 4.0–4.1.x, download Rtools40</p></li>
+</ul>
+<ol type="1">
+<li>Run the downloaded .exe file and follow the installer prompts, typically accepting the default options and installation directory.</li>
+</ol>
+</section>
+<section id="download-and-installing-r-and-r-studio" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="download-and-installing-r-and-r-studio"><span class="header-section-number">3.4</span> Download and Installing R and R Studio</h2>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
     const mode = bsSheetEl.getAttribute("data-mode");
@@ -571,15 +654,21 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
 });
-</script><nav class="page-navigation"><div class="nav-page nav-page-previous">
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./02-chap2.html" class="pagination-link" aria-label="Key Statistical Terminologies">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Key Statistical Terminologies</span></span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./01-chap1.html" class="pagination-link" aria-label="Introduction">
-        <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./refs.html" class="pagination-link" aria-label="Bibliography">
+        <span class="nav-page-text">Bibliography</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
 </div> <!-- /content -->
+
 
 
 

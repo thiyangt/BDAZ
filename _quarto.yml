@@ -9,6 +9,8 @@ book:
     - text: "Front matter"
       file: index.qmd
     - "01-chap1.qmd"
+    - "02-chap2.qmd"
+    - "03-chap3.qmd"
     - "refs.qmd"
   sidebar:
     style: "docked"

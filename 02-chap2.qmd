@@ -1,1 +1,223 @@
-# Data Collection and Sampling {#sec-chap2}
+# Key Statistical Terminologies {#sec-chap2}
+
+```{r}
+#| label: load_packages
+#| include: false
+library(dplyr)
+library(ggplot2)
+library(tidyr)
+library(tsibble)
+library(feasts)
+library(fable)
+```
+
+## Primary vs Secondary Data
+
+
+### Primary Data
+
+-   Primary data refers to information collected directly by the researcher.
+
+-   This data is gathered specifically to address the researcher’s current problem or objective, tailored to meet the specific requirements of a particular study.
+
+**Methods of collecting primary data**
+
+-   surveys
+
+-   census
+
+-   interviews
+
+-   observational studies
+
+-   experimental studies
+
+-   case studies
+
+-   content analysis
+
+-   ethnography
+
+-   focus groups
+
+-   analyse social media content
+
+### Secondary Data
+
+-   Secondary data refers to information that has already been collected, compiled, and published by others for purposes different from the researcher’s current study.
+
+
+**Methods of collecting secondary data**
+
+-   Online databases: These databases can be categorized into two main types based on their accessibility: commercial and open-access.
+
+-   Government and Institutional Reports
+
+
+**Why Secondary Data?**
+
+1.  Cost-Effective (not always)
+
+2.  Time-saving
+
+3.  Preliminary Research: It serves as a valuable resource for preliminary research or background studies, helping to identify gaps in knowledge, formulate hypotheses, and refine research questions.
+
+4.  Historical Analysis: Enables researchers to conduct historical analyses and understand past trends, events, and behaviors, which can inform present and future research directions.
+
+5.  Validation: Secondary data can be used to validate findings from primary data
+
+
+## Observational Studies vs Experimental Study
+
+### Observational Study
+
+The researcher observes and collects data without manipulating variables.
+
+### Experimental study
+
+The researcher manipulates one or more variables (independent variables) and measures the effect on another variable (dependent variable).
+
+### Example for observational study vs experimental study
+
+Research question: "Investigate the effect of fertilizer A and B on chili crop yield."
+
+Following is how two researchers started the data collection to answer the research question. 
+
+### Researcher 1
+
+**Step 1:** Population: Identify two groups of chili farmers based on the fertilizer they use.
+
+Group A: Farmers using fertilizer A.
+
+Group B: Farmers using fertilizer B.
+
+**Step 2:** Data collection: Collect data on chili crop yield from both groups at the end of the growing season.
+
+### Researcher 2
+
+**Step 1:** Randomization: Randomly assign plots of land to receive either fertilizer A or fertilizer B. Same seed variety is used.
+
+**Step 2:** Control Conditions: Ensure all other conditions (water, sunlight, humidity, soil type) are kept constant across all plots. Use consistent pest management practices and ensure uniform planting and harvesting techniques.
+
+**Step 3:** Data Collection: Measure the chili crop yield from each plot at the end of the growing season.
+
+Here researcher 1 used observation study to collect data and researcher two use experimental study to collect data.
+
+## Population
+
+The [complete collection]{style="color:red;"} of individuals or objects that are of interest.
+
+```{r}
+#|echo: false
+knitr::include_graphics("ip2.png")
+```
+
+Example
+
+We're interested in studying the average height of [all adults in a country]{style="color:blue;"}, the population is all adult residents of that country.
+
+## Unit
+
+A unit is a single member of the population. It could be an individual or an object.
+
+```{r}
+#|echo: false
+knitr::include_graphics("ip4.png")
+```
+
+**Example**
+
+1.  Population
+
+We're interested in studying the average height of [all adults in a country]{style="color:blue;"}, the population is all adult residents of that country.
+
+2.  Unit
+
+In our example of studying adult height, [each adult residing]{style="color:blue;"} in the country would be a unit.
+
+## Sample
+
+A subset of units in a population.
+
+```{r}
+#|echo: false
+knitr::include_graphics("ip5.png")
+```
+
+
+## Sampling
+
+Sampling is the [process]{style="color:red;"} of selecting a subset of individuals or items from a population.
+
+```{r}
+#|echo: false
+knitr::include_graphics("ip7.png")
+```
+
+## Statistics
+
+A numerical summary of a sample.
+
+<!--A numerical value summarizing the sample data.-->
+
+```{r}
+#|echo: false
+knitr::include_graphics("ip8.png")
+```
+
+## Parameter
+
+A numerical summary of a population.
+
+```{r}
+#|echo: false
+knitr::include_graphics("ip9.png")
+```
+
+
+## Two Branches of Statistics
+
+
+### 1. Descriptive Statistics
+
+Describe and summarize the collected data through numerical summaries, tables, and graphs.
+
+### 2. Inferential Statistics
+
+Statistical inference refers to the methods used to make estimations, decisions, or predictions about a population parameters based on the statistics computed from a sample that was selected from that population.
+
+```{r}
+#|echo: false
+knitr::include_graphics("ip11.png")
+```
+
+## Census
+
+A [census]{style="color:red;"} involves collecting information from every individual or unit within the entire population of interest.
+
+## Sample Survey
+
+A [survey]{style="color:red;"} involves collecting information from a subset (sample) of the population to estimate characteristics of the entire population.
+
+## Notations
+
+[Parameters]{style="color:red;"} are usually denoted by Greek letters
+
+Example:
+
+$\mu - \text{population mean}$
+
+$\sigma - \text{population variance}$
+
+[Statistics]{style="color:blue;"} are denoted by English letters (Capital or Simple? You will learn more of this in the "Statistical Inference" section)
+
+Eample:
+
+$\bar{X} - \text{sample mean}$
+
+$S^2 - \text{sample variance}$
+
+
+-   The value of the population parameter does not change.
+
+-   Sample statistics vary from sample to sample.
