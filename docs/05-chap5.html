@@ -145,11 +145,17 @@ ul.task-list li input[type="checkbox"] {
 <li><a href="#dataset-use-for-illustrations" id="toc-dataset-use-for-illustrations" class="nav-link active" data-scroll-target="#dataset-use-for-illustrations"><span class="header-section-number">5.1</span> Dataset Use for Illustrations</a></li>
   <li><a href="#qualitative-data-univariate-analysis" id="toc-qualitative-data-univariate-analysis" class="nav-link" data-scroll-target="#qualitative-data-univariate-analysis"><span class="header-section-number">5.2</span> Qualitative data: Univariate Analysis</a></li>
   <li><a href="#qualitative-data-bivariate-analysis" id="toc-qualitative-data-bivariate-analysis" class="nav-link" data-scroll-target="#qualitative-data-bivariate-analysis"><span class="header-section-number">5.3</span> Qualitative data: Bivariate Analysis</a></li>
-  <li><a href="#quntitative-data-univariate-analysis" id="toc-quntitative-data-univariate-analysis" class="nav-link" data-scroll-target="#quntitative-data-univariate-analysis"><span class="header-section-number">5.4</span> Quntitative data: Univariate Analysis</a></li>
-  <li><a href="#quantitative-data-bivariate-analysis" id="toc-quantitative-data-bivariate-analysis" class="nav-link" data-scroll-target="#quantitative-data-bivariate-analysis"><span class="header-section-number">5.5</span> Quantitative data: Bivariate Analysis</a></li>
-  <li><a href="#qualitative-vs-quantitative" id="toc-qualitative-vs-quantitative" class="nav-link" data-scroll-target="#qualitative-vs-quantitative"><span class="header-section-number">5.6</span> Qualitative vs Quantitative</a></li>
-  <li><a href="#quantitative-vs-quantitative" id="toc-quantitative-vs-quantitative" class="nav-link" data-scroll-target="#quantitative-vs-quantitative"><span class="header-section-number">5.7</span> Quantitative vs Quantitative</a></li>
-  <li><a href="#quantitative-vs-quantitative-with-a-qualitative-variable" id="toc-quantitative-vs-quantitative-with-a-qualitative-variable" class="nav-link" data-scroll-target="#quantitative-vs-quantitative-with-a-qualitative-variable"><span class="header-section-number">5.8</span> Quantitative vs Quantitative with a Qualitative variable</a></li>
+  <li><a href="#percentage-chart" id="toc-percentage-chart" class="nav-link" data-scroll-target="#percentage-chart"><span class="header-section-number">5.4</span> Percentage chart</a></li>
+  <li><a href="#counts-chart" id="toc-counts-chart" class="nav-link" data-scroll-target="#counts-chart"><span class="header-section-number">5.5</span> Counts chart</a></li>
+  <li><a href="#grouped-bar-chart-percentage" id="toc-grouped-bar-chart-percentage" class="nav-link" data-scroll-target="#grouped-bar-chart-percentage"><span class="header-section-number">5.6</span> Grouped Bar Chart (Percentage)</a></li>
+  <li><a href="#stacked-bar-chart" id="toc-stacked-bar-chart" class="nav-link" data-scroll-target="#stacked-bar-chart"><span class="header-section-number">5.7</span> Stacked Bar Chart</a></li>
+  <li><a href="#which-is-the-best-1" id="toc-which-is-the-best-1" class="nav-link" data-scroll-target="#which-is-the-best-1"><span class="header-section-number">5.8</span> Which is the best?</a></li>
+  <li><a href="#quntitative-data-univariate-analysis" id="toc-quntitative-data-univariate-analysis" class="nav-link" data-scroll-target="#quntitative-data-univariate-analysis"><span class="header-section-number">5.9</span> Quntitative data: Univariate Analysis</a></li>
+  <li><a href="#quantitative-data-bivariate-analysis" id="toc-quantitative-data-bivariate-analysis" class="nav-link" data-scroll-target="#quantitative-data-bivariate-analysis"><span class="header-section-number">5.10</span> Quantitative data: Bivariate Analysis</a></li>
+  <li><a href="#qualitative-vs-quantitative" id="toc-qualitative-vs-quantitative" class="nav-link" data-scroll-target="#qualitative-vs-quantitative"><span class="header-section-number">5.11</span> Qualitative vs Quantitative</a></li>
+  <li><a href="#quantitative-vs-quantitative" id="toc-quantitative-vs-quantitative" class="nav-link" data-scroll-target="#quantitative-vs-quantitative"><span class="header-section-number">5.12</span> Quantitative vs Quantitative</a></li>
+  <li><a href="#quantitative-vs-quantitative-with-a-qualitative-variable" id="toc-quantitative-vs-quantitative-with-a-qualitative-variable" class="nav-link" data-scroll-target="#quantitative-vs-quantitative-with-a-qualitative-variable"><span class="header-section-number">5.13</span> Quantitative vs Quantitative with a Qualitative variable</a></li>
+  <li><a href="#some-rules" id="toc-some-rules" class="nav-link" data-scroll-target="#some-rules"><span class="header-section-number">5.14</span> Some rules</a></li>
   </ul></nav>
     </div>
 <!-- main -->
@@ -170,92 +176,817 @@ ul.task-list li input[type="checkbox"] {
 
 </header><section id="dataset-use-for-illustrations" class="level2" data-number="5.1"><h2 data-number="5.1" class="anchored" data-anchor-id="dataset-use-for-illustrations">
 <span class="header-section-number">5.1</span> Dataset Use for Illustrations</h2>
-<p>We will use <code>penguins</code> dataset in the <code>palmerpenguins</code> package.</p>
-<p>Variable description</p>
-<div class="cell">
-<div class="cell-output-display">
-<table class="caption-top table table-sm table-striped small">
-<colgroup>
-<col style="width: 16%">
-<col style="width: 83%">
-</colgroup>
-<thead><tr class="header">
-<th style="text-align: left;">Variable name</th>
-<th style="text-align: left;">Variable description</th>
-</tr></thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">species</td>
-<td style="text-align: left;">penguin species (Adélie, Chinstrap and Gentoo)</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">island</td>
-<td style="text-align: left;">island in Palmer Archipelago, Antarctica (Biscoe, Dream or Torgersen)</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">bill_len</td>
-<td style="text-align: left;">bill length (millimeters)</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">bill_dep</td>
-<td style="text-align: left;">bill depth (millimeters)</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">flipper_len</td>
-<td style="text-align: left;">flipper length (millimeters)</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">body_mass</td>
-<td style="text-align: left;">body mass (grams)</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">sex</td>
-<td style="text-align: left;">penguin gender (female, male)</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">year</td>
-<td style="text-align: left;">the study year (2007, 2008, or 2009)</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<p>Preview of the dataset</p>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 344 × 8
+<pre><code># A tibble: 333 × 9
    species island    bill_length_mm bill_depth_mm flipper_length_mm body_mass_g
    &lt;fct&gt;   &lt;fct&gt;              &lt;dbl&gt;         &lt;dbl&gt;             &lt;int&gt;       &lt;int&gt;
  1 Adelie  Torgersen           39.1          18.7               181        3750
  2 Adelie  Torgersen           39.5          17.4               186        3800
  3 Adelie  Torgersen           40.3          18                 195        3250
- 4 Adelie  Torgersen           NA            NA                  NA          NA
- 5 Adelie  Torgersen           36.7          19.3               193        3450
- 6 Adelie  Torgersen           39.3          20.6               190        3650
- 7 Adelie  Torgersen           38.9          17.8               181        3625
- 8 Adelie  Torgersen           39.2          19.6               195        4675
- 9 Adelie  Torgersen           34.1          18.1               193        3475
-10 Adelie  Torgersen           42            20.2               190        4250
-# ℹ 334 more rows
-# ℹ 2 more variables: sex &lt;fct&gt;, year &lt;int&gt;</code></pre>
+ 4 Adelie  Torgersen           36.7          19.3               193        3450
+ 5 Adelie  Torgersen           39.3          20.6               190        3650
+ 6 Adelie  Torgersen           38.9          17.8               181        3625
+ 7 Adelie  Torgersen           39.2          19.6               195        4675
+ 8 Adelie  Torgersen           41.1          17.6               182        3200
+ 9 Adelie  Torgersen           38.6          21.2               191        3800
+10 Adelie  Torgersen           34.6          21.1               198        4400
+# ℹ 323 more rows
+# ℹ 3 more variables: gender &lt;fct&gt;, year &lt;int&gt;, BMI_category &lt;chr&gt;</code></pre>
 </div>
 </div>
 </section><section id="qualitative-data-univariate-analysis" class="level2" data-number="5.2"><h2 data-number="5.2" class="anchored" data-anchor-id="qualitative-data-univariate-analysis">
 <span class="header-section-number">5.2</span> Qualitative data: Univariate Analysis</h2>
 <p>Chart types we can use: Pie chart, Bar chart</p>
 <p>Tables: Tables with counts and percentages</p>
-</section><section id="qualitative-data-bivariate-analysis" class="level2" data-number="5.3"><h2 data-number="5.3" class="anchored" data-anchor-id="qualitative-data-bivariate-analysis">
+<section id="extract-qualitative-variables" class="level3"><h3 class="anchored" data-anchor-id="extract-qualitative-variables">Extract qualitative variables</h3>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 333 × 4
+   species island    gender BMI_category
+   &lt;fct&gt;   &lt;fct&gt;     &lt;fct&gt;  &lt;chr&gt;       
+ 1 Adelie  Torgersen male   Normal      
+ 2 Adelie  Torgersen female Normal      
+ 3 Adelie  Torgersen female Underweight 
+ 4 Adelie  Torgersen female Normal      
+ 5 Adelie  Torgersen male   Normal      
+ 6 Adelie  Torgersen female Normal      
+ 7 Adelie  Torgersen male   Overweight  
+ 8 Adelie  Torgersen female Underweight 
+ 9 Adelie  Torgersen male   Normal      
+10 Adelie  Torgersen male   Overweight  
+# ℹ 323 more rows</code></pre>
+</div>
+</div>
+</section><section id="nominal-scale-data" class="level3"><h3 class="anchored" data-anchor-id="nominal-scale-data">Nominal Scale Data</h3>
+</section><section id="tabular-representations" class="level3"><h3 class="anchored" data-anchor-id="tabular-representations">Tabular representations</h3>
+<p>Frequency tables/ Contingency Tables</p>
+<div class="cell">
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<thead><tr class="header">
+<th style="text-align: left;">Species</th>
+<th style="text-align: right;">Count</th>
+<th style="text-align: right;">Percentage (%)</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Adelie</td>
+<td style="text-align: right;">146</td>
+<td style="text-align: right;">43.84</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Chinstrap</td>
+<td style="text-align: right;">68</td>
+<td style="text-align: right;">20.42</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Gentoo</td>
+<td style="text-align: right;">119</td>
+<td style="text-align: right;">35.74</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Total</td>
+<td style="text-align: right;">333</td>
+<td style="text-align: right;">100.00</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section><section id="graphical-representations" class="level3"><h3 class="anchored" data-anchor-id="graphical-representations">Graphical Representations</h3>
+<ul>
+<li><p>Simple Bar Charts</p></li>
+<li><p>Pie Charts</p></li>
+</ul>
+<section id="vertical-bar-chart" class="level4"><h4 class="anchored" data-anchor-id="vertical-bar-chart">Vertical Bar Chart</h4>
+</section><section id="counts-bar-chart" class="level4"><h4 class="anchored" data-anchor-id="counts-bar-chart">Counts Bar Chart</h4>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="05-chap5_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="768"></p>
+</figure>
+</div>
+</div>
+</div>
+</section><section id="percentage-bar-chart" class="level4"><h4 class="anchored" data-anchor-id="percentage-bar-chart">Percentage Bar Chart</h4>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="05-chap5_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid figure-img" width="768"></p>
+</figure>
+</div>
+</div>
+</div>
+</section><section id="horizontal-bar-chart" class="level4"><h4 class="anchored" data-anchor-id="horizontal-bar-chart">Horizontal Bar Chart</h4>
+</section><section id="counts-bar-chart-1" class="level4"><h4 class="anchored" data-anchor-id="counts-bar-chart-1">Counts Bar Chart</h4>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="05-chap5_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid figure-img" width="768"></p>
+</figure>
+</div>
+</div>
+</div>
+</section><section id="percentage-bar-chart-1" class="level4"><h4 class="anchored" data-anchor-id="percentage-bar-chart-1">Percentage Bar Chart</h4>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="05-chap5_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid figure-img" width="768"></p>
+</figure>
+</div>
+</div>
+</div>
+</section><section id="sort-bars-for-easy-comparison" class="level4"><h4 class="anchored" data-anchor-id="sort-bars-for-easy-comparison">Sort bars for easy comparison</h4>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="05-chap5_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid figure-img" width="768"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="05-chap5_files/figure-html/unnamed-chunk-9-1.png" class="img-fluid figure-img" width="768"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="05-chap5_files/figure-html/unnamed-chunk-10-1.png" class="img-fluid figure-img" width="768"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="05-chap5_files/figure-html/unnamed-chunk-11-1.png" class="img-fluid figure-img" width="768"></p>
+</figure>
+</div>
+</div>
+</div>
+</section><section id="pie-chart" class="level4"><h4 class="anchored" data-anchor-id="pie-chart">Pie chart</h4>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="05-chap5_files/figure-html/unnamed-chunk-12-1.png" class="img-fluid figure-img" width="768"></p>
+</figure>
+</div>
+</div>
+</div>
+</section></section><section id="which-is-the-best" class="level3"><h3 class="anchored" data-anchor-id="which-is-the-best">Which is the best?</h3>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="05-chap5_files/figure-html/unnamed-chunk-13-1.png" class="img-fluid figure-img" width="768"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="05-chap5_files/figure-html/unnamed-chunk-14-1.png" class="img-fluid figure-img" width="768"></p>
+</figure>
+</div>
+</div>
+</div>
+<ul>
+<li><p>Pie charts are easier to compare for relative proportions.</p></li>
+<li><p>Pie charts are best for a small number of categories.</p></li>
+<li><p>Bar charts are better for comparing precise values.</p></li>
+<li><p>Bar charts can handle more categories without becoming cluttered.</p></li>
+</ul>
+<p><strong>Note:</strong> Our visual system is typically better at comparing lengths or heights than angles. This inherent characteristic of human perception makes bar charts more effective than pie charts for comparing values or proportions.</p>
+<section id="your-turn" class="level4"><h4 class="anchored" data-anchor-id="your-turn">Your turn</h4>
+<p>What other types of charts are suitable for visualizing nominal scale data?</p>
+</section></section><section id="ordinal-scale-data" class="level3"><h3 class="anchored" data-anchor-id="ordinal-scale-data">Ordinal Scale Data</h3>
+<section id="tabular-representation-one-wau-tables" class="level4"><h4 class="anchored" data-anchor-id="tabular-representation-one-wau-tables">Tabular Representation: One-wau tables</h4>
+<div class="cell">
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<colgroup>
+<col style="width: 18%">
+<col style="width: 8%">
+<col style="width: 24%">
+<col style="width: 15%">
+<col style="width: 31%">
+</colgroup>
+<thead><tr class="header">
+<th style="text-align: left;">BMI Category</th>
+<th style="text-align: right;">Count</th>
+<th style="text-align: right;">Cumulative Count</th>
+<th style="text-align: right;">Percentage</th>
+<th style="text-align: right;">Cumulative Percentage</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Underweight</td>
+<td style="text-align: right;">38</td>
+<td style="text-align: right;">38</td>
+<td style="text-align: right;">11.41</td>
+<td style="text-align: right;">11.41</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Normal</td>
+<td style="text-align: right;">134</td>
+<td style="text-align: right;">172</td>
+<td style="text-align: right;">40.24</td>
+<td style="text-align: right;">51.65</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Overweight</td>
+<td style="text-align: right;">94</td>
+<td style="text-align: right;">266</td>
+<td style="text-align: right;">28.23</td>
+<td style="text-align: right;">79.88</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Obese</td>
+<td style="text-align: right;">67</td>
+<td style="text-align: right;">333</td>
+<td style="text-align: right;">20.12</td>
+<td style="text-align: right;">100.00</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section><section id="graphical-representation" class="level4"><h4 class="anchored" data-anchor-id="graphical-representation">Graphical representation</h4>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="05-chap5_files/figure-html/unnamed-chunk-16-1.png" class="img-fluid figure-img" width="768"></p>
+</figure>
+</div>
+</div>
+</div>
+<p><strong>Question:</strong> In this case, is it necessary to sort the bars in our data visualization for better clarity and interpretation?</p>
+</section></section></section><section id="qualitative-data-bivariate-analysis" class="level2" data-number="5.3"><h2 data-number="5.3" class="anchored" data-anchor-id="qualitative-data-bivariate-analysis">
 <span class="header-section-number">5.3</span> Qualitative data: Bivariate Analysis</h2>
-</section><section id="quntitative-data-univariate-analysis" class="level2" data-number="5.4"><h2 data-number="5.4" class="anchored" data-anchor-id="quntitative-data-univariate-analysis">
-<span class="header-section-number">5.4</span> Quntitative data: Univariate Analysis</h2>
-</section><section id="quantitative-data-bivariate-analysis" class="level2" data-number="5.5"><h2 data-number="5.5" class="anchored" data-anchor-id="quantitative-data-bivariate-analysis">
-<span class="header-section-number">5.5</span> Quantitative data: Bivariate Analysis</h2>
-</section><section id="qualitative-vs-quantitative" class="level2" data-number="5.6"><h2 data-number="5.6" class="anchored" data-anchor-id="qualitative-vs-quantitative">
-<span class="header-section-number">5.6</span> Qualitative vs Quantitative</h2>
-</section><section id="quantitative-vs-quantitative" class="level2" data-number="5.7"><h2 data-number="5.7" class="anchored" data-anchor-id="quantitative-vs-quantitative">
-<span class="header-section-number">5.7</span> Quantitative vs Quantitative</h2>
-</section><section id="quantitative-vs-quantitative-with-a-qualitative-variable" class="level2" data-number="5.8"><h2 data-number="5.8" class="anchored" data-anchor-id="quantitative-vs-quantitative-with-a-qualitative-variable">
-<span class="header-section-number">5.8</span> Quantitative vs Quantitative with a Qualitative variable</h2>
+<section id="tabular-representation-two-way-tables" class="level3"><h3 class="anchored" data-anchor-id="tabular-representation-two-way-tables">Tabular Representation: Two-way tables</h3>
+<div class="cell">
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<thead><tr class="header">
+<th style="text-align: left;">species</th>
+<th style="text-align: right;">Underweight</th>
+<th style="text-align: right;">Normal</th>
+<th style="text-align: right;">Overweight</th>
+<th style="text-align: right;">Obese</th>
+<th style="text-align: right;">Total</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Adelie</td>
+<td style="text-align: right;">30</td>
+<td style="text-align: right;">84</td>
+<td style="text-align: right;">32</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">146</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Chinstrap</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">49</td>
+<td style="text-align: right;">11</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">68</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Gentoo</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">51</td>
+<td style="text-align: right;">67</td>
+<td style="text-align: right;">119</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Total</td>
+<td style="text-align: right;">38</td>
+<td style="text-align: right;">134</td>
+<td style="text-align: right;">94</td>
+<td style="text-align: right;">67</td>
+<td style="text-align: right;">333</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>Let’s compute</p>
+<ul>
+<li>Row percentage: percent that each cell represents of the row total</li>
+<li>Column percentage: percent that each cell represents of the column total</li>
+<li>Overall percentage (total percentage): percent that each cell represents of the grand total</li>
+</ul>
+<div class="cell">
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<caption>Counts</caption>
+<thead><tr class="header">
+<th style="text-align: left;">species</th>
+<th style="text-align: right;">Underweight</th>
+<th style="text-align: right;">Normal</th>
+<th style="text-align: right;">Overweight</th>
+<th style="text-align: right;">Obese</th>
+<th style="text-align: right;">Total</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Adelie</td>
+<td style="text-align: right;">30</td>
+<td style="text-align: right;">84</td>
+<td style="text-align: right;">32</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">146</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Chinstrap</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">49</td>
+<td style="text-align: right;">11</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">68</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Gentoo</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">51</td>
+<td style="text-align: right;">67</td>
+<td style="text-align: right;">119</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Total</td>
+<td style="text-align: right;">38</td>
+<td style="text-align: right;">134</td>
+<td style="text-align: right;">94</td>
+<td style="text-align: right;">67</td>
+<td style="text-align: right;">333</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<caption>Row Percentages</caption>
+<thead><tr class="header">
+<th style="text-align: left;">species</th>
+<th style="text-align: left;">Underweight</th>
+<th style="text-align: left;">Normal</th>
+<th style="text-align: left;">Overweight</th>
+<th style="text-align: left;">Obese</th>
+<th style="text-align: left;">Total</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Adelie</td>
+<td style="text-align: left;">20.5%</td>
+<td style="text-align: left;">57.5%</td>
+<td style="text-align: left;">21.9%</td>
+<td style="text-align: left;">0.0%</td>
+<td style="text-align: left;">100.0%</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Chinstrap</td>
+<td style="text-align: left;">11.8%</td>
+<td style="text-align: left;">72.1%</td>
+<td style="text-align: left;">16.2%</td>
+<td style="text-align: left;">0.0%</td>
+<td style="text-align: left;">100.0%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Gentoo</td>
+<td style="text-align: left;">0.0%</td>
+<td style="text-align: left;">0.8%</td>
+<td style="text-align: left;">42.9%</td>
+<td style="text-align: left;">56.3%</td>
+<td style="text-align: left;">100.0%</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Total</td>
+<td style="text-align: left;">11.4%</td>
+<td style="text-align: left;">40.2%</td>
+<td style="text-align: left;">28.2%</td>
+<td style="text-align: left;">20.1%</td>
+<td style="text-align: left;">100.0%</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<caption>Column Percentages</caption>
+<thead><tr class="header">
+<th style="text-align: left;">species</th>
+<th style="text-align: left;">Underweight</th>
+<th style="text-align: left;">Normal</th>
+<th style="text-align: left;">Overweight</th>
+<th style="text-align: left;">Obese</th>
+<th style="text-align: left;">Total</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Adelie</td>
+<td style="text-align: left;">78.9%</td>
+<td style="text-align: left;">62.7%</td>
+<td style="text-align: left;">34.0%</td>
+<td style="text-align: left;">0.0%</td>
+<td style="text-align: left;">43.8%</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Chinstrap</td>
+<td style="text-align: left;">21.1%</td>
+<td style="text-align: left;">36.6%</td>
+<td style="text-align: left;">11.7%</td>
+<td style="text-align: left;">0.0%</td>
+<td style="text-align: left;">20.4%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Gentoo</td>
+<td style="text-align: left;">0.0%</td>
+<td style="text-align: left;">0.7%</td>
+<td style="text-align: left;">54.3%</td>
+<td style="text-align: left;">100.0%</td>
+<td style="text-align: left;">35.7%</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Total</td>
+<td style="text-align: left;">100.0%</td>
+<td style="text-align: left;">100.0%</td>
+<td style="text-align: left;">100.0%</td>
+<td style="text-align: left;">100.0%</td>
+<td style="text-align: left;">100.0%</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<caption>Total Percentages</caption>
+<thead><tr class="header">
+<th style="text-align: left;">species</th>
+<th style="text-align: left;">Underweight</th>
+<th style="text-align: left;">Normal</th>
+<th style="text-align: left;">Overweight</th>
+<th style="text-align: left;">Obese</th>
+<th style="text-align: left;">Total</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Adelie</td>
+<td style="text-align: left;">9.0%</td>
+<td style="text-align: left;">25.2%</td>
+<td style="text-align: left;">9.6%</td>
+<td style="text-align: left;">0.0%</td>
+<td style="text-align: left;">43.8%</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Chinstrap</td>
+<td style="text-align: left;">2.4%</td>
+<td style="text-align: left;">14.7%</td>
+<td style="text-align: left;">3.3%</td>
+<td style="text-align: left;">0.0%</td>
+<td style="text-align: left;">20.4%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Gentoo</td>
+<td style="text-align: left;">0.0%</td>
+<td style="text-align: left;">0.3%</td>
+<td style="text-align: left;">15.3%</td>
+<td style="text-align: left;">20.1%</td>
+<td style="text-align: left;">35.7%</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Total</td>
+<td style="text-align: left;">11.4%</td>
+<td style="text-align: left;">40.2%</td>
+<td style="text-align: left;">28.2%</td>
+<td style="text-align: left;">20.1%</td>
+<td style="text-align: left;">100.0%</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>Why is it important to represent both counts and percentages?</p>
+<ul>
+<li><p>Percentages can sometimes be misleading when the sample size is small. By presenting both counts and percentages, the reader can see the actual numbers behind the percentages.</p></li>
+<li><p>When comparing different groups or datasets, percentages help standardize the comparison by accounting for differences in group sizes.</p></li>
+</ul>
+<p>When presenting the counts and percentages, you can combine them to a single table.</p>
+<div class="cell">
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<caption>Counts with Row Percentages</caption>
+<colgroup>
+<col style="width: 14%">
+<col style="width: 17%">
+<col style="width: 17%">
+<col style="width: 15%">
+<col style="width: 15%">
+<col style="width: 18%">
+</colgroup>
+<thead><tr class="header">
+<th style="text-align: left;">species</th>
+<th style="text-align: left;">Underweight</th>
+<th style="text-align: left;">Normal</th>
+<th style="text-align: left;">Overweight</th>
+<th style="text-align: left;">Obese</th>
+<th style="text-align: left;">Total</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Adelie</td>
+<td style="text-align: left;">30 (20.5%)</td>
+<td style="text-align: left;">84 (57.5%)</td>
+<td style="text-align: left;">32 (21.9%)</td>
+<td style="text-align: left;">0 (0.0%)</td>
+<td style="text-align: left;">146 (100.0%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Chinstrap</td>
+<td style="text-align: left;">8 (11.8%)</td>
+<td style="text-align: left;">49 (72.1%)</td>
+<td style="text-align: left;">11 (16.2%)</td>
+<td style="text-align: left;">0 (0.0%)</td>
+<td style="text-align: left;">68 (100.0%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Gentoo</td>
+<td style="text-align: left;">0 (0.0%)</td>
+<td style="text-align: left;">1 (0.8%)</td>
+<td style="text-align: left;">51 (42.9%)</td>
+<td style="text-align: left;">67 (56.3%)</td>
+<td style="text-align: left;">119 (100.0%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Total</td>
+<td style="text-align: left;">38 (11.4%)</td>
+<td style="text-align: left;">134 (40.2%)</td>
+<td style="text-align: left;">94 (28.2%)</td>
+<td style="text-align: left;">67 (20.1%)</td>
+<td style="text-align: left;">333 (100.0%)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<section id="graphical-representation-1" class="level4"><h4 class="anchored" data-anchor-id="graphical-representation-1">Graphical representation</h4>
+<div class="cell">
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<thead><tr class="header">
+<th style="text-align: left;">species</th>
+<th style="text-align: right;">Underweight</th>
+<th style="text-align: right;">Normal</th>
+<th style="text-align: right;">Overweight</th>
+<th style="text-align: right;">Obese</th>
+<th style="text-align: right;">Total</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Adelie</td>
+<td style="text-align: right;">30</td>
+<td style="text-align: right;">84</td>
+<td style="text-align: right;">32</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">146</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Chinstrap</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">49</td>
+<td style="text-align: right;">11</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">68</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Gentoo</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">51</td>
+<td style="text-align: right;">67</td>
+<td style="text-align: right;">119</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Total</td>
+<td style="text-align: right;">38</td>
+<td style="text-align: right;">134</td>
+<td style="text-align: right;">94</td>
+<td style="text-align: right;">67</td>
+<td style="text-align: right;">333</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section><section id="grouped-bar-chart-clustered-bar-chart" class="level4"><h4 class="anchored" data-anchor-id="grouped-bar-chart-clustered-bar-chart">Grouped Bar Chart/ Clustered Bar Chart</h4>
+<div class="cell">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="05-chap5_files/figure-html/unnamed-chunk-21-1.png" class="img-fluid figure-img" width="768"></p>
+<figcaption>Figure 1: Composition of the Sample by Species and BMI Category</figcaption></figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="05-chap5_files/figure-html/unnamed-chunk-22-1.png" class="img-fluid figure-img" width="768"></p>
+<figcaption>Figure 1: Composition of the Sample by Species and BMI Category</figcaption></figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="05-chap5_files/figure-html/unnamed-chunk-23-1.png" class="img-fluid figure-img" width="768"></p>
+<figcaption>Figure 1: Composition of the Sample by Species and BMI Category</figcaption></figure>
+</div>
+</div>
+</div>
+</section><section id="percentage-grouped-bar-chart" class="level4"><h4 class="anchored" data-anchor-id="percentage-grouped-bar-chart">Percentage Grouped Bar Chart</h4>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="05-chap5_files/figure-html/unnamed-chunk-24-1.png" class="img-fluid figure-img" width="768"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="05-chap5_files/figure-html/unnamed-chunk-25-1.png" class="img-fluid figure-img" width="768"></p>
+</figure>
+</div>
+</div>
+</div>
+</section></section><section id="percentages" class="level3"><h3 class="anchored" data-anchor-id="percentages">Percentages</h3>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="05-chap5_files/figure-html/unnamed-chunk-26-1.png" class="img-fluid figure-img" width="768"></p>
+</figure>
+</div>
+</div>
+</div>
+<section id="staked-bar-chart" class="level4"><h4 class="anchored" data-anchor-id="staked-bar-chart">Staked Bar Chart</h4>
+<p>Counts</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="05-chap5_files/figure-html/unnamed-chunk-27-1.png" class="img-fluid figure-img" width="768"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Percentages</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="05-chap5_files/figure-html/unnamed-chunk-28-1.png" class="img-fluid figure-img" width="768"></p>
+</figure>
+</div>
+</div>
+</div>
+</section></section><section id="counts" class="level3"><h3 class="anchored" data-anchor-id="counts">Counts</h3>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="05-chap5_files/figure-html/unnamed-chunk-29-1.png" class="img-fluid figure-img" width="768"></p>
+</figure>
+</div>
+</div>
+</div>
+</section><section id="percentages-1" class="level3"><h3 class="anchored" data-anchor-id="percentages-1">Percentages</h3>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="05-chap5_files/figure-html/unnamed-chunk-30-1.png" class="img-fluid figure-img" width="768"></p>
+</figure>
+</div>
+</div>
+</div>
+</section></section><section id="percentage-chart" class="level2" data-number="5.4"><h2 data-number="5.4" class="anchored" data-anchor-id="percentage-chart">
+<span class="header-section-number">5.4</span> Percentage chart</h2>
+<p><strong>Advantages</strong></p>
+<ul>
+<li><p>Shows the proportion of each category relative to the whole, making it easier to understand the distribution.</p></li>
+<li><p>Allows for fair comparisons between different groups or categories, regardless of their size.</p></li>
+<li><p>Highlights the relative importance of different categories within each group.</p></li>
+</ul>
+<p><strong>Disadvantages</strong></p>
+<ul>
+<li>Doesn’t provide the raw counts, which might be necessary for understanding the actual volume or size of each category.</li>
+</ul></section><section id="counts-chart" class="level2" data-number="5.5"><h2 data-number="5.5" class="anchored" data-anchor-id="counts-chart">
+<span class="header-section-number">5.5</span> Counts chart</h2>
+<p><strong>Advantages</strong></p>
+<ul>
+<li><p>Clearly shows the frequency of each category, providing a direct understanding of the volume or size.</p></li>
+<li><p>Useful when the actual count is crucial for decision-making.</p></li>
+</ul>
+<p><strong>Disadvantages</strong></p>
+<ul>
+<li>Difficulties arise when comparing groups, especially when their sizes differ.</li>
+</ul></section><section id="grouped-bar-chart-percentage" class="level2" data-number="5.6"><h2 data-number="5.6" class="anchored" data-anchor-id="grouped-bar-chart-percentage">
+<span class="header-section-number">5.6</span> Grouped Bar Chart (Percentage)</h2>
+<p><strong>Advantages</strong></p>
+<ul>
+<li><p>Comparison within groups: It allows for easy comparison of values within each category group.</p></li>
+<li><p>Comparison between groups: It also facilitates comparison between different category groups.</p></li>
+</ul>
+<p><strong>Disadvantages</strong></p>
+<ul>
+<li><p>If there are too many groups or variables, the bars can become narrow, making it difficult to read.</p></li>
+<li><p>Complexity with many groups: With a large number of groups or variables, the chart can become crowded and hard to read.</p></li>
+<li><p>Difficulty in showing totals: It’s not straightforward to show the total magnitude of each category since bars are grouped.</p></li>
+</ul></section><section id="stacked-bar-chart" class="level2" data-number="5.7"><h2 data-number="5.7" class="anchored" data-anchor-id="stacked-bar-chart">
+<span class="header-section-number">5.7</span> Stacked Bar Chart</h2>
+<p><strong>Stacked Count Chart</strong></p>
+<ul>
+<li><p>Allows viewers to see how totals accumulate as each category is stacked on top of one another.</p></li>
+<li><p>Useful for comparing the total magnitude of each category across different groups or segments.</p></li>
+<li><p>Ideal when the emphasis is on the total quantity of items in each category rather than their relative proportions.</p></li>
+</ul>
+<p><strong>Stacked Percentage Chart</strong></p>
+<ul>
+<li><p>Use when you want to show the relative proportion or contribution of each category to the total.</p></li>
+<li><p>Helpful for illustrating the distribution of percentages within categories across different groups or segments.</p></li>
+<li><p>Suitable when you want to emphasize the composition or share of each category relative to the whole.</p></li>
+</ul>
+<p>Stacked Bar Chart: Disadvantages</p>
+<ul>
+<li><p>It can be challenging to compare individual segments between different groups because they are not aligned horizontally.</p></li>
+<li><p>Small segments can be hard to interpret accurately when they are stacked on top of each other.</p></li>
+</ul></section><section id="which-is-the-best-1" class="level2" data-number="5.8"><h2 data-number="5.8" class="anchored" data-anchor-id="which-is-the-best-1">
+<span class="header-section-number">5.8</span> Which is the best?</h2>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="05-chap5_files/figure-html/unnamed-chunk-31-1.png" class="img-fluid figure-img" width="768"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="05-chap5_files/figure-html/unnamed-chunk-32-1.png" class="img-fluid figure-img" width="768"></p>
+</figure>
+</div>
+</div>
+</div>
+<section id="facet-bar-chart" class="level4"><h4 class="anchored" data-anchor-id="facet-bar-chart">Facet Bar Chart</h4>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="05-chap5_files/figure-html/unnamed-chunk-33-1.png" class="img-fluid figure-img" width="768"></p>
+</figure>
+</div>
+</div>
+</div>
+<p><strong>Facet by BMI Category</strong></p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="05-chap5_files/figure-html/unnamed-chunk-34-1.png" class="img-fluid figure-img" width="1152"></p>
+</figure>
+</div>
+</div>
+</div>
+</section></section><section id="quntitative-data-univariate-analysis" class="level2" data-number="5.9"><h2 data-number="5.9" class="anchored" data-anchor-id="quntitative-data-univariate-analysis">
+<span class="header-section-number">5.9</span> Quntitative data: Univariate Analysis</h2>
+</section><section id="quantitative-data-bivariate-analysis" class="level2" data-number="5.10"><h2 data-number="5.10" class="anchored" data-anchor-id="quantitative-data-bivariate-analysis">
+<span class="header-section-number">5.10</span> Quantitative data: Bivariate Analysis</h2>
+</section><section id="qualitative-vs-quantitative" class="level2" data-number="5.11"><h2 data-number="5.11" class="anchored" data-anchor-id="qualitative-vs-quantitative">
+<span class="header-section-number">5.11</span> Qualitative vs Quantitative</h2>
+</section><section id="quantitative-vs-quantitative" class="level2" data-number="5.12"><h2 data-number="5.12" class="anchored" data-anchor-id="quantitative-vs-quantitative">
+<span class="header-section-number">5.12</span> Quantitative vs Quantitative</h2>
+</section><section id="quantitative-vs-quantitative-with-a-qualitative-variable" class="level2" data-number="5.13"><h2 data-number="5.13" class="anchored" data-anchor-id="quantitative-vs-quantitative-with-a-qualitative-variable">
+<span class="header-section-number">5.13</span> Quantitative vs Quantitative with a Qualitative variable</h2>
+</section><section id="some-rules" class="level2" data-number="5.14"><h2 data-number="5.14" class="anchored" data-anchor-id="some-rules">
+<span class="header-section-number">5.14</span> Some rules</h2>
+<ol type="1">
+<li><p>Don’t make them 3D: 3D charts can distort data and make it difficult to accurately interpret values.</p></li>
+<li><p>Don’t use overly complex charts: Keep it simple. Overly complex charts can confuse the viewer and obscure the data.</p></li>
+<li><p>Don’t use excessive colors: Too many colors can be distracting and make the chart hard to read. Stick to a simple color palette.</p></li>
+<li><p>Don’t use misleading scales: Ensure the scales start at zero (when appropriate) and are consistent to avoid misrepresenting the data.</p></li>
+<li><p>Don’t use pie charts for too many categories: Pie charts are hard to interpret with more than a few slices. Use a bar chart instead.</p></li>
+<li><p>Don’t use inappropriate chart types: Match the chart type to the data you are presenting. For example, use line charts for trends over time and bar charts for comparing categories.</p></li>
+<li><p>Don’t omit axis labels and titles: Always label your axes and give your chart a clear, descriptive title.</p></li>
+<li><p>Don’t clutter with too much information: Avoid adding unnecessary elements like excessive gridlines, text, or data points.</p></li>
+<li><p>Don’t ignore accessibility: Ensure your charts are readable for people with color blindness by using colorblind-friendly palettes and providing text alternatives.</p></li>
+<li><p>Don’t make legends and labels too small: Ensure that legends and labels are large enough to be easily read.</p></li>
+<li><p>Don’t use default settings without customization: Default settings might not be the best for your data. Customize your charts to improve clarity and impact.</p></li>
+<li><p>Don’t ignore data source and context: Always provide the data source and context to help the audience understand where the data comes from and its relevance.</p></li>
+</ol>
 
 
 </section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
