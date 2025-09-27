@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Biostatistics and Data Analysis for Zoologists",
     "section": "",
-    "text": "Understanding and interpreting quantitative data is fundamental for modern zoological research. “Biostatistics and Data Analysis for Zoologists (BDAZ)” serves as a comprehensive, practical textbook that introduces statistical concepts and data analysis techniques specifically designed for zoologists, wildlife biologists, and ecology researchers. Each topic in this book includes a practical session using R.\nCopyright notice\nProduced on 20 September 2025.\n© Thiyanga S. Talagala (2025).",
+    "text": "Understanding and interpreting quantitative data is fundamental for modern zoological research. “Biostatistics and Data Analysis for Zoologists (BDAZ)” serves as a comprehensive, practical textbook that introduces statistical concepts and data analysis techniques specifically designed for zoologists, wildlife biologists, and ecology researchers. Each topic in this book includes a practical session using R.\nCopyright notice\nProduced on 27 September 2025.\n© Thiyanga S. Talagala (2025).",
     "crumbs": [
       "Front matter"
     ]
@@ -234,7 +234,7 @@
     "href": "03-chap3.html#r-as-a-calculator",
     "title": "3  Introduction to R programming basics and R studio",
     "section": "\n3.6 R as a calculator",
-    "text": "3.6 R as a calculator\nLet’s type some simple commands. Type these in the console.\n\n1 + 2\n\n[1] 3\n\n\n\n1 * 100\n\n[1] 100\n\n\n\n1 / 100\n\n[1] 0.01\n\n\n\nrnorm(50)\n\n [1] -0.74515809 -0.48392936 -0.07116476 -1.87194430 -0.09568957  1.18765856\n [7]  1.19006655  0.37527361 -0.71931310  1.61343240  1.36799830 -0.35427711\n[13] -0.12659376  1.26202323  0.89990473 -1.03705938  1.35552094 -0.78406351\n[19]  0.06257110  1.04515588 -0.83621479  0.16573931  0.79359047 -0.03023787\n[25] -0.60448605 -1.10349020 -0.04156491 -0.86745770 -0.38112680 -1.95739337\n[31] -0.67762867  0.77933703 -0.82970448 -0.11202830  0.06532624 -0.26166063\n[37]  1.25979094  1.14231072  2.05097581 -0.57239823  0.70375374  0.14003665\n[43] -0.16509296 -0.95649913 -0.28249536 -1.60291155  0.93001328 -2.39677192\n[49] -0.10108335  1.44662942\n\n\n\nhist(rnorm(50))\n\n\n\n\n\n\n\nIn R, square brackets [ ] indicate the index or position of an element in a vector, list, or other data structure.",
+    "text": "3.6 R as a calculator\nLet’s type some simple commands. Type these in the console.\n\n1 + 2\n\n[1] 3\n\n\n\n1 * 100\n\n[1] 100\n\n\n\n1 / 100\n\n[1] 0.01\n\n\n\nrnorm(50)\n\n [1] -0.659058870 -0.805408563 -1.432407078 -1.342085002  0.917405038\n [6] -1.682894785  0.111194763 -0.566195258 -1.630423769 -0.778983478\n[11]  0.023289624  1.603599949  0.632911835 -1.051778592  0.016594274\n[16]  0.487631137 -0.758481859  0.640170243  2.023974371 -0.043060007\n[21] -0.125610736 -0.287034174  0.446634063  2.124943090 -0.793818277\n[26] -0.953757827 -0.031818767  1.108377398  0.437203158  1.259942984\n[31]  0.005523019  1.633614623 -1.252464639  0.024207752 -1.575335764\n[36]  1.332148287 -0.251160834 -0.253029831  1.578179687 -0.732790543\n[41]  2.225505806 -1.957161322  0.588250999 -1.300056506  0.416894634\n[46]  0.249101489  0.346147218  0.065174767  1.468929175  0.617158362\n\n\n\nhist(rnorm(50))\n\n\n\n\n\n\n\nIn R, square brackets [ ] indicate the index or position of an element in a vector, list, or other data structure.",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Introduction to R programming basics and R studio</span>"
     ]
@@ -380,16 +380,6 @@
     ]
   },
   {
-    "objectID": "04-chap4.html#variable-description",
-    "href": "04-chap4.html#variable-description",
-    "title": "4  Types of Variables",
-    "section": "\n4.3 Variable description",
-    "text": "4.3 Variable description\n\n\n\n\n\n\n\n\nVariable name\nVariable description\n\n\n\nspecies\npenguin species (Adélie, Chinstrap and Gentoo)\n\n\nisland\nisland in Palmer Archipelago, Antarctica (Biscoe, Dream or Torgersen)\n\n\nbill_length_mm\nbill length (millimeters)\n\n\nbill_depth_mm\nbill depth (millimeters)\n\n\nflipper_length_mm\nflipper length (millimeters)\n\n\nbody_mass_g\nbody mass (grams)\n\n\nsex\npenguin gender (female, male)\n\n\nyear\nthe study year (2007, 2008, or 2009)",
-    "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Types of Variables</span>"
-    ]
-  },
-  {
     "objectID": "04-chap4.html#types-of-variables",
     "href": "04-chap4.html#types-of-variables",
     "title": "4  Types of Variables",
@@ -415,6 +405,16 @@
     "title": "4  Types of Variables",
     "section": "\n4.5 Quantitative Variables/ Numerical Variables",
     "text": "4.5 Quantitative Variables/ Numerical Variables\n\nRepresents measurable quantities\nNumeric\n\nExamples:\n\nHeight in cm\nWeight in kg\n\n\n\nYour turn: Identify quantitative variables in the penguins dataset.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Types of Variables</span>"
+    ]
+  },
+  {
+    "objectID": "04-chap4.html#discrete-vs-continuous",
+    "href": "04-chap4.html#discrete-vs-continuous",
+    "title": "4  Types of Variables",
+    "section": "\n4.6 Discrete vs Continuous",
+    "text": "4.6 Discrete vs Continuous\nDiscrete\n\nRepresent countable quantities\nCan take on only specific, distinct values (whole numbers)\nNo intermediate values between consecutive values\nExamples:\nNumber of students in a classroom\nNumber of cars in a parking lot\nNumber of books on a shelf\nContinuous\n\nRepresent measurable quantities\nCan take on any value within a given range, including fractions and decimals.\nInfinite number of possible values within a range.\nExamples:\nHeight of individuals\nTemperature\nTime taken to complete a task\n\nYour turn: Identify discrete and continuous variables\n\n\n\n\n\n\n\n\nVariable name\nVariable description\n\n\n\nspecies\npenguin species (Adélie, Chinstrap and Gentoo)\n\n\nisland\nisland in Palmer Archipelago, Antarctica (Biscoe, Dream or Torgersen)\n\n\nbill_len\nbill length (millimeters)\n\n\nbill_dep\nbill depth (millimeters)\n\n\nflipper_len\nflipper length (millimeters)\n\n\nbody_mass\nbody mass (grams)\n\n\nsex\npenguin gender (female, male)\n\n\nyear\nthe study year (2007, 2008, or 2009)",
     "crumbs": [
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Types of Variables</span>"
     ]
@@ -490,21 +490,21 @@
     ]
   },
   {
-    "objectID": "04-chap4.html#discrete-vs-continuous",
-    "href": "04-chap4.html#discrete-vs-continuous",
-    "title": "4  Types of Variables",
-    "section": "\n4.6 Discrete vs Continuous",
-    "text": "4.6 Discrete vs Continuous\nDiscrete\n\nRepresent countable quantities\nCan take on only specific, distinct values (whole numbers)\nNo intermediate values between consecutive values\nExamples:\nNumber of students in a classroom\nNumber of cars in a parking lot\nNumber of books on a shelf\nContinuous\n\nRepresent measurable quantities\nCan take on any value within a given range, including fractions and decimals.\nInfinite number of possible values within a range.\nExamples:\nHeight of individuals\nTemperature\nTime taken to complete a task\n\nYour turn: Identify discrete and continuous variables\n\n\n\n\n\n\n\n\nVariable name\nVariable description\n\n\n\nspecies\npenguin species (Adélie, Chinstrap and Gentoo)\n\n\nisland\nisland in Palmer Archipelago, Antarctica (Biscoe, Dream or Torgersen)\n\n\nbill_len\nbill length (millimeters)\n\n\nbill_dep\nbill depth (millimeters)\n\n\nflipper_len\nflipper length (millimeters)\n\n\nbody_mass\nbody mass (grams)\n\n\nsex\npenguin gender (female, male)\n\n\nyear\nthe study year (2007, 2008, or 2009)",
-    "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Types of Variables</span>"
-    ]
-  },
-  {
     "objectID": "05-chap5.html",
     "href": "05-chap5.html",
     "title": "5  Descriptive Statistics",
     "section": "",
-    "text": "5.1 Dataset Use for Illustrations\n# A tibble: 333 × 9\n   species island    bill_length_mm bill_depth_mm flipper_length_mm body_mass_g\n   &lt;fct&gt;   &lt;fct&gt;              &lt;dbl&gt;         &lt;dbl&gt;             &lt;int&gt;       &lt;int&gt;\n 1 Adelie  Torgersen           39.1          18.7               181        3750\n 2 Adelie  Torgersen           39.5          17.4               186        3800\n 3 Adelie  Torgersen           40.3          18                 195        3250\n 4 Adelie  Torgersen           36.7          19.3               193        3450\n 5 Adelie  Torgersen           39.3          20.6               190        3650\n 6 Adelie  Torgersen           38.9          17.8               181        3625\n 7 Adelie  Torgersen           39.2          19.6               195        4675\n 8 Adelie  Torgersen           41.1          17.6               182        3200\n 9 Adelie  Torgersen           38.6          21.2               191        3800\n10 Adelie  Torgersen           34.6          21.1               198        4400\n# ℹ 323 more rows\n# ℹ 3 more variables: gender &lt;fct&gt;, year &lt;int&gt;, BMI_category &lt;chr&gt;",
+    "text": "5.1 What is Descriptive Statistics?\nDescribe the data\nDescriptive statistics involves summarizing and organizing the data so they can be easily understood\nDoes not attempt to make inferences from the sample to the whole population",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Descriptive Statistics</span>"
+    ]
+  },
+  {
+    "objectID": "05-chap5.html#dataset-use-for-illustrations",
+    "href": "05-chap5.html#dataset-use-for-illustrations",
+    "title": "5  Descriptive Statistics",
+    "section": "\n5.2 Dataset Use for Illustrations",
+    "text": "5.2 Dataset Use for Illustrations\n\n\n# A tibble: 333 × 9\n   species island    bill_length_mm bill_depth_mm flipper_length_mm body_mass_g\n   &lt;fct&gt;   &lt;fct&gt;              &lt;dbl&gt;         &lt;dbl&gt;             &lt;int&gt;       &lt;int&gt;\n 1 Adelie  Torgersen           39.1          18.7               181        3750\n 2 Adelie  Torgersen           39.5          17.4               186        3800\n 3 Adelie  Torgersen           40.3          18                 195        3250\n 4 Adelie  Torgersen           36.7          19.3               193        3450\n 5 Adelie  Torgersen           39.3          20.6               190        3650\n 6 Adelie  Torgersen           38.9          17.8               181        3625\n 7 Adelie  Torgersen           39.2          19.6               195        4675\n 8 Adelie  Torgersen           41.1          17.6               182        3200\n 9 Adelie  Torgersen           38.6          21.2               191        3800\n10 Adelie  Torgersen           34.6          21.1               198        4400\n# ℹ 323 more rows\n# ℹ 3 more variables: gender &lt;fct&gt;, year &lt;int&gt;, BMI_category &lt;chr&gt;",
     "crumbs": [
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Descriptive Statistics</span>"
     ]
@@ -513,8 +513,8 @@
     "objectID": "05-chap5.html#qualitative-data-univariate-analysis",
     "href": "05-chap5.html#qualitative-data-univariate-analysis",
     "title": "5  Descriptive Statistics",
-    "section": "\n5.2 Qualitative data: Univariate Analysis",
-    "text": "5.2 Qualitative data: Univariate Analysis\nChart types we can use: Pie chart, Bar chart\nTables: Tables with counts and percentages\nExtract qualitative variables\n\n\n# A tibble: 333 × 4\n   species island    gender BMI_category\n   &lt;fct&gt;   &lt;fct&gt;     &lt;fct&gt;  &lt;chr&gt;       \n 1 Adelie  Torgersen male   Normal      \n 2 Adelie  Torgersen female Normal      \n 3 Adelie  Torgersen female Underweight \n 4 Adelie  Torgersen female Normal      \n 5 Adelie  Torgersen male   Normal      \n 6 Adelie  Torgersen female Normal      \n 7 Adelie  Torgersen male   Overweight  \n 8 Adelie  Torgersen female Underweight \n 9 Adelie  Torgersen male   Normal      \n10 Adelie  Torgersen male   Overweight  \n# ℹ 323 more rows\n\n\nNominal Scale Data\nTabular representations\nFrequency tables/ Contingency Tables\n\n\n\n\nSpecies\nCount\nPercentage (%)\n\n\n\nAdelie\n146\n43.84\n\n\nChinstrap\n68\n20.42\n\n\nGentoo\n119\n35.74\n\n\nTotal\n333\n100.00\n\n\n\n\n\nGraphical Representations\n\nSimple Bar Charts\nPie Charts\n\nVertical Bar Chart\nCounts Bar Chart\n\n\n\n\n\n\n\n\nPercentage Bar Chart\n\n\n\n\n\n\n\n\nHorizontal Bar Chart\nCounts Bar Chart\n\n\n\n\n\n\n\n\nPercentage Bar Chart\n\n\n\n\n\n\n\n\nSort bars for easy comparison\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPie chart\n\n\n\n\n\n\n\n\nWhich is the best?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPie charts are easier to compare for relative proportions.\nPie charts are best for a small number of categories.\nBar charts are better for comparing precise values.\nBar charts can handle more categories without becoming cluttered.\n\nNote: Our visual system is typically better at comparing lengths or heights than angles. This inherent characteristic of human perception makes bar charts more effective than pie charts for comparing values or proportions.\nYour turn\nWhat other types of charts are suitable for visualizing nominal scale data?\nOrdinal Scale Data\nTabular Representation: One-wau tables\n\n\n\n\n\n\n\n\n\n\n\nBMI Category\nCount\nCumulative Count\nPercentage\nCumulative Percentage\n\n\n\nUnderweight\n38\n38\n11.41\n11.41\n\n\nNormal\n134\n172\n40.24\n51.65\n\n\nOverweight\n94\n266\n28.23\n79.88\n\n\nObese\n67\n333\n20.12\n100.00\n\n\n\n\n\nGraphical representation\n\n\n\n\n\n\n\n\nQuestion: In this case, is it necessary to sort the bars in our data visualization for better clarity and interpretation?",
+    "section": "\n5.3 Qualitative data: Univariate Analysis",
+    "text": "5.3 Qualitative data: Univariate Analysis\nChart types we can use: Pie chart, Bar chart\nTables: Tables with counts and percentages\nExtract qualitative variables\n\n\n# A tibble: 333 × 4\n   species island    gender BMI_category\n   &lt;fct&gt;   &lt;fct&gt;     &lt;fct&gt;  &lt;chr&gt;       \n 1 Adelie  Torgersen male   Normal      \n 2 Adelie  Torgersen female Normal      \n 3 Adelie  Torgersen female Underweight \n 4 Adelie  Torgersen female Normal      \n 5 Adelie  Torgersen male   Normal      \n 6 Adelie  Torgersen female Normal      \n 7 Adelie  Torgersen male   Overweight  \n 8 Adelie  Torgersen female Underweight \n 9 Adelie  Torgersen male   Normal      \n10 Adelie  Torgersen male   Overweight  \n# ℹ 323 more rows\n\n\nNominal Scale Data\nTabular representations\nFrequency tables/ Contingency Tables\n\n\n\n\nSpecies\nCount\nPercentage (%)\n\n\n\nAdelie\n146\n43.84\n\n\nChinstrap\n68\n20.42\n\n\nGentoo\n119\n35.74\n\n\nTotal\n333\n100.00\n\n\n\n\n\nGraphical Representations\n\nSimple Bar Charts\nPie Charts\n\nVertical Bar Chart\nCounts Bar Chart\n\n\n\n\n\n\n\n\nPercentage Bar Chart\n\n\n\n\n\n\n\n\nHorizontal Bar Chart\nCounts Bar Chart\n\n\n\n\n\n\n\n\nPercentage Bar Chart\n\n\n\n\n\n\n\n\nSort bars for easy comparison\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPie chart\n\n\n\n\n\n\n\n\nWhich is the best?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPie charts are easier to compare for relative proportions.\nPie charts are best for a small number of categories.\nBar charts are better for comparing precise values.\nBar charts can handle more categories without becoming cluttered.\n\nNote: Our visual system is typically better at comparing lengths or heights than angles. This inherent characteristic of human perception makes bar charts more effective than pie charts for comparing values or proportions.\nYour turn\nWhat other types of charts are suitable for visualizing nominal scale data?\nOrdinal Scale Data\nTabular Representation: One-wau tables\n\n\n\n\n\n\n\n\n\n\n\nBMI Category\nCount\nCumulative Count\nPercentage\nCumulative Percentage\n\n\n\nUnderweight\n38\n38\n11.41\n11.41\n\n\nNormal\n134\n172\n40.24\n51.65\n\n\nOverweight\n94\n266\n28.23\n79.88\n\n\nObese\n67\n333\n20.12\n100.00\n\n\n\n\n\nGraphical representation\n\n\n\n\n\n\n\n\nQuestion: In this case, is it necessary to sort the bars in our data visualization for better clarity and interpretation?",
     "crumbs": [
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Descriptive Statistics</span>"
     ]
@@ -523,8 +523,8 @@
     "objectID": "05-chap5.html#qualitative-data-bivariate-analysis",
     "href": "05-chap5.html#qualitative-data-bivariate-analysis",
     "title": "5  Descriptive Statistics",
-    "section": "\n5.3 Qualitative data: Bivariate Analysis",
-    "text": "5.3 Qualitative data: Bivariate Analysis\nTabular Representation: Two-way tables\n\n\n\n\nspecies\nUnderweight\nNormal\nOverweight\nObese\nTotal\n\n\n\nAdelie\n30\n84\n32\n0\n146\n\n\nChinstrap\n8\n49\n11\n0\n68\n\n\nGentoo\n0\n1\n51\n67\n119\n\n\nTotal\n38\n134\n94\n67\n333\n\n\n\n\n\nLet’s compute\n\nRow percentage: percent that each cell represents of the row total\nColumn percentage: percent that each cell represents of the column total\nOverall percentage (total percentage): percent that each cell represents of the grand total\n\n\n\n\nCounts\n\nspecies\nUnderweight\nNormal\nOverweight\nObese\nTotal\n\n\n\nAdelie\n30\n84\n32\n0\n146\n\n\nChinstrap\n8\n49\n11\n0\n68\n\n\nGentoo\n0\n1\n51\n67\n119\n\n\nTotal\n38\n134\n94\n67\n333\n\n\n\n\n\n\nRow Percentages\n\nspecies\nUnderweight\nNormal\nOverweight\nObese\nTotal\n\n\n\nAdelie\n20.5%\n57.5%\n21.9%\n0.0%\n100.0%\n\n\nChinstrap\n11.8%\n72.1%\n16.2%\n0.0%\n100.0%\n\n\nGentoo\n0.0%\n0.8%\n42.9%\n56.3%\n100.0%\n\n\nTotal\n11.4%\n40.2%\n28.2%\n20.1%\n100.0%\n\n\n\n\n\n\nColumn Percentages\n\nspecies\nUnderweight\nNormal\nOverweight\nObese\nTotal\n\n\n\nAdelie\n78.9%\n62.7%\n34.0%\n0.0%\n43.8%\n\n\nChinstrap\n21.1%\n36.6%\n11.7%\n0.0%\n20.4%\n\n\nGentoo\n0.0%\n0.7%\n54.3%\n100.0%\n35.7%\n\n\nTotal\n100.0%\n100.0%\n100.0%\n100.0%\n100.0%\n\n\n\n\n\n\nTotal Percentages\n\nspecies\nUnderweight\nNormal\nOverweight\nObese\nTotal\n\n\n\nAdelie\n9.0%\n25.2%\n9.6%\n0.0%\n43.8%\n\n\nChinstrap\n2.4%\n14.7%\n3.3%\n0.0%\n20.4%\n\n\nGentoo\n0.0%\n0.3%\n15.3%\n20.1%\n35.7%\n\n\nTotal\n11.4%\n40.2%\n28.2%\n20.1%\n100.0%\n\n\n\n\n\nWhy is it important to represent both counts and percentages?\n\nPercentages can sometimes be misleading when the sample size is small. By presenting both counts and percentages, the reader can see the actual numbers behind the percentages.\nWhen comparing different groups or datasets, percentages help standardize the comparison by accounting for differences in group sizes.\n\nWhen presenting the counts and percentages, you can combine them to a single table.\n\n\n\nCounts with Row Percentages\n\n\n\n\n\n\n\n\n\nspecies\nUnderweight\nNormal\nOverweight\nObese\nTotal\n\n\n\nAdelie\n30 (20.5%)\n84 (57.5%)\n32 (21.9%)\n0 (0.0%)\n146 (100.0%)\n\n\nChinstrap\n8 (11.8%)\n49 (72.1%)\n11 (16.2%)\n0 (0.0%)\n68 (100.0%)\n\n\nGentoo\n0 (0.0%)\n1 (0.8%)\n51 (42.9%)\n67 (56.3%)\n119 (100.0%)\n\n\nTotal\n38 (11.4%)\n134 (40.2%)\n94 (28.2%)\n67 (20.1%)\n333 (100.0%)\n\n\n\n\n\nGraphical representation\n\n\n\n\nspecies\nUnderweight\nNormal\nOverweight\nObese\nTotal\n\n\n\nAdelie\n30\n84\n32\n0\n146\n\n\nChinstrap\n8\n49\n11\n0\n68\n\n\nGentoo\n0\n1\n51\n67\n119\n\n\nTotal\n38\n134\n94\n67\n333\n\n\n\n\n\nGrouped Bar Chart/ Clustered Bar Chart\n\n\n\n\nFigure 1: Composition of the Sample by Species and BMI Category\n\n\n\n\n\n\n\nFigure 1: Composition of the Sample by Species and BMI Category\n\n\n\n\n\n\n\nFigure 1: Composition of the Sample by Species and BMI Category\n\n\n\nPercentage Grouped Bar Chart\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPercentages\n\n\n\n\n\n\n\n\nStaked Bar Chart\nCounts\n\n\n\n\n\n\n\n\nPercentages\n\n\n\n\n\n\n\n\nCounts\n\n\n\n\n\n\n\n\nPercentages",
+    "section": "\n5.4 Qualitative data: Bivariate Analysis",
+    "text": "5.4 Qualitative data: Bivariate Analysis\nTabular Representation: Two-way tables\n\n\n\n\nspecies\nUnderweight\nNormal\nOverweight\nObese\nTotal\n\n\n\nAdelie\n30\n84\n32\n0\n146\n\n\nChinstrap\n8\n49\n11\n0\n68\n\n\nGentoo\n0\n1\n51\n67\n119\n\n\nTotal\n38\n134\n94\n67\n333\n\n\n\n\n\nLet’s compute\n\nRow percentage: percent that each cell represents of the row total\nColumn percentage: percent that each cell represents of the column total\nOverall percentage (total percentage): percent that each cell represents of the grand total\n\n\n\n\nCounts\n\nspecies\nUnderweight\nNormal\nOverweight\nObese\nTotal\n\n\n\nAdelie\n30\n84\n32\n0\n146\n\n\nChinstrap\n8\n49\n11\n0\n68\n\n\nGentoo\n0\n1\n51\n67\n119\n\n\nTotal\n38\n134\n94\n67\n333\n\n\n\n\n\n\nRow Percentages\n\nspecies\nUnderweight\nNormal\nOverweight\nObese\nTotal\n\n\n\nAdelie\n20.5%\n57.5%\n21.9%\n0.0%\n100.0%\n\n\nChinstrap\n11.8%\n72.1%\n16.2%\n0.0%\n100.0%\n\n\nGentoo\n0.0%\n0.8%\n42.9%\n56.3%\n100.0%\n\n\nTotal\n11.4%\n40.2%\n28.2%\n20.1%\n100.0%\n\n\n\n\n\n\nColumn Percentages\n\nspecies\nUnderweight\nNormal\nOverweight\nObese\nTotal\n\n\n\nAdelie\n78.9%\n62.7%\n34.0%\n0.0%\n43.8%\n\n\nChinstrap\n21.1%\n36.6%\n11.7%\n0.0%\n20.4%\n\n\nGentoo\n0.0%\n0.7%\n54.3%\n100.0%\n35.7%\n\n\nTotal\n100.0%\n100.0%\n100.0%\n100.0%\n100.0%\n\n\n\n\n\n\nTotal Percentages\n\nspecies\nUnderweight\nNormal\nOverweight\nObese\nTotal\n\n\n\nAdelie\n9.0%\n25.2%\n9.6%\n0.0%\n43.8%\n\n\nChinstrap\n2.4%\n14.7%\n3.3%\n0.0%\n20.4%\n\n\nGentoo\n0.0%\n0.3%\n15.3%\n20.1%\n35.7%\n\n\nTotal\n11.4%\n40.2%\n28.2%\n20.1%\n100.0%\n\n\n\n\n\nWhy is it important to represent both counts and percentages?\n\nPercentages can sometimes be misleading when the sample size is small. By presenting both counts and percentages, the reader can see the actual numbers behind the percentages.\nWhen comparing different groups or datasets, percentages help standardize the comparison by accounting for differences in group sizes.\n\nWhen presenting the counts and percentages, you can combine them to a single table.\n\n\n\nCounts with Row Percentages\n\n\n\n\n\n\n\n\n\nspecies\nUnderweight\nNormal\nOverweight\nObese\nTotal\n\n\n\nAdelie\n30 (20.5%)\n84 (57.5%)\n32 (21.9%)\n0 (0.0%)\n146 (100.0%)\n\n\nChinstrap\n8 (11.8%)\n49 (72.1%)\n11 (16.2%)\n0 (0.0%)\n68 (100.0%)\n\n\nGentoo\n0 (0.0%)\n1 (0.8%)\n51 (42.9%)\n67 (56.3%)\n119 (100.0%)\n\n\nTotal\n38 (11.4%)\n134 (40.2%)\n94 (28.2%)\n67 (20.1%)\n333 (100.0%)\n\n\n\n\n\nGraphical representation\nGrouped Bar Chart/ Clustered Bar Chart: With counts\n\n\n\n\nComposition of the Sample by Species and BMI Category\n\n\n\nAlways try to level up your plots.\nChange the colour theme to emphasize the order.\n\n\n\n\nComposition of the Sample by Species and BMI Category\n\n\n\nAdd counts\n\n\n\n\nComposition of the Sample by Species and BMI Category\n\n\n\nGrouped Bar Chart/ Cluster Bar chart: With percentages\nAdvantages\n\nComparison within groups: It allows for easy comparison of values within each category group.\nComparison between groups: It also facilitates comparison between different category groups.\n\nDisadvantages\n\nIf there are too many groups or variables, the bars can become narrow, making it difficult to read.\nComplexity with many groups: With a large number of groups or variables, the chart can become crowded and hard to read.\nDifficulty in showing totals: It’s not straightforward to show the total magnitude of each category since bars are grouped.\n\n\n\n\n\n\n\n\n\nStaked Bar Chart\nStacked Bar Chart: Advantages\n\nAllows viewers to see how totals accumulate as each category is stacked on top of one another.\nUseful for comparing the total magnitude of each category across different groups or segments.\nIdeal when the emphasis is on the total quantity of items in each category rather than their relative proportions.\n\nStacked Percentage Chart\n\nUse when you want to show the relative proportion or contribution of each category to the total.\nHelpful for illustrating the distribution of percentages within categories across different groups or segments.\nSuitable when you want to emphasize the composition or share of each category relative to the whole.\n\nStacked Bar Chart: Disadvantages\n\nIt can be challenging to compare individual segments between different groups because they are not aligned horizontally.\nSmall segments can be hard to interpret accurately when they are stacked on top of each other.\n\nCounts\n\n\n\n\n\n\n\n\nWith percentages\n\n\n\n\n\n\n\n\nYou can also take the horizontal version of the bar charts as well.\nWith counts\n\n\n\n\n\n\n\n\nWith percentages\n\n\n\n\n\n\n\n\nCount chart vs Percentage Cluster Bar Charts\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPercentage charts: Advantages\n\nShows the proportion of each category relative to the whole, making it easier to understand the distribution.\nAllows for fair comparisons between different groups or categories, regardless of their size.\nHighlights the relative importance of different categories within each group.\n\nPercentage charts: Disadvantages\n\nDoesn’t provide the raw counts, which might be necessary for understanding the actual volume or size of each category.\n\nCount charts: Advantages\n\nClearly shows the frequency of each category, providing a direct understanding of the volume or size.\nUseful when the actual count is crucial for decision-making.\n\nCount charts: Disadvantages\n\nDifficulties arise when comparing groups, especially when their sizes differ.\nWhich is the best?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFacet Bar Chart\nA facet bar chart is simply a set of bar charts that are split (or faceted) into multiple smaller plots, usually based on the values of one or more categorical variables.\n\n\n\n\n\n\n\n\nFacet by BMI Category",
     "crumbs": [
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Descriptive Statistics</span>"
     ]
@@ -533,8 +533,38 @@
     "objectID": "05-chap5.html#quntitative-data-univariate-analysis",
     "href": "05-chap5.html#quntitative-data-univariate-analysis",
     "title": "5  Descriptive Statistics",
-    "section": "\n5.9 Quntitative data: Univariate Analysis",
-    "text": "5.9 Quntitative data: Univariate Analysis",
+    "section": "\n5.5 Quntitative data: Univariate Analysis",
+    "text": "5.5 Quntitative data: Univariate Analysis\nGraphical representations\nHistogram\n\nA histogram shows the frequency distribution of a numeric variable.\nThe data range is divided into bins (intervals), and the height of each bar represents the number (or proportion) of observations falling in that interval.\n\nHelps to identify:\n\nShape of distribution (normal, skewed, bimodal, etc.)\nSpread of values\nOutliers (indirectly, as bars may extend far out)\n\n\n\n\n\n\n\n\n\n\n\nBox and Whisker Plot (or Box Plot)\n\nsummarizes the five-number summary (Q1 - 3IQR, Q1, Q2, Q3, Q3 + 3IQR)\nOutliers are usually marked as individual points beyond whiskers.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Descriptive Statistics</span>"
+    ]
+  },
+  {
+    "objectID": "05-chap5.html#summary-measures",
+    "href": "05-chap5.html#summary-measures",
+    "title": "5  Descriptive Statistics",
+    "section": "\n5.6 Summary Measures",
+    "text": "5.6 Summary Measures\nMeasures of Central Tendency\n\nUsed to identify the center of data distribution.\nIt describes a whole set of data with a single value that represents the center of its distribution.\nOne number that best summarizes the entire set of measurement.\nMeasures of central tendency: mode, median, mean, weighted mean, harmonic mean, geometric mean, quadratic mean\n\nMode\n\nThe most frequently occurring value in a set of data.\nCan be used to determine which category occurs most frequently\n\nExample 1: Determine the mode for the following numbers.\n2, 4, 8, 4, 6, 2, 7, 8, 4, 3, 8, 9, 4, 3, 10, 21, 4\nThe mode can be determined for qualitative data as well as quantitative data.\nExample 2: A group of 10 people were asked about their favorite shoe color.\nBlack, Blue, Brown, White, Black, Black, Black, Brown, Brown, Black\nYour turn:\nCompute the mode for the following numbers\nDataset 1\n0.5, 0.1, 0.8, 0.8, 0.8, 0.7, 0.7, 0.7, 0.6, 0.2, 0.3, 0.1, 0.8, 0.7\nDataset 2\n2, 4, 6, 8, 10, 12, 14, 16\nImportant facts about mode\n\nUnimodal - only 1 mode\nBimodal - 2 modes\nMultimodal - more than 2 modes\nNo mode: There is no mode when all observed values appear the same number of times in a data set.\nMedian\n\nThe middle value in an ordered array of numbers.\nFor an array with an odd number of observations, the median is the middle number.\nFor an array with an even number of observations, median is the mean of the two middle numbers.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Descriptive Statistics</span>"
+    ]
+  },
+  {
+    "objectID": "05-chap5.html#steps-in-calculating-median",
+    "href": "05-chap5.html#steps-in-calculating-median",
+    "title": "5  Descriptive Statistics",
+    "section": "\n5.7 Steps in calculating median",
+    "text": "5.7 Steps in calculating median\n\nArrange the data in an ordered array of numbers.\nCount the number of observations. Suppose there are n number of observations.\nLocate the middle value of the ordered array as follows\n\nMedian formula when n is odd\nMedian = (\\frac{n+1}{2})^{th} \\text{observation}\nMedian formula when n is even\nMedian = \\frac{(\\frac{n}{2})^{observation} + (\\frac{n}{2} + 1)^{observation}}{2}\nYour turn\nCompute the median for the following numbers.\nDataset 1:\n214, 215, 216, 105, 109, 8, 50, 1000, 150\nDataset 2:\n2, 3, 10, 11, 50, 5, 8, 9, 10, 5\nMean (Arithmetic mean)\nPopulation mean: \\mu\nPopulation size: N\n\\mu = \\frac{\\sum_{i=1}^Nx_i}{N}\nSample mean: \\bar{x}\nSample size: n\n\\bar{x} = \\frac{\\sum_{i=1}^nx_i}{n}",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Descriptive Statistics</span>"
+    ]
+  },
+  {
+    "objectID": "05-chap5.html#your-turn-1",
+    "href": "05-chap5.html#your-turn-1",
+    "title": "5  Descriptive Statistics",
+    "section": "\n5.8 Your turn",
+    "text": "5.8 Your turn\nDetermine the mean for the following numbers.\nQ1:\n214, 215, 216, 105, 109, 8, 50, 1000, 150\nQ2:\n2, 3, 10, 11, 50, 5, 8, 9, 10, 5\nTabular representation\n\nlibrary(dplyr)\nlibrary(palmerpenguins)\nlibrary(knitr)\n\npenguins |&gt;\n  summarise(\n    Minimum     = min(body_mass_g, na.rm = TRUE),\n    Q1      = quantile(body_mass_g, 0.25, na.rm = TRUE),\n    Median  = median(body_mass_g, na.rm = TRUE),\n    Mean    = mean(body_mass_g, na.rm = TRUE),\n    Q3      = quantile(body_mass_g, 0.75, na.rm = TRUE),\n    Maximum     = max(body_mass_g, na.rm = TRUE),\n    SD      = sd(body_mass_g, na.rm = TRUE),\n    N       = n()\n  ) |&gt;\n  kable(caption = \"Summary statistics for Penguin Body Mass (g)\")\n\n\nSummary statistics for Penguin Body Mass (g)\n\nMinimum\nQ1\nMedian\nMean\nQ3\nMaximum\nSD\nN\n\n\n2700\n3550\n4050\n4201.754\n4750\n6300\n801.9545\n344",
     "crumbs": [
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Descriptive Statistics</span>"
     ]
@@ -543,8 +573,8 @@
     "objectID": "05-chap5.html#quantitative-data-bivariate-analysis",
     "href": "05-chap5.html#quantitative-data-bivariate-analysis",
     "title": "5  Descriptive Statistics",
-    "section": "\n5.10 Quantitative data: Bivariate Analysis",
-    "text": "5.10 Quantitative data: Bivariate Analysis",
+    "section": "\n5.9 Quantitative data: Bivariate Analysis",
+    "text": "5.9 Quantitative data: Bivariate Analysis\nGraphical Representation\n\n\n\n\n\n\n\n\nTabular representation\nIn addition to the descriptive measures we can also record the Pearson’s correlation coefficient.\nIn this case Pearson’s correlation coefficient is\n\n\n# A tibble: 1 × 1\n  correlation\n        &lt;dbl&gt;\n1       0.871",
     "crumbs": [
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Descriptive Statistics</span>"
     ]
@@ -553,18 +583,8 @@
     "objectID": "05-chap5.html#qualitative-vs-quantitative",
     "href": "05-chap5.html#qualitative-vs-quantitative",
     "title": "5  Descriptive Statistics",
-    "section": "\n5.11 Qualitative vs Quantitative",
-    "text": "5.11 Qualitative vs Quantitative",
-    "crumbs": [
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Descriptive Statistics</span>"
-    ]
-  },
-  {
-    "objectID": "05-chap5.html#quantitative-vs-quantitative",
-    "href": "05-chap5.html#quantitative-vs-quantitative",
-    "title": "5  Descriptive Statistics",
-    "section": "\n5.12 Quantitative vs Quantitative",
-    "text": "5.12 Quantitative vs Quantitative",
+    "section": "\n5.10 Qualitative vs Quantitative",
+    "text": "5.10 Qualitative vs Quantitative",
     "crumbs": [
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Descriptive Statistics</span>"
     ]
@@ -573,58 +593,8 @@
     "objectID": "05-chap5.html#quantitative-vs-quantitative-with-a-qualitative-variable",
     "href": "05-chap5.html#quantitative-vs-quantitative-with-a-qualitative-variable",
     "title": "5  Descriptive Statistics",
-    "section": "\n5.13 Quantitative vs Quantitative with a Qualitative variable",
-    "text": "5.13 Quantitative vs Quantitative with a Qualitative variable",
-    "crumbs": [
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Descriptive Statistics</span>"
-    ]
-  },
-  {
-    "objectID": "05-chap5.html#percentage-chart",
-    "href": "05-chap5.html#percentage-chart",
-    "title": "5  Descriptive Statistics",
-    "section": "\n5.4 Percentage chart",
-    "text": "5.4 Percentage chart\nAdvantages\n\nShows the proportion of each category relative to the whole, making it easier to understand the distribution.\nAllows for fair comparisons between different groups or categories, regardless of their size.\nHighlights the relative importance of different categories within each group.\n\nDisadvantages\n\nDoesn’t provide the raw counts, which might be necessary for understanding the actual volume or size of each category.",
-    "crumbs": [
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Descriptive Statistics</span>"
-    ]
-  },
-  {
-    "objectID": "05-chap5.html#counts-chart",
-    "href": "05-chap5.html#counts-chart",
-    "title": "5  Descriptive Statistics",
-    "section": "\n5.5 Counts chart",
-    "text": "5.5 Counts chart\nAdvantages\n\nClearly shows the frequency of each category, providing a direct understanding of the volume or size.\nUseful when the actual count is crucial for decision-making.\n\nDisadvantages\n\nDifficulties arise when comparing groups, especially when their sizes differ.",
-    "crumbs": [
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Descriptive Statistics</span>"
-    ]
-  },
-  {
-    "objectID": "05-chap5.html#grouped-bar-chart-percentage",
-    "href": "05-chap5.html#grouped-bar-chart-percentage",
-    "title": "5  Descriptive Statistics",
-    "section": "\n5.6 Grouped Bar Chart (Percentage)",
-    "text": "5.6 Grouped Bar Chart (Percentage)\nAdvantages\n\nComparison within groups: It allows for easy comparison of values within each category group.\nComparison between groups: It also facilitates comparison between different category groups.\n\nDisadvantages\n\nIf there are too many groups or variables, the bars can become narrow, making it difficult to read.\nComplexity with many groups: With a large number of groups or variables, the chart can become crowded and hard to read.\nDifficulty in showing totals: It’s not straightforward to show the total magnitude of each category since bars are grouped.",
-    "crumbs": [
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Descriptive Statistics</span>"
-    ]
-  },
-  {
-    "objectID": "05-chap5.html#stacked-bar-chart",
-    "href": "05-chap5.html#stacked-bar-chart",
-    "title": "5  Descriptive Statistics",
-    "section": "\n5.7 Stacked Bar Chart",
-    "text": "5.7 Stacked Bar Chart\nStacked Count Chart\n\nAllows viewers to see how totals accumulate as each category is stacked on top of one another.\nUseful for comparing the total magnitude of each category across different groups or segments.\nIdeal when the emphasis is on the total quantity of items in each category rather than their relative proportions.\n\nStacked Percentage Chart\n\nUse when you want to show the relative proportion or contribution of each category to the total.\nHelpful for illustrating the distribution of percentages within categories across different groups or segments.\nSuitable when you want to emphasize the composition or share of each category relative to the whole.\n\nStacked Bar Chart: Disadvantages\n\nIt can be challenging to compare individual segments between different groups because they are not aligned horizontally.\nSmall segments can be hard to interpret accurately when they are stacked on top of each other.",
-    "crumbs": [
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Descriptive Statistics</span>"
-    ]
-  },
-  {
-    "objectID": "05-chap5.html#which-is-the-best-1",
-    "href": "05-chap5.html#which-is-the-best-1",
-    "title": "5  Descriptive Statistics",
-    "section": "\n5.8 Which is the best?",
-    "text": "5.8 Which is the best?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFacet Bar Chart\n\n\n\n\n\n\n\n\nFacet by BMI Category",
+    "section": "\n5.11 Quantitative vs Quantitative with a Qualitative variable",
+    "text": "5.11 Quantitative vs Quantitative with a Qualitative variable",
     "crumbs": [
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Descriptive Statistics</span>"
     ]
@@ -633,8 +603,8 @@
     "objectID": "05-chap5.html#some-rules",
     "href": "05-chap5.html#some-rules",
     "title": "5  Descriptive Statistics",
-    "section": "\n5.14 Some rules",
-    "text": "5.14 Some rules\n\nDon’t make them 3D: 3D charts can distort data and make it difficult to accurately interpret values.\nDon’t use overly complex charts: Keep it simple. Overly complex charts can confuse the viewer and obscure the data.\nDon’t use excessive colors: Too many colors can be distracting and make the chart hard to read. Stick to a simple color palette.\nDon’t use misleading scales: Ensure the scales start at zero (when appropriate) and are consistent to avoid misrepresenting the data.\nDon’t use pie charts for too many categories: Pie charts are hard to interpret with more than a few slices. Use a bar chart instead.\nDon’t use inappropriate chart types: Match the chart type to the data you are presenting. For example, use line charts for trends over time and bar charts for comparing categories.\nDon’t omit axis labels and titles: Always label your axes and give your chart a clear, descriptive title.\nDon’t clutter with too much information: Avoid adding unnecessary elements like excessive gridlines, text, or data points.\nDon’t ignore accessibility: Ensure your charts are readable for people with color blindness by using colorblind-friendly palettes and providing text alternatives.\nDon’t make legends and labels too small: Ensure that legends and labels are large enough to be easily read.\nDon’t use default settings without customization: Default settings might not be the best for your data. Customize your charts to improve clarity and impact.\nDon’t ignore data source and context: Always provide the data source and context to help the audience understand where the data comes from and its relevance.",
+    "section": "\n5.12 Some rules",
+    "text": "5.12 Some rules\n\nDon’t make them 3D: 3D charts can distort data and make it difficult to accurately interpret values.\nDon’t use overly complex charts: Keep it simple. Overly complex charts can confuse the viewer and obscure the data.\nDon’t use excessive colors: Too many colors can be distracting and make the chart hard to read. Stick to a simple color palette.\nDon’t use misleading scales: Ensure the scales start at zero (when appropriate) and are consistent to avoid misrepresenting the data.\nDon’t use pie charts for too many categories: Pie charts are hard to interpret with more than a few slices. Use a bar chart instead.\nDon’t use inappropriate chart types: Match the chart type to the data you are presenting. For example, use line charts for trends over time and bar charts for comparing categories.\nDon’t omit axis labels and titles: Always label your axes and give your chart a clear, descriptive title.\nDon’t clutter with too much information: Avoid adding unnecessary elements like excessive gridlines, text, or data points.\nDon’t ignore accessibility: Ensure your charts are readable for people with color blindness by using colorblind-friendly palettes and providing text alternatives.\nDon’t make legends and labels too small: Ensure that legends and labels are large enough to be easily read.\nDon’t use default settings without customization: Default settings might not be the best for your data. Customize your charts to improve clarity and impact.\nDon’t ignore data source and context: Always provide the data source and context to help the audience understand where the data comes from and its relevance.",
     "crumbs": [
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Descriptive Statistics</span>"
     ]

@@ -17,6 +17,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -63,6 +97,46 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script><link href="https://fonts.googleapis.com/css?family=Fira+Sans|Merriweather|Source%20Code%20Pro" rel="stylesheet">
+<script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script><script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script><script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 </head>
 <body class="nav-sidebar docked">
 
@@ -142,20 +216,18 @@ ul.task-list li input[type="checkbox"] {
         <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title"><b>Sections</b></h2>
    
   <ul class="collapse">
-<li><a href="#dataset-use-for-illustrations" id="toc-dataset-use-for-illustrations" class="nav-link active" data-scroll-target="#dataset-use-for-illustrations"><span class="header-section-number">5.1</span> Dataset Use for Illustrations</a></li>
-  <li><a href="#qualitative-data-univariate-analysis" id="toc-qualitative-data-univariate-analysis" class="nav-link" data-scroll-target="#qualitative-data-univariate-analysis"><span class="header-section-number">5.2</span> Qualitative data: Univariate Analysis</a></li>
-  <li><a href="#qualitative-data-bivariate-analysis" id="toc-qualitative-data-bivariate-analysis" class="nav-link" data-scroll-target="#qualitative-data-bivariate-analysis"><span class="header-section-number">5.3</span> Qualitative data: Bivariate Analysis</a></li>
-  <li><a href="#percentage-chart" id="toc-percentage-chart" class="nav-link" data-scroll-target="#percentage-chart"><span class="header-section-number">5.4</span> Percentage chart</a></li>
-  <li><a href="#counts-chart" id="toc-counts-chart" class="nav-link" data-scroll-target="#counts-chart"><span class="header-section-number">5.5</span> Counts chart</a></li>
-  <li><a href="#grouped-bar-chart-percentage" id="toc-grouped-bar-chart-percentage" class="nav-link" data-scroll-target="#grouped-bar-chart-percentage"><span class="header-section-number">5.6</span> Grouped Bar Chart (Percentage)</a></li>
-  <li><a href="#stacked-bar-chart" id="toc-stacked-bar-chart" class="nav-link" data-scroll-target="#stacked-bar-chart"><span class="header-section-number">5.7</span> Stacked Bar Chart</a></li>
-  <li><a href="#which-is-the-best-1" id="toc-which-is-the-best-1" class="nav-link" data-scroll-target="#which-is-the-best-1"><span class="header-section-number">5.8</span> Which is the best?</a></li>
-  <li><a href="#quntitative-data-univariate-analysis" id="toc-quntitative-data-univariate-analysis" class="nav-link" data-scroll-target="#quntitative-data-univariate-analysis"><span class="header-section-number">5.9</span> Quntitative data: Univariate Analysis</a></li>
-  <li><a href="#quantitative-data-bivariate-analysis" id="toc-quantitative-data-bivariate-analysis" class="nav-link" data-scroll-target="#quantitative-data-bivariate-analysis"><span class="header-section-number">5.10</span> Quantitative data: Bivariate Analysis</a></li>
-  <li><a href="#qualitative-vs-quantitative" id="toc-qualitative-vs-quantitative" class="nav-link" data-scroll-target="#qualitative-vs-quantitative"><span class="header-section-number">5.11</span> Qualitative vs Quantitative</a></li>
-  <li><a href="#quantitative-vs-quantitative" id="toc-quantitative-vs-quantitative" class="nav-link" data-scroll-target="#quantitative-vs-quantitative"><span class="header-section-number">5.12</span> Quantitative vs Quantitative</a></li>
-  <li><a href="#quantitative-vs-quantitative-with-a-qualitative-variable" id="toc-quantitative-vs-quantitative-with-a-qualitative-variable" class="nav-link" data-scroll-target="#quantitative-vs-quantitative-with-a-qualitative-variable"><span class="header-section-number">5.13</span> Quantitative vs Quantitative with a Qualitative variable</a></li>
-  <li><a href="#some-rules" id="toc-some-rules" class="nav-link" data-scroll-target="#some-rules"><span class="header-section-number">5.14</span> Some rules</a></li>
+<li><a href="#what-is-descriptive-statistics" id="toc-what-is-descriptive-statistics" class="nav-link active" data-scroll-target="#what-is-descriptive-statistics"><span class="header-section-number">5.1</span> What is Descriptive Statistics?</a></li>
+  <li><a href="#dataset-use-for-illustrations" id="toc-dataset-use-for-illustrations" class="nav-link" data-scroll-target="#dataset-use-for-illustrations"><span class="header-section-number">5.2</span> Dataset Use for Illustrations</a></li>
+  <li><a href="#qualitative-data-univariate-analysis" id="toc-qualitative-data-univariate-analysis" class="nav-link" data-scroll-target="#qualitative-data-univariate-analysis"><span class="header-section-number">5.3</span> Qualitative data: Univariate Analysis</a></li>
+  <li><a href="#qualitative-data-bivariate-analysis" id="toc-qualitative-data-bivariate-analysis" class="nav-link" data-scroll-target="#qualitative-data-bivariate-analysis"><span class="header-section-number">5.4</span> Qualitative data: Bivariate Analysis</a></li>
+  <li><a href="#quntitative-data-univariate-analysis" id="toc-quntitative-data-univariate-analysis" class="nav-link" data-scroll-target="#quntitative-data-univariate-analysis"><span class="header-section-number">5.5</span> Quntitative data: Univariate Analysis</a></li>
+  <li><a href="#summary-measures" id="toc-summary-measures" class="nav-link" data-scroll-target="#summary-measures"><span class="header-section-number">5.6</span> Summary Measures</a></li>
+  <li><a href="#steps-in-calculating-median" id="toc-steps-in-calculating-median" class="nav-link" data-scroll-target="#steps-in-calculating-median"><span class="header-section-number">5.7</span> Steps in calculating median</a></li>
+  <li><a href="#your-turn-1" id="toc-your-turn-1" class="nav-link" data-scroll-target="#your-turn-1"><span class="header-section-number">5.8</span> Your turn</a></li>
+  <li><a href="#quantitative-data-bivariate-analysis" id="toc-quantitative-data-bivariate-analysis" class="nav-link" data-scroll-target="#quantitative-data-bivariate-analysis"><span class="header-section-number">5.9</span> Quantitative data: Bivariate Analysis</a></li>
+  <li><a href="#qualitative-vs-quantitative" id="toc-qualitative-vs-quantitative" class="nav-link" data-scroll-target="#qualitative-vs-quantitative"><span class="header-section-number">5.10</span> Qualitative vs Quantitative</a></li>
+  <li><a href="#quantitative-vs-quantitative-with-a-qualitative-variable" id="toc-quantitative-vs-quantitative-with-a-qualitative-variable" class="nav-link" data-scroll-target="#quantitative-vs-quantitative-with-a-qualitative-variable"><span class="header-section-number">5.11</span> Quantitative vs Quantitative with a Qualitative variable</a></li>
+  <li><a href="#some-rules" id="toc-some-rules" class="nav-link" data-scroll-target="#some-rules"><span class="header-section-number">5.12</span> Some rules</a></li>
   </ul></nav>
     </div>
 <!-- main -->
@@ -174,8 +246,13 @@ ul.task-list li input[type="checkbox"] {
   
 
 
-</header><section id="dataset-use-for-illustrations" class="level2" data-number="5.1"><h2 data-number="5.1" class="anchored" data-anchor-id="dataset-use-for-illustrations">
-<span class="header-section-number">5.1</span> Dataset Use for Illustrations</h2>
+</header><section id="what-is-descriptive-statistics" class="level2" data-number="5.1"><h2 data-number="5.1" class="anchored" data-anchor-id="what-is-descriptive-statistics">
+<span class="header-section-number">5.1</span> What is Descriptive Statistics?</h2>
+<p>Describe the data</p>
+<p>Descriptive statistics involves summarizing and organizing the data so they can be easily understood</p>
+<p>Does not attempt to make inferences from the sample to the whole population</p>
+</section><section id="dataset-use-for-illustrations" class="level2" data-number="5.2"><h2 data-number="5.2" class="anchored" data-anchor-id="dataset-use-for-illustrations">
+<span class="header-section-number">5.2</span> Dataset Use for Illustrations</h2>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 333 × 9
@@ -195,8 +272,8 @@ ul.task-list li input[type="checkbox"] {
 # ℹ 3 more variables: gender &lt;fct&gt;, year &lt;int&gt;, BMI_category &lt;chr&gt;</code></pre>
 </div>
 </div>
-</section><section id="qualitative-data-univariate-analysis" class="level2" data-number="5.2"><h2 data-number="5.2" class="anchored" data-anchor-id="qualitative-data-univariate-analysis">
-<span class="header-section-number">5.2</span> Qualitative data: Univariate Analysis</h2>
+</section><section id="qualitative-data-univariate-analysis" class="level2" data-number="5.3"><h2 data-number="5.3" class="anchored" data-anchor-id="qualitative-data-univariate-analysis">
+<span class="header-section-number">5.3</span> Qualitative data: Univariate Analysis</h2>
 <p>Chart types we can use: Pie chart, Bar chart</p>
 <p>Tables: Tables with counts and percentages</p>
 <section id="extract-qualitative-variables" class="level3"><h3 class="anchored" data-anchor-id="extract-qualitative-variables">Extract qualitative variables</h3>
@@ -427,8 +504,8 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <p><strong>Question:</strong> In this case, is it necessary to sort the bars in our data visualization for better clarity and interpretation?</p>
-</section></section></section><section id="qualitative-data-bivariate-analysis" class="level2" data-number="5.3"><h2 data-number="5.3" class="anchored" data-anchor-id="qualitative-data-bivariate-analysis">
-<span class="header-section-number">5.3</span> Qualitative data: Bivariate Analysis</h2>
+</section></section></section><section id="qualitative-data-bivariate-analysis" class="level2" data-number="5.4"><h2 data-number="5.4" class="anchored" data-anchor-id="qualitative-data-bivariate-analysis">
+<span class="header-section-number">5.4</span> Qualitative data: Bivariate Analysis</h2>
 <section id="tabular-representation-two-way-tables" class="level3"><h3 class="anchored" data-anchor-id="tabular-representation-two-way-tables">Tabular Representation: Two-way tables</h3>
 <div class="cell">
 <div class="cell-output-display">
@@ -737,166 +814,36 @@ ul.task-list li input[type="checkbox"] {
 </table>
 </div>
 </div>
-<section id="graphical-representation-1" class="level4"><h4 class="anchored" data-anchor-id="graphical-representation-1">Graphical representation</h4>
+</section><section id="graphical-representation-1" class="level3"><h3 class="anchored" data-anchor-id="graphical-representation-1">Graphical representation</h3>
+<section id="grouped-bar-chart-clustered-bar-chart-with-counts" class="level4"><h4 class="anchored" data-anchor-id="grouped-bar-chart-clustered-bar-chart-with-counts">Grouped Bar Chart/ Clustered Bar Chart: With counts</h4>
 <div class="cell">
 <div class="cell-output-display">
-<table class="caption-top table table-sm table-striped small">
-<thead><tr class="header">
-<th style="text-align: left;">species</th>
-<th style="text-align: right;">Underweight</th>
-<th style="text-align: right;">Normal</th>
-<th style="text-align: right;">Overweight</th>
-<th style="text-align: right;">Obese</th>
-<th style="text-align: right;">Total</th>
-</tr></thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">Adelie</td>
-<td style="text-align: right;">30</td>
-<td style="text-align: right;">84</td>
-<td style="text-align: right;">32</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">146</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Chinstrap</td>
-<td style="text-align: right;">8</td>
-<td style="text-align: right;">49</td>
-<td style="text-align: right;">11</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">68</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Gentoo</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">51</td>
-<td style="text-align: right;">67</td>
-<td style="text-align: right;">119</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Total</td>
-<td style="text-align: right;">38</td>
-<td style="text-align: right;">134</td>
-<td style="text-align: right;">94</td>
-<td style="text-align: right;">67</td>
-<td style="text-align: right;">333</td>
-</tr>
-</tbody>
-</table>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="05-chap5_files/figure-html/unnamed-chunk-20-1.png" class="img-fluid figure-img" width="768"></p>
+<figcaption>Composition of the Sample by Species and BMI Category</figcaption></figure>
 </div>
 </div>
-</section><section id="grouped-bar-chart-clustered-bar-chart" class="level4"><h4 class="anchored" data-anchor-id="grouped-bar-chart-clustered-bar-chart">Grouped Bar Chart/ Clustered Bar Chart</h4>
+</div>
+<p>Always try to level up your plots.</p>
+<p>Change the colour theme to emphasize the order.</p>
 <div class="cell">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure"><p><img src="05-chap5_files/figure-html/unnamed-chunk-21-1.png" class="img-fluid figure-img" width="768"></p>
-<figcaption>Figure 1: Composition of the Sample by Species and BMI Category</figcaption></figure>
+<figcaption>Composition of the Sample by Species and BMI Category</figcaption></figure>
 </div>
 </div>
 </div>
+<p>Add counts</p>
 <div class="cell">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure"><p><img src="05-chap5_files/figure-html/unnamed-chunk-22-1.png" class="img-fluid figure-img" width="768"></p>
-<figcaption>Figure 1: Composition of the Sample by Species and BMI Category</figcaption></figure>
+<figcaption>Composition of the Sample by Species and BMI Category</figcaption></figure>
 </div>
 </div>
 </div>
-<div class="cell">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="05-chap5_files/figure-html/unnamed-chunk-23-1.png" class="img-fluid figure-img" width="768"></p>
-<figcaption>Figure 1: Composition of the Sample by Species and BMI Category</figcaption></figure>
-</div>
-</div>
-</div>
-</section><section id="percentage-grouped-bar-chart" class="level4"><h4 class="anchored" data-anchor-id="percentage-grouped-bar-chart">Percentage Grouped Bar Chart</h4>
-<div class="cell">
-<div class="cell-output-display">
-<div>
-<figure class="figure"><p><img src="05-chap5_files/figure-html/unnamed-chunk-24-1.png" class="img-fluid figure-img" width="768"></p>
-</figure>
-</div>
-</div>
-</div>
-<div class="cell">
-<div class="cell-output-display">
-<div>
-<figure class="figure"><p><img src="05-chap5_files/figure-html/unnamed-chunk-25-1.png" class="img-fluid figure-img" width="768"></p>
-</figure>
-</div>
-</div>
-</div>
-</section></section><section id="percentages" class="level3"><h3 class="anchored" data-anchor-id="percentages">Percentages</h3>
-<div class="cell">
-<div class="cell-output-display">
-<div>
-<figure class="figure"><p><img src="05-chap5_files/figure-html/unnamed-chunk-26-1.png" class="img-fluid figure-img" width="768"></p>
-</figure>
-</div>
-</div>
-</div>
-<section id="staked-bar-chart" class="level4"><h4 class="anchored" data-anchor-id="staked-bar-chart">Staked Bar Chart</h4>
-<p>Counts</p>
-<div class="cell">
-<div class="cell-output-display">
-<div>
-<figure class="figure"><p><img src="05-chap5_files/figure-html/unnamed-chunk-27-1.png" class="img-fluid figure-img" width="768"></p>
-</figure>
-</div>
-</div>
-</div>
-<p>Percentages</p>
-<div class="cell">
-<div class="cell-output-display">
-<div>
-<figure class="figure"><p><img src="05-chap5_files/figure-html/unnamed-chunk-28-1.png" class="img-fluid figure-img" width="768"></p>
-</figure>
-</div>
-</div>
-</div>
-</section></section><section id="counts" class="level3"><h3 class="anchored" data-anchor-id="counts">Counts</h3>
-<div class="cell">
-<div class="cell-output-display">
-<div>
-<figure class="figure"><p><img src="05-chap5_files/figure-html/unnamed-chunk-29-1.png" class="img-fluid figure-img" width="768"></p>
-</figure>
-</div>
-</div>
-</div>
-</section><section id="percentages-1" class="level3"><h3 class="anchored" data-anchor-id="percentages-1">Percentages</h3>
-<div class="cell">
-<div class="cell-output-display">
-<div>
-<figure class="figure"><p><img src="05-chap5_files/figure-html/unnamed-chunk-30-1.png" class="img-fluid figure-img" width="768"></p>
-</figure>
-</div>
-</div>
-</div>
-</section></section><section id="percentage-chart" class="level2" data-number="5.4"><h2 data-number="5.4" class="anchored" data-anchor-id="percentage-chart">
-<span class="header-section-number">5.4</span> Percentage chart</h2>
-<p><strong>Advantages</strong></p>
-<ul>
-<li><p>Shows the proportion of each category relative to the whole, making it easier to understand the distribution.</p></li>
-<li><p>Allows for fair comparisons between different groups or categories, regardless of their size.</p></li>
-<li><p>Highlights the relative importance of different categories within each group.</p></li>
-</ul>
-<p><strong>Disadvantages</strong></p>
-<ul>
-<li>Doesn’t provide the raw counts, which might be necessary for understanding the actual volume or size of each category.</li>
-</ul></section><section id="counts-chart" class="level2" data-number="5.5"><h2 data-number="5.5" class="anchored" data-anchor-id="counts-chart">
-<span class="header-section-number">5.5</span> Counts chart</h2>
-<p><strong>Advantages</strong></p>
-<ul>
-<li><p>Clearly shows the frequency of each category, providing a direct understanding of the volume or size.</p></li>
-<li><p>Useful when the actual count is crucial for decision-making.</p></li>
-</ul>
-<p><strong>Disadvantages</strong></p>
-<ul>
-<li>Difficulties arise when comparing groups, especially when their sizes differ.</li>
-</ul></section><section id="grouped-bar-chart-percentage" class="level2" data-number="5.6"><h2 data-number="5.6" class="anchored" data-anchor-id="grouped-bar-chart-percentage">
-<span class="header-section-number">5.6</span> Grouped Bar Chart (Percentage)</h2>
+</section><section id="grouped-bar-chart-cluster-bar-chart-with-percentages" class="level4"><h4 class="anchored" data-anchor-id="grouped-bar-chart-cluster-bar-chart-with-percentages">Grouped Bar Chart/ Cluster Bar chart: With percentages</h4>
 <p><strong>Advantages</strong></p>
 <ul>
 <li><p>Comparison within groups: It allows for easy comparison of values within each category group.</p></li>
@@ -907,9 +854,17 @@ ul.task-list li input[type="checkbox"] {
 <li><p>If there are too many groups or variables, the bars can become narrow, making it difficult to read.</p></li>
 <li><p>Complexity with many groups: With a large number of groups or variables, the chart can become crowded and hard to read.</p></li>
 <li><p>Difficulty in showing totals: It’s not straightforward to show the total magnitude of each category since bars are grouped.</p></li>
-</ul></section><section id="stacked-bar-chart" class="level2" data-number="5.7"><h2 data-number="5.7" class="anchored" data-anchor-id="stacked-bar-chart">
-<span class="header-section-number">5.7</span> Stacked Bar Chart</h2>
-<p><strong>Stacked Count Chart</strong></p>
+</ul>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="05-chap5_files/figure-html/unnamed-chunk-23-1.png" class="img-fluid figure-img" width="768"></p>
+</figure>
+</div>
+</div>
+</div>
+</section><section id="staked-bar-chart" class="level4"><h4 class="anchored" data-anchor-id="staked-bar-chart">Staked Bar Chart</h4>
+<p><strong>Stacked Bar Chart: Advantages</strong></p>
 <ul>
 <li><p>Allows viewers to see how totals accumulate as each category is stacked on top of one another.</p></li>
 <li><p>Useful for comparing the total magnitude of each category across different groups or segments.</p></li>
@@ -921,12 +876,92 @@ ul.task-list li input[type="checkbox"] {
 <li><p>Helpful for illustrating the distribution of percentages within categories across different groups or segments.</p></li>
 <li><p>Suitable when you want to emphasize the composition or share of each category relative to the whole.</p></li>
 </ul>
-<p>Stacked Bar Chart: Disadvantages</p>
+<p><strong>Stacked Bar Chart: Disadvantages</strong></p>
 <ul>
 <li><p>It can be challenging to compare individual segments between different groups because they are not aligned horizontally.</p></li>
 <li><p>Small segments can be hard to interpret accurately when they are stacked on top of each other.</p></li>
-</ul></section><section id="which-is-the-best-1" class="level2" data-number="5.8"><h2 data-number="5.8" class="anchored" data-anchor-id="which-is-the-best-1">
-<span class="header-section-number">5.8</span> Which is the best?</h2>
+</ul>
+<p>Counts</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="05-chap5_files/figure-html/unnamed-chunk-24-1.png" class="img-fluid figure-img" width="768"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>With percentages</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="05-chap5_files/figure-html/unnamed-chunk-25-1.png" class="img-fluid figure-img" width="768"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>You can also take the horizontal version of the bar charts as well.</p>
+<p>With counts</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="05-chap5_files/figure-html/unnamed-chunk-26-1.png" class="img-fluid figure-img" width="768"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>With percentages</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="05-chap5_files/figure-html/unnamed-chunk-27-1.png" class="img-fluid figure-img" width="768"></p>
+</figure>
+</div>
+</div>
+</div>
+</section><section id="count-chart-vs-percentage-cluster-bar-charts" class="level4"><h4 class="anchored" data-anchor-id="count-chart-vs-percentage-cluster-bar-charts">Count chart vs Percentage Cluster Bar Charts</h4>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="05-chap5_files/figure-html/unnamed-chunk-28-1.png" class="img-fluid figure-img" width="768"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="05-chap5_files/figure-html/unnamed-chunk-29-1.png" class="img-fluid figure-img" width="768"></p>
+</figure>
+</div>
+</div>
+</div>
+<p><strong>Percentage charts: Advantages</strong></p>
+<ul>
+<li><p>Shows the proportion of each category relative to the whole, making it easier to understand the distribution.</p></li>
+<li><p>Allows for fair comparisons between different groups or categories, regardless of their size.</p></li>
+<li><p>Highlights the relative importance of different categories within each group.</p></li>
+</ul>
+<p><strong>Percentage charts: Disadvantages</strong></p>
+<ul>
+<li>Doesn’t provide the raw counts, which might be necessary for understanding the actual volume or size of each category.</li>
+</ul>
+<p><strong>Count charts: Advantages</strong></p>
+<ul>
+<li><p>Clearly shows the frequency of each category, providing a direct understanding of the volume or size.</p></li>
+<li><p>Useful when the actual count is crucial for decision-making.</p></li>
+</ul>
+<p><strong>Count charts: Disadvantages</strong></p>
+<ul>
+<li>Difficulties arise when comparing groups, especially when their sizes differ.</li>
+</ul></section><section id="which-is-the-best-1" class="level4"><h4 class="anchored" data-anchor-id="which-is-the-best-1">Which is the best?</h4>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="05-chap5_files/figure-html/unnamed-chunk-30-1.png" class="img-fluid figure-img" width="768"></p>
+</figure>
+</div>
+</div>
+</div>
 <div class="cell">
 <div class="cell-output-display">
 <div>
@@ -935,6 +970,8 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
+</section><section id="facet-bar-chart" class="level4"><h4 class="anchored" data-anchor-id="facet-bar-chart">Facet Bar Chart</h4>
+<p>A facet bar chart is simply a set of bar charts that are split (or faceted) into multiple smaller plots, usually based on the values of one or more categorical variables.</p>
 <div class="cell">
 <div class="cell-output-display">
 <div>
@@ -943,36 +980,191 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
-<section id="facet-bar-chart" class="level4"><h4 class="anchored" data-anchor-id="facet-bar-chart">Facet Bar Chart</h4>
-<div class="cell">
-<div class="cell-output-display">
-<div>
-<figure class="figure"><p><img src="05-chap5_files/figure-html/unnamed-chunk-33-1.png" class="img-fluid figure-img" width="768"></p>
-</figure>
-</div>
-</div>
-</div>
 <p><strong>Facet by BMI Category</strong></p>
 <div class="cell">
 <div class="cell-output-display">
 <div>
-<figure class="figure"><p><img src="05-chap5_files/figure-html/unnamed-chunk-34-1.png" class="img-fluid figure-img" width="1152"></p>
+<figure class="figure"><p><img src="05-chap5_files/figure-html/unnamed-chunk-33-1.png" class="img-fluid figure-img" width="1152"></p>
 </figure>
 </div>
 </div>
 </div>
-</section></section><section id="quntitative-data-univariate-analysis" class="level2" data-number="5.9"><h2 data-number="5.9" class="anchored" data-anchor-id="quntitative-data-univariate-analysis">
-<span class="header-section-number">5.9</span> Quntitative data: Univariate Analysis</h2>
-</section><section id="quantitative-data-bivariate-analysis" class="level2" data-number="5.10"><h2 data-number="5.10" class="anchored" data-anchor-id="quantitative-data-bivariate-analysis">
-<span class="header-section-number">5.10</span> Quantitative data: Bivariate Analysis</h2>
-</section><section id="qualitative-vs-quantitative" class="level2" data-number="5.11"><h2 data-number="5.11" class="anchored" data-anchor-id="qualitative-vs-quantitative">
-<span class="header-section-number">5.11</span> Qualitative vs Quantitative</h2>
-</section><section id="quantitative-vs-quantitative" class="level2" data-number="5.12"><h2 data-number="5.12" class="anchored" data-anchor-id="quantitative-vs-quantitative">
-<span class="header-section-number">5.12</span> Quantitative vs Quantitative</h2>
-</section><section id="quantitative-vs-quantitative-with-a-qualitative-variable" class="level2" data-number="5.13"><h2 data-number="5.13" class="anchored" data-anchor-id="quantitative-vs-quantitative-with-a-qualitative-variable">
-<span class="header-section-number">5.13</span> Quantitative vs Quantitative with a Qualitative variable</h2>
-</section><section id="some-rules" class="level2" data-number="5.14"><h2 data-number="5.14" class="anchored" data-anchor-id="some-rules">
-<span class="header-section-number">5.14</span> Some rules</h2>
+</section></section></section><section id="quntitative-data-univariate-analysis" class="level2" data-number="5.5"><h2 data-number="5.5" class="anchored" data-anchor-id="quntitative-data-univariate-analysis">
+<span class="header-section-number">5.5</span> Quntitative data: Univariate Analysis</h2>
+<section id="graphical-representations-1" class="level3"><h3 class="anchored" data-anchor-id="graphical-representations-1">Graphical representations</h3>
+<section id="histogram" class="level4"><h4 class="anchored" data-anchor-id="histogram">Histogram</h4>
+<ul>
+<li><p>A histogram shows the frequency distribution of a numeric variable.</p></li>
+<li><p>The data range is divided into bins (intervals), and the height of each bar represents the number (or proportion) of observations falling in that interval.</p></li>
+<li>
+<p>Helps to identify:</p>
+<ul>
+<li><p>Shape of distribution (normal, skewed, bimodal, etc.)</p></li>
+<li><p>Spread of values</p></li>
+<li><p>Outliers (indirectly, as bars may extend far out)</p></li>
+</ul>
+</li>
+</ul>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="05-chap5_files/figure-html/unnamed-chunk-34-1.png" class="img-fluid figure-img" width="768"></p>
+</figure>
+</div>
+</div>
+</div>
+</section><section id="box-and-whisker-plot-or-box-plot" class="level4"><h4 class="anchored" data-anchor-id="box-and-whisker-plot-or-box-plot">Box and Whisker Plot (or Box Plot)</h4>
+<ul>
+<li><p>summarizes the five-number summary (<span class="math inline">Q1 - 3IQR</span>, <span class="math inline">Q1</span>, <span class="math inline">Q2</span>, <span class="math inline">Q3</span>, <span class="math inline">Q3 + 3IQR</span>)</p></li>
+<li><p>Outliers are usually marked as individual points beyond whiskers.</p></li>
+</ul>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="05-chap5_files/figure-html/unnamed-chunk-35-1.png" class="img-fluid figure-img" width="768"></p>
+</figure>
+</div>
+</div>
+</div>
+</section></section></section><section id="summary-measures" class="level2" data-number="5.6"><h2 data-number="5.6" class="anchored" data-anchor-id="summary-measures">
+<span class="header-section-number">5.6</span> Summary Measures</h2>
+<section id="measures-of-central-tendency" class="level3"><h3 class="anchored" data-anchor-id="measures-of-central-tendency">Measures of Central Tendency</h3>
+<ul>
+<li><p>Used to identify the center of data distribution.</p></li>
+<li><p>It describes a whole set of data with a single value that represents the center of its distribution.</p></li>
+<li><p>One number that best summarizes the entire set of measurement.</p></li>
+<li><p>Measures of central tendency: mode, median, mean, weighted mean, harmonic mean, geometric mean, quadratic mean</p></li>
+</ul>
+<section id="mode" class="level4"><h4 class="anchored" data-anchor-id="mode">Mode</h4>
+<ul>
+<li><p>The most frequently occurring value in a set of data.</p></li>
+<li><p>Can be used to determine which category occurs most frequently</p></li>
+</ul>
+<p>Example 1: Determine the mode for the following numbers.</p>
+<pre><code>2, 4, 8, 4, 6, 2, 7, 8, 4, 3, 8, 9, 4, 3, 10, 21, 4</code></pre>
+<p>The mode can be determined for qualitative data as well as quantitative data.</p>
+<p>Example 2: A group of 10 people were asked about their favorite shoe color.</p>
+<pre><code>Black, Blue, Brown, White, Black, Black, Black, Brown, Brown, Black</code></pre>
+<p>Your turn:</p>
+<p>Compute the mode for the following numbers</p>
+<p><strong>Dataset 1</strong></p>
+<p>0.5, 0.1, 0.8, 0.8, 0.8, 0.7, 0.7, 0.7, 0.6, 0.2, 0.3, 0.1, 0.8, 0.7</p>
+<p><strong>Dataset 2</strong></p>
+<p>2, 4, 6, 8, 10, 12, 14, 16</p>
+</section><section id="important-facts-about-mode" class="level4"><h4 class="anchored" data-anchor-id="important-facts-about-mode">Important facts about mode</h4>
+<ol type="1">
+<li><p>Unimodal - only 1 mode</p></li>
+<li><p>Bimodal - 2 modes</p></li>
+<li><p>Multimodal - more than 2 modes</p></li>
+<li><p>No mode: There is no mode when all observed values appear the same number of times in a data set.</p></li>
+</ol></section><section id="median" class="level4"><h4 class="anchored" data-anchor-id="median">Median</h4>
+<ul>
+<li><p>The middle value in an ordered array of numbers.</p></li>
+<li><p>For an array with an odd number of observations, the median is the middle number.</p></li>
+<li><p>For an array with an even number of observations, median is the mean of the two middle numbers.</p></li>
+</ul></section></section></section><section id="steps-in-calculating-median" class="level2" data-number="5.7"><h2 data-number="5.7" class="anchored" data-anchor-id="steps-in-calculating-median">
+<span class="header-section-number">5.7</span> Steps in calculating median</h2>
+<ol type="1">
+<li><p>Arrange the data in an ordered array of numbers.</p></li>
+<li><p>Count the number of observations. Suppose there are <span class="math inline">n</span> number of observations.</p></li>
+<li><p>Locate the middle value of the ordered array as follows</p></li>
+</ol>
+<p><strong>Median formula when <span class="math inline">n</span> is odd</strong></p>
+<p><span class="math inline">Median = (\frac{n+1}{2})^{th} \text{observation}</span></p>
+<p><strong>Median formula when <span class="math inline">n</span> is even</strong></p>
+<p><span class="math inline">Median = \frac{(\frac{n}{2})^{observation} + (\frac{n}{2} + 1)^{observation}}{2}</span></p>
+<p><strong>Your turn</strong></p>
+<p>Compute the median for the following numbers.</p>
+<p>Dataset 1:</p>
+<p>214, 215, 216, 105, 109, 8, 50, 1000, 150</p>
+<p>Dataset 2:</p>
+<p>2, 3, 10, 11, 50, 5, 8, 9, 10, 5</p>
+<section id="mean-arithmetic-mean" class="level4"><h4 class="anchored" data-anchor-id="mean-arithmetic-mean">Mean (Arithmetic mean)</h4>
+<p>Population mean: <span class="math inline">\mu</span></p>
+<p>Population size: <span class="math inline">N</span></p>
+<p><span class="math display">\mu = \frac{\sum_{i=1}^Nx_i}{N}</span></p>
+<p>Sample mean: <span class="math inline">\bar{x}</span></p>
+<p>Sample size: <span class="math inline">n</span></p>
+<p><span class="math display">\bar{x} = \frac{\sum_{i=1}^nx_i}{n}</span></p>
+</section></section><section id="your-turn-1" class="level2" data-number="5.8"><h2 data-number="5.8" class="anchored" data-anchor-id="your-turn-1">
+<span class="header-section-number">5.8</span> Your turn</h2>
+<p>Determine the mean for the following numbers.</p>
+<p>Q1:</p>
+<p>214, 215, 216, 105, 109, 8, 50, 1000, 150</p>
+<p>Q2:</p>
+<p>2, 3, 10, 11, 50, 5, 8, 9, 10, 5</p>
+<section id="tabular-representation" class="level3"><h3 class="anchored" data-anchor-id="tabular-representation">Tabular representation</h3>
+<div class="cell">
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://dplyr.tidyverse.org">dplyr</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://allisonhorst.github.io/palmerpenguins/">palmerpenguins</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://yihui.org/knitr/">knitr</a></span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">penguins</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarise</a></span><span class="op">(</span></span>
+<span>    Minimum     <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Extremes.html">min</a></span><span class="op">(</span><span class="va">body_mass_g</span>, na.rm <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>,</span>
+<span>    Q1      <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/quantile.html">quantile</a></span><span class="op">(</span><span class="va">body_mass_g</span>, <span class="fl">0.25</span>, na.rm <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>,</span>
+<span>    Median  <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/median.html">median</a></span><span class="op">(</span><span class="va">body_mass_g</span>, na.rm <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>,</span>
+<span>    Mean    <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">body_mass_g</span>, na.rm <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>,</span>
+<span>    Q3      <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/quantile.html">quantile</a></span><span class="op">(</span><span class="va">body_mass_g</span>, <span class="fl">0.75</span>, na.rm <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>,</span>
+<span>    Maximum     <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Extremes.html">max</a></span><span class="op">(</span><span class="va">body_mass_g</span>, na.rm <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>,</span>
+<span>    SD      <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/sd.html">sd</a></span><span class="op">(</span><span class="va">body_mass_g</span>, na.rm <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>,</span>
+<span>    N       <span class="op">=</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/context.html">n</a></span><span class="op">(</span><span class="op">)</span></span>
+<span>  <span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html">kable</a></span><span class="op">(</span>caption <span class="op">=</span> <span class="st">"Summary statistics for Penguin Body Mass (g)"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<caption>Summary statistics for Penguin Body Mass (g)</caption>
+<thead><tr class="header">
+<th style="text-align: right;">Minimum</th>
+<th style="text-align: right;">Q1</th>
+<th style="text-align: right;">Median</th>
+<th style="text-align: right;">Mean</th>
+<th style="text-align: right;">Q3</th>
+<th style="text-align: right;">Maximum</th>
+<th style="text-align: right;">SD</th>
+<th style="text-align: right;">N</th>
+</tr></thead>
+<tbody><tr class="odd">
+<td style="text-align: right;">2700</td>
+<td style="text-align: right;">3550</td>
+<td style="text-align: right;">4050</td>
+<td style="text-align: right;">4201.754</td>
+<td style="text-align: right;">4750</td>
+<td style="text-align: right;">6300</td>
+<td style="text-align: right;">801.9545</td>
+<td style="text-align: right;">344</td>
+</tr></tbody>
+</table>
+</div>
+</div>
+</section></section><section id="quantitative-data-bivariate-analysis" class="level2" data-number="5.9"><h2 data-number="5.9" class="anchored" data-anchor-id="quantitative-data-bivariate-analysis">
+<span class="header-section-number">5.9</span> Quantitative data: Bivariate Analysis</h2>
+<section id="graphical-representation-2" class="level3"><h3 class="anchored" data-anchor-id="graphical-representation-2">Graphical Representation</h3>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="05-chap5_files/figure-html/unnamed-chunk-37-1.png" class="img-fluid figure-img" width="768"></p>
+</figure>
+</div>
+</div>
+</div>
+</section><section id="tabular-representation-1" class="level3"><h3 class="anchored" data-anchor-id="tabular-representation-1">Tabular representation</h3>
+<p>In addition to the descriptive measures we can also record the Pearson’s correlation coefficient.</p>
+<p>In this case Pearson’s correlation coefficient is</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 1
+  correlation
+        &lt;dbl&gt;
+1       0.871</code></pre>
+</div>
+</div>
+</section></section><section id="qualitative-vs-quantitative" class="level2" data-number="5.10"><h2 data-number="5.10" class="anchored" data-anchor-id="qualitative-vs-quantitative">
+<span class="header-section-number">5.10</span> Qualitative vs Quantitative</h2>
+</section><section id="quantitative-vs-quantitative-with-a-qualitative-variable" class="level2" data-number="5.11"><h2 data-number="5.11" class="anchored" data-anchor-id="quantitative-vs-quantitative-with-a-qualitative-variable">
+<span class="header-section-number">5.11</span> Quantitative vs Quantitative with a Qualitative variable</h2>
+</section><section id="some-rules" class="level2" data-number="5.12"><h2 data-number="5.12" class="anchored" data-anchor-id="some-rules">
+<span class="header-section-number">5.12</span> Some rules</h2>
 <ol type="1">
 <li><p>Don’t make them 3D: 3D charts can distort data and make it difficult to accurately interpret values.</p></li>
 <li><p>Don’t use overly complex charts: Keep it simple. Overly complex charts can confuse the viewer and obscure the data.</p></li>

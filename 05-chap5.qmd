@@ -1,5 +1,12 @@
 # Descriptive Statistics {#sec-chap5}
 
+## What is Descriptive Statistics?
+Describe the data
+
+Descriptive statistics involves summarizing and organizing the data so they can be easily understood
+
+Does not attempt to make inferences from the sample to the whole population
+
 ## Dataset Use for Illustrations
 
 ```{r, message=FALSE, warning=FALSE}
@@ -400,45 +407,13 @@ combined_table |> knitr::kable(caption = "Counts with Row Percentages")
 ```
 
 
-#### Graphical representation
+### Graphical representation
 
-```{r, message=FALSE, warning=FALSE}
-library(palmerpenguins)
-library(tidyr)
-library(dplyr)
-library(ggplot2)
-library(RColorBrewer)
-names(penguins)[names(penguins) == "sex"] <- "gender"
-penguins_complete <- penguins |>
-  drop_na()
-quartiles <- quantile(penguins_complete$body_mass_g, probs = c(0.1, 0.5, 0.8))
-
-pf <- penguins_complete |>
-  mutate(BMI_category = case_when(
-    body_mass_g <= quartiles[1] ~ "Underweight",
-    body_mass_g > quartiles[1] & body_mass_g <= quartiles[2] ~ "Normal",
-    body_mass_g > quartiles[2] & body_mass_g <= quartiles[3] ~ "Overweight",
-    body_mass_g > quartiles[3] ~ "Obese"
-  ))
-pf2 <- pf |> select(species, island, gender, BMI_category)
-pf2$BMI_category <- factor(pf2$BMI_category, levels=c("Underweight", "Normal",
-"Overweight", "Obese"))
-
-library(janitor)
-# Create the two-way table
-two_way_table <- pf2 |>
-  count(species, BMI_category) |>
-  spread(BMI_category, n, fill = 0) |>
-  adorn_totals("row") |>
-  adorn_totals("col") 
-
-two_way_table |> knitr::kable()
-```
-
-#### Grouped Bar Chart/ Clustered Bar Chart
+#### Grouped Bar Chart/ Clustered Bar Chart: With counts
 
 
-```{r, fig.cap="Figure 1: Composition of the Sample by Species and BMI Category"}
+```{r}
+#| fig.cap: "Composition of the Sample by Species and BMI Category"
 pf2 |>
   count(species, BMI_category) |>
   complete(species = unique(species), BMI_category = unique(BMI_category), 
@@ -448,9 +423,12 @@ pf2 |>
 
 ```
 
+Always try to level up your plots.
 
+Change the  colour theme to emphasize the order.
 
-```{r, fig.cap="Figure 1: Composition of the Sample by Species and BMI Category"}
+```{r}
+#| fig.cap: "Composition of the Sample by Species and BMI Category"
 pf2 |>
   count(species, BMI_category) |>
   complete(species = unique(species), BMI_category = unique(BMI_category), 
@@ -460,8 +438,10 @@ pf2 |>
 
 ```
 
+Add counts 
 
-```{r, fig.cap="Figure 1: Composition of the Sample by Species and BMI Category"}
+```{r}
+#| fig.cap: "Composition of the Sample by Species and BMI Category"
 p1 <- pf2 |>
   count(species, BMI_category) |>
   complete(species = unique(species), BMI_category = unique(BMI_category), 
@@ -474,7 +454,23 @@ p1
 
 ```
 
-#### Percentage Grouped Bar Chart
+#### Grouped Bar Chart/ Cluster Bar chart: With percentages
+
+**Advantages**
+
+-   Comparison within groups: It allows for easy comparison of values within each category group.
+
+-   Comparison between groups: It also facilitates comparison between different category groups.
+
+**Disadvantages**
+
+-   If there are too many groups or variables, the bars can become narrow, making it difficult to read.
+
+-   Complexity with many groups: With a large number of groups or variables, the chart can become crowded and hard to read.
+
+-   Difficulty in showing totals: It's not straightforward to show the total magnitude of each category since bars are grouped.
+
+
 
 ```{r}
 pf3 <- pf2 %>%
@@ -497,6 +493,99 @@ p2
 ```
 
 
+####  Staked Bar Chart
+
+
+**Stacked Bar Chart: Advantages**
+
+-   Allows viewers to see how totals accumulate as each category is stacked on top of one another.
+
+-   Useful for comparing the total magnitude of each category across different groups or segments.
+
+-   Ideal when the emphasis is on the total quantity of items in each category rather than their relative proportions.
+
+**Stacked Percentage Chart**
+
+-   Use when you want to show the relative proportion or contribution of each category to the total.
+
+-   Helpful for illustrating the distribution of percentages within categories across different groups or segments.
+
+-   Suitable when you want to emphasize the composition or share of each category relative to the whole.
+
+
+**Stacked Bar Chart: Disadvantages**
+
+-   It can be challenging to compare individual segments between different groups because they are not aligned horizontally.
+
+-   Small segments can be hard to interpret accurately when they are stacked on top of each other.
+
+
+Counts
+
+```{r}
+pf2 |>
+  count(BMI_category, species) |>
+  ggplot(aes(fill=factor(species), y= n, x = factor(BMI_category))) + 
+  geom_bar(stat = 'identity', position = 'stack') + 
+ geom_text(aes(label =n),
+            position = position_stack(vjust = 0.5), 
+            size = 3, 
+            color = "white") +
+labs(x = "BMI Category", fill ="Species", y="Counts") +
+scale_fill_brewer(palette = "Dark2")
+
+```
+
+
+With percentages
+
+```{r}
+pf2 |>
+  count(BMI_category, species) |>      
+  group_by(BMI_category) |>
+  mutate(pct= prop.table(n) * 100) %>%
+  ggplot() + aes(BMI_category, pct, fill=species) +
+  geom_bar(stat="identity") +
+  ylab("Percentage") +
+  xlab("BMI Category")+
+  geom_text(aes(label=paste0(sprintf("%1.1f", pct),"%")),
+            position=position_stack(vjust=0.5)) + scale_fill_brewer(palette = "Dark2")
+```
+
+You can also take the horizontal version of the bar charts as well. 
+
+With counts
+
+```{r}
+pf2 |>
+  count(BMI_category, species) |>
+  ggplot(aes(fill=factor(species), y= n, x = factor(BMI_category))) + 
+  geom_bar(stat = 'identity', position = 'stack') + 
+ geom_text(aes(label =n),
+            position = position_stack(vjust = 0.5), 
+            size = 3, 
+            color = "white") +
+labs(x = "BMI Category", fill ="Species", y="Counts") +
+scale_fill_brewer(palette = "Dark2") + coord_flip()
+
+```
+
+With percentages
+
+```{r}
+pf2 |>
+  count(BMI_category, species) |>      
+  group_by(BMI_category) |>
+  mutate(pct= prop.table(n) * 100) %>%
+  ggplot() + aes(BMI_category, pct, fill=species) +
+  geom_bar(stat="identity") +
+  ylab("Percentage") +
+  xlab("BMI Category")+
+  geom_text(aes(label=paste0(sprintf("%1.1f", pct),"%")),
+            position=position_stack(vjust=0.5)) + scale_fill_brewer(palette = "Dark2") + coord_flip()
+```
+
+#### Count chart vs Percentage Cluster Bar Charts
 
 ```{r}
 pf2 |>
@@ -512,8 +601,6 @@ scale_fill_brewer(palette = "Dark2")
 
 ```
 
-
-### Percentages
 
 ```{r}
 pf4 <- pf2 %>%
@@ -534,74 +621,8 @@ p3 <- ggplot(pf4, aes(x = factor(BMI_category), y = col_percentage, fill = facto
 p3
 ```
 
-#### Staked Bar Chart
 
-Counts
-
-```{r}
-pf2 |>
-  count(BMI_category, species) |>
-  ggplot(aes(fill=factor(species), y= n, x = factor(BMI_category))) + 
-  geom_bar(stat = 'identity', position = 'stack') + 
- geom_text(aes(label =n),
-            position = position_stack(vjust = 0.5), 
-            size = 3, 
-            color = "white") +
-labs(x = "BMI Category", fill ="Species", y="Counts") +
-scale_fill_brewer(palette = "Dark2")
-
-```
-
-
-Percentages
-
-```{r}
-pf2 |>
-  count(BMI_category, species) |>      
-  group_by(BMI_category) |>
-  mutate(pct= prop.table(n) * 100) %>%
-  ggplot() + aes(BMI_category, pct, fill=species) +
-  geom_bar(stat="identity") +
-  ylab("Percentage") +
-  xlab("BMI Category")+
-  geom_text(aes(label=paste0(sprintf("%1.1f", pct),"%")),
-            position=position_stack(vjust=0.5)) + scale_fill_brewer(palette = "Dark2")
-```
-
-### Counts
-
-```{r}
-pf2 |>
-  count(BMI_category, species) |>
-  ggplot(aes(fill=factor(species), y= n, x = factor(BMI_category))) + 
-  geom_bar(stat = 'identity', position = 'stack') + 
- geom_text(aes(label =n),
-            position = position_stack(vjust = 0.5), 
-            size = 3, 
-            color = "white") +
-labs(x = "BMI Category", fill ="Species", y="Counts") +
-scale_fill_brewer(palette = "Dark2") + coord_flip()
-
-```
-
-### Percentages
-
-```{r}
-pf2 |>
-  count(BMI_category, species) |>      
-  group_by(BMI_category) |>
-  mutate(pct= prop.table(n) * 100) %>%
-  ggplot() + aes(BMI_category, pct, fill=species) +
-  geom_bar(stat="identity") +
-  ylab("Percentage") +
-  xlab("BMI Category")+
-  geom_text(aes(label=paste0(sprintf("%1.1f", pct),"%")),
-            position=position_stack(vjust=0.5)) + scale_fill_brewer(palette = "Dark2") + coord_flip()
-```
-
-## Percentage chart
-
-**Advantages**
+**Percentage charts: Advantages**
 
 -   Shows the proportion of each category relative to the whole, making it easier to understand the distribution.
 
@@ -609,67 +630,26 @@ pf2 |>
 
 -   Highlights the relative importance of different categories within each group.
 
-**Disadvantages**
+**Percentage charts: Disadvantages**
 
 -   Doesn’t provide the raw counts, which might be necessary for understanding the actual volume or size of each category.
 
 
-## Counts chart
 
-**Advantages**
+**Count charts: Advantages**
 
 -   Clearly shows the frequency of each category, providing a direct understanding of the volume or size.
 
 -   Useful when the actual count is crucial for decision-making.
 
-**Disadvantages**
+**Count charts: Disadvantages**
 
 -   Difficulties arise when comparing groups, especially when their sizes differ.
 
 
-## Grouped Bar Chart (Percentage)
-
-**Advantages**
-
--   Comparison within groups: It allows for easy comparison of values within each category group.
-
--   Comparison between groups: It also facilitates comparison between different category groups.
-
-**Disadvantages**
-
--   If there are too many groups or variables, the bars can become narrow, making it difficult to read.
-
--   Complexity with many groups: With a large number of groups or variables, the chart can become crowded and hard to read.
-
--   Difficulty in showing totals: It's not straightforward to show the total magnitude of each category since bars are grouped.
 
 
-## Stacked Bar Chart
-
-**Stacked Count Chart**
-
--   Allows viewers to see how totals accumulate as each category is stacked on top of one another.
-
--   Useful for comparing the total magnitude of each category across different groups or segments.
-
--   Ideal when the emphasis is on the total quantity of items in each category rather than their relative proportions.
-
-**Stacked Percentage Chart**
-
--   Use when you want to show the relative proportion or contribution of each category to the total.
-
--   Helpful for illustrating the distribution of percentages within categories across different groups or segments.
-
--   Suitable when you want to emphasize the composition or share of each category relative to the whole.
-
-
-Stacked Bar Chart: Disadvantages
-
--   It can be challenging to compare individual segments between different groups because they are not aligned horizontally.
-
--   Small segments can be hard to interpret accurately when they are stacked on top of each other.
-
-## Which is the best?
+#### Which is the best?
 
 ```{r, fig.height=10}
 pf2 |>
@@ -700,6 +680,7 @@ pf2 |>
 
 #### Facet Bar Chart
 
+A facet bar chart is simply a set of bar charts that are split (or faceted) into multiple smaller plots, usually based on the values of one or more categorical variables.
 
 
 ```{r, fig.height=10}
@@ -736,11 +717,207 @@ pf2 |>
 
 ## Quntitative data: Univariate Analysis
 
+### Graphical representations
+
+#### Histogram
+
+- A histogram shows the frequency distribution of a numeric variable.
+
+- The data range is divided into bins (intervals), and the height of each bar represents the number (or proportion) of observations falling in that interval.
+
+- Helps to identify:
+
+    - Shape of distribution (normal, skewed, bimodal, etc.)
+
+    - Spread of values
+
+    - Outliers (indirectly, as bars may extend far out)
+
+```{r}
+ggplot(penguins, aes(x=body_mass_g)) + 
+  geom_histogram(col="white") +
+  xlab("Body mass (g)")
+```
+
+
+#### Box and Whisker Plot (or Box Plot) 
+
+- summarizes the five-number summary ($Q1 - 3IQR$, $Q1$, $Q2$, $Q3$, $Q3 + 3IQR$)
+
+- Outliers are usually marked as individual points beyond whiskers.
+
+```{r}
+ggplot(penguins, aes(x=body_mass_g)) + 
+  geom_boxplot() + 
+  xlab("Body mass (g)") 
+  
+```
+
+## Summary Measures
+
+### Measures of Central Tendency
+
+-   Used to identify the center of data distribution.
+
+-   It describes a whole set of data with a single value that represents the center of its distribution.
+
+-   One number that best summarizes the entire set of measurement.
+
+-   Measures of central tendency: mode, median, mean, weighted mean, harmonic mean, geometric mean, quadratic mean
+
+#### Mode
+
+-   The most frequently occurring value in a set of data.
+
+-   Can be used to determine which category occurs most frequently
+
+   Example 1: Determine the mode for the following numbers.
+
+    2, 4, 8, 4, 6, 2, 7, 8, 4, 3, 8, 9, 4, 3, 10, 21, 4
+
+  The mode can be determined for qualitative data as well as quantitative data.
+
+  Example 2: A group of 10 people were asked about their favorite shoe color.
+
+
+    Black, Blue, Brown, White, Black, Black, Black, Brown, Brown, Black
+    
+Your turn:
+
+Compute the mode for the following numbers
+
+**Dataset 1**
+
+0.5, 0.1, 0.8, 0.8, 0.8, 0.7, 0.7, 0.7, 0.6, 0.2, 0.3, 0.1, 0.8, 0.7
+
+**Dataset 2**
+
+2, 4, 6, 8, 10, 12, 14, 16
+
+#### Important facts about mode
+
+1.  Unimodal - only 1 mode
+
+2.  Bimodal - 2 modes
+
+3.  Multimodal - more than 2 modes
+
+4.  No mode: There is no mode when all observed values appear the same number of times in a data set.
+
+#### Median
+
+-   The middle value in an ordered array of numbers.
+
+-   For an array with an odd number of observations, the median is the middle number.
+
+-   For an array with an even number of observations, median is the mean of the two middle numbers.
+
+## Steps in calculating median
+
+1.  Arrange the data in an ordered array of numbers.
+
+2.  Count the number of observations. Suppose there are $n$ number of observations.
+
+3.  Locate the middle value of the ordered array as follows
+
+**Median formula when $n$ is odd**
+
+$Median = (\frac{n+1}{2})^{th} \text{observation}$
+
+**Median formula when $n$ is even**
+
+$Median = \frac{(\frac{n}{2})^{observation} + (\frac{n}{2} + 1)^{observation}}{2}$
+
+**Your turn**
+
+Compute the median for the following numbers.
+
+Dataset 1:
+
+214, 215, 216, 105, 109, 8, 50, 1000, 150
+
+Dataset 2:
+
+2, 3, 10, 11, 50, 5, 8, 9, 10, 5
+
+#### Mean (Arithmetic mean)
+
+Population mean: $\mu$
+
+Population size: $N$
+
+$$\mu = \frac{\sum_{i=1}^Nx_i}{N}$$ 
+
+Sample mean: $\bar{x}$
+
+Sample size: $n$
+
+$$\bar{x} = \frac{\sum_{i=1}^nx_i}{n}$$
+
+## Your turn
+
+Determine the mean for the following numbers.
+
+Q1:
+
+214, 215, 216, 105, 109, 8, 50, 1000, 150
+
+Q2:
+
+2, 3, 10, 11, 50, 5, 8, 9, 10, 5
+
+### Tabular representation
+
+```{r}
+#| echo: true
+library(dplyr)
+library(palmerpenguins)
+library(knitr)
+
+penguins |>
+  summarise(
+    Minimum     = min(body_mass_g, na.rm = TRUE),
+    Q1      = quantile(body_mass_g, 0.25, na.rm = TRUE),
+    Median  = median(body_mass_g, na.rm = TRUE),
+    Mean    = mean(body_mass_g, na.rm = TRUE),
+    Q3      = quantile(body_mass_g, 0.75, na.rm = TRUE),
+    Maximum     = max(body_mass_g, na.rm = TRUE),
+    SD      = sd(body_mass_g, na.rm = TRUE),
+    N       = n()
+  ) |>
+  kable(caption = "Summary statistics for Penguin Body Mass (g)")
+
+```
+
 ## Quantitative data: Bivariate Analysis
+
+### Graphical Representation
+
+```{r}
+ggplot(penguins, aes(x=body_mass_g,
+                     y=flipper_length_mm)) + geom_point()
+```
+
+### Tabular representation
+
+In addition to the descriptive measures we can also record the Pearson's correlation coefficient. 
+
+In this case Pearson's correlation coefficient is
+
+```{r}
+#|echo: true
+library(dplyr)
+library(palmerpenguins)
+
+penguins |>
+  summarise(
+    correlation = cor(body_mass_g, flipper_length_mm, use = "complete.obs")
+  )
+
+```
 
 ## Qualitative vs Quantitative
 
-## Quantitative vs Quantitative
 
 ## Quantitative vs Quantitative with a Qualitative variable
 
