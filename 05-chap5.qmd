@@ -794,7 +794,7 @@ Compute the mode for the following numbers
 
 2, 4, 6, 8, 10, 12, 14, 16
 
-#### Important facts about mode
+**Important facts about mode**
 
 1.  Unimodal - only 1 mode
 
@@ -812,7 +812,7 @@ Compute the mode for the following numbers
 
 -   For an array with an even number of observations, median is the mean of the two middle numbers.
 
-## Steps in calculating median
+**Steps in calculating median**
 
 1.  Arrange the data in an ordered array of numbers.
 
@@ -854,7 +854,7 @@ Sample size: $n$
 
 $$\bar{x} = \frac{\sum_{i=1}^nx_i}{n}$$
 
-## Your turn
+Your turn
 
 Determine the mean for the following numbers.
 
@@ -865,6 +865,137 @@ Q1:
 Q2:
 
 2, 3, 10, 11, 50, 5, 8, 9, 10, 5
+
+### Measures of Dispersion
+
+#### Range: Maximum - Minimum
+
+Advantages
+
+-   Easy measure
+
+-   Easy to understand
+
+Disadvatages
+
+-   It only takes into account the maximum and the minimum value.
+
+-   Highly sensitive to outliers.
+
+-   Does not provide information about the spread of data between the minimum and maximum values, nor does it indicate whether the data points are clustered or evenly distributed.
+
+#### Variance
+
+-   Variance is the mean squared deviations from the mean.
+
+-   Measure of the spread of the data around the mean.
+
+**Population Variance**
+
+$$\text{Population variance} = \sum_{i=1}^N \frac{(x_i-\mu)^2}{N}$$
+
+$N$ - population size
+
+$\mu$ - population mean
+
+**Sample Variance**
+
+$$\text{Sample variance} = \sum_{i=1}^n \frac{(x_i-\bar{x})^2}{n-1}$$
+
+$n$ - sample size
+
+$\bar{x}$ - sample mean
+
+
+Advantages:
+
+-   Variance considers all data points in the dataset.
+
+Disadvantages:
+
+-   Sensitive to outliers/ extreme values.
+
+-   The units of variance are the square of the units of the original data, which can make interpretation difficult. For example, if the data are in meters, the variance will be in square meters.
+
+-   Variance is less intuitive to understand than other measures of dispersion like the range or interquartile range. People often find the concept of squared deviations harder to grasp.
+
+#### Standard deviation
+
+$$\text{Standard deviation} = \sqrt{Variance}$$
+
+-   The variance and the standard deviation are measures of the spread of the data around the mean. They summarise how close each observed data value is to the mean value.
+
+-   Standard deviation is expressed in the same units as the original values (e.g., minutes or meters)
+
+ In datasets with a small spread all values are very close to the mean, resulting in a small variance and standard deviation.
+ 
+#### Interquartile Range (IQR)
+
+We will talk about this after looking at measures of relative standing/ measures of noncentral location.
+
+-   Measure of dispersion
+
+$$IQR = Q_3 - Q_1$$
+
+-   Measure considers the spread in the middle 50% of the data.
+
+-   Not influenced by extreme values.
+ 
+### Measures of relative standing/ Measures of noncentral location
+
+-   Quartiles
+
+-   Percentiles
+
+
+#### Quantiles
+
+Quantiles are descriptive measures that split the ordered data into four quarters (four equal parts).
+
+Q1 - first (lower) quantile
+
+Q2 - second (middle) quantile
+
+Q3 - third (upper) quantile
+
+> First quantile
+
+The value which 25% of the observations are smaller and 75% are larger
+
+$$Q_1 = \frac{n+1}{4} \text{ ordered observation}$$
+
+> Second quantile
+
+Same as median
+
+> Third quantile
+
+The value for which 75% of the observations are smaller and 25% are larger
+
+$$Q_3 = \frac{3(n+1)}{4} \text{ ordered observation}$$
+
+#### Percentiles
+
+-   Percentiles divides a given ordered data array into 100 equal parts, it divides the complete data set into hundred groups of 1% each. There are total of 99 percentiles denoted as P1, P2, P3,…, and, P99, and they are known as 1st percentile, 2nd percentile,…., 99th percentile respectively.
+
+first decile = 10th percentile
+
+Q1 = 25th percentile
+
+Q2 = 50th percentile
+
+Q3 = 75th percentile
+
+ninth decile = 90th percentile
+
+**Location of a percentile**
+
+The following formula allows us to approximate the location of any percentile.
+
+$$L_p = (n+1)\frac{p}{100}$$
+
+where $L_p$ is the location of the $p^{th}$ percentile.
+
 
 ### Tabular representation
 
