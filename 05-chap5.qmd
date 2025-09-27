@@ -1,0 +1,51 @@
+# Descriptive Statistics {#sec-chap5}
+
+## Dataset Use for Illustrations
+
+We will use `penguins` dataset in the `palmerpenguins` package.
+
+Variable description
+
+```{r}
+colnames <- colnames(penguins)
+description <- c("penguin species (Adélie, Chinstrap and Gentoo)", 
+                 "island in Palmer Archipelago, Antarctica (Biscoe, Dream or Torgersen)", 
+                 "bill length (millimeters)", 
+                 "bill depth (millimeters)", 
+              "flipper length (millimeters)",
+              "body mass (grams)",
+              "penguin gender (female, male)",
+              "the study year (2007, 2008, or 2009)")
+df <- data.frame(colnames, description)
+colnames(df) <- c("Variable name", "Variable description")
+df |> knitr::kable()
+```
+
+Preview of the dataset
+
+```{r}
+library(palmerpenguins)
+penguins
+```
+
+
+## Qualitative data: Univariate Analysis
+
+Chart types we can use: Pie chart, Bar chart
+
+Tables: Tables with counts and percentages
+
+
+
+
+## Qualitative data: Bivariate Analysis
+
+## Quntitative data: Univariate Analysis
+
+## Quantitative data: Bivariate Analysis
+
+## Qualitative vs Quantitative
+
+## Quantitative vs Quantitative
+
+## Quantitative vs Quantitative with a Qualitative variable

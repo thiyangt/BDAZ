@@ -348,5 +348,235 @@
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Introduction to R programming basics and R studio</span>"
     ]
+  },
+  {
+    "objectID": "04-chap4.html",
+    "href": "04-chap4.html",
+    "title": "4  Types of Variables",
+    "section": "",
+    "text": "4.1 Components of a datset",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Types of Variables</span>"
+    ]
+  },
+  {
+    "objectID": "04-chap4.html#components-of-a-datset",
+    "href": "04-chap4.html#components-of-a-datset",
+    "title": "4  Types of Variables",
+    "section": "",
+    "text": "Each variable must have its own column.\nEach observation must have its own row.\nEach value must have its own cell.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Types of Variables</span>"
+    ]
+  },
+  {
+    "objectID": "04-chap4.html#penguins-dataset",
+    "href": "04-chap4.html#penguins-dataset",
+    "title": "4  Types of Variables",
+    "section": "\n4.2 penguins dataset",
+    "text": "4.2 penguins dataset\n\nHow many variables and observations are there in the data set?\nWhat are the variable names?\n\nVariable description\n\n\n\n\n\n\n\n\nVariable name\nVariable description\n\n\n\nspecies\npenguin species (Adélie, Chinstrap and Gentoo)\n\n\nisland\nisland in Palmer Archipelago, Antarctica (Biscoe, Dream or Torgersen)\n\n\nbill_len\nbill length (millimeters)\n\n\nbill_dep\nbill depth (millimeters)\n\n\nflipper_len\nflipper length (millimeters)\n\n\nbody_mass\nbody mass (grams)\n\n\nsex\npenguin gender (female, male)\n\n\nyear\nthe study year (2007, 2008, or 2009)\n\n\n\n\n\nPreview of the dataset\n\n\n# A tibble: 344 × 8\n   species island    bill_length_mm bill_depth_mm flipper_length_mm body_mass_g\n   &lt;fct&gt;   &lt;fct&gt;              &lt;dbl&gt;         &lt;dbl&gt;             &lt;int&gt;       &lt;int&gt;\n 1 Adelie  Torgersen           39.1          18.7               181        3750\n 2 Adelie  Torgersen           39.5          17.4               186        3800\n 3 Adelie  Torgersen           40.3          18                 195        3250\n 4 Adelie  Torgersen           NA            NA                  NA          NA\n 5 Adelie  Torgersen           36.7          19.3               193        3450\n 6 Adelie  Torgersen           39.3          20.6               190        3650\n 7 Adelie  Torgersen           38.9          17.8               181        3625\n 8 Adelie  Torgersen           39.2          19.6               195        4675\n 9 Adelie  Torgersen           34.1          18.1               193        3475\n10 Adelie  Torgersen           42            20.2               190        4250\n# ℹ 334 more rows\n# ℹ 2 more variables: sex &lt;fct&gt;, year &lt;int&gt;",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Types of Variables</span>"
+    ]
+  },
+  {
+    "objectID": "04-chap4.html#variable-description",
+    "href": "04-chap4.html#variable-description",
+    "title": "4  Types of Variables",
+    "section": "\n4.3 Variable description",
+    "text": "4.3 Variable description\n\n\n\n\n\n\n\n\nVariable name\nVariable description\n\n\n\nspecies\npenguin species (Adélie, Chinstrap and Gentoo)\n\n\nisland\nisland in Palmer Archipelago, Antarctica (Biscoe, Dream or Torgersen)\n\n\nbill_length_mm\nbill length (millimeters)\n\n\nbill_depth_mm\nbill depth (millimeters)\n\n\nflipper_length_mm\nflipper length (millimeters)\n\n\nbody_mass_g\nbody mass (grams)\n\n\nsex\npenguin gender (female, male)\n\n\nyear\nthe study year (2007, 2008, or 2009)",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Types of Variables</span>"
+    ]
+  },
+  {
+    "objectID": "04-chap4.html#types-of-variables",
+    "href": "04-chap4.html#types-of-variables",
+    "title": "4  Types of Variables",
+    "section": "\n4.3 Types of Variables",
+    "text": "4.3 Types of Variables",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Types of Variables</span>"
+    ]
+  },
+  {
+    "objectID": "04-chap4.html#qualitative-categorical-variables",
+    "href": "04-chap4.html#qualitative-categorical-variables",
+    "title": "4  Types of Variables",
+    "section": "\n4.4 Qualitative/ Categorical Variables",
+    "text": "4.4 Qualitative/ Categorical Variables\n\nDescribes categories or groups\nNon-numeric (no numerical meaning)\n\nExamples:\n\ncolors: red, blue, green\n\ngender: male, female\ntypes of animals: non-mammal mammal\n\n\n\nYour turn: Identify qualitative variables in the penguins dataset.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Types of Variables</span>"
+    ]
+  },
+  {
+    "objectID": "04-chap4.html#quantitative-variables-numerical-variables",
+    "href": "04-chap4.html#quantitative-variables-numerical-variables",
+    "title": "4  Types of Variables",
+    "section": "\n4.5 Quantitative Variables/ Numerical Variables",
+    "text": "4.5 Quantitative Variables/ Numerical Variables\n\nRepresents measurable quantities\nNumeric\n\nExamples:\n\nHeight in cm\nWeight in kg\n\n\n\nYour turn: Identify quantitative variables in the penguins dataset.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Types of Variables</span>"
+    ]
+  },
+  {
+    "objectID": "04-chap4.html#scales-of-measurement",
+    "href": "04-chap4.html#scales-of-measurement",
+    "title": "4  Types of Variables",
+    "section": "\n4.7 Scales of measurement",
+    "text": "4.7 Scales of measurement",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Types of Variables</span>"
+    ]
+  },
+  {
+    "objectID": "04-chap4.html#nominal-scale",
+    "href": "04-chap4.html#nominal-scale",
+    "title": "4  Types of Variables",
+    "section": "\n4.8 Nominal Scale",
+    "text": "4.8 Nominal Scale\n\nThe simplest measurement scale\nNamed variable levels\nNo numerical meaning\nThey have no natural order.\nCategories are mutually exclusive.\nThe difference between values can’t be evaluated.\n\nExamples\n\nBlood type: O-, O+, A-, A+, B-, B+, AB-, AB+\nHair color: Blonde, black, brown, grey\nDistrict you live",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Types of Variables</span>"
+    ]
+  },
+  {
+    "objectID": "04-chap4.html#ordinal-scale",
+    "href": "04-chap4.html#ordinal-scale",
+    "title": "4  Types of Variables",
+    "section": "\n4.9 Ordinal Scale",
+    "text": "4.9 Ordinal Scale\n\nThe simplest measurement scale\nNamed variable levels\nNo numerical meaning\nThey have a natural order.\nCategories are mutually exclusive.\nThe difference between values can’t be evaluated.\n\nExamples\nIncome: Low income, medium income, high income\nCustomer Satisfaction: Very Dissatisfied, Dissatisfied, Neutral, Satisfied, Very Satisfied\nGrade: A+, A, A-, B+, B, B-",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Types of Variables</span>"
+    ]
+  },
+  {
+    "objectID": "04-chap4.html#interval-scale",
+    "href": "04-chap4.html#interval-scale",
+    "title": "4  Types of Variables",
+    "section": "\n4.10 Interval Scale",
+    "text": "4.10 Interval Scale\nThese variables have\n\na natural order\na numerical meaning\na quantifiable difference between values\nno true zero value\n\nExamples\n\nTemperature: Measured in Fahrenheit or Celsius\nMarks: Measured from 0 to 100",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Types of Variables</span>"
+    ]
+  },
+  {
+    "objectID": "04-chap4.html#ratio-scale",
+    "href": "04-chap4.html#ratio-scale",
+    "title": "4  Types of Variables",
+    "section": "\n4.11 Ratio Scale",
+    "text": "4.11 Ratio Scale\nThese variables have\n\na natural order\na numerical meaning\na quantifiable difference between values\na true zero value\n\nExamples\n\nHeight: measured in centimeters.\nWeight: measured in kilograms.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Types of Variables</span>"
+    ]
+  },
+  {
+    "objectID": "04-chap4.html#summary-scales-of-measurements",
+    "href": "04-chap4.html#summary-scales-of-measurements",
+    "title": "4  Types of Variables",
+    "section": "\n4.12 Summary: scales of measurements",
+    "text": "4.12 Summary: scales of measurements",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Types of Variables</span>"
+    ]
+  },
+  {
+    "objectID": "04-chap4.html#exercise",
+    "href": "04-chap4.html#exercise",
+    "title": "4  Types of Variables",
+    "section": "\n4.13 Exercise",
+    "text": "4.13 Exercise\nIdentify scales of measurement for each variable.\n\n\n\n\n\n\n\n\nVariable name\nVariable description\n\n\n\nspecies\npenguin species (Adélie, Chinstrap and Gentoo)\n\n\nisland\nisland in Palmer Archipelago, Antarctica (Biscoe, Dream or Torgersen)\n\n\nbill_len\nbill length (millimeters)\n\n\nbill_dep\nbill depth (millimeters)\n\n\nflipper_len\nflipper length (millimeters)\n\n\nbody_mass\nbody mass (grams)\n\n\nsex\npenguin gender (female, male)\n\n\nyear\nthe study year (2007, 2008, or 2009)",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Types of Variables</span>"
+    ]
+  },
+  {
+    "objectID": "04-chap4.html#discrete-vs-continuous",
+    "href": "04-chap4.html#discrete-vs-continuous",
+    "title": "4  Types of Variables",
+    "section": "\n4.6 Discrete vs Continuous",
+    "text": "4.6 Discrete vs Continuous\nDiscrete\n\nRepresent countable quantities\nCan take on only specific, distinct values (whole numbers)\nNo intermediate values between consecutive values\nExamples:\nNumber of students in a classroom\nNumber of cars in a parking lot\nNumber of books on a shelf\nContinuous\n\nRepresent measurable quantities\nCan take on any value within a given range, including fractions and decimals.\nInfinite number of possible values within a range.\nExamples:\nHeight of individuals\nTemperature\nTime taken to complete a task\n\nYour turn: Identify discrete and continuous variables\n\n\n\n\n\n\n\n\nVariable name\nVariable description\n\n\n\nspecies\npenguin species (Adélie, Chinstrap and Gentoo)\n\n\nisland\nisland in Palmer Archipelago, Antarctica (Biscoe, Dream or Torgersen)\n\n\nbill_len\nbill length (millimeters)\n\n\nbill_dep\nbill depth (millimeters)\n\n\nflipper_len\nflipper length (millimeters)\n\n\nbody_mass\nbody mass (grams)\n\n\nsex\npenguin gender (female, male)\n\n\nyear\nthe study year (2007, 2008, or 2009)",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Types of Variables</span>"
+    ]
+  },
+  {
+    "objectID": "05-chap5.html",
+    "href": "05-chap5.html",
+    "title": "5  Descriptive Statistics",
+    "section": "",
+    "text": "5.1 Dataset Use for Illustrations\nWe will use penguins dataset in the palmerpenguins package.\nVariable description\nVariable name\nVariable description\n\n\n\nspecies\npenguin species (Adélie, Chinstrap and Gentoo)\n\n\nisland\nisland in Palmer Archipelago, Antarctica (Biscoe, Dream or Torgersen)\n\n\nbill_len\nbill length (millimeters)\n\n\nbill_dep\nbill depth (millimeters)\n\n\nflipper_len\nflipper length (millimeters)\n\n\nbody_mass\nbody mass (grams)\n\n\nsex\npenguin gender (female, male)\n\n\nyear\nthe study year (2007, 2008, or 2009)\nPreview of the dataset\n# A tibble: 344 × 8\n   species island    bill_length_mm bill_depth_mm flipper_length_mm body_mass_g\n   &lt;fct&gt;   &lt;fct&gt;              &lt;dbl&gt;         &lt;dbl&gt;             &lt;int&gt;       &lt;int&gt;\n 1 Adelie  Torgersen           39.1          18.7               181        3750\n 2 Adelie  Torgersen           39.5          17.4               186        3800\n 3 Adelie  Torgersen           40.3          18                 195        3250\n 4 Adelie  Torgersen           NA            NA                  NA          NA\n 5 Adelie  Torgersen           36.7          19.3               193        3450\n 6 Adelie  Torgersen           39.3          20.6               190        3650\n 7 Adelie  Torgersen           38.9          17.8               181        3625\n 8 Adelie  Torgersen           39.2          19.6               195        4675\n 9 Adelie  Torgersen           34.1          18.1               193        3475\n10 Adelie  Torgersen           42            20.2               190        4250\n# ℹ 334 more rows\n# ℹ 2 more variables: sex &lt;fct&gt;, year &lt;int&gt;",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Descriptive Statistics</span>"
+    ]
+  },
+  {
+    "objectID": "05-chap5.html#qualitative-data-univariate-analysis",
+    "href": "05-chap5.html#qualitative-data-univariate-analysis",
+    "title": "5  Descriptive Statistics",
+    "section": "\n5.2 Qualitative data: Univariate Analysis",
+    "text": "5.2 Qualitative data: Univariate Analysis\nChart types we can use: Pie chart, Bar chart\nTables: Tables with counts and percentages",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Descriptive Statistics</span>"
+    ]
+  },
+  {
+    "objectID": "05-chap5.html#qualitative-data-bivariate-analysis",
+    "href": "05-chap5.html#qualitative-data-bivariate-analysis",
+    "title": "5  Descriptive Statistics",
+    "section": "\n5.3 Qualitative data: Bivariate Analysis",
+    "text": "5.3 Qualitative data: Bivariate Analysis",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Descriptive Statistics</span>"
+    ]
+  },
+  {
+    "objectID": "05-chap5.html#quntitative-data-univariate-analysis",
+    "href": "05-chap5.html#quntitative-data-univariate-analysis",
+    "title": "5  Descriptive Statistics",
+    "section": "\n5.4 Quntitative data: Univariate Analysis",
+    "text": "5.4 Quntitative data: Univariate Analysis",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Descriptive Statistics</span>"
+    ]
+  },
+  {
+    "objectID": "05-chap5.html#quantitative-data-bivariate-analysis",
+    "href": "05-chap5.html#quantitative-data-bivariate-analysis",
+    "title": "5  Descriptive Statistics",
+    "section": "\n5.5 Quantitative data: Bivariate Analysis",
+    "text": "5.5 Quantitative data: Bivariate Analysis",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Descriptive Statistics</span>"
+    ]
+  },
+  {
+    "objectID": "05-chap5.html#qualitative-vs-quantitative",
+    "href": "05-chap5.html#qualitative-vs-quantitative",
+    "title": "5  Descriptive Statistics",
+    "section": "\n5.6 Qualitative vs Quantitative",
+    "text": "5.6 Qualitative vs Quantitative",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Descriptive Statistics</span>"
+    ]
+  },
+  {
+    "objectID": "05-chap5.html#quantitative-vs-quantitative",
+    "href": "05-chap5.html#quantitative-vs-quantitative",
+    "title": "5  Descriptive Statistics",
+    "section": "\n5.7 Quantitative vs Quantitative",
+    "text": "5.7 Quantitative vs Quantitative",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Descriptive Statistics</span>"
+    ]
+  },
+  {
+    "objectID": "05-chap5.html#quantitative-vs-quantitative-with-a-qualitative-variable",
+    "href": "05-chap5.html#quantitative-vs-quantitative-with-a-qualitative-variable",
+    "title": "5  Descriptive Statistics",
+    "section": "\n5.8 Quantitative vs Quantitative with a Qualitative variable",
+    "text": "5.8 Quantitative vs Quantitative with a Qualitative variable",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Descriptive Statistics</span>"
+    ]
   }
 ]
