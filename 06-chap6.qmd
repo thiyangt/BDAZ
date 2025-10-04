@@ -13,39 +13,37 @@ uncertain event.
 
 1. Experiment
 
-Statisticians use the word experiment to
+  Statisticians use the word experiment to
 describe any process that generates a set of
-data.
-
-This involves observing or counting or measuring.
+data. This involves observing or counting or measuring.
 
 2. Random Experiment
 
-- All possible outcomes can be specified in
+  - All possible outcomes can be specified in
 advance.
 
-- It can be repeated in an identical fashion.
+  - It can be repeated in an identical fashion.
 
-- The same outcome may not occur on
+  - The same outcome may not occur on
 various repetitions so that the actual
 outcome is not known in advance.
 
 3. Outcomes
 
-The results one obtains from an experiment
+  The results one obtains from an experiment
 
 4. Sample space
 
-The set of all possible outcomes of an
+  The set of all possible outcomes of an
 experiment.
 
 5. Events
 
-- An event is a subset of the set of all possible
+  - An event is a subset of the set of all possible
 results of some action or a process or a
 procedure.
 
-- Events are usually denoted by capital English
+  - Events are usually denoted by capital English
 letters A, B, C, D, E etc.
 
 - Events are of two types,
