@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Biostatistics and Data Analysis for Zoologists",
     "section": "",
-    "text": "Understanding and interpreting quantitative data is fundamental for modern zoological research. “Biostatistics and Data Analysis for Zoologists (BDAZ)” serves as a comprehensive, practical textbook that introduces statistical concepts and data analysis techniques specifically designed for zoologists, wildlife biologists, and ecology researchers. Each topic in this book includes a practical session using R.\nCopyright notice\nProduced on 27 September 2025.\n© Thiyanga S. Talagala (2025).",
+    "text": "Understanding and interpreting quantitative data is fundamental for modern zoological research. “Biostatistics and Data Analysis for Zoologists (BDAZ)” serves as a comprehensive, practical textbook that introduces statistical concepts and data analysis techniques specifically designed for zoologists, wildlife biologists, and ecology researchers. Each topic in this book includes a practical session using R.\nCopyright notice\nProduced on 5 October 2025.\n© Thiyanga S. Talagala (2025).",
     "crumbs": [
       "Front matter"
     ]
@@ -234,7 +234,7 @@
     "href": "03-chap3.html#r-as-a-calculator",
     "title": "3  Introduction to R programming basics and R studio",
     "section": "\n3.6 R as a calculator",
-    "text": "3.6 R as a calculator\nLet’s type some simple commands. Type these in the console.\n\n1 + 2\n\n[1] 3\n\n\n\n1 * 100\n\n[1] 100\n\n\n\n1 / 100\n\n[1] 0.01\n\n\n\nrnorm(50)\n\n [1] -0.24810467 -1.13136530  1.36191264  0.77526826  0.03787430  0.54196701\n [7] -0.11627497  0.49092464  1.86517110  0.58250298 -1.23507514 -1.11120833\n[13]  1.98207697 -2.20796316  1.25522151  1.12835651  0.10052406  0.87035023\n[19]  2.75113850  0.52977912 -1.34316081  0.75103716 -1.26873603 -1.25189536\n[25] -0.70762965  0.24563926  0.13616552 -0.08340129 -0.72125184  1.15226594\n[31] -2.04628393  1.15339546 -1.83316397  0.93669985  1.40899408 -0.06031358\n[37]  0.76883377  0.26882024 -0.73589723 -1.23589847  0.10968805  1.14538726\n[43] -0.03763376 -0.77660213 -0.76242697 -0.25465284 -0.38697124 -1.03148342\n[49]  0.63580778 -1.28889324\n\n\n\nhist(rnorm(50))\n\n\n\n\n\n\n\nIn R, square brackets [ ] indicate the index or position of an element in a vector, list, or other data structure.",
+    "text": "3.6 R as a calculator\nLet’s type some simple commands. Type these in the console.\n\n1 + 2\n\n[1] 3\n\n\n\n1 * 100\n\n[1] 100\n\n\n\n1 / 100\n\n[1] 0.01\n\n\n\nrnorm(50)\n\n [1] -0.510933129  0.518584096 -1.192452769  1.226492440 -0.562943611\n [6] -1.019418544  2.661728286  0.631449392 -0.392064003 -0.031875439\n[11]  0.515855377 -0.500941843 -1.534644501 -0.802258919  0.391937567\n[16] -0.817940832 -2.368464568 -1.103220431 -0.309978856  1.270014074\n[21]  0.509074494 -0.706464535 -0.410595846  1.644728659 -0.130257001\n[26] -0.983395294 -0.249678330 -0.192944577  0.601127142  0.729593234\n[31] -0.011814596 -0.644963630 -1.087082260  1.134806725  0.175878343\n[36]  0.454942215 -0.669189126  1.956927191 -0.175055867 -0.276398789\n[41]  0.547707556  1.684580783 -1.126695941 -0.008452133 -1.063927258\n[46]  1.602364643 -0.304995736 -1.526144274 -0.621642001  1.718128833\n\n\n\nhist(rnorm(50))\n\n\n\n\n\n\n\nIn R, square brackets [ ] indicate the index or position of an element in a vector, list, or other data structure.",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Introduction to R programming basics and R studio</span>"
     ]
@@ -587,6 +587,236 @@
     "text": "5.10 Some rules\n\nDon’t make them 3D: 3D charts can distort data and make it difficult to accurately interpret values.\nDon’t use overly complex charts: Keep it simple. Overly complex charts can confuse the viewer and obscure the data.\nDon’t use excessive colors: Too many colors can be distracting and make the chart hard to read. Stick to a simple color palette.\nDon’t use misleading scales: Ensure the scales start at zero (when appropriate) and are consistent to avoid misrepresenting the data.\nDon’t use pie charts for too many categories: Pie charts are hard to interpret with more than a few slices. Use a bar chart instead.\nDon’t use inappropriate chart types: Match the chart type to the data you are presenting. For example, use line charts for trends over time and bar charts for comparing categories.\nDon’t omit axis labels and titles: Always label your axes and give your chart a clear, descriptive title.\nDon’t clutter with too much information: Avoid adding unnecessary elements like excessive gridlines, text, or data points.\nDon’t ignore accessibility: Ensure your charts are readable for people with color blindness by using colorblind-friendly palettes and providing text alternatives.\nDon’t make legends and labels too small: Ensure that legends and labels are large enough to be easily read.\nDon’t use default settings without customization: Default settings might not be the best for your data. Customize your charts to improve clarity and impact.\nDon’t ignore data source and context: Always provide the data source and context to help the audience understand where the data comes from and its relevance.",
     "crumbs": [
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Descriptive Statistics</span>"
+    ]
+  },
+  {
+    "objectID": "06-chap6.html",
+    "href": "06-chap6.html",
+    "title": "6  Probability and Distribution Theory",
+    "section": "",
+    "text": "6.1 What is Probability?",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Probability and Distribution Theory</span>"
+    ]
+  },
+  {
+    "objectID": "06-chap6.html#what-is-probability",
+    "href": "06-chap6.html#what-is-probability",
+    "title": "6  Probability and Distribution Theory",
+    "section": "",
+    "text": "Probability is a quantitative measure of uncertainty.\nA number that conveys the strength of our belief in the occurrence of an uncertain event.",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Probability and Distribution Theory</span>"
+    ]
+  },
+  {
+    "objectID": "06-chap6.html#terminology",
+    "href": "06-chap6.html#terminology",
+    "title": "6  Probability and Distribution Theory",
+    "section": "6.2 Terminology",
+    "text": "6.2 Terminology\n\nExperiment\n\nStatisticians use the word experiment to describe any process that generates a set of data.\nThis involves observing or counting or measuring.\n\nRandom Experiment\n\n\nAll possible outcomes can be specified in advance.\nIt can be repeated in an identical fashion.\nThe same outcome may not occur on various repetitions so that the actual outcome is not known in advance.\n\n\nOutcomes\n\nThe results one obtains from an experiment\n\nSample space\n\nThe set of all possible outcomes of an experiment.\n\nEvents\n\n\nAn event is a subset of the set of all possible results of some action or a process or a procedure.\nEvents are usually denoted by capital English letters A, B, C, D, E etc.\nEvents are of two types,\n\nSimple event: An event containing only one outcome\nCompound event: An event containing more than one outcome\n\n\n\nRandom Variable\n\nLet \\Omega be a sample space. Let X be a function from \\Omega to \\mathbb{R} (i.e., X: \\Omega \\to \\mathbb{R}). Then X is called a random variable.\nRandom variables are denoted by capital English letters.\nEvent 1\n\nEvent 2\n\nEvent 3\n\n\n\nEvent 4",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Probability and Distribution Theory</span>"
+    ]
+  },
+  {
+    "objectID": "06-chap6.html#event-operations",
+    "href": "06-chap6.html#event-operations",
+    "title": "6  Probability and Distribution Theory",
+    "section": "6.3 Event Operations",
+    "text": "6.3 Event Operations\n\nIntersection\nUnion\nComplement",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Probability and Distribution Theory</span>"
+    ]
+  },
+  {
+    "objectID": "06-chap6.html#axioms-of-probability",
+    "href": "06-chap6.html#axioms-of-probability",
+    "title": "6  Probability and Distribution Theory",
+    "section": "6.4 Axioms of probability",
+    "text": "6.4 Axioms of probability\nAxiom 1: For any event A, P (A) ≥ 0\nAxiom 2: P(\\Omega) = 1\nAxiom 3:\n\n\nIf A_1, A_2, \\dots, A_k is a finite collection of mutually exclusive events, then \nP(A_1 \\cup A_2 \\cup \\dots \\cup A_k) = P(A_1) + P(A_2) + \\dots + P(A_k) = \\sum_{i=1}^{k} P(A_i).\n\nIf A_1, A_2, \\dots is an infinite collection of mutually exclusive events, then \nP\\Big(\\bigcup_{i=1}^{\\infty} A_i \\Big) = \\sum_{i=1}^{\\infty} P(A_i).\n\n\nAxioms 1 and 2 imply that for any event E, 0 \\leq P(E) \\leq 1.\nThe probability of an impossible event is 0.\nThe probability of an event that is certain to occur is 1.",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Probability and Distribution Theory</span>"
+    ]
+  },
+  {
+    "objectID": "06-chap6.html#interpretation-of-probability",
+    "href": "06-chap6.html#interpretation-of-probability",
+    "title": "6  Probability and Distribution Theory",
+    "section": "6.5 Interpretation of probability",
+    "text": "6.5 Interpretation of probability\n\nRelative frequency interpretation.\n\nThe probability of an event E related to a random experiment can be interpreted as the ’approximate proportion of times that E occurs if we repeat the experiment very large number of times.\nExample: A wildlife biologist could then say that the probability that a randomly selected turtle from this population has the disease is 0.05. This means, if we observe a very large population of sea turtles in a certain coastal region, the proportion of turtles carrying a particular shell disease might be approximately 5%.\n\nSubjective interpretation.\n\nExample: A marine biologist feels that there is a 60% chance that a rescued dolphin will successfully reintegrate into the wild, based on her past experience with similar rescues and her knowledge of the dolphin’s behavior.",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Probability and Distribution Theory</span>"
+    ]
+  },
+  {
+    "objectID": "06-chap6.html#methods-for-determining-probability",
+    "href": "06-chap6.html#methods-for-determining-probability",
+    "title": "6  Probability and Distribution Theory",
+    "section": "6.6 Methods for Determining Probability",
+    "text": "6.6 Methods for Determining Probability\n\nClassical method\nRelative frequency method\nSubjective method\nUsing probability models",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Probability and Distribution Theory</span>"
+    ]
+  },
+  {
+    "objectID": "06-chap6.html#classical-method",
+    "href": "06-chap6.html#classical-method",
+    "title": "6  Probability and Distribution Theory",
+    "section": "6.7 Classical Method",
+    "text": "6.7 Classical Method\n\nProbability is calculated based on the sample space.\nNo need to carry out any experiment. It is enough to know the sample space.\nThis approach can be used only if,\n\nthe sample space consists of finite number of outcomes.\nall the outcomes are ‘equally likely’\n\n\nThen, the probability of event E is given by,\nP(E) = \\frac{n(E)}{n(\\Omega)}",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Probability and Distribution Theory</span>"
+    ]
+  },
+  {
+    "objectID": "06-chap6.html#exercise",
+    "href": "06-chap6.html#exercise",
+    "title": "6  Probability and Distribution Theory",
+    "section": "6.8 Exercise",
+    "text": "6.8 Exercise\nQ1: What is the probability of obtaining ‘Head’ in a single toss of an unbiased coin?\nQ2: Two fair dice are tossed. Find the probability that sum of the dice equals seven.\nQ3: A box contains 3 white balls and 2 black balls. Two balls are taken one after the other without replacement. Write down the sample space. Find the probability of getting one white ball and one black ball.\n\\Omega = \\{(W,W), (W,B), (B,W), (B,B)\\}\nAre the outcomes of this sample space equally likely?\nCan you write the sample space so that outcomes will be equally likely?",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Probability and Distribution Theory</span>"
+    ]
+  },
+  {
+    "objectID": "06-chap6.html#relative-frequency-method-empirical-probability",
+    "href": "06-chap6.html#relative-frequency-method-empirical-probability",
+    "title": "6  Probability and Distribution Theory",
+    "section": "6.9 Relative frequency method (Empirical probability)",
+    "text": "6.9 Relative frequency method (Empirical probability)\nP(E) =\\frac{\\text{number of times E occurred}}{\\text{number of times trial was repeated}} ## Exercise\nQ1: A wildlife researcher observes 500 frogs in a wetland and records that 75 of them have a certain skin fungus.\nUsing the relative frequency approach, estimate the probability that a randomly selected frog from this wetland has the skin fungus.\nQ2: During a bird migration study, a biologist counts 800 birds and finds that 160 of them are male sparrows.\nUsing the relative frequency approach, what is the probability that a randomly selected bird from this group is a male sparrow?",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Probability and Distribution Theory</span>"
+    ]
+  },
+  {
+    "objectID": "06-chap6.html#subjective-method",
+    "href": "06-chap6.html#subjective-method",
+    "title": "6  Probability and Distribution Theory",
+    "section": "6.10 Subjective Method",
+    "text": "6.10 Subjective Method\nUsually based on an educated guess or estimate, employing opinions and inexact information.",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Probability and Distribution Theory</span>"
+    ]
+  },
+  {
+    "objectID": "06-chap6.html#conditional-probability",
+    "href": "06-chap6.html#conditional-probability",
+    "title": "6  Probability and Distribution Theory",
+    "section": "6.11 Conditional Probability",
+    "text": "6.11 Conditional Probability\nThe conditional probability of an event A given that event B has occurred is denoted by P(A \\mid B) and is defined as:\nP(A \\mid B) = \\frac{P(A \\cap B)}{P(B)}, \\quad \\text{for } P(B) &gt; 0",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Probability and Distribution Theory</span>"
+    ]
+  },
+  {
+    "objectID": "06-chap6.html#multiplication-rule",
+    "href": "06-chap6.html#multiplication-rule",
+    "title": "6  Probability and Distribution Theory",
+    "section": "6.12 Multiplication Rule",
+    "text": "6.12 Multiplication Rule\nRearranging the formula of conditional probability, we get the :\nP(A \\cap B) = P(A \\mid B) \\cdot P(B)",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Probability and Distribution Theory</span>"
+    ]
+  },
+  {
+    "objectID": "06-chap6.html#extension-for-multiple-events",
+    "href": "06-chap6.html#extension-for-multiple-events",
+    "title": "6  Probability and Distribution Theory",
+    "section": "6.13 Extension for multiple events",
+    "text": "6.13 Extension for multiple events\nFor three events A, B, and C, the multiplication rule can be extended as:\nP(A \\cap B \\cap C) = P(A) \\cdot P(B \\mid A) \\cdot P(C \\mid A \\cap B)",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Probability and Distribution Theory</span>"
+    ]
+  },
+  {
+    "objectID": "06-chap6.html#mutually-exclusive-events",
+    "href": "06-chap6.html#mutually-exclusive-events",
+    "title": "6  Probability and Distribution Theory",
+    "section": "6.14 Mutually Exclusive Events",
+    "text": "6.14 Mutually Exclusive Events\nTwo or more events are mutually exclusive if they cannot occur at the same time.\n\nP(A \\cap B) = 0\n\nExample (Zoology):\nIn a bird survey, observing a bird as either a sparrow or an eagle in a single sighting is mutually exclusive — the bird cannot be both at the same time.",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Probability and Distribution Theory</span>"
+    ]
+  },
+  {
+    "objectID": "06-chap6.html#exhaustive-events",
+    "href": "06-chap6.html#exhaustive-events",
+    "title": "6  Probability and Distribution Theory",
+    "section": "6.15 Exhaustive Events",
+    "text": "6.15 Exhaustive Events\nA set of events is exhaustive if at least one of them must occur, meaning they cover all possible outcomes.\n\nP(A_1 \\cup A_2 \\cup \\dots \\cup A_n) = 1\n\nExample (Zoology):\nObserving a frog in a wetland, it must either be male or female. These categories are exhaustive because they cover all possible frogs.",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Probability and Distribution Theory</span>"
+    ]
+  },
+  {
+    "objectID": "06-chap6.html#independent-events",
+    "href": "06-chap6.html#independent-events",
+    "title": "6  Probability and Distribution Theory",
+    "section": "6.16 Independent Events",
+    "text": "6.16 Independent Events\nTwo events A and B are independent if the occurrence of one does not affect the probability of the other.\n\nP(A \\cap B) = P(A) \\cdot P(B)\n\nExample (Zoology):\nThe event that a sea turtle lays eggs today and the event that a crab crosses the beach are independent — one does not affect the other.",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Probability and Distribution Theory</span>"
+    ]
+  },
+  {
+    "objectID": "06-chap6.html#complement-rule",
+    "href": "06-chap6.html#complement-rule",
+    "title": "6  Probability and Distribution Theory",
+    "section": "8.1 1. Complement Rule",
+    "text": "8.1 1. Complement Rule\nThe probability of the complement of an event A, denoted by A^c, is:\n\nP(A^c) = 1 - P(A)",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Probability and Distribution Theory</span>"
+    ]
+  },
+  {
+    "objectID": "06-chap6.html#addition-rule",
+    "href": "06-chap6.html#addition-rule",
+    "title": "6  Probability and Distribution Theory",
+    "section": "8.2 2. Addition Rule",
+    "text": "8.2 2. Addition Rule\n\nFor any two events A and B:\n\n\nP(A \\cup B) = P(A) + P(B) - P(A \\cap B)\n\n\nFor mutually exclusive events A and B:\n\n\nP(A \\cup B) = P(A) + P(B)",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Probability and Distribution Theory</span>"
+    ]
+  },
+  {
+    "objectID": "06-chap6.html#multiplication-rule-1",
+    "href": "06-chap6.html#multiplication-rule-1",
+    "title": "6  Probability and Distribution Theory",
+    "section": "8.3 3. Multiplication Rule",
+    "text": "8.3 3. Multiplication Rule\n\nConditional probability:\n\n\nP(A \\mid B) = \\frac{P(A \\cap B)}{P(B)}, \\quad P(B) &gt; 0\n\n\nMultiplication rule:\n\n\nP(A \\cap B) = P(A \\mid B) \\cdot P(B)\n\n\nExtension to multiple events A_1, A_2, \\dots, A_n:\n\n\nP(A_1 \\cap A_2 \\cap \\dots \\cap A_n) = P(A_1) \\cdot P(A_2 \\mid A_1) \\cdot \\dots \\cdot P(A_n \\mid A_1 \\cap \\dots \\cap A_{n-1})",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Probability and Distribution Theory</span>"
+    ]
+  },
+  {
+    "objectID": "06-chap6.html#law-of-total-probability",
+    "href": "06-chap6.html#law-of-total-probability",
+    "title": "6  Probability and Distribution Theory",
+    "section": "8.4 4. Law of Total Probability",
+    "text": "8.4 4. Law of Total Probability\nIf \\{B_1, B_2, \\dots, B_n\\} is a partition of the sample space \\Omega, then for any event A:\n\nP(A) = \\sum_{i=1}^{n} P(A \\mid B_i) \\cdot P(B_i)",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Probability and Distribution Theory</span>"
+    ]
+  },
+  {
+    "objectID": "06-chap6.html#bayes-theorem",
+    "href": "06-chap6.html#bayes-theorem",
+    "title": "6  Probability and Distribution Theory",
+    "section": "8.5 5. Bayes’ Theorem",
+    "text": "8.5 5. Bayes’ Theorem\nFor events A and B_i with P(B_i) &gt; 0:\n\nP(B_i \\mid A) = \\frac{P(A \\mid B_i) \\cdot P(B_i)}{\\sum_{j=1}^{n} P(A \\mid B_j) \\cdot P(B_j)}",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Probability and Distribution Theory</span>"
+    ]
+  },
+  {
+    "objectID": "06-chap6.html#exercise-1",
+    "href": "06-chap6.html#exercise-1",
+    "title": "6  Probability and Distribution Theory",
+    "section": "8.6 Exercise",
+    "text": "8.6 Exercise\nQuestion 1\nA wildlife researcher studies frogs in three ponds: Pond A, Pond B, and Pond C.\nPond A has 50 frogs, Pond B has 30 frogs, and Pond C has 20 frogs.\nThe probability that a frog in Pond A is infected with a skin fungus is 0.1, in Pond B is 0.2, and in Pond C is 0.3.\n\nIf a frog is randomly selected from all ponds, what is the probability that it is infected?\nSuppose a randomly selected frog is found to be infected. What is the probability that it came from Pond B?\n\nQuestion 2\nA wildlife biologist tests a population of 1000 bats for a viral infection using a diagnostic test.\n200 bats are actually infected.\nThe test correctly identifies 180 of the infected bats as positive.\nAmong the 800 uninfected bats, the test correctly identifies 720 as negative.\nTasks:\nCalculate the sensitivity of the test.\nCalculate the specificity of the test.",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Probability and Distribution Theory</span>"
     ]
   }
 ]
