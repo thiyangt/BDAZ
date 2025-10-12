@@ -3,9 +3,9 @@
 
 ## Random versus Nonrandom Sampling
 
-Random sampling: A sampling method in which every unit of population has a known probability of being selected for the sample
+Random sampling: A sampling method in which every unit of population has a known probability of being selected for the sample,
 
-Nonrandom sampling: A sampling method in which not every unit of the population has the same probability of being selected for the sample
+Nonrandom sampling: A sampling method in which every unit of the population has unkown probability of being selected for the sample.
 
 
 ## Random Sampling Techniques
