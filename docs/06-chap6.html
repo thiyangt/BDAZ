@@ -1,12 +1,9 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
-
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.6.42">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-
-
 <title>6&nbsp; Probability and Distribution Theory – Biostatistics and Data Analysis for Zoologists</title>
 <style>
 code{white-space: pre-wrap;}
@@ -20,8 +17,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
-
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="site_libs/quarto-nav/headroom.min.js"></script>
@@ -40,8 +70,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-47708def744f7d6bf9e6ade08d3fbeef.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-dcaec5c8d80e8fa62fc25e24c15f567a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
-<script id="quarto-search-options" type="application/json">{
+<link href="site_libs/bootstrap/bootstrap-dcaec5c8d80e8fa62fc25e24c15f567a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
   "collapse-after": 3,
@@ -67,11 +96,8 @@ ul.task-list li input[type="checkbox"] {
     "search-submit-button-title": "Submit",
     "search-label": "Search"
   }
-}</script>
-<link href="https://fonts.googleapis.com/css?family=Fira+Sans|Merriweather|Source Code Pro" rel="stylesheet">
-
-  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
-  <script>document.addEventListener("DOMContentLoaded", function () {
+}</script><link href="https://fonts.googleapis.com/css?family=Fira+Sans|Merriweather|Source%20Code%20Pro" rel="stylesheet">
+<script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script><script>document.addEventListener("DOMContentLoaded", function () {
  var mathElements = document.getElementsByClassName("math");
  var macros = [];
  for (var i = 0; i < mathElements.length; i++) {
@@ -84,9 +110,7 @@ ul.task-list li input[type="checkbox"] {
     fleqn: false
    });
 }}});
-  </script>
-  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
-
+  </script><script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
 <script type="text/javascript">
 const typesetMath = (el) => {
   if (window.MathJax) {
@@ -113,15 +137,11 @@ window.Quarto = {
   typesetMath
 };
 </script>
-
 </head>
-
 <body class="nav-sidebar docked">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-  <nav class="quarto-secondary-nav">
-    <div class="container-fluid d-flex">
+  <header id="quarto-header" class="headroom fixed-top"><nav class="quarto-secondary-nav"><div class="container-fluid d-flex">
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
@@ -132,13 +152,9 @@ window.Quarto = {
         <i class="bi bi-search"></i>
       </button>
     </div>
-  </nav>
-</header>
-<!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+  </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
-    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto"><div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="./">Biostatistics and Data Analysis for Zoologists</a> 
     </div>
@@ -150,7 +166,7 @@ window.Quarto = {
         </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
-        <li class="sidebar-item">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Front matter</span></a>
@@ -199,16 +215,14 @@ window.Quarto = {
   </div>
 </li>
     </ul>
-    </div>
-</nav>
-<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+</div>
+</nav><div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title"><b>Sections</b></h2>
+        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title"><b>Sections</b></h2>
    
   <ul class="collapse">
-  <li><a href="#what-is-probability" id="toc-what-is-probability" class="nav-link active" data-scroll-target="#what-is-probability"><span class="header-section-number">6.1</span> What is Probability?</a></li>
+<li><a href="#what-is-probability" id="toc-what-is-probability" class="nav-link active" data-scroll-target="#what-is-probability"><span class="header-section-number">6.1</span> What is Probability?</a></li>
   <li><a href="#terminology" id="toc-terminology" class="nav-link" data-scroll-target="#terminology"><span class="header-section-number">6.2</span> Terminology</a></li>
   <li><a href="#event-operations" id="toc-event-operations" class="nav-link" data-scroll-target="#event-operations"><span class="header-section-number">6.3</span> Event Operations</a></li>
   <li><a href="#axioms-of-probability" id="toc-axioms-of-probability" class="nav-link" data-scroll-target="#axioms-of-probability"><span class="header-section-number">6.4</span> Axioms of probability</a></li>
@@ -225,23 +239,23 @@ window.Quarto = {
   <li><a href="#exhaustive-events" id="toc-exhaustive-events" class="nav-link" data-scroll-target="#exhaustive-events"><span class="header-section-number">6.15</span> Exhaustive Events</a></li>
   <li><a href="#independent-events" id="toc-independent-events" class="nav-link" data-scroll-target="#independent-events"><span class="header-section-number">6.16</span> Independent Events</a></li>
   <li><a href="#combinations-of-events-mutual-exclusivity-and-exhaustiveness" id="toc-combinations-of-events-mutual-exclusivity-and-exhaustiveness" class="nav-link" data-scroll-target="#combinations-of-events-mutual-exclusivity-and-exhaustiveness"><span class="header-section-number">7</span> Combinations of Events: Mutual Exclusivity and Exhaustiveness</a></li>
-  <li><a href="#rules-of-probability" id="toc-rules-of-probability" class="nav-link" data-scroll-target="#rules-of-probability"><span class="header-section-number">8</span> Rules of Probability</a>
+  <li>
+<a href="#rules-of-probability" id="toc-rules-of-probability" class="nav-link" data-scroll-target="#rules-of-probability"><span class="header-section-number">8</span> Rules of Probability</a>
   <ul class="collapse">
-  <li><a href="#complement-rule" id="toc-complement-rule" class="nav-link" data-scroll-target="#complement-rule"><span class="header-section-number">8.1</span> 1. Complement Rule</a></li>
+<li><a href="#complement-rule" id="toc-complement-rule" class="nav-link" data-scroll-target="#complement-rule"><span class="header-section-number">8.1</span> 1. Complement Rule</a></li>
   <li><a href="#addition-rule" id="toc-addition-rule" class="nav-link" data-scroll-target="#addition-rule"><span class="header-section-number">8.2</span> 2. Addition Rule</a></li>
   <li><a href="#multiplication-rule-1" id="toc-multiplication-rule-1" class="nav-link" data-scroll-target="#multiplication-rule-1"><span class="header-section-number">8.3</span> 3. Multiplication Rule</a></li>
   <li><a href="#law-of-total-probability" id="toc-law-of-total-probability" class="nav-link" data-scroll-target="#law-of-total-probability"><span class="header-section-number">8.4</span> 4. Law of Total Probability</a></li>
   <li><a href="#bayes-theorem" id="toc-bayes-theorem" class="nav-link" data-scroll-target="#bayes-theorem"><span class="header-section-number">8.5</span> 5. Bayes’ Theorem</a></li>
   <li><a href="#exercise-1" id="toc-exercise-1" class="nav-link" data-scroll-target="#exercise-1"><span class="header-section-number">8.6</span> Exercise</a></li>
-  </ul></li>
+  <li><a href="#probability-distributions" id="toc-probability-distributions" class="nav-link" data-scroll-target="#probability-distributions"><span class="header-section-number">8.7</span> Probability Distributions</a></li>
+  <li><a href="#t-distribution" id="toc-t-distribution" class="nav-link" data-scroll-target="#t-distribution"><span class="header-section-number">8.8</span> t-distribution</a></li>
   </ul>
-</nav>
+</li>
+  </ul></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
 <h1 class="title"><span id="sec-chap6" class="quarto-section-identifier"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Probability and Distribution Theory</span></span></h1>
 </div>
 
@@ -256,18 +270,13 @@ window.Quarto = {
   
 
 
-</header>
-
-
-<section id="what-is-probability" class="level2" data-number="6.1">
-<h2 data-number="6.1" class="anchored" data-anchor-id="what-is-probability"><span class="header-section-number">6.1</span> What is Probability?</h2>
+</header><section id="what-is-probability" class="level2" data-number="6.1"><h2 data-number="6.1" class="anchored" data-anchor-id="what-is-probability">
+<span class="header-section-number">6.1</span> What is Probability?</h2>
 <ul>
 <li><p>Probability is a quantitative measure of uncertainty.</p></li>
 <li><p>A number that conveys the strength of our belief in the occurrence of an uncertain event.</p></li>
-</ul>
-</section>
-<section id="terminology" class="level2" data-number="6.2">
-<h2 data-number="6.2" class="anchored" data-anchor-id="terminology"><span class="header-section-number">6.2</span> Terminology</h2>
+</ul></section><section id="terminology" class="level2" data-number="6.2"><h2 data-number="6.2" class="anchored" data-anchor-id="terminology">
+<span class="header-section-number">6.2</span> Terminology</h2>
 <ol type="1">
 <li>Experiment</li>
 </ol>
@@ -294,11 +303,13 @@ window.Quarto = {
 <ul>
 <li><p>An event is a subset of the set of all possible results of some action or a process or a procedure.</p></li>
 <li><p>Events are usually denoted by capital English letters A, B, C, D, E etc.</p></li>
-<li><p>Events are of two types,</p>
+<li>
+<p>Events are of two types,</p>
 <ul>
 <li><p>Simple event: An event containing only one outcome</p></li>
 <li><p>Compound event: An event containing more than one outcome</p></li>
-</ul></li>
+</ul>
+</li>
 </ul>
 <ol start="6" type="1">
 <li>Random Variable</li>
@@ -315,17 +326,14 @@ window.Quarto = {
 <p><img src="p5.png" class="img-fluid"></p>
 <p>Event 4</p>
 <p><img src="p6.png" class="img-fluid"></p>
-</section>
-<section id="event-operations" class="level2" data-number="6.3">
-<h2 data-number="6.3" class="anchored" data-anchor-id="event-operations"><span class="header-section-number">6.3</span> Event Operations</h2>
+</section><section id="event-operations" class="level2" data-number="6.3"><h2 data-number="6.3" class="anchored" data-anchor-id="event-operations">
+<span class="header-section-number">6.3</span> Event Operations</h2>
 <ul>
 <li><p>Intersection</p></li>
 <li><p>Union</p></li>
 <li><p>Complement</p></li>
-</ul>
-</section>
-<section id="axioms-of-probability" class="level2" data-number="6.4">
-<h2 data-number="6.4" class="anchored" data-anchor-id="axioms-of-probability"><span class="header-section-number">6.4</span> Axioms of probability</h2>
+</ul></section><section id="axioms-of-probability" class="level2" data-number="6.4"><h2 data-number="6.4" class="anchored" data-anchor-id="axioms-of-probability">
+<span class="header-section-number">6.4</span> Axioms of probability</h2>
 <p>Axiom 1: For any event <span class="math inline">A</span>, <span class="math inline">P (A) ≥ 0</span></p>
 <p>Axiom 2: <span class="math inline">P(\Omega) = 1</span></p>
 <p>Axiom 3:</p>
@@ -341,9 +349,8 @@ P\Big(\bigcup_{i=1}^{\infty} A_i \Big) = \sum_{i=1}^{\infty} P(A_i).
 <p>Axioms 1 and 2 imply that for any event <span class="math inline">E</span>, <span class="math inline">0 \leq P(E) \leq 1</span>.</p>
 <p>The probability of an impossible event is 0.</p>
 <p>The probability of an event that is certain to occur is 1.</p>
-</section>
-<section id="interpretation-of-probability" class="level2" data-number="6.5">
-<h2 data-number="6.5" class="anchored" data-anchor-id="interpretation-of-probability"><span class="header-section-number">6.5</span> Interpretation of probability</h2>
+</section><section id="interpretation-of-probability" class="level2" data-number="6.5"><h2 data-number="6.5" class="anchored" data-anchor-id="interpretation-of-probability">
+<span class="header-section-number">6.5</span> Interpretation of probability</h2>
 <ul>
 <li>Relative frequency interpretation.</li>
 </ul>
@@ -353,108 +360,95 @@ P\Big(\bigcup_{i=1}^{\infty} A_i \Big) = \sum_{i=1}^{\infty} P(A_i).
 <li>Subjective interpretation.</li>
 </ul>
 <p>Example: A marine biologist feels that there is a 60% chance that a rescued dolphin will successfully reintegrate into the wild, based on her past experience with similar rescues and her knowledge of the dolphin’s behavior.</p>
-</section>
-<section id="methods-for-determining-probability" class="level2" data-number="6.6">
-<h2 data-number="6.6" class="anchored" data-anchor-id="methods-for-determining-probability"><span class="header-section-number">6.6</span> Methods for Determining Probability</h2>
+</section><section id="methods-for-determining-probability" class="level2" data-number="6.6"><h2 data-number="6.6" class="anchored" data-anchor-id="methods-for-determining-probability">
+<span class="header-section-number">6.6</span> Methods for Determining Probability</h2>
 <ul>
 <li><p>Classical method</p></li>
 <li><p>Relative frequency method</p></li>
 <li><p>Subjective method</p></li>
 <li><p>Using probability models</p></li>
-</ul>
-</section>
-<section id="classical-method" class="level2" data-number="6.7">
-<h2 data-number="6.7" class="anchored" data-anchor-id="classical-method"><span class="header-section-number">6.7</span> Classical Method</h2>
+</ul></section><section id="classical-method" class="level2" data-number="6.7"><h2 data-number="6.7" class="anchored" data-anchor-id="classical-method">
+<span class="header-section-number">6.7</span> Classical Method</h2>
 <ul>
 <li><p>Probability is calculated based on the sample space.</p></li>
 <li><p>No need to carry out any experiment. It is enough to know the sample space.</p></li>
-<li><p>This approach can be used only if,</p>
+<li>
+<p>This approach can be used only if,</p>
 <ul>
 <li><p>the sample space consists of finite number of outcomes.</p></li>
 <li><p>all the outcomes are ‘equally likely’</p></li>
-</ul></li>
+</ul>
+</li>
 </ul>
 <p>Then, the probability of event <span class="math inline">E</span> is given by,</p>
 <p><span class="math inline">P(E) = \frac{n(E)}{n(\Omega)}</span></p>
-</section>
-<section id="exercise" class="level2" data-number="6.8">
-<h2 data-number="6.8" class="anchored" data-anchor-id="exercise"><span class="header-section-number">6.8</span> Exercise</h2>
+</section><section id="exercise" class="level2" data-number="6.8"><h2 data-number="6.8" class="anchored" data-anchor-id="exercise">
+<span class="header-section-number">6.8</span> Exercise</h2>
 <p>Q1: What is the probability of obtaining ‘Head’ in a single toss of an unbiased coin?</p>
 <p>Q2: Two fair dice are tossed. Find the probability that sum of the dice equals seven.</p>
 <p>Q3: A box contains 3 white balls and 2 black balls. Two balls are taken one after the other without replacement. Write down the sample space. Find the probability of getting one white ball and one black ball.</p>
 <p><span class="math inline">\Omega = \{(W,W), (W,B), (B,W), (B,B)\}</span></p>
 <p>Are the outcomes of this sample space equally likely?</p>
 <p>Can you write the sample space so that outcomes will be equally likely?</p>
-</section>
-<section id="relative-frequency-method-empirical-probability" class="level2" data-number="6.9">
-<h2 data-number="6.9" class="anchored" data-anchor-id="relative-frequency-method-empirical-probability"><span class="header-section-number">6.9</span> Relative frequency method (Empirical probability)</h2>
+</section><section id="relative-frequency-method-empirical-probability" class="level2" data-number="6.9"><h2 data-number="6.9" class="anchored" data-anchor-id="relative-frequency-method-empirical-probability">
+<span class="header-section-number">6.9</span> Relative frequency method (Empirical probability)</h2>
 <p><span class="math display">P(E) =\frac{\text{number of times E occurred}}{\text{number of times trial was repeated}}</span> ## Exercise</p>
 <p>Q1: A wildlife researcher observes 500 frogs in a wetland and records that 75 of them have a certain skin fungus.</p>
 <p>Using the relative frequency approach, estimate the probability that a randomly selected frog from this wetland has the skin fungus.</p>
 <p>Q2: During a bird migration study, a biologist counts 800 birds and finds that 160 of them are male sparrows.</p>
 <p>Using the relative frequency approach, what is the probability that a randomly selected bird from this group is a male sparrow?</p>
-</section>
-<section id="subjective-method" class="level2" data-number="6.10">
-<h2 data-number="6.10" class="anchored" data-anchor-id="subjective-method"><span class="header-section-number">6.10</span> Subjective Method</h2>
+</section><section id="subjective-method" class="level2" data-number="6.10"><h2 data-number="6.10" class="anchored" data-anchor-id="subjective-method">
+<span class="header-section-number">6.10</span> Subjective Method</h2>
 <p>Usually based on an educated guess or estimate, employing opinions and inexact information.</p>
-</section>
-<section id="conditional-probability" class="level2" data-number="6.11">
-<h2 data-number="6.11" class="anchored" data-anchor-id="conditional-probability"><span class="header-section-number">6.11</span> Conditional Probability</h2>
+</section><section id="conditional-probability" class="level2" data-number="6.11"><h2 data-number="6.11" class="anchored" data-anchor-id="conditional-probability">
+<span class="header-section-number">6.11</span> Conditional Probability</h2>
 <p>The conditional probability of an event <span class="math inline">A</span> given that event <span class="math inline">B</span> has occurred is denoted by <span class="math inline">P(A \mid B)</span> and is defined as:</p>
 <p><span class="math display">P(A \mid B) = \frac{P(A \cap B)}{P(B)}, \quad \text{for } P(B) &gt; 0</span></p>
-</section>
-<section id="multiplication-rule" class="level2" data-number="6.12">
-<h2 data-number="6.12" class="anchored" data-anchor-id="multiplication-rule"><span class="header-section-number">6.12</span> Multiplication Rule</h2>
+</section><section id="multiplication-rule" class="level2" data-number="6.12"><h2 data-number="6.12" class="anchored" data-anchor-id="multiplication-rule">
+<span class="header-section-number">6.12</span> Multiplication Rule</h2>
 <p>Rearranging the formula of conditional probability, we get the :</p>
 <p><span class="math display">P(A \cap B) = P(A \mid B) \cdot P(B)</span></p>
-</section>
-<section id="extension-for-multiple-events" class="level2" data-number="6.13">
-<h2 data-number="6.13" class="anchored" data-anchor-id="extension-for-multiple-events"><span class="header-section-number">6.13</span> Extension for multiple events</h2>
+</section><section id="extension-for-multiple-events" class="level2" data-number="6.13"><h2 data-number="6.13" class="anchored" data-anchor-id="extension-for-multiple-events">
+<span class="header-section-number">6.13</span> Extension for multiple events</h2>
 <p>For three events <span class="math inline">A</span>, <span class="math inline">B</span>, and <span class="math inline">C</span>, the multiplication rule can be extended as:</p>
 <p><span class="math display">P(A \cap B \cap C) = P(A) \cdot P(B \mid A) \cdot P(C \mid A \cap B)</span></p>
-</section>
-<section id="mutually-exclusive-events" class="level2" data-number="6.14">
-<h2 data-number="6.14" class="anchored" data-anchor-id="mutually-exclusive-events"><span class="header-section-number">6.14</span> Mutually Exclusive Events</h2>
+</section><section id="mutually-exclusive-events" class="level2" data-number="6.14"><h2 data-number="6.14" class="anchored" data-anchor-id="mutually-exclusive-events">
+<span class="header-section-number">6.14</span> Mutually Exclusive Events</h2>
 <p>Two or more events are <strong>mutually exclusive</strong> if they <strong>cannot occur at the same time</strong>.</p>
 <p><span class="math display">
 P(A \cap B) = 0
 </span></p>
 <p><strong>Example (Zoology):</strong><br>
 In a bird survey, observing a bird as either a <strong>sparrow</strong> or an <strong>eagle</strong> in a single sighting is mutually exclusive — the bird cannot be both at the same time.</p>
-</section>
-<section id="exhaustive-events" class="level2" data-number="6.15">
-<h2 data-number="6.15" class="anchored" data-anchor-id="exhaustive-events"><span class="header-section-number">6.15</span> Exhaustive Events</h2>
+</section><section id="exhaustive-events" class="level2" data-number="6.15"><h2 data-number="6.15" class="anchored" data-anchor-id="exhaustive-events">
+<span class="header-section-number">6.15</span> Exhaustive Events</h2>
 <p>A set of events is <strong>exhaustive</strong> if <strong>at least one of them must occur</strong>, meaning they cover all possible outcomes.</p>
 <p><span class="math display">
 P(A_1 \cup A_2 \cup \dots \cup A_n) = 1
 </span></p>
 <p><strong>Example (Zoology):</strong><br>
 Observing a frog in a wetland, it must either be <strong>male</strong> or <strong>female</strong>. These categories are exhaustive because they cover all possible frogs.</p>
-</section>
-<section id="independent-events" class="level2" data-number="6.16">
-<h2 data-number="6.16" class="anchored" data-anchor-id="independent-events"><span class="header-section-number">6.16</span> Independent Events</h2>
+</section><section id="independent-events" class="level2" data-number="6.16"><h2 data-number="6.16" class="anchored" data-anchor-id="independent-events">
+<span class="header-section-number">6.16</span> Independent Events</h2>
 <p>Two events <span class="math inline">A</span> and <span class="math inline">B</span> are <strong>independent</strong> if the occurrence of one <strong>does not affect the probability</strong> of the other.</p>
 <p><span class="math display">
 P(A \cap B) = P(A) \cdot P(B)
 </span></p>
 <p><strong>Example (Zoology):</strong><br>
 The event that a <strong>sea turtle lays eggs today</strong> and the event that a <strong>crab crosses the beach</strong> are independent — one does not affect the other.</p>
-</section>
-<section id="combinations-of-events-mutual-exclusivity-and-exhaustiveness" class="level1" data-number="7">
-<h1 data-number="7"><span class="header-section-number">7</span> Combinations of Events: Mutual Exclusivity and Exhaustiveness</h1>
+</section><section id="combinations-of-events-mutual-exclusivity-and-exhaustiveness" class="level1" data-number="7"><h1 data-number="7">
+<span class="header-section-number">7</span> Combinations of Events: Mutual Exclusivity and Exhaustiveness</h1>
 <p>In-class</p>
-</section>
-<section id="rules-of-probability" class="level1" data-number="8">
-<h1 data-number="8"><span class="header-section-number">8</span> Rules of Probability</h1>
-<section id="complement-rule" class="level2" data-number="8.1">
-<h2 data-number="8.1" class="anchored" data-anchor-id="complement-rule"><span class="header-section-number">8.1</span> 1. Complement Rule</h2>
+</section><section id="rules-of-probability" class="level1" data-number="8"><h1 data-number="8">
+<span class="header-section-number">8</span> Rules of Probability</h1>
+<section id="complement-rule" class="level2" data-number="8.1"><h2 data-number="8.1" class="anchored" data-anchor-id="complement-rule">
+<span class="header-section-number">8.1</span> 1. Complement Rule</h2>
 <p>The probability of the complement of an event <span class="math inline">A</span>, denoted by <span class="math inline">A^c</span>, is:</p>
 <p><span class="math display">
 P(A^c) = 1 - P(A)
 </span></p>
-</section>
-<section id="addition-rule" class="level2" data-number="8.2">
-<h2 data-number="8.2" class="anchored" data-anchor-id="addition-rule"><span class="header-section-number">8.2</span> 2. Addition Rule</h2>
+</section><section id="addition-rule" class="level2" data-number="8.2"><h2 data-number="8.2" class="anchored" data-anchor-id="addition-rule">
+<span class="header-section-number">8.2</span> 2. Addition Rule</h2>
 <ul>
 <li><strong>For any two events <span class="math inline">A</span> and <span class="math inline">B</span>:</strong></li>
 </ul>
@@ -467,9 +461,8 @@ P(A \cup B) = P(A) + P(B) - P(A \cap B)
 <p><span class="math display">
 P(A \cup B) = P(A) + P(B)
 </span></p>
-</section>
-<section id="multiplication-rule-1" class="level2" data-number="8.3">
-<h2 data-number="8.3" class="anchored" data-anchor-id="multiplication-rule-1"><span class="header-section-number">8.3</span> 3. Multiplication Rule</h2>
+</section><section id="multiplication-rule-1" class="level2" data-number="8.3"><h2 data-number="8.3" class="anchored" data-anchor-id="multiplication-rule-1">
+<span class="header-section-number">8.3</span> 3. Multiplication Rule</h2>
 <ul>
 <li><strong>Conditional probability:</strong></li>
 </ul>
@@ -488,23 +481,20 @@ P(A \cap B) = P(A \mid B) \cdot P(B)
 <p><span class="math display">
 P(A_1 \cap A_2 \cap \dots \cap A_n) = P(A_1) \cdot P(A_2 \mid A_1) \cdot \dots \cdot P(A_n \mid A_1 \cap \dots \cap A_{n-1})
 </span></p>
-</section>
-<section id="law-of-total-probability" class="level2" data-number="8.4">
-<h2 data-number="8.4" class="anchored" data-anchor-id="law-of-total-probability"><span class="header-section-number">8.4</span> 4. Law of Total Probability</h2>
+</section><section id="law-of-total-probability" class="level2" data-number="8.4"><h2 data-number="8.4" class="anchored" data-anchor-id="law-of-total-probability">
+<span class="header-section-number">8.4</span> 4. Law of Total Probability</h2>
 <p>If <span class="math inline">\{B_1, B_2, \dots, B_n\}</span> is a partition of the sample space <span class="math inline">\Omega</span>, then for any event <span class="math inline">A</span>:</p>
 <p><span class="math display">
 P(A) = \sum_{i=1}^{n} P(A \mid B_i) \cdot P(B_i)
 </span></p>
-</section>
-<section id="bayes-theorem" class="level2" data-number="8.5">
-<h2 data-number="8.5" class="anchored" data-anchor-id="bayes-theorem"><span class="header-section-number">8.5</span> 5. Bayes’ Theorem</h2>
+</section><section id="bayes-theorem" class="level2" data-number="8.5"><h2 data-number="8.5" class="anchored" data-anchor-id="bayes-theorem">
+<span class="header-section-number">8.5</span> 5. Bayes’ Theorem</h2>
 <p>For events <span class="math inline">A</span> and <span class="math inline">B_i</span> with <span class="math inline">P(B_i) &gt; 0</span>:</p>
 <p><span class="math display">
 P(B_i \mid A) = \frac{P(A \mid B_i) \cdot P(B_i)}{\sum_{j=1}^{n} P(A \mid B_j) \cdot P(B_j)}
 </span></p>
-</section>
-<section id="exercise-1" class="level2" data-number="8.6">
-<h2 data-number="8.6" class="anchored" data-anchor-id="exercise-1"><span class="header-section-number">8.6</span> Exercise</h2>
+</section><section id="exercise-1" class="level2" data-number="8.6"><h2 data-number="8.6" class="anchored" data-anchor-id="exercise-1">
+<span class="header-section-number">8.6</span> Exercise</h2>
 <p>Question 1</p>
 <p>A wildlife researcher studies frogs in three ponds: Pond A, Pond B, and Pond C.</p>
 <p>Pond A has 50 frogs, Pond B has 30 frogs, and Pond C has 20 frogs.</p>
@@ -521,13 +511,116 @@ P(B_i \mid A) = \frac{P(A \mid B_i) \cdot P(B_i)}{\sum_{j=1}^{n} P(A \mid B_j) \
 <p>Tasks:</p>
 <p>Calculate the sensitivity of the test.</p>
 <p>Calculate the specificity of the test.</p>
+</section><section id="probability-distributions" class="level2" data-number="8.7"><h2 data-number="8.7" class="anchored" data-anchor-id="probability-distributions">
+<span class="header-section-number">8.7</span> Probability Distributions</h2>
+<p>Below are four commonly used distributions in zoological studies.</p>
+<section id="binomial-distribution" class="level3"><h3 class="anchored" data-anchor-id="binomial-distribution">Binomial Distribution</h3>
+<p>The <strong>Binomial distribution</strong> models the number of successes in a fixed number of independent trials, where each trial has two outcomes (success/failure).</p>
+<p>Let <span class="math inline">X</span> be the number of frogs infected out of 10 observed.</p>
+<p><span class="math display">P(X = x) = \binom{n}{x} p^x (1 - p)^{n - x}</span></p>
+<p>where<br>
+- <span class="math inline">n</span> = number of trials (e.g., number of frogs observed)<br>
+- <span class="math inline">p</span> = probability of success (e.g., infection)<br>
+- <span class="math inline">x</span> = number of successes (e.g., frogs infected)</p>
+<p><strong>Example:</strong><br>
+A wildlife biologist observes 10 frogs and records whether each frog is infected with a fungus (infected = success).</p>
+<p>If the probability of infection is 0.2, the number of infected frogs follows a Binomial distribution.</p>
+<p>What is the probability that exactly 3 frogs are infected?</p>
+<p><strong>Calculation:</strong></p>
+<p><span class="math display">P(X = 3) = \binom{10}{3} 0.2^3 (1 - 0.2)^{10 - 2}</span></p>
+<p><strong>R Code:</strong></p>
+<div class="cell">
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Parameters</span></span>
+<span><span class="va">n</span> <span class="op">&lt;-</span> <span class="fl">10</span>    <span class="co"># number of frogs</span></span>
+<span><span class="va">p</span> <span class="op">&lt;-</span> <span class="fl">0.2</span>   <span class="co"># probability of infection</span></span>
+<span></span>
+<span><span class="co"># Probability of exactly 3 infected frogs</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/stats/Binomial.html">dbinom</a></span><span class="op">(</span><span class="fl">3</span>, size <span class="op">=</span> <span class="va">n</span>, prob <span class="op">=</span> <span class="va">p</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.2013266</code></pre>
+</div>
+</div>
+</section><section id="poisson-distribution" class="level3"><h3 class="anchored" data-anchor-id="poisson-distribution">Poisson Distribution</h3>
+<p>The <strong>Poisson distribution</strong> describes the number of events that occur in a fixed time or space interval when events happen independently and at a constant average rate.</p>
+<p><span class="math display">
+P(X = x) = \frac{e^{-\lambda} \lambda^x}{x!}
+</span></p>
+<p>where:<br>
+- <span class="math inline">\lambda</span>: average number of events per interval<br>
+- <span class="math inline">x</span>: number of observed events</p>
+<p><strong>Example</strong></p>
+<p>A field researcher records bird calls in a forest.<br>
+On average, there are ( = 5 ) calls per minute.</p>
+<p>What is the probability that exactly <strong>3 bird calls</strong> are heard in one minute?</p>
+<p>Let <span class="math inline">X</span> be the number of bird calls within a minute.</p>
+<p><span class="math display">P(X = 3) = \frac{e^{-5} 5^3}{3!} = 0.1404</span></p>
+<p>Therefore, the probability of hearing exactly 3 calls in one minute is 0.1404.</p>
+<p><strong>R Code:</strong></p>
+<div class="cell">
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">lambda</span> <span class="op">&lt;-</span> <span class="fl">5</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/stats/Poisson.html">dpois</a></span><span class="op">(</span><span class="fl">3</span>, <span class="va">lambda</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.1403739</code></pre>
+</div>
+</div>
+<p>What is the probability that exactly 3 bird calls are heard in one hour?</p>
+<p>Let <span class="math inline">X</span> be the number of bird calls heard in one hour.</p>
+<p>Then the average number of bird calls per minute is <span class="math inline">60 \times 5 = 300</span>.</p>
+<div class="cell">
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">lambda_hour</span> <span class="op">&lt;-</span> <span class="fl">5</span> <span class="op">*</span> <span class="fl">60</span>  <span class="co"># 300 bird calls per hour</span></span>
+<span><span class="va">x</span> <span class="op">&lt;-</span> <span class="fl">3</span></span>
+<span></span>
+<span><span class="co"># Probability of exactly 3 bird calls in an hour</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/stats/Poisson.html">dpois</a></span><span class="op">(</span><span class="va">x</span>, <span class="va">lambda_hour</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 2.31669e-124</code></pre>
+</div>
+</div>
+</section><section id="normal-distribution" class="level3"><h3 class="anchored" data-anchor-id="normal-distribution">Normal Distribution</h3>
+<p>The Normal distribution is used to describe continuous measurements such as body length, weight, or temperature that cluster around a mean value.</p>
+<p><span class="math display">
+f_X(x) = \frac{1}{\sqrt{2 \pi \sigma^2}} \, e^{ - \frac{(x - \mu)^2}{2 \sigma^2} }
+</span></p>
+<p>Where:<br>
+- <span class="math inline">x</span> = observed value<br>
+- <span class="math inline">\mu</span> = mean of the distribution<br>
+- <span class="math inline">\sigma</span> = standard deviation<br>
+- <span class="math inline">f_X(x)</span> = probability density at <span class="math inline">x</span></p>
+<p><strong>Example</strong></p>
+<p>Suppose the body weights of adult lizards in a population are normally distributed with:</p>
+<p><span class="math display">\mu = 150 \text{ g}, \quad \sigma = 20 \text{ g}</span></p>
+<p>Define the random variable:</p>
+<p><span class="math display">X = \text{body weight of a randomly selected lizard (g)}</span></p>
+<p>What is the probability that a randomly selected lizard weighs <strong>less than 130 g</strong>?</p>
+<p>We standardize using the z-score formula:</p>
+<p><span class="math display">Z = \frac{X - \mu}{\sigma} = \frac{130 - 150}{20} = -1</span></p>
+<p>Using the cumulative distribution function (CDF):</p>
+<p><span class="math display">P(X &lt; 130) = P(Z &lt; -1) = 0.1587</span></p>
+<p><strong>R code:</strong></p>
+<p>Method 1</p>
+<div class="cell">
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Parameters</span></span>
+<span><span class="va">mean_weight</span> <span class="op">&lt;-</span> <span class="fl">150</span></span>
+<span><span class="va">sd_weight</span> <span class="op">&lt;-</span> <span class="fl">20</span></span>
+<span></span>
+<span><span class="co"># Probability of weight less than 130 g</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/stats/Normal.html">pnorm</a></span><span class="op">(</span><span class="fl">130</span>, mean <span class="op">=</span> <span class="va">mean_weight</span>, sd <span class="op">=</span> <span class="va">sd_weight</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.1586553</code></pre>
+</div>
+</div>
+<p>Method 2:</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.1586553</code></pre>
+</div>
+</div>
+</section></section><section id="t-distribution" class="level2" data-number="8.8"><h2 data-number="8.8" class="anchored" data-anchor-id="t-distribution">
+<span class="header-section-number">8.8</span> t-distribution</h2>
+<p>We will talk about this in Statistical Inference section.</p>
 
 
-</section>
-</section>
-
-</main> <!-- /main -->
-<script id="quarto-html-after-body" type="application/javascript">
+</section></section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
     const mode = bsSheetEl.getAttribute("data-mode");
@@ -943,9 +1036,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
 });
-</script>
-<nav class="page-navigation">
-  <div class="nav-page nav-page-previous">
+</script><nav class="page-navigation"><div class="nav-page nav-page-previous">
       <a href="./05-chap5.html" class="pagination-link" aria-label="Descriptive Statistics">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Descriptive Statistics</span></span>
       </a>          
@@ -957,7 +1048,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   </div>
 </nav>
 </div> <!-- /content -->
-
 
 
 

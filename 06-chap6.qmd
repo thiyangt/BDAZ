@@ -363,3 +363,159 @@ Tasks:
 Calculate the sensitivity of the test.
 
 Calculate the specificity of the test.
+
+## Probability Distributions
+
+Below are four commonly used distributions in zoological studies.
+
+
+
+### Binomial Distribution
+
+The **Binomial distribution** models the number of successes in a fixed number of independent trials, where each trial has two outcomes (success/failure).
+
+Let $X$ be the number of frogs infected out of 10 observed. 
+
+$$P(X = x) = \binom{n}{x} p^x (1 - p)^{n - x}$$
+
+where  
+- $n$ = number of trials (e.g., number of frogs observed)  
+- $p$ = probability of success (e.g., infection)  
+- $x$ = number of successes (e.g., frogs infected)  
+
+**Example:**  
+A wildlife biologist observes 10 frogs and records whether each frog is infected with a fungus (infected = success).  
+
+If the probability of infection is 0.2, the number of infected frogs follows a Binomial distribution.
+
+What is the probability that exactly 3 frogs are infected?
+
+
+**Calculation:**
+
+
+$$P(X = 3) = \binom{10}{3} 0.2^3 (1 - 0.2)^{10 - 2}$$
+
+**R Code:**
+
+```{r, echo=TRUE}
+# Parameters
+n <- 10    # number of frogs
+p <- 0.2   # probability of infection
+
+# Probability of exactly 3 infected frogs
+dbinom(3, size = n, prob = p)
+
+```
+
+### Poisson Distribution
+
+The **Poisson distribution** describes the number of events that occur in a fixed time or space interval when events happen independently and at a constant average rate.
+
+
+$$
+P(X = x) = \frac{e^{-\lambda} \lambda^x}{x!}
+$$
+
+where:  
+- $\lambda$: average number of events per interval  
+- $x$: number of observed events  
+
+**Example**
+
+A field researcher records bird calls in a forest.  
+On average, there are \( \lambda = 5 \) calls per minute.
+
+
+What is the probability that exactly **3 bird calls** are heard in one minute?
+
+
+Let $X$ be the number of bird calls within a minute.
+
+$$P(X = 3) = \frac{e^{-5} 5^3}{3!} = 0.1404$$
+
+Therefore, the probability of hearing exactly 3 calls in one minute is 0.1404.
+
+**R Code:**
+```{r, echo=TRUE}
+lambda <- 5
+dpois(3, lambda)
+```
+
+What is the probability that exactly 3 bird calls are heard in one hour?
+
+Let $X$ be the number of bird calls heard in one hour.
+
+Then the average number of bird calls per minute is $60 \times 5 = 300$.
+
+```{r, echo=TRUE}
+lambda_hour <- 5 * 60  # 300 bird calls per hour
+x <- 3
+
+# Probability of exactly 3 bird calls in an hour
+dpois(x, lambda_hour)
+
+```
+
+### Normal Distribution
+
+The Normal distribution is used to describe continuous measurements such as body length, weight, or temperature that cluster around a mean value.
+
+
+$$
+f_X(x) = \frac{1}{\sqrt{2 \pi \sigma^2}} \, e^{ - \frac{(x - \mu)^2}{2 \sigma^2} }
+$$
+
+
+
+
+Where:  
+- $x$ = observed value  
+- $\mu$ = mean of the distribution  
+- $\sigma$ = standard deviation  
+- $f_X(x)$ = probability density at $x$  
+
+**Example**
+
+Suppose the body weights of adult lizards in a population are normally distributed with:  
+
+$$\mu = 150 \text{ g}, \quad \sigma = 20 \text{ g}$$
+
+Define the random variable:
+
+$$X = \text{body weight of a randomly selected lizard (g)}$$ 
+
+What is the probability that a randomly selected lizard weighs **less than 130 g**?
+
+We standardize using the z-score formula:
+
+
+$$Z = \frac{X - \mu}{\sigma} = \frac{130 - 150}{20} = -1$$
+
+Using the cumulative distribution function (CDF):
+
+$$P(X < 130) = P(Z < -1) = 0.1587$$
+
+**R code:**
+
+Method 1
+
+```{r, echo=TRUE}
+# Parameters
+mean_weight <- 150
+sd_weight <- 20
+
+# Probability of weight less than 130 g
+pnorm(130, mean = mean_weight, sd = sd_weight)
+```
+
+Method 2:
+
+```{r}
+pnorm(-1, mean = 0, sd = 1)
+```
+
+
+## t-distribution
+
+We will talk about this in Statistical Inference section.
