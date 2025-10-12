@@ -232,6 +232,7 @@ $$P(A \cap B) = P(A \mid B) \cdot P(B)$$
 
 
 ## Extension for multiple events
+
 For three events $A$, $B$, and $C$, the multiplication rule can be extended as:
 
 $$P(A \cap B \cap C) = P(A) \cdot P(B \mid A) \cdot P(C \mid A \cap B)$$
@@ -252,6 +253,7 @@ In a bird survey, observing a bird as either a **sparrow** or an **eagle** in a 
 
 
 ## Exhaustive Events
+
 A set of events is **exhaustive** if **at least one of them must occur**, meaning they cover all possible outcomes.  
 
 $$
@@ -274,20 +276,20 @@ $$
 The event that a **sea turtle lays eggs today** and the event that a **crab crosses the beach** are independent — one does not affect the other.
 
 
-# Combinations of Events: Mutual Exclusivity and Exhaustiveness
+## Combinations of Events: Mutual Exclusivity and Exhaustiveness
 
 In-class
 
-# Rules of Probability
+## Rules of Probability
 
-## 1. Complement Rule
+### 1. Complement Rule
 The probability of the complement of an event $A$, denoted by $A^c$, is:
 
 $$
 P(A^c) = 1 - P(A)
 $$
 
-## 2. Addition Rule
+### 2. Addition Rule
 - **For any two events $A$ and $B$:**
 
 $$
@@ -300,7 +302,7 @@ $$
 P(A \cup B) = P(A) + P(B)
 $$
 
-## 3. Multiplication Rule
+### 3. Multiplication Rule
 - **Conditional probability:**
 
 $$
@@ -320,6 +322,7 @@ P(A_1 \cap A_2 \cap \dots \cap A_n) = P(A_1) \cdot P(A_2 \mid A_1) \cdot \dots \
 $$
 
 ## 4. Law of Total Probability
+
 If $\{B_1, B_2, \dots, B_n\}$ is a partition of the sample space $\Omega$, then for any event $A$:
 
 $$
@@ -327,6 +330,7 @@ P(A) = \sum_{i=1}^{n} P(A \mid B_i) \cdot P(B_i)
 $$
 
 ## 5. Bayes’ Theorem
+
 For events $A$ and $B_i$ with $P(B_i) > 0$:
 
 $$

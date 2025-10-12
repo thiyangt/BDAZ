@@ -234,7 +234,7 @@
     "href": "03-chap3.html#r-as-a-calculator",
     "title": "3  Introduction to R programming basics and R studio",
     "section": "\n3.6 R as a calculator",
-    "text": "3.6 R as a calculator\nLet’s type some simple commands. Type these in the console.\n\n1 + 2\n\n[1] 3\n\n\n\n1 * 100\n\n[1] 100\n\n\n\n1 / 100\n\n[1] 0.01\n\n\n\nrnorm(50)\n\n [1]  0.866345477 -0.184289785  1.207613032 -0.798142806 -1.436703054\n [6] -1.083840334  0.975892518 -0.356689847 -0.787354877  0.612618508\n[11]  1.579110724 -0.563247255  0.076887947  0.808730932 -1.203286948\n[16] -1.137701962 -0.973520298 -1.160946685  0.515998299  0.387159272\n[21]  0.287785198 -1.241957241 -0.478132554  0.715417133 -0.926432604\n[26] -1.387297037  1.466506748 -1.556173594 -1.185497182 -0.694163929\n[31]  0.031336431 -0.234404984 -0.173295563  0.352839792 -0.079696749\n[36]  1.518836545 -0.719637669 -1.061274840 -1.319920180  1.263568103\n[41] -2.159357363  0.408753027  0.465616684 -0.272966064  0.113691925\n[46] -0.472325515 -1.480324007 -0.038835321 -0.006493186 -0.955405197\n\n\n\nhist(rnorm(50))\n\n\n\n\n\n\n\nIn R, square brackets [ ] indicate the index or position of an element in a vector, list, or other data structure.",
+    "text": "3.6 R as a calculator\nLet’s type some simple commands. Type these in the console.\n\n1 + 2\n\n[1] 3\n\n\n\n1 * 100\n\n[1] 100\n\n\n\n1 / 100\n\n[1] 0.01\n\n\n\nrnorm(50)\n\n [1]  1.25679197 -0.27731007  0.30292307 -0.24109624 -0.46913494 -0.63577640\n [7] -0.08565422 -1.04099556 -1.67926770 -0.15901515 -0.74313752 -1.98350046\n[13] -0.05545933  0.04274313  0.35704586  0.86767823  0.33002338 -1.64847294\n[19]  0.89301591  0.77192285  0.10289986 -0.36169656  0.60472325  1.61274808\n[25]  0.10593182 -0.76848799  0.72789200 -1.91078296 -0.23948961  0.21599235\n[31] -0.63745291  1.25741376 -0.05193891 -0.14963249  1.20575337 -0.16049686\n[37]  0.90288375 -0.24081903  0.44588961 -1.15053142  0.74235750 -1.35290978\n[43] -0.54197385  1.14540803 -0.47215094 -1.52062177 -1.12982320 -0.91737375\n[49]  2.28804949  0.17714930\n\n\n\nhist(rnorm(50))\n\n\n\n\n\n\n\nIn R, square brackets [ ] indicate the index or position of an element in a vector, list, or other data structure.",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Introduction to R programming basics and R studio</span>"
     ]
@@ -760,31 +760,21 @@
     ]
   },
   {
-    "objectID": "06-chap6.html#complement-rule",
-    "href": "06-chap6.html#complement-rule",
+    "objectID": "06-chap6.html#combinations-of-events-mutual-exclusivity-and-exhaustiveness",
+    "href": "06-chap6.html#combinations-of-events-mutual-exclusivity-and-exhaustiveness",
     "title": "6  Probability and Distribution Theory",
-    "section": "\n8.1 1. Complement Rule",
-    "text": "8.1 1. Complement Rule\nThe probability of the complement of an event A, denoted by A^c, is:\n\nP(A^c) = 1 - P(A)",
+    "section": "\n6.17 Combinations of Events: Mutual Exclusivity and Exhaustiveness",
+    "text": "6.17 Combinations of Events: Mutual Exclusivity and Exhaustiveness\nIn-class",
     "crumbs": [
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>Probability and Distribution Theory</span>"
     ]
   },
   {
-    "objectID": "06-chap6.html#addition-rule",
-    "href": "06-chap6.html#addition-rule",
+    "objectID": "06-chap6.html#rules-of-probability",
+    "href": "06-chap6.html#rules-of-probability",
     "title": "6  Probability and Distribution Theory",
-    "section": "\n8.2 2. Addition Rule",
-    "text": "8.2 2. Addition Rule\n\nFor any two events A and B:\n\n\nP(A \\cup B) = P(A) + P(B) - P(A \\cap B)\n\n\nFor mutually exclusive events A and B:\n\n\nP(A \\cup B) = P(A) + P(B)",
-    "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Probability and Distribution Theory</span>"
-    ]
-  },
-  {
-    "objectID": "06-chap6.html#multiplication-rule-1",
-    "href": "06-chap6.html#multiplication-rule-1",
-    "title": "6  Probability and Distribution Theory",
-    "section": "\n8.3 3. Multiplication Rule",
-    "text": "8.3 3. Multiplication Rule\n\nConditional probability:\n\n\nP(A \\mid B) = \\frac{P(A \\cap B)}{P(B)}, \\quad P(B) &gt; 0\n\n\nMultiplication rule:\n\n\nP(A \\cap B) = P(A \\mid B) \\cdot P(B)\n\n\nExtension to multiple events A_1, A_2, \\dots, A_n:\n\n\nP(A_1 \\cap A_2 \\cap \\dots \\cap A_n) = P(A_1) \\cdot P(A_2 \\mid A_1) \\cdot \\dots \\cdot P(A_n \\mid A_1 \\cap \\dots \\cap A_{n-1})",
+    "section": "\n6.18 Rules of Probability",
+    "text": "6.18 Rules of Probability\n1. Complement Rule\nThe probability of the complement of an event A, denoted by A^c, is:\n\nP(A^c) = 1 - P(A)\n\n2. Addition Rule\n\nFor any two events A and B:\n\n\nP(A \\cup B) = P(A) + P(B) - P(A \\cap B)\n\n\nFor mutually exclusive events A and B:\n\n\nP(A \\cup B) = P(A) + P(B)\n\n3. Multiplication Rule\n\nConditional probability:\n\n\nP(A \\mid B) = \\frac{P(A \\cap B)}{P(B)}, \\quad P(B) &gt; 0\n\n\nMultiplication rule:\n\n\nP(A \\cap B) = P(A \\mid B) \\cdot P(B)\n\n\nExtension to multiple events A_1, A_2, \\dots, A_n:\n\n\nP(A_1 \\cap A_2 \\cap \\dots \\cap A_n) = P(A_1) \\cdot P(A_2 \\mid A_1) \\cdot \\dots \\cdot P(A_n \\mid A_1 \\cap \\dots \\cap A_{n-1})",
     "crumbs": [
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>Probability and Distribution Theory</span>"
     ]
@@ -793,8 +783,8 @@
     "objectID": "06-chap6.html#law-of-total-probability",
     "href": "06-chap6.html#law-of-total-probability",
     "title": "6  Probability and Distribution Theory",
-    "section": "\n8.4 4. Law of Total Probability",
-    "text": "8.4 4. Law of Total Probability\nIf \\{B_1, B_2, \\dots, B_n\\} is a partition of the sample space \\Omega, then for any event A:\n\nP(A) = \\sum_{i=1}^{n} P(A \\mid B_i) \\cdot P(B_i)",
+    "section": "\n6.19 4. Law of Total Probability",
+    "text": "6.19 4. Law of Total Probability\nIf \\{B_1, B_2, \\dots, B_n\\} is a partition of the sample space \\Omega, then for any event A:\n\nP(A) = \\sum_{i=1}^{n} P(A \\mid B_i) \\cdot P(B_i)",
     "crumbs": [
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>Probability and Distribution Theory</span>"
     ]
@@ -803,8 +793,8 @@
     "objectID": "06-chap6.html#bayes-theorem",
     "href": "06-chap6.html#bayes-theorem",
     "title": "6  Probability and Distribution Theory",
-    "section": "\n8.5 5. Bayes’ Theorem",
-    "text": "8.5 5. Bayes’ Theorem\nFor events A and B_i with P(B_i) &gt; 0:\n\nP(B_i \\mid A) = \\frac{P(A \\mid B_i) \\cdot P(B_i)}{\\sum_{j=1}^{n} P(A \\mid B_j) \\cdot P(B_j)}",
+    "section": "\n6.20 5. Bayes’ Theorem",
+    "text": "6.20 5. Bayes’ Theorem\nFor events A and B_i with P(B_i) &gt; 0:\n\nP(B_i \\mid A) = \\frac{P(A \\mid B_i) \\cdot P(B_i)}{\\sum_{j=1}^{n} P(A \\mid B_j) \\cdot P(B_j)}",
     "crumbs": [
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>Probability and Distribution Theory</span>"
     ]
@@ -813,8 +803,8 @@
     "objectID": "06-chap6.html#exercise-1",
     "href": "06-chap6.html#exercise-1",
     "title": "6  Probability and Distribution Theory",
-    "section": "\n8.6 Exercise",
-    "text": "8.6 Exercise\nQuestion 1\nA wildlife researcher studies frogs in three ponds: Pond A, Pond B, and Pond C.\nPond A has 50 frogs, Pond B has 30 frogs, and Pond C has 20 frogs.\nThe probability that a frog in Pond A is infected with a skin fungus is 0.1, in Pond B is 0.2, and in Pond C is 0.3.\n\nIf a frog is randomly selected from all ponds, what is the probability that it is infected?\nSuppose a randomly selected frog is found to be infected. What is the probability that it came from Pond B?\n\nQuestion 2\nA wildlife biologist tests a population of 1000 bats for a viral infection using a diagnostic test.\n200 bats are actually infected.\nThe test correctly identifies 180 of the infected bats as positive.\nAmong the 800 uninfected bats, the test correctly identifies 720 as negative.\nTasks:\nCalculate the sensitivity of the test.\nCalculate the specificity of the test.",
+    "section": "\n6.21 Exercise",
+    "text": "6.21 Exercise\nQuestion 1\nA wildlife researcher studies frogs in three ponds: Pond A, Pond B, and Pond C.\nPond A has 50 frogs, Pond B has 30 frogs, and Pond C has 20 frogs.\nThe probability that a frog in Pond A is infected with a skin fungus is 0.1, in Pond B is 0.2, and in Pond C is 0.3.\n\nIf a frog is randomly selected from all ponds, what is the probability that it is infected?\nSuppose a randomly selected frog is found to be infected. What is the probability that it came from Pond B?\n\nQuestion 2\nA wildlife biologist tests a population of 1000 bats for a viral infection using a diagnostic test.\n200 bats are actually infected.\nThe test correctly identifies 180 of the infected bats as positive.\nAmong the 800 uninfected bats, the test correctly identifies 720 as negative.\nTasks:\nCalculate the sensitivity of the test.\nCalculate the specificity of the test.",
     "crumbs": [
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>Probability and Distribution Theory</span>"
     ]
@@ -823,8 +813,8 @@
     "objectID": "06-chap6.html#probability-distributions",
     "href": "06-chap6.html#probability-distributions",
     "title": "6  Probability and Distribution Theory",
-    "section": "\n8.7 Probability Distributions",
-    "text": "8.7 Probability Distributions\nBelow are four commonly used distributions in zoological studies.\nBinomial Distribution\nThe Binomial distribution models the number of successes in a fixed number of independent trials, where each trial has two outcomes (success/failure).\nLet X be the number of frogs infected out of 10 observed.\nP(X = x) = \\binom{n}{x} p^x (1 - p)^{n - x}\nwhere\n- n = number of trials (e.g., number of frogs observed)\n- p = probability of success (e.g., infection)\n- x = number of successes (e.g., frogs infected)\nExample:\nA wildlife biologist observes 10 frogs and records whether each frog is infected with a fungus (infected = success).\nIf the probability of infection is 0.2, the number of infected frogs follows a Binomial distribution.\nWhat is the probability that exactly 3 frogs are infected?\nCalculation:\nP(X = 3) = \\binom{10}{3} 0.2^3 (1 - 0.2)^{10 - 2}\nR Code:\n\n# Parameters\nn &lt;- 10    # number of frogs\np &lt;- 0.2   # probability of infection\n\n# Probability of exactly 3 infected frogs\ndbinom(3, size = n, prob = p)\n\n[1] 0.2013266\n\n\nPoisson Distribution\nThe Poisson distribution describes the number of events that occur in a fixed time or space interval when events happen independently and at a constant average rate.\n\nP(X = x) = \\frac{e^{-\\lambda} \\lambda^x}{x!}\n\nwhere:\n- \\lambda: average number of events per interval\n- x: number of observed events\nExample\nA field researcher records bird calls in a forest.\nOn average, there are ( = 5 ) calls per minute.\nWhat is the probability that exactly 3 bird calls are heard in one minute?\nLet X be the number of bird calls within a minute.\nP(X = 3) = \\frac{e^{-5} 5^3}{3!} = 0.1404\nTherefore, the probability of hearing exactly 3 calls in one minute is 0.1404.\nR Code:\n\nlambda &lt;- 5\ndpois(3, lambda)\n\n[1] 0.1403739\n\n\nWhat is the probability that exactly 3 bird calls are heard in one hour?\nLet X be the number of bird calls heard in one hour.\nThen the average number of bird calls per minute is 60 \\times 5 = 300.\n\nlambda_hour &lt;- 5 * 60  # 300 bird calls per hour\nx &lt;- 3\n\n# Probability of exactly 3 bird calls in an hour\ndpois(x, lambda_hour)\n\n[1] 2.31669e-124\n\n\nNormal Distribution\nThe Normal distribution is used to describe continuous measurements such as body length, weight, or temperature that cluster around a mean value.\n\nf_X(x) = \\frac{1}{\\sqrt{2 \\pi \\sigma^2}} \\, e^{ - \\frac{(x - \\mu)^2}{2 \\sigma^2} }\n\nWhere:\n- x = observed value\n- \\mu = mean of the distribution\n- \\sigma = standard deviation\n- f_X(x) = probability density at x\nExample\nSuppose the body weights of adult lizards in a population are normally distributed with:\n\\mu = 150 \\text{ g}, \\quad \\sigma = 20 \\text{ g}\nDefine the random variable:\nX = \\text{body weight of a randomly selected lizard (g)}\nWhat is the probability that a randomly selected lizard weighs less than 130 g?\nWe standardize using the z-score formula:\nZ = \\frac{X - \\mu}{\\sigma} = \\frac{130 - 150}{20} = -1\nUsing the cumulative distribution function (CDF):\nP(X &lt; 130) = P(Z &lt; -1) = 0.1587\nR code:\nMethod 1\n\n# Parameters\nmean_weight &lt;- 150\nsd_weight &lt;- 20\n\n# Probability of weight less than 130 g\npnorm(130, mean = mean_weight, sd = sd_weight)\n\n[1] 0.1586553\n\n\nMethod 2:\n\n\n[1] 0.1586553",
+    "section": "\n6.22 Probability Distributions",
+    "text": "6.22 Probability Distributions\nBelow are four commonly used distributions in zoological studies.\nBinomial Distribution\nThe Binomial distribution models the number of successes in a fixed number of independent trials, where each trial has two outcomes (success/failure).\nLet X be the number of frogs infected out of 10 observed.\nP(X = x) = \\binom{n}{x} p^x (1 - p)^{n - x}\nwhere\n- n = number of trials (e.g., number of frogs observed)\n- p = probability of success (e.g., infection)\n- x = number of successes (e.g., frogs infected)\nExample:\nA wildlife biologist observes 10 frogs and records whether each frog is infected with a fungus (infected = success).\nIf the probability of infection is 0.2, the number of infected frogs follows a Binomial distribution.\nWhat is the probability that exactly 3 frogs are infected?\nCalculation:\nP(X = 3) = \\binom{10}{3} 0.2^3 (1 - 0.2)^{10 - 2}\nR Code:\n\n# Parameters\nn &lt;- 10    # number of frogs\np &lt;- 0.2   # probability of infection\n\n# Probability of exactly 3 infected frogs\ndbinom(3, size = n, prob = p)\n\n[1] 0.2013266\n\n\nPoisson Distribution\nThe Poisson distribution describes the number of events that occur in a fixed time or space interval when events happen independently and at a constant average rate.\n\nP(X = x) = \\frac{e^{-\\lambda} \\lambda^x}{x!}\n\nwhere:\n- \\lambda: average number of events per interval\n- x: number of observed events\nExample\nA field researcher records bird calls in a forest.\nOn average, there are ( = 5 ) calls per minute.\nWhat is the probability that exactly 3 bird calls are heard in one minute?\nLet X be the number of bird calls within a minute.\nP(X = 3) = \\frac{e^{-5} 5^3}{3!} = 0.1404\nTherefore, the probability of hearing exactly 3 calls in one minute is 0.1404.\nR Code:\n\nlambda &lt;- 5\ndpois(3, lambda)\n\n[1] 0.1403739\n\n\nWhat is the probability that exactly 3 bird calls are heard in one hour?\nLet X be the number of bird calls heard in one hour.\nThen the average number of bird calls per minute is 60 \\times 5 = 300.\n\nlambda_hour &lt;- 5 * 60  # 300 bird calls per hour\nx &lt;- 3\n\n# Probability of exactly 3 bird calls in an hour\ndpois(x, lambda_hour)\n\n[1] 2.31669e-124\n\n\nNormal Distribution\nThe Normal distribution is used to describe continuous measurements such as body length, weight, or temperature that cluster around a mean value.\n\nf_X(x) = \\frac{1}{\\sqrt{2 \\pi \\sigma^2}} \\, e^{ - \\frac{(x - \\mu)^2}{2 \\sigma^2} }\n\nWhere:\n- x = observed value\n- \\mu = mean of the distribution\n- \\sigma = standard deviation\n- f_X(x) = probability density at x\nExample\nSuppose the body weights of adult lizards in a population are normally distributed with:\n\\mu = 150 \\text{ g}, \\quad \\sigma = 20 \\text{ g}\nDefine the random variable:\nX = \\text{body weight of a randomly selected lizard (g)}\nWhat is the probability that a randomly selected lizard weighs less than 130 g?\nWe standardize using the z-score formula:\nZ = \\frac{X - \\mu}{\\sigma} = \\frac{130 - 150}{20} = -1\nUsing the cumulative distribution function (CDF):\nP(X &lt; 130) = P(Z &lt; -1) = 0.1587\nR code:\nMethod 1\n\n# Parameters\nmean_weight &lt;- 150\nsd_weight &lt;- 20\n\n# Probability of weight less than 130 g\npnorm(130, mean = mean_weight, sd = sd_weight)\n\n[1] 0.1586553\n\n\nMethod 2:\n\n\n[1] 0.1586553",
     "crumbs": [
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>Probability and Distribution Theory</span>"
     ]
@@ -833,8 +823,8 @@
     "objectID": "06-chap6.html#t-distribution",
     "href": "06-chap6.html#t-distribution",
     "title": "6  Probability and Distribution Theory",
-    "section": "\n8.8 t-distribution",
-    "text": "8.8 t-distribution\nWe will talk about this in Statistical Inference section.",
+    "section": "\n6.23 t-distribution",
+    "text": "6.23 t-distribution\nWe will talk about this in Statistical Inference section.",
     "crumbs": [
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>Probability and Distribution Theory</span>"
     ]
