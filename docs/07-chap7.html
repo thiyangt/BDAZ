@@ -215,9 +215,10 @@ window.Quarto = {
    
   <ul class="collapse">
   <li><a href="#random-versus-nonrandom-sampling" id="toc-random-versus-nonrandom-sampling" class="nav-link active" data-scroll-target="#random-versus-nonrandom-sampling"><span class="header-section-number">7.1</span> Random versus Nonrandom Sampling</a></li>
-  <li><a href="#random-sampling-techniques" id="toc-random-sampling-techniques" class="nav-link" data-scroll-target="#random-sampling-techniques"><span class="header-section-number">7.2</span> Random Sampling Techniques</a></li>
-  <li><a href="#nonrandom-sampling-techniques" id="toc-nonrandom-sampling-techniques" class="nav-link" data-scroll-target="#nonrandom-sampling-techniques"><span class="header-section-number">7.3</span> Nonrandom Sampling Techniques</a></li>
-  <li><a href="#sampling-error-vs-nonsampling-error" id="toc-sampling-error-vs-nonsampling-error" class="nav-link" data-scroll-target="#sampling-error-vs-nonsampling-error"><span class="header-section-number">7.4</span> Sampling Error vs Nonsampling error</a></li>
+  <li><a href="#sampling-frame" id="toc-sampling-frame" class="nav-link" data-scroll-target="#sampling-frame"><span class="header-section-number">7.2</span> Sampling Frame</a></li>
+  <li><a href="#random-sampling-techniques" id="toc-random-sampling-techniques" class="nav-link" data-scroll-target="#random-sampling-techniques"><span class="header-section-number">7.3</span> Random Sampling Techniques</a></li>
+  <li><a href="#nonrandom-sampling-techniques" id="toc-nonrandom-sampling-techniques" class="nav-link" data-scroll-target="#nonrandom-sampling-techniques"><span class="header-section-number">7.4</span> Nonrandom Sampling Techniques</a></li>
+  <li><a href="#sampling-error-vs-nonsampling-error" id="toc-sampling-error-vs-nonsampling-error" class="nav-link" data-scroll-target="#sampling-error-vs-nonsampling-error"><span class="header-section-number">7.5</span> Sampling Error vs Nonsampling error</a></li>
   </ul>
 </nav>
     </div>
@@ -243,13 +244,18 @@ window.Quarto = {
 </header>
 
 
+<p><img src="ip7.png" class="img-fluid"></p>
 <section id="random-versus-nonrandom-sampling" class="level2" data-number="7.1">
 <h2 data-number="7.1" class="anchored" data-anchor-id="random-versus-nonrandom-sampling"><span class="header-section-number">7.1</span> Random versus Nonrandom Sampling</h2>
 <p>Random sampling: A sampling method in which every unit of population has a known probability of being selected for the sample,</p>
 <p>Nonrandom sampling: A sampling method in which every unit of the population has unkown probability of being selected for the sample.</p>
 </section>
-<section id="random-sampling-techniques" class="level2" data-number="7.2">
-<h2 data-number="7.2" class="anchored" data-anchor-id="random-sampling-techniques"><span class="header-section-number">7.2</span> Random Sampling Techniques</h2>
+<section id="sampling-frame" class="level2" data-number="7.2">
+<h2 data-number="7.2" class="anchored" data-anchor-id="sampling-frame"><span class="header-section-number">7.2</span> Sampling Frame</h2>
+<p>A list of the items or people forming a population from which a sample is taken.</p>
+</section>
+<section id="random-sampling-techniques" class="level2" data-number="7.3">
+<h2 data-number="7.3" class="anchored" data-anchor-id="random-sampling-techniques"><span class="header-section-number">7.3</span> Random Sampling Techniques</h2>
 <section id="simple-random-sampling" class="level3">
 <h3 class="anchored" data-anchor-id="simple-random-sampling">Simple random sampling</h3>
 <ul>
@@ -300,6 +306,15 @@ window.Quarto = {
 <li><p>Randomly select a starting point between <span class="math inline">1</span> and <span class="math inline">k</span>.</p></li>
 <li><p>Select every <span class="math inline">k</span>-th individual thereafter until the sample size <span class="math inline">n</span> is reached.</p></li>
 </ul>
+<p><strong>Example</strong></p>
+<p>A researcher wants to estimate the average wheat yield in a large farm that has 1,000 wheat plots.</p>
+<p>Steps using systematic sampling:</p>
+<p>Determine sample size: Suppose the researcher wants to sample 50 plots.</p>
+<p>Calculate the sampling interval <span class="math inline">k</span></p>
+<p><span class="math display">k = \frac{ \text{Total&nbsp;number&nbsp;of&nbsp;plots​}}{\text{Sample ize}} = \frac{1000}{50} = 20</span></p>
+<p>Randomly select a starting point from 1 to <span class="math inline">k</span>: For example, randomly pick plot number 7 as the starting plot.</p>
+<p>Select every k-th plot: From the starting plot, select every 20th plot: plot 7, plot 27, plot 47, plot 67, … up to 50 plots.</p>
+<p>Collect data: Measure the yield from each selected plot.</p>
 </section>
 <section id="cluster-sampling" class="level3">
 <h3 class="anchored" data-anchor-id="cluster-sampling">Cluster sampling</h3>
@@ -316,8 +331,8 @@ window.Quarto = {
 </ul>
 </section>
 </section>
-<section id="nonrandom-sampling-techniques" class="level2" data-number="7.3">
-<h2 data-number="7.3" class="anchored" data-anchor-id="nonrandom-sampling-techniques"><span class="header-section-number">7.3</span> Nonrandom Sampling Techniques</h2>
+<section id="nonrandom-sampling-techniques" class="level2" data-number="7.4">
+<h2 data-number="7.4" class="anchored" data-anchor-id="nonrandom-sampling-techniques"><span class="header-section-number">7.4</span> Nonrandom Sampling Techniques</h2>
 <section id="covenience-sampling" class="level3">
 <h3 class="anchored" data-anchor-id="covenience-sampling">Covenience sampling</h3>
 <p>Samples are selected based on ease of access or availability.</p>
@@ -362,8 +377,8 @@ window.Quarto = {
 <p>A researcher studying rare medical conditions starts with a few patients at a clinic. Each patient refers other patients they know who have the condition, and the process continues until enough participants are recruited.</p>
 </section>
 </section>
-<section id="sampling-error-vs-nonsampling-error" class="level2" data-number="7.4">
-<h2 data-number="7.4" class="anchored" data-anchor-id="sampling-error-vs-nonsampling-error"><span class="header-section-number">7.4</span> Sampling Error vs Nonsampling error</h2>
+<section id="sampling-error-vs-nonsampling-error" class="level2" data-number="7.5">
+<h2 data-number="7.5" class="anchored" data-anchor-id="sampling-error-vs-nonsampling-error"><span class="header-section-number">7.5</span> Sampling Error vs Nonsampling error</h2>
 <p>Sampling error is the difference between a sample and the population it represents, often due to an inadequate sample size and can be reduced by increasing the sample size.</p>
 <p>Non-sampling error, on the other hand, includes all other mistakes in a study, such as data entry mistakes, poorly worded questions, or faulty data collection methods.</p>
 

@@ -1,11 +1,17 @@
 
 # Sampling Techniques {#sec-chap7}
 
+![](ip7.png)
+
 ## Random versus Nonrandom Sampling
 
 Random sampling: A sampling method in which every unit of population has a known probability of being selected for the sample,
 
 Nonrandom sampling: A sampling method in which every unit of the population has unkown probability of being selected for the sample.
+
+## Sampling Frame
+
+A list of the items or people forming a population from which a sample is taken.
 
 
 ## Random Sampling Techniques
@@ -76,7 +82,24 @@ Systematic sampling selects every $k$-th individual from a population \textbf{af
    
   - Randomly select a starting point between $1$ and $k$.
  - Select every $k$-th individual thereafter until the sample size $n$ is reached.
+ 
+ **Example**
 
+A researcher wants to estimate the average wheat yield in a large farm that has 1,000 wheat plots.
+
+Steps using systematic sampling:
+
+Determine sample size: Suppose the researcher wants to sample 50 plots.
+
+Calculate the sampling interval $k$
+
+$$k = \frac{ \text{Total number of plots​}}{\text{Sample ize}} = \frac{1000}{50} = 20$$
+
+Randomly select a starting point from 1 to $k$: For example, randomly pick plot number 7 as the starting plot.
+
+Select every k-th plot: From the starting plot, select every 20th plot: plot 7, plot 27, plot 47, plot 67, … up to 50 plots.
+
+Collect data: Measure the yield from each selected plot.
 
 ### Cluster sampling
 
