@@ -1,0 +1,173 @@
+
+# Sampling Techniques {#sec-chap7}
+
+## Random versus Nonrandom Sampling
+
+Random sampling: A sampling method in which every unit of population has a known probability of being selected for the sample
+
+Nonrandom sampling: A sampling method in which not every unit of the population has the same probability of being selected for the sample
+
+
+## Random Sampling Techniques
+
+### Simple random sampling
+
+- Each unit of the population has an equal probability of being selected.  
+ 
+
+**Example:** 
+
+A wildlife researcher wants to estimate the average weight of adolescent elephants in the Pinnewala Elephant Orphanage.
+
+The population of adolescent elephants is approximately 50 individuals.
+
+Procedure:
+
+i. Assign each adolescent elephant a unique ID from 1 to 50.
+
+ii. Use a random number generator or lottery method to select 10 elephants.
+
+iii. Measure the weight of the selected elephants.
+
+
+### Stratified random sampling
+
+- Population is divided into strata (subgroups) based on characteristics (e.g., species, age, sex).
+
+- Random samples are drawn from each stratum proportional to its size.
+
+- Within each stratum: individuals are relatively homogeneous (similar).
+
+- Between strata: individuals are relatively heterogeneous (different).
+
+**Example**
+
+A wildlife researcher wants to study the average weight of adolescent elephants at the Pinnewala Elephant Orphanage.
+
+Total population of adolescent elephants: 50
+
+Strata based on sex:
+
+Males: 30
+
+Females: 20
+
+Sampling Plan:
+
+Randomly select a proportional sample from each stratum:
+
+6 males (20% of 30)
+
+4 females (20% of 20)
+
+### Systematic random sampling
+
+Systematic sampling selects every $k$-th individual from a population \textbf{after a random starting point}.  
+
+- Ensures the sample is spread evenly across the population.  
+- Simple to implement, especially in the field.  
+
+**Steps**
+
+  - Determine the total population size $N$ and the desired sample size $n$.
+  - Calculate the sampling interval:
+   
+    $$k = \frac{N}{n}$$
+   
+  - Randomly select a starting point between $1$ and $k$.
+ - Select every $k$-th individual thereafter until the sample size $n$ is reached.
+
+
+### Cluster sampling
+
+Cluster sampling divides the population into \textbf{clusters} (groups), often based on geography or natural grouping. Some clusters are randomly selected, and \textbf{all individuals within the selected clusters} are studied.  
+
+- Useful when the population is large and spread over a wide area.  
+
+- Reduces time and travel costs compared to simple random sampling.  
+
+**Steps**
+
+  - Divide the population into clusters.
+  - Randomly select a subset of clusters.
+ - Include **all individuals** from the selected clusters in the sample.
+
+
+## Nonrandom Sampling Techniques
+
+### Covenience sampling
+
+
+Samples are selected based on ease of access or availability.
+
+Advantages: Quick and inexpensive.
+
+Disadvantages: High risk of bias; not representative of the entire population.
+
+**Example**
+
+A researcher studies the  frogs only in the pond near the research station, because it is easily accessible, rather than sampling all ponds in the area.
+
+### Judgement sampling
+
+The researcher uses expert knowledge or judgment to select the most relevant or typical subjects.
+
+Advantages: Focused on specific traits or behaviors; useful for rare or specialized cases.
+
+Disadvantages: Subjective; results cannot be generalized to the population.
+
+**Example**
+
+A researcher wants to study the reproductive behavior of mature elephants. Only adult, healthy elephants are selected based on expert judgment, ignoring juveniles or sick individuals.
+
+### Quota sampling
+
+The population is divided into subgroups, and the researcher selects a fixed number of subjects from each subgroup.
+
+Advantages: Ensures representation of important subgroups.
+
+Disadvantages: Nonrandom selection within subgroups may introduce bias.
+
+**Example**
+
+A researcher wants to study male and female adolescent elephants:
+
+Total population: 50 elephants
+
+Quota: 30 males and 20 females
+
+The researcher selects individuals to meet the quota, not randomly within each sex.
+
+### Snowball sampling
+
+Snowball sampling is a non-probability sampling technique in which existing study participants recruit future participants from among their acquaintances. The sample "snowballs" as more and more participants are referred by those already in the study.
+
+Key Features:
+
+Often used when the population is hard to reach or hidden, such as people with rare diseases, drug users, or marginalized communities.
+
+Starts with a small initial group (called "seeds") who are known or accessible to the researcher.
+
+Each participant helps identify additional participants, increasing the sample size progressively.
+
+Advantages:
+
+Efficient for reaching difficult-to-access populations.
+
+Can leverage participants’ networks to gain trust and participation.
+
+Disadvantages:
+
+Bias risk: The sample may not represent the entire population, since people tend to refer others similar to themselves.
+
+Dependence on initial participants: If the first "seeds" are not diverse, the sample may be skewed.
+
+**Example:**
+
+A researcher studying rare medical conditions starts with a few patients at a clinic. Each patient refers other patients they know who have the condition, and the process continues until enough participants are recruited.
+
+## Sampling Error vs Nonsampling error
+
+Sampling error is the difference between a sample and the population it represents, often due to an inadequate sample size and can be reduced by increasing the sample size.
+
+Non-sampling error, on the other hand, includes all other mistakes in a study, such as data entry mistakes, poorly worded questions, or faulty data collection methods.

@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Biostatistics and Data Analysis for Zoologists",
     "section": "",
-    "text": "Understanding and interpreting quantitative data is fundamental for modern zoological research. “Biostatistics and Data Analysis for Zoologists (BDAZ)” serves as a comprehensive, practical textbook that introduces statistical concepts and data analysis techniques specifically designed for zoologists, wildlife biologists, and ecology researchers. Each topic in this book includes a practical session using R.\nCopyright notice\nProduced on 5 October 2025.\n© Thiyanga S. Talagala (2025).",
+    "text": "Understanding and interpreting quantitative data is fundamental for modern zoological research. “Biostatistics and Data Analysis for Zoologists (BDAZ)” serves as a comprehensive, practical textbook that introduces statistical concepts and data analysis techniques specifically designed for zoologists, wildlife biologists, and ecology researchers. Each topic in this book includes a practical session using R.\nCopyright notice\nProduced on 12 October 2025.\n© Thiyanga S. Talagala (2025).",
     "crumbs": [
       "Front matter"
     ]
@@ -234,7 +234,7 @@
     "href": "03-chap3.html#r-as-a-calculator",
     "title": "3  Introduction to R programming basics and R studio",
     "section": "\n3.6 R as a calculator",
-    "text": "3.6 R as a calculator\nLet’s type some simple commands. Type these in the console.\n\n1 + 2\n\n[1] 3\n\n\n\n1 * 100\n\n[1] 100\n\n\n\n1 / 100\n\n[1] 0.01\n\n\n\nrnorm(50)\n\n [1]  0.92390563 -0.52676574  0.36322542  0.30558063 -0.09130185 -0.88544540\n [7] -0.53384352  0.81400943  0.79274208 -0.04097415 -1.28593881  0.55317187\n[13]  0.67316085 -0.50955550  0.07208845  1.04075076 -1.85342700 -0.56365908\n[19] -0.04845543 -0.05121647 -1.82402390 -0.52338619  0.27811262  0.23650012\n[25] -0.03548342 -0.15131966 -0.03594310  1.42312477 -0.98991464  0.39738389\n[31] -0.94355789  1.38303826 -0.22289375  1.12754963 -1.59477155  0.32752739\n[37]  0.38910087  2.69135456 -1.04465008 -1.49716917  0.29203135  1.21709073\n[43]  0.04642200  0.62279929 -1.59846473 -1.09051301  0.31317312  0.58034539\n[49] -1.28994412  0.23682530\n\n\n\nhist(rnorm(50))\n\n\n\n\n\n\n\nIn R, square brackets [ ] indicate the index or position of an element in a vector, list, or other data structure.",
+    "text": "3.6 R as a calculator\nLet’s type some simple commands. Type these in the console.\n\n1 + 2\n\n[1] 3\n\n\n\n1 * 100\n\n[1] 100\n\n\n\n1 / 100\n\n[1] 0.01\n\n\n\nrnorm(50)\n\n [1]  0.866345477 -0.184289785  1.207613032 -0.798142806 -1.436703054\n [6] -1.083840334  0.975892518 -0.356689847 -0.787354877  0.612618508\n[11]  1.579110724 -0.563247255  0.076887947  0.808730932 -1.203286948\n[16] -1.137701962 -0.973520298 -1.160946685  0.515998299  0.387159272\n[21]  0.287785198 -1.241957241 -0.478132554  0.715417133 -0.926432604\n[26] -1.387297037  1.466506748 -1.556173594 -1.185497182 -0.694163929\n[31]  0.031336431 -0.234404984 -0.173295563  0.352839792 -0.079696749\n[36]  1.518836545 -0.719637669 -1.061274840 -1.319920180  1.263568103\n[41] -2.159357363  0.408753027  0.465616684 -0.272966064  0.113691925\n[46] -0.472325515 -1.480324007 -0.038835321 -0.006493186 -0.955405197\n\n\n\nhist(rnorm(50))\n\n\n\n\n\n\n\nIn R, square brackets [ ] indicate the index or position of an element in a vector, list, or other data structure.",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Introduction to R programming basics and R studio</span>"
     ]
@@ -837,6 +837,46 @@
     "text": "8.8 t-distribution\nWe will talk about this in Statistical Inference section.",
     "crumbs": [
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>Probability and Distribution Theory</span>"
+    ]
+  },
+  {
+    "objectID": "07-chap7.html",
+    "href": "07-chap7.html",
+    "title": "7  Sampling Techniques",
+    "section": "",
+    "text": "7.1 Random versus Nonrandom Sampling\nRandom sampling: A sampling method in which every unit of population has a known probability of being selected for the sample\nNonrandom sampling: A sampling method in which not every unit of the population has the same probability of being selected for the sample",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Sampling Techniques</span>"
+    ]
+  },
+  {
+    "objectID": "07-chap7.html#random-sampling-techniques",
+    "href": "07-chap7.html#random-sampling-techniques",
+    "title": "7  Sampling Techniques",
+    "section": "7.2 Random Sampling Techniques",
+    "text": "7.2 Random Sampling Techniques\n\nSimple random sampling\n\nEach unit of the population has an equal probability of being selected.\n\nExample:\nA wildlife researcher wants to estimate the average weight of adolescent elephants in the Pinnewala Elephant Orphanage.\nThe population of adolescent elephants is approximately 50 individuals.\nProcedure:\n\nAssign each adolescent elephant a unique ID from 1 to 50.\nUse a random number generator or lottery method to select 10 elephants.\nMeasure the weight of the selected elephants.\n\n\n\nStratified random sampling\n\nPopulation is divided into strata (subgroups) based on characteristics (e.g., species, age, sex).\nRandom samples are drawn from each stratum proportional to its size.\nWithin each stratum: individuals are relatively homogeneous (similar).\nBetween strata: individuals are relatively heterogeneous (different).\n\nExample\nA wildlife researcher wants to study the average weight of adolescent elephants at the Pinnewala Elephant Orphanage.\nTotal population of adolescent elephants: 50\nStrata based on sex:\nMales: 30\nFemales: 20\nSampling Plan:\nRandomly select a proportional sample from each stratum:\n6 males (20% of 30)\n4 females (20% of 20)\n\n\nSystematic random sampling\nSystematic sampling selects every k-th individual from a population .\n\nEnsures the sample is spread evenly across the population.\n\nSimple to implement, especially in the field.\n\nSteps\n\nDetermine the total population size N and the desired sample size n.\nCalculate the sampling interval:\nk = \\frac{N}{n}\nRandomly select a starting point between 1 and k.\nSelect every k-th individual thereafter until the sample size n is reached.\n\n\n\nCluster sampling\nCluster sampling divides the population into (groups), often based on geography or natural grouping. Some clusters are randomly selected, and are studied.\n\nUseful when the population is large and spread over a wide area.\nReduces time and travel costs compared to simple random sampling.\n\nSteps\n\nDivide the population into clusters.\nRandomly select a subset of clusters.\nInclude all individuals from the selected clusters in the sample.",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Sampling Techniques</span>"
+    ]
+  },
+  {
+    "objectID": "07-chap7.html#nonrandom-sampling-techniques",
+    "href": "07-chap7.html#nonrandom-sampling-techniques",
+    "title": "7  Sampling Techniques",
+    "section": "7.3 Nonrandom Sampling Techniques",
+    "text": "7.3 Nonrandom Sampling Techniques\n\nCovenience sampling\nSamples are selected based on ease of access or availability.\nAdvantages: Quick and inexpensive.\nDisadvantages: High risk of bias; not representative of the entire population.\nExample\nA researcher studies the frogs only in the pond near the research station, because it is easily accessible, rather than sampling all ponds in the area.\n\n\nJudgement sampling\nThe researcher uses expert knowledge or judgment to select the most relevant or typical subjects.\nAdvantages: Focused on specific traits or behaviors; useful for rare or specialized cases.\nDisadvantages: Subjective; results cannot be generalized to the population.\nExample\nA researcher wants to study the reproductive behavior of mature elephants. Only adult, healthy elephants are selected based on expert judgment, ignoring juveniles or sick individuals.\n\n\nQuota sampling\nThe population is divided into subgroups, and the researcher selects a fixed number of subjects from each subgroup.\nAdvantages: Ensures representation of important subgroups.\nDisadvantages: Nonrandom selection within subgroups may introduce bias.\nExample\nA researcher wants to study male and female adolescent elephants:\nTotal population: 50 elephants\nQuota: 30 males and 20 females\nThe researcher selects individuals to meet the quota, not randomly within each sex.\n\n\nSnowball sampling\nSnowball sampling is a non-probability sampling technique in which existing study participants recruit future participants from among their acquaintances. The sample “snowballs” as more and more participants are referred by those already in the study.\nKey Features:\nOften used when the population is hard to reach or hidden, such as people with rare diseases, drug users, or marginalized communities.\nStarts with a small initial group (called “seeds”) who are known or accessible to the researcher.\nEach participant helps identify additional participants, increasing the sample size progressively.\nAdvantages:\nEfficient for reaching difficult-to-access populations.\nCan leverage participants’ networks to gain trust and participation.\nDisadvantages:\nBias risk: The sample may not represent the entire population, since people tend to refer others similar to themselves.\nDependence on initial participants: If the first “seeds” are not diverse, the sample may be skewed.\nExample:\nA researcher studying rare medical conditions starts with a few patients at a clinic. Each patient refers other patients they know who have the condition, and the process continues until enough participants are recruited.",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Sampling Techniques</span>"
+    ]
+  },
+  {
+    "objectID": "07-chap7.html#sampling-error-vs-nonsampling-error",
+    "href": "07-chap7.html#sampling-error-vs-nonsampling-error",
+    "title": "7  Sampling Techniques",
+    "section": "7.4 Sampling Error vs Nonsampling error",
+    "text": "7.4 Sampling Error vs Nonsampling error\nSampling error is the difference between a sample and the population it represents, often due to an inadequate sample size and can be reduced by increasing the sample size.\nNon-sampling error, on the other hand, includes all other mistakes in a study, such as data entry mistakes, poorly worded questions, or faulty data collection methods.",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Sampling Techniques</span>"
     ]
   }
 ]
