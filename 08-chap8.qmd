@@ -1,0 +1,46 @@
+# Statistical Inference: Estimation
+
+In this section we discuss  how can we use sample data to estimate values of population parameters?
+
+**Point estimation** and **Interval estimation** are the two forms of population parameter estimation based on sample data.
+
+## Point Estimation
+
+Provides a single best guess for the population parameter.
+
+The statistical properties of point estimators (Unbiased, Efficiency, Consistency) are out of the scope of this book.
+
+
+| Population Parameter | Point Estimator |
+|----------------------|-----------------|
+| Population Mean | Sample Mean |
+| Population Variance | Sample Variance |
+| Population Proportion | Sample Proportion |
+
+**Note:** Each point estimator provides the best single-value estimate of its corresponding population parameter, based on a **random sample**.
+
+Question:
+
+A zoologist collected data on the **body weight (in kg)** of 6 randomly selected **adult cheetahs** from a wildlife reserve.  
+The recorded weights are as follows:
+
+$$
+42,\ 47,\ 39,\ 45,\ 44,\ 43
+$$
+
+Additionally, out of these 6 cheetahs, **4 were identified as healthy** based on veterinary examination.
+
+**Tasks:**
+
+1. Estimate the **population mean body weight** of adult cheetahs.  
+2. Estimate the **population variance** of body weight.  
+3. Estimate the **population proportion** of healthy cheetahs.
+
+## Interval Estimation
+
+While a **point estimate** gives a single best guess for a population parameter, it does not indicate how reliable that estimate is.  
+**Interval estimation** provides a **range of plausible values** within which the true population parameter is likely to lie.
+
+The general form of an interval estimate is as follows:
+
+(Point estimate - marginal error, Point estimate + marginal error)

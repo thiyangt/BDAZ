@@ -216,6 +216,12 @@ window.Quarto = {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./08-chap8.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Statistical Inference: Estimation</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./refs.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Bibliography</span></a>
   </div>
@@ -582,6 +588,58 @@ f_X(x) = \frac{1}{\sqrt{2 \pi \sigma^2}} \, e^{ - \frac{(x - \mu)^2}{2 \sigma^2}
 - <span class="math inline">\mu</span> = mean of the distribution<br>
 - <span class="math inline">\sigma</span> = standard deviation<br>
 - <span class="math inline">f_X(x)</span> = probability density at <span class="math inline">x</span></p>
+<p><strong>Illustration</strong></p>
+<p>Height of 500 elephants.</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>  [1] 1.9 2.0 2.2 2.0 2.0 2.2 2.0 1.9 1.9 2.0 2.1 2.0 2.0 2.0 1.9 2.2 2.0 1.8
+ [19] 2.1 2.0 1.9 2.0 1.9 1.9 1.9 1.8 2.1 2.0 1.9 2.1 2.0 2.0 2.1 2.1 2.1 2.1
+ [37] 2.1 2.0 2.0 2.0 1.9 2.0 1.9 2.2 2.1 1.9 2.0 2.0 2.1 2.0 2.0 2.0 2.0 2.1
+ [55] 2.0 2.2 1.8 2.1 2.0 2.0 2.0 1.9 2.0 1.9 1.9 2.0 2.0 2.0 2.1 2.2 2.0 1.8
+ [73] 2.1 1.9 1.9 2.1 2.0 1.9 2.0 2.0 2.0 2.0 2.0 2.1 2.0 2.0 2.1 2.0 2.0 2.1
+ [91] 2.1 2.1 2.0 1.9 2.1 1.9 2.2 2.2 2.0 1.9 1.9 2.0 2.0 2.0 1.9 2.0 1.9 1.8
+[109] 2.0 2.1 1.9 2.1 1.8 2.0 2.1 2.0 2.0 1.9 1.9 1.9 2.0 1.9 2.0 2.0 2.2 1.9
+[127] 2.0 2.0 1.9 2.0 2.1 2.0 2.0 2.0 1.8 2.1 1.9 2.1 2.2 1.9 2.1 2.0 1.8 1.8
+[145] 1.8 1.9 1.9 2.1 2.2 1.9 2.1 2.1 2.0 1.9 2.0 2.0 2.1 2.0 2.1 2.0 2.1 1.9
+[163] 1.9 2.3 2.0 2.0 2.1 2.0 2.1 2.0 2.0 2.0 2.0 2.2 1.9 1.9 2.0 2.0 2.0 2.0
+[181] 1.9 2.1 2.0 1.9 2.0 2.0 2.1 2.0 2.1 2.0 2.0 2.0 2.0 1.9 1.9 2.2 2.1 1.9
+[199] 1.9 1.9 2.2 2.1 2.0 2.1 2.0 2.0 1.9 1.9 2.2 2.0 2.0 2.0 2.1 1.9 1.9 2.2
+[217] 2.0 1.9 1.9 1.9 1.9 2.1 2.1 2.1 2.0 2.0 1.9 1.9 2.1 1.9 2.2 2.0 2.0 1.9
+[235] 1.9 1.9 2.0 2.0 2.0 1.9 1.9 1.9 2.1 1.9 2.0 2.2 2.0 1.9 1.9 2.0 2.0 1.9
+[253] 2.0 2.0 2.2 2.0 2.1 2.1 2.0 1.8 1.9 2.0 2.0 2.1 2.2 2.2 2.0 1.8 2.0 2.0
+[271] 2.1 2.1 2.1 1.9 2.1 2.0 2.0 2.0 2.0 2.0 1.8 2.1 2.0 2.0 2.0 2.0 2.0 2.2
+[289] 2.0 2.0 2.1 2.1 2.1 1.9 2.2 2.0 2.2 1.9 2.0 2.1 1.9 1.9 1.9 1.9 2.0 2.0
+[307] 1.8 2.0 2.1 2.2 2.1 2.1 1.8 1.9 2.0 2.1 2.0 1.9 2.2 2.1 2.0 2.1 1.9 2.1
+[325] 1.9 2.1 2.0 2.1 2.1 2.0 2.1 1.9 1.9 2.2 2.0 1.8 1.9 2.0 2.1 2.0 2.1 2.1
+[343] 2.2 2.0 2.0 1.8 2.0 1.9 1.9 2.0 2.1 1.8 2.0 2.0 1.9 2.0 2.0 2.0 1.8 2.3
+[361] 2.0 2.1 2.0 2.1 2.1 2.0 2.0 1.9 2.1 2.0 2.2 1.8 2.0 2.1 2.1 1.9 1.9 2.0
+[379] 2.0 1.8 2.0 2.0 2.0 1.9 2.0 2.1 2.0 1.9 2.0 2.0 1.9 1.8 2.1 1.9 1.9 2.2
+[397] 1.9 2.1 1.9 2.0 2.0 1.9 1.9 2.0 2.1 1.8 2.0 2.1 1.9 2.0 2.0 2.0 2.1 2.0
+[415] 2.0 1.7 2.0 2.0 2.1 1.9 2.2 2.0 2.0 2.1 1.9 2.0 2.2 2.0 2.2 1.9 2.0 2.0
+[433] 2.0 1.9 2.0 1.9 2.1 2.1 1.8 2.1 1.9 2.0 2.1 2.0 1.9 2.0 2.0 2.1 1.8 1.8
+[451] 2.1 2.1 2.0 2.1 2.1 1.7 2.1 2.0 2.0 2.0 2.1 2.0 2.1 2.0 1.9 2.1 2.1 2.2
+[469] 2.0 2.1 2.2 2.0 1.9 2.0 2.0 2.0 2.2 2.0 2.0 2.0 2.0 2.0 2.1 2.0 2.1 2.1
+[487] 2.1 1.9 2.2 2.0 2.0 2.1 2.1 1.9 1.9 1.9 2.0 2.0 2.0 2.1</code></pre>
+</div>
+</div>
+<p>Distribution of height</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="06-chap6_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid figure-img" width="768"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Approximate the shape of the distribution using normal distribution density</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="06-chap6_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid figure-img" width="768"></p>
+</figure>
+</div>
+</div>
+</div>
 <p><strong>Example</strong></p>
 <p>Suppose the body weights of adult lizards in a population are normally distributed with:</p>
 <p><span class="math display">\mu = 150 \text{ g}, \quad \sigma = 20 \text{ g}</span></p>
@@ -595,7 +653,7 @@ f_X(x) = \frac{1}{\sqrt{2 \pi \sigma^2}} \, e^{ - \frac{(x - \mu)^2}{2 \sigma^2}
 <p><strong>R code:</strong></p>
 <p>Method 1</p>
 <div class="cell">
-<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Parameters</span></span>
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Parameters</span></span>
 <span><span class="va">mean_weight</span> <span class="op">&lt;-</span> <span class="fl">150</span></span>
 <span><span class="va">sd_weight</span> <span class="op">&lt;-</span> <span class="fl">20</span></span>
 <span></span>
@@ -611,9 +669,80 @@ f_X(x) = \frac{1}{\sqrt{2 \pi \sigma^2}} \, e^{ - \frac{(x - \mu)^2}{2 \sigma^2}
 <pre><code>[1] 0.1586553</code></pre>
 </div>
 </div>
+</section><section id="illustrating-the-idea-of-z_alpha-notation" class="level3"><h3 class="anchored" data-anchor-id="illustrating-the-idea-of-z_alpha-notation">Illustrating the idea of <span class="math inline">Z_{\alpha}</span> notation</h3>
+<p>The notation <span class="math inline">Z_{\alpha}</span> represents the <strong>critical value</strong> of the <strong>standard normal distribution</strong> (mean = 0, standard deviation = 1) that leaves an upper-tail area of <span class="math inline">\alpha</span>. It is commonly used in hypothesis testing to mark the boundary of the <strong>rejection region</strong> at a significance level <span class="math inline">\alpha</span>.</p>
+<p><span class="math display">
+P(Z &gt; Z_{\alpha}) = \alpha, \quad \text{where } Z \sim N(0,1)
+</span></p>
+<p>For example, when the significance level is <span class="math inline">\alpha = 0.05</span>,</p>
+<p><span class="math display">
+Z_{0.05} = 1.645
+</span></p>
+<p>This means that 5% of the standard normal distribution lies to the right of 1.645.</p>
+<p>In hypothesis testing:</p>
+<ul>
+<li>For a <strong>one-sided test</strong>, the rejection region is <span class="math inline">Z &gt; Z_{\alpha}</span> (upper tail) or <span class="math inline">Z &lt; -Z_{\alpha}</span> (lower tail).</li>
+<li>For a <strong>two-sided test</strong>, the critical values are <span class="math inline">\pm Z_{\alpha/2}</span>, leaving <span class="math inline">\alpha/2</span> area in each tail.</li>
+</ul>
+<p>Graphically, <span class="math inline">Z_{\alpha}</span> appears as a vertical line on the standard normal curve, with the shaded region beyond it representing the probability <span class="math inline">\alpha</span>.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="06-chap6_files/figure-html/unnamed-chunk-9-1.png" class="img-fluid figure-img" width="768"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="06-chap6_files/figure-html/unnamed-chunk-10-1.png" class="img-fluid figure-img" width="768"></p>
+</figure>
+</div>
+</div>
+</div>
+<p><strong>R Code</strong></p>
+<div class="cell">
+<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/stats/Normal.html">qnorm</a></span><span class="op">(</span><span class="fl">0.05</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] -1.644854</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode" id="cb13"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/stats/Normal.html">qnorm</a></span><span class="op">(</span><span class="fl">0.5</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0</code></pre>
+</div>
+</div>
 </section></section><section id="t-distribution" class="level2" data-number="6.23"><h2 data-number="6.23" class="anchored" data-anchor-id="t-distribution">
 <span class="header-section-number">6.23</span> t-distribution</h2>
-<p>We will talk about this in Statistical Inference section.</p>
+<p>The t-distribution is similar to the standard normal distribution but has heavier tails, especially for small sample sizes.</p>
+<p><span class="math display">
+t_{df} \xrightarrow[df \to \infty]{} N(0,1)
+</span></p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="06-chap6_files/figure-html/unnamed-chunk-13-1.png" class="img-fluid figure-img" width="768"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>R Code</p>
+<div class="cell">
+<div class="sourceCode" id="cb15"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/stats/TDist.html">pt</a></span><span class="op">(</span><span class="fl">0</span>, df<span class="op">=</span><span class="fl">10</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.5</code></pre>
+</div>
+<div class="sourceCode" id="cb17"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/stats/TDist.html">pt</a></span><span class="op">(</span><span class="fl">5</span>, df<span class="op">=</span><span class="fl">10</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.9997313</code></pre>
+</div>
+<div class="sourceCode" id="cb19"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/stats/TDist.html">qt</a></span><span class="op">(</span><span class="fl">0.2</span>, df<span class="op">=</span><span class="fl">10</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] -0.8790578</code></pre>
+</div>
+</div>
 
 
 </section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">

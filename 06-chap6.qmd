@@ -479,6 +479,43 @@ Where:
 - $\sigma$ = standard deviation  
 - $f_X(x)$ = probability density at $x$  
 
+
+**Illustration**
+
+Height of 500 elephants.
+
+```{r, echo=FALSE}
+set.seed(123)
+height <- rnorm(500, mean=2, sd=0.1)
+height |> round(1) 
+```
+
+Distribution of height
+
+```{r}
+library(ggplot2)
+df <- data.frame(height)
+ggplot(df, aes(x=height)) + 
+  geom_histogram(col="white")
+```
+
+Approximate the shape of the distribution using normal distribution density
+
+```{r}
+ggplot(df, aes(x = height)) +
+  geom_histogram(col="white", aes(y=..density..)) +
+  stat_function(fun = dnorm, 
+                args = list(mean = 2, sd = 0.1),
+                color = "red", 
+                size = 1.2) +
+  labs(
+    title = "Distribution of Heights with Normal Curve",
+    x = "Height (cm)",
+    y = "Density"
+  )
+
+```
+
 **Example**
 
 Suppose the body weights of adult lizards in a population are normally distributed with:  
@@ -520,6 +557,208 @@ pnorm(-1, mean = 0, sd = 1)
 ```
 
 
+### Illustrating the idea of $Z_{\alpha}$ notation
+
+
+The notation $Z_{\alpha}$ represents the **critical value** of the **standard normal distribution** (mean = 0, standard deviation = 1) that leaves an upper-tail area of $\alpha$. It is commonly used in hypothesis testing to mark the boundary of the **rejection region** at a significance level $\alpha$.
+
+$$
+P(Z > Z_{\alpha}) = \alpha, \quad \text{where } Z \sim N(0,1)
+$$
+
+For example, when the significance level is $\alpha = 0.05$,
+
+$$
+Z_{0.05} = 1.645
+$$
+
+This means that 5% of the standard normal distribution lies to the right of 1.645.
+
+In hypothesis testing:
+
+- For a **one-sided test**, the rejection region is $Z > Z_{\alpha}$ (upper tail) or $Z < -Z_{\alpha}$ (lower tail).
+- For a **two-sided test**, the critical values are $\pm Z_{\alpha/2}$, leaving $\alpha/2$ area in each tail.
+
+Graphically, $Z_{\alpha}$ appears as a vertical line on the standard normal curve, with the shaded region beyond it representing the probability $\alpha$.
+
+
+```{r}
+# normal_z_alpha_plot.R
+# Draws a standard normal density and annotates Z_alpha (one-sided)
+# Uses ggplot2.
+
+library(ggplot2)
+
+# Parameters
+alpha <- 0.05        # significance level (one-sided)
+two_sided <- FALSE    # one-sided test
+
+# Prepare x and density
+x <- seq(-4, 4, length.out = 1000)
+df <- data.frame(x = x, y = dnorm(x))
+
+# Compute one-sided critical value
+z <- qnorm(1 - alpha)
+shade_right <- df$x >= z
+shade_label <- paste0("Z_{", alpha, "} = ", round(z, 3))
+
+# Plot
+p <- ggplot(df, aes(x = x, y = y)) +
+  geom_line(size = 1) +
+  geom_hline(yintercept = 0, colour = "grey80") +
+  geom_ribbon(data = df[shade_right, ], aes(x = x, ymin = 0, ymax = y), alpha = 0.3) +
+  geom_vline(xintercept = z, linetype = "dashed") +
+  annotate("text", x = z + 0.2, y = 0.05, label = shade_label, hjust = 0) +
+  labs(title = paste0("Standard Normal Distribution (alpha = ", alpha, ", one-sided)"),
+       subtitle = bquote(Z[alpha]~"(upper tail)"),
+       x = "z", y = "Density") +
+  theme_minimal(base_size = 14)
+
+# Print plot
+print(p)
+
+# Example: to save to file
+# ggsave("z_alpha_one_sided.png", plot = p, width = 7, height = 4)
+
+# End of script
+
+```
+
+```{r}
+# normal_z_alpha_plot.R
+# Draws a standard normal density and annotates Z_alpha (one-sided)
+# Also supports two-sided alpha/2 shading. Uses ggplot2.
+
+library(ggplot2)
+
+# Parameters
+alpha <- 0.05        # significance level
+two_sided <- TRUE    # if TRUE, show Z_{alpha/2} on both tails; if FALSE, show Z_{alpha} upper-tail
+
+# Prepare x and density
+x <- seq(-4, 4, length.out = 1000)
+df <- data.frame(x = x, y = dnorm(x))
+
+if (two_sided) {
+  z <- qnorm(1 - alpha/2)          # positive critical value
+  shade_left <- df$x <= -z
+  shade_right <- df$x >= z
+  shade_label_right <- paste0("Z_{", alpha/2, "} = ", round(z, 3))
+  shade_label_left <- paste0("-Z_{", alpha/2, "} = ", round(-z, 3))
+} else {
+  z <- qnorm(1 - alpha)            # one-sided critical value
+  shade_left <- df$x >= z
+  shade_label_right <- paste0("Z_{", alpha, "} = ", round(z, 3))
+}
+
+p <- ggplot(df, aes(x = x, y = y)) +
+  geom_line(size = 1) +
+  geom_hline(yintercept = 0, colour = "grey80") +
+  labs(title = ifelse(two_sided,
+                      paste0("Standard Normal with two-sided critical values (alpha=", alpha, ")"),
+                      paste0("Standard Normal with one-sided critical value (alpha=", alpha, ")")),
+       x = "z", y = "Density") +
+  theme_minimal(base_size = 14)
+
+# Add shading and vertical lines
+if (two_sided) {
+  p <- p +
+    geom_ribbon(data = df[shade_left, ], aes(x = x, ymin = 0, ymax = y), alpha = 0.3) +
+    geom_ribbon(data = df[shade_right, ], aes(x = x, ymin = 0, ymax = y), alpha = 0.3) +
+    geom_vline(xintercept = c(-z, z), linetype = "dashed") +
+    annotate("text", x = z + 0.3, y = 0.05, label = shade_label_right, hjust = 0) +
+    annotate("text", x = -z - 0.3, y = 0.05, label = shade_label_left, hjust = 1)
+} else {
+  p <- p +
+    geom_ribbon(data = df[shade_left, ], aes(x = x, ymin = 0, ymax = y), alpha = 0.3) +
+    geom_vline(xintercept = z, linetype = "dashed") +
+    annotate("text", x = z + 0.2, y = 0.05, label = shade_label_right, hjust = 0)
+}
+
+# Add a mathematical expression for Z_alpha in plot subtitle
+if (two_sided) {
+  subtitle_text <- bquote(Z[alpha/2]~"(two-sided)")
+} else {
+  subtitle_text <- bquote(Z[alpha]~"(upper tail)")
+}
+
+p <- p + labs(subtitle = subtitle_text)
+
+# Print plot
+print(p)
+
+# Example: to save to file
+# ggsave("z_alpha_plot.png", plot = p, width = 7, height = 4)
+
+# End of script
+
+```
+
+**R Code**
+
+```{r, echo=TRUE}
+qnorm(0.05)
+```
+
+```{r, echo=TRUE}
+qnorm(0.5)
+```
+
 ## t-distribution
 
-We will talk about this in Statistical Inference section.
+The t-distribution is similar to the standard normal distribution but has heavier tails, especially for small sample sizes.
+
+$$
+t_{df} \xrightarrow[df \to \infty]{} N(0,1)
+$$
+
+```{r}
+# t_vs_normal_multi.R
+library(ggplot2)
+
+# Degrees of freedom to compare
+dfs <- c(5, 10)
+
+# Sequence of x values
+x <- seq(-4, 4, length.out = 1000)
+
+# Create t-distribution data for each df
+t_data <- lapply(dfs, function(df) {
+  data.frame(x = x, Density = dt(x, df = df), Distribution = paste0("t (df = ", df, ")"))
+})
+
+# Combine all t-distributions
+t_df <- do.call(rbind, t_data)
+
+# Add standard normal
+norm_df <- data.frame(x = x, Density = dnorm(x), Distribution = "Standard Normal")
+
+# Combine all data
+plot_df <- rbind(t_df, norm_df)
+
+# Plot
+ggplot(plot_df, aes(x = x, y = Density, color = Distribution, linetype = Distribution)) +
+  geom_line(size = 1) +
+  theme_minimal(base_size = 14) +
+  labs(
+    title = "t-Distributions (df = 5 and 10) vs. Standard Normal Distribution",
+    x = "Value",
+    y = "Density",
+    color = "Distribution",
+    linetype = "Distribution"
+  ) +
+  theme(legend.position = "bottom")
+
+
+```
+
+R Code
+
+```{r, echo=TRUE}
+pt(0, df=10)
+
+pt(5, df=10)
+
+qt(0.2, df=10)
+```
+
