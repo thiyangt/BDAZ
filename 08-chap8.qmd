@@ -65,3 +65,25 @@ $$
 |------------|-----------------------------|--------------------|
 | **Large sample $n\hat{p} \ge 5$, $n(1-\hat{p}$ \ge 5$** | $$ \hat{p} \pm z_{\alpha/2} \sqrt{\frac{\hat{p}(1-\hat{p})}{n}} $$ | Standard Normal  |
 | **Small sample or extreme proportions** | Use **exact (Clopper–Pearson)** or **Wilson interval** methods | Binomial-based |
+
+
+#### Example:
+
+A zoologist is studying the body length (in cm) of a rare frog species in a rainforest. She randomly captures 10 frogs and measures their lengths:
+
+Sample data (body lengths in cm):
+
+7.8, 8.2, 7.5, 8.0, 7.9, 8.1, 7.6, 8.3, 7.7, 8.0
+
+Assume body lengths are normally distributed. Construct a 95% confidence interval (CI) for the population mean.
+
+Interpretation:
+
+We are 95% confident that the true mean body length of this frog species in the rainforest lies between 7.73 cm and 8.09 cm.
+
+- This does not mean that 95% of the frogs have lengths in this range. It refers to the population mean.
+
+- If we repeated this sampling many times, 95% of the calculated confidence intervals would contain the true mean.
+
+#### Question:
+
