@@ -43,4 +43,24 @@ While a **point estimate** gives a single best guess for a population parameter,
 
 The general form of an interval estimate is as follows:
 
-(Point estimate - marginal error, Point estimate + marginal error)
+The general form of a confidence interval (CI) is:
+
+$$
+\text{Point Estimate} \ \pm\ \text{Margin of Error}
+$$
+
+### Confidence Interval for the Population Mean ($\mu$)
+
+| Condition | Confidence Interval Formula | Distribution Used |
+|------------|-----------------------------|--------------------|
+| **Population standard deviation (\(\sigma\)) known** | $$ \bar{x} \pm z_{\alpha/2} \frac{\sigma}{\sqrt{n}} $$ | Standard Normal (\(z\)) |
+| **\(\sigma\) unknown, population normal** | $$ \bar{x} \pm t_{\alpha/2,\,df} \frac{s}{\sqrt{n}} $$ | Student’s \(t\)-distribution (\(df = n-1\)) |
+| **\(\sigma\) unknown, large sample  (\(n \ge 30\))** | $$ \bar{x} \pm z_{\alpha/2} \frac{s}{\sqrt{n}} $$ | Approx. Standard Normal (\(z\)) |
+
+
+### Confidence Interval for the Population Proportion ($\theta$)
+
+| Condition | Confidence Interval Formula | Distribution Used |
+|------------|-----------------------------|--------------------|
+| **Large sample (\(n\hat{p} \ge 5\), \(n(1-\hat{p}) \ge 5\))** | $$ \hat{p} \pm z_{\alpha/2} \sqrt{\frac{\hat{p}(1-\hat{p})}{n}} $$ | Standard Normal (\(z\)) |
+| **Small sample or extreme proportions** | Use **exact (Clopper–Pearson)** or **Wilson interval** methods | Binomial-based |
