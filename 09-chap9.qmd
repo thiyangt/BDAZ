@@ -210,17 +210,17 @@ $$
 
 As reported by the US National Centre for Health Statistics, the mean serum high density (HDL) cholesterol of female 20 - 29 years old is 53. Dr Jack Hall claims that the HDL Cholesterol level of female 20 - 29 years old is greater than 53. He uses the following data, randomly gathered from 22 individuals.
 
-```{r, comment=NA, message=FALSE, warning=FALSE, echo=FALSE}
+```{r, echo=TRUE,  comment=NA, message=FALSE, warning=FALSE, echo=FALSE}
 library(tidyverse)
 ```
 
-```{r, comment=NA, message=FALSE}
+```{r, echo=TRUE, comment=NA, message=FALSE}
 HDL <- c(65, 47, 51, 54, 70, 55, 44, 48, 36, 53, 45, 34, 59, 45, 54, 50, 40, 60, 53, 53, 54, 55)
 ```
 
 It is known from past research that the distribution of the HDL cholesterol is normally distributed and the corresponding population variance is 81. Test the claim that the HDL level is greater than 53 at $\alpha=0.01$ level of significance.
 
-```{r, comment=NA, fig.width=2, fig.height=3, , fig.cap="Distribution of HDL level", fig.pos="h"}
+```{r, echo=TRUE, comment=NA, fig.width=2, fig.height=3, , fig.cap="Distribution of HDL level", fig.pos="h"}
 library(ggplot2)
 HDL.df <- data.frame(HDL=HDL)
 ggplot(HDL.df, aes(y=HDL, x="")) + 
@@ -232,7 +232,7 @@ ggplot(HDL.df, aes(y=HDL, x="")) +
 
 A chemist wants to measure the bias in a pH meter. She uses the meter to measure the pH in 14 neutral substances (pH=7) and obtains the data below.
 
-```{r, comment=NA}
+```{r, echo=TRUE, comment=NA}
 ph <- c( 7.01, 7.04, 6.97, 7.00, 6.99, 6.97, 7.04, 7.04, 7.01, 7.00, 6.99, 7.04, 7.07, 6.97)
 ```
 
@@ -244,7 +244,7 @@ Answer:
 
 
 
-```{r, fig.width=3, fig.cap="Distribution of pH values", fig.pos="h", fig.height=4}
+```{r, echo=TRUE, fig.width=3, fig.cap="Distribution of pH values", fig.pos="h", fig.height=4}
 ph.df <- data.frame(pH=ph)
 ggplot(ph.df, aes(y=pH, x="")) + 
   geom_boxplot(outlier.shape = NA) + 
@@ -255,7 +255,7 @@ ggplot(ph.df, aes(y=pH, x="")) +
 
 In this case, we have only sixteen observations, meaning that the Central Limit Theorem does not apply. With a small sample, we should only use the t-test if we can reasonably assume that the population is normally distributed. Hence, we must first verify that pH is normally distributed.
 
-```{r, comment=NA, fig.cap="Normal probability plot of pH values", fig.height=3, fig.width=3}
+```{r, echo=TRUE,  comment=NA, fig.cap="Normal probability plot of pH values", fig.height=3, fig.width=3}
 ggplot(ph.df, 
        aes(sample=pH))+
   stat_qq() + stat_qq_line()+labs(x="Theoretical Quantiles", y="Sample Quantiles")
@@ -293,7 +293,7 @@ t.test(x, y = NULL,
        conf.level = 0.95, ...)
 ```
 
-```{r, comment=NA}
+```{r, echo=TRUE, comment=NA}
 t.test(ph.df$pH, alternative = "two.sided", mu=7)
 
 ```
@@ -313,7 +313,7 @@ i) Test the claim that the Cholesterol level before the special diet is greater 
 
 ii) Construct 99% confidence interval for the difference in mean cholesterol levels. Assume that the cholesterol levels are normally distributed both before and after.
 
-```{r, comment=NA}
+```{r, echo=TRUE, comment=NA}
 id <- 1:20
 before <- c(210, 235, 208, 190, 172, 244, 211, 235, 210, 
             190, 175, 250, 200, 270, 222, 203, 209, 220, 250, 280)
@@ -324,19 +324,19 @@ head(cholesterol_1)
 
 ```
 
-```{r, comment=NA, message=FALSE, warning=FALSE}
+```{r,echo=TRUE,  comment=NA, message=FALSE, warning=FALSE}
 library(tidyverse)
 cholesterol_2 <- pivot_longer(cholesterol_1, before:after, names_to = "type", values_to = "value")
 head(cholesterol_2)
 ```
 
-```{r, comment=NA, message=FALSE, warning=FALSE, fig.cap="Distribution of cholesterol levels after and before the special diet"}
+```{r, echo=TRUE, comment=NA, message=FALSE, warning=FALSE, fig.cap="Distribution of cholesterol levels after and before the special diet"}
 ggplot(data= cholesterol_2, aes(x=type, y=value)) + 
   geom_boxplot(outlier.shape = NA, aes(fill=type), alpha=0.5) + 
   geom_jitter(aes(fill=type)) 
 ```
 
-```{r, comment=NA, message=FALSE}
+```{r, echo=TRUE, comment=NA, message=FALSE}
 cholesterol_2 |>
   group_by(type) |>
   summarize(mean = round(mean(value), 2),
@@ -346,7 +346,7 @@ cholesterol_2 |>
 
 ### 2.1.1 Testing for Normality
 
-```{r, comment=NA, message=FALSE, warning=FALSE}
+```{r, echo=TRUE,  comment=NA, message=FALSE, warning=FALSE}
  ggplot(data = cholesterol_2, aes(sample = value)) +
   stat_qq() + 
   stat_qq_line() +
@@ -369,7 +369,7 @@ $\mu_{before}$ - population mean cholesterol level before the special diet
 
 $\mu_{after}$ - population mean cholesterol level after the special diet 
 
-```{r, comment=NA, message=FALSE}
+```{r, echo=TRUE, comment=NA, message=FALSE}
 t.test(before, after, data=cholesterol_1, "greater", paired=TRUE)
 ```
 
@@ -379,14 +379,14 @@ Conclusion: ___________________
 
 ### Approach 2
 
-```{r, comment=NA, message=FALSE, warning=FALSE}
+```{r, echo=TRUE, comment=NA, message=FALSE, warning=FALSE}
 approach2_tbl <- tibble(diff = cholesterol_1$before - cholesterol_1$after)
 ```
 
 
 ### 2.1.3 Testing for Normality
 
-```{r, comment=NA,  message=FALSE, warning=FALSE}
+```{r, echo=TRUE,  comment=NA,  message=FALSE, warning=FALSE}
 ggplot(approach2_tbl, 
        aes(sample=diff))+
   stat_qq() + stat_qq_line()+
@@ -403,7 +403,7 @@ H0: $\mu_{d} > 0$,
 
 where: $\mu_d = \mu_{before} - \mu_{after}$
 
-```{r, comment=NA, message=FALSE}
+```{r, echo=TRUE, comment=NA, message=FALSE}
 
 t.test(x = approach2_tbl$diff,  alternative = c("greater"), mu=0)
 ```
