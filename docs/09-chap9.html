@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.6.42">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-<title>2&nbsp; Key Statistical Terminologies – Biostatistics and Data Analysis for Zoologists</title>
+<title>9&nbsp; Statistical Inference: Hypothesis Testing – Biostatistics and Data Analysis for Zoologists</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -17,6 +17,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -26,8 +60,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./03-chap3.html" rel="next">
-<link href="./01-chap1.html" rel="prev">
+<link href="./refs.html" rel="next">
+<link href="./08-chap8.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -111,7 +145,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./02-chap2.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Key Statistical Terminologies</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./09-chap9.html"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Statistical Inference: Hypothesis Testing</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -146,7 +180,7 @@ window.Quarto = {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./02-chap2.html" class="sidebar-item-text sidebar-link active">
+  <a href="./02-chap2.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Key Statistical Terminologies</span></span></a>
   </div>
 </li>
@@ -188,7 +222,7 @@ window.Quarto = {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./09-chap9.html" class="sidebar-item-text sidebar-link">
+  <a href="./09-chap9.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Statistical Inference: Hypothesis Testing</span></span></a>
   </div>
 </li>
@@ -206,23 +240,20 @@ window.Quarto = {
         <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title"><b>Sections</b></h2>
    
   <ul class="collapse">
-<li><a href="#primary-vs-secondary-data" id="toc-primary-vs-secondary-data" class="nav-link active" data-scroll-target="#primary-vs-secondary-data"><span class="header-section-number">2.1</span> Primary vs Secondary Data</a></li>
-  <li><a href="#observational-studies-vs-experimental-study" id="toc-observational-studies-vs-experimental-study" class="nav-link" data-scroll-target="#observational-studies-vs-experimental-study"><span class="header-section-number">2.2</span> Observational Studies vs Experimental Study</a></li>
-  <li><a href="#population" id="toc-population" class="nav-link" data-scroll-target="#population"><span class="header-section-number">2.3</span> Population</a></li>
-  <li><a href="#unit" id="toc-unit" class="nav-link" data-scroll-target="#unit"><span class="header-section-number">2.4</span> Unit</a></li>
-  <li><a href="#sample" id="toc-sample" class="nav-link" data-scroll-target="#sample"><span class="header-section-number">2.5</span> Sample</a></li>
-  <li><a href="#sampling" id="toc-sampling" class="nav-link" data-scroll-target="#sampling"><span class="header-section-number">2.6</span> Sampling</a></li>
-  <li><a href="#statistics" id="toc-statistics" class="nav-link" data-scroll-target="#statistics"><span class="header-section-number">2.7</span> Statistics</a></li>
-  <li><a href="#parameter" id="toc-parameter" class="nav-link" data-scroll-target="#parameter"><span class="header-section-number">2.8</span> Parameter</a></li>
-  <li><a href="#two-branches-of-statistics" id="toc-two-branches-of-statistics" class="nav-link" data-scroll-target="#two-branches-of-statistics"><span class="header-section-number">2.9</span> Two Branches of Statistics</a></li>
-  <li><a href="#census" id="toc-census" class="nav-link" data-scroll-target="#census"><span class="header-section-number">2.10</span> Census</a></li>
-  <li><a href="#sample-survey" id="toc-sample-survey" class="nav-link" data-scroll-target="#sample-survey"><span class="header-section-number">2.11</span> Sample Survey</a></li>
-  <li><a href="#notations" id="toc-notations" class="nav-link" data-scroll-target="#notations"><span class="header-section-number">2.12</span> Notations</a></li>
+<li><a href="#hypothesis-testing-for-a-population-mean" id="toc-hypothesis-testing-for-a-population-mean" class="nav-link active" data-scroll-target="#hypothesis-testing-for-a-population-mean"><span class="header-section-number">9.1</span> Hypothesis Testing for a Population Mean</a></li>
+  <li><a href="#one-sample-mean-test" id="toc-one-sample-mean-test" class="nav-link" data-scroll-target="#one-sample-mean-test"><span class="header-section-number">9.2</span> One-Sample Mean Test</a></li>
+  <li><a href="#one-sample-proportion-test" id="toc-one-sample-proportion-test" class="nav-link" data-scroll-target="#one-sample-proportion-test"><span class="header-section-number">9.3</span> One-Sample Proportion Test</a></li>
+  <li><a href="#two-sample-mean-test" id="toc-two-sample-mean-test" class="nav-link" data-scroll-target="#two-sample-mean-test"><span class="header-section-number">9.4</span> Two-Sample Mean Test</a></li>
+  <li><a href="#variance-test-chi-square-test" id="toc-variance-test-chi-square-test" class="nav-link" data-scroll-target="#variance-test-chi-square-test"><span class="header-section-number">9.5</span> Variance Test (Chi-Square Test)</a></li>
+  <li><a href="#summary-table-of-tests" id="toc-summary-table-of-tests" class="nav-link" data-scroll-target="#summary-table-of-tests"><span class="header-section-number">9.6</span> Summary Table of Tests</a></li>
+  <li><a href="#questions" id="toc-questions" class="nav-link" data-scroll-target="#questions"><span class="header-section-number">9.7</span> Questions</a></li>
   </ul></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
-<h1 class="title"><span id="sec-chap2" class="quarto-section-identifier"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Key Statistical Terminologies</span></span></h1>
+<h1 class="title">
+<span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Statistical Inference: Hypothesis Testing</span>
+</h1>
 </div>
 
 
@@ -236,175 +267,351 @@ window.Quarto = {
   
 
 
-</header><section id="primary-vs-secondary-data" class="level2" data-number="2.1"><h2 data-number="2.1" class="anchored" data-anchor-id="primary-vs-secondary-data">
-<span class="header-section-number">2.1</span> Primary vs Secondary Data</h2>
-<section id="primary-data" class="level3"><h3 class="anchored" data-anchor-id="primary-data">Primary Data</h3>
+</header><p>In this section we talk about parametric statistical hypothesis testing.</p>
+<p>A hypothesis in statistics is a statement about a population parameter that we want to test using sample data. In hypothesis testing, we always deal with two contradictory statements: the null hypothesis and the alternative hypothesis.</p>
+<section id="hypothesis-testing-for-a-population-mean" class="level2" data-number="9.1"><h2 data-number="9.1" class="anchored" data-anchor-id="hypothesis-testing-for-a-population-mean">
+<span class="header-section-number">9.1</span> Hypothesis Testing for a Population Mean</h2>
+<section id="two-tailed-test" class="level3"><h3 class="anchored" data-anchor-id="two-tailed-test">Two-tailed Test</h3>
+<p>Tests if the population mean is different from a specific value <span class="math inline">\mu_0</span> in either direction.</p>
+<p><strong>Hypotheses:</strong></p>
+<p><span class="math display">
+H_0: \mu = \mu_0
+</span></p>
+<p><span class="math display">
+H_a: \mu \neq \mu_0
+</span></p>
+</section><section id="right-tailed-test" class="level3"><h3 class="anchored" data-anchor-id="right-tailed-test">Right-tailed Test</h3>
+<p>Tests if the population mean is greater than a specific value <span class="math inline">\mu_0</span>.</p>
+<p><strong>Hypotheses:</strong></p>
+<p><span class="math display">
+H_0: \mu = \mu_0
+</span></p>
+<p><span class="math display">
+H_a: \mu &gt; \mu_0
+</span></p>
+</section><section id="left-tailed-test" class="level3"><h3 class="anchored" data-anchor-id="left-tailed-test">Left-tailed Test</h3>
+<p>Tests if the population mean is less than a specific value <span class="math inline">\mu_0</span>.</p>
+<p><strong>Hypotheses:</strong></p>
+<p><span class="math display">
+H_0: \mu = \mu_0
+</span></p>
+<p><span class="math display">
+H_a: \mu &lt; \mu_0
+</span></p>
+</section></section><section id="one-sample-mean-test" class="level2" data-number="9.2"><h2 data-number="9.2" class="anchored" data-anchor-id="one-sample-mean-test">
+<span class="header-section-number">9.2</span> One-Sample Mean Test</h2>
+<p>We test whether the <strong>population mean</strong> equals a hypothesized value <span class="math inline">\mu_0</span>.</p>
+<section id="a-z-test-for-mean" class="level3"><h3 class="anchored" data-anchor-id="a-z-test-for-mean">(a) z-test for mean</h3>
+<p><strong>Use when:</strong> - Random sample - Population standard deviation <span class="math inline">\sigma</span> is <strong>known</strong> - Either population is <strong>normally distributed</strong> or sample size <span class="math inline">n \ge 30</span></p>
+<p><strong>Hypotheses:</strong></p>
+<p><span class="math display">
+H_0: \mu = \mu_0 \quad \text{vs} \quad H_1: \mu \ne \mu_0
+</span></p>
+<p><strong>Test statistic:</strong></p>
+<p><span class="math display">
+z = \frac{\bar{x} - \mu_0}{\sigma / \sqrt{n}}
+</span></p>
+</section><section id="b-t-test-for-mean" class="level3"><h3 class="anchored" data-anchor-id="b-t-test-for-mean">(b) t-test for mean</h3>
+<p><strong>Use when:</strong> - Random sample - Population standard deviation <span class="math inline">\sigma</span> is <strong>unknown</strong> - Population is <strong>normally distributed</strong> or sample is small (<span class="math inline">n&lt;30</span>)</p>
+<p><strong>Test statistic:</strong></p>
+<p><span class="math display">
+t = \frac{\bar{x} - \mu_0}{s / \sqrt{n}}, \quad df = n-1
+</span></p>
+</section></section><section id="one-sample-proportion-test" class="level2" data-number="9.3"><h2 data-number="9.3" class="anchored" data-anchor-id="one-sample-proportion-test">
+<span class="header-section-number">9.3</span> One-Sample Proportion Test</h2>
+<p><strong>Use when:</strong> - Random sample - Sample size large enough for <strong>normal approximation</strong>: <span class="math inline">n p_0 \ge 5</span> and <span class="math inline">n (1-p_0) \ge 5</span></p>
+<p><strong>Hypotheses:</strong></p>
+<p><span class="math display">
+H_0: p = p_0 \quad \text{vs} \quad H_1: p \ne p_0
+</span></p>
+<p><strong>Test statistic:</strong></p>
+<p><span class="math display">
+z = \frac{\hat{p} - p_0}{\sqrt{p_0 (1 - p_0)/n}}
+</span></p>
+</section><section id="two-sample-mean-test" class="level2" data-number="9.4"><h2 data-number="9.4" class="anchored" data-anchor-id="two-sample-mean-test">
+<span class="header-section-number">9.4</span> Two-Sample Mean Test</h2>
+<p>We compare means from <strong>two populations</strong>.</p>
+<section id="a-independent-samples-equal-variances" class="level3"><h3 class="anchored" data-anchor-id="a-independent-samples-equal-variances">(a) Independent samples, equal variances</h3>
+<p><strong>Use when:</strong> - Two random independent samples - Populations <strong>normally distributed</strong> or sample sizes large - Population variances assumed <strong>equal</strong></p>
+<p><strong>Hypotheses:</strong></p>
+<p><span class="math display">
+H_0: \mu_1 = \mu_2 \quad vs \quad H_1: \mu_1 \ne \mu_2
+</span></p>
+<p><strong>Test statistic:</strong></p>
+<p><span class="math display">
+t = \frac{\bar{x}_1 - \bar{x}_2}{s_p \sqrt{\frac{1}{n_1} + \frac{1}{n_2}}}, \quad
+s_p^2 = \frac{(n_1-1)s_1^2 + (n_2-1)s_2^2}{n_1+n_2-2}
+</span></p>
 <ul>
-<li><p>Primary data refers to information collected directly by the researcher.</p></li>
-<li><p>This data is gathered specifically to address the researcher’s current problem or objective, tailored to meet the specific requirements of a particular study.</p></li>
-</ul>
-<p><strong>Methods of collecting primary data</strong></p>
+<li>Degrees of freedom: <span class="math inline">df = n_1 + n_2 - 2</span>
+</li>
+</ul></section><section id="b-independent-samples-unequal-variances-welchs-t-test" class="level3"><h3 class="anchored" data-anchor-id="b-independent-samples-unequal-variances-welchs-t-test">(b) Independent samples, unequal variances (Welch’s t-test)</h3>
+<p><strong>Use when:</strong> - Two random independent samples - Populations <strong>normally distributed</strong> - Population variances <strong>not equal</strong></p>
+<p><strong>Test statistic:</strong></p>
+<p><span class="math display">
+t = \frac{\bar{x}_1 - \bar{x}_2}{\sqrt{\frac{s_1^2}{n_1} + \frac{s_2^2}{n_2}}}
+</span></p>
 <ul>
-<li><p>surveys</p></li>
-<li><p>census</p></li>
-<li><p>interviews</p></li>
-<li><p>observational studies</p></li>
-<li><p>experimental studies</p></li>
-<li><p>case studies</p></li>
-<li><p>content analysis</p></li>
-<li><p>ethnography</p></li>
-<li><p>focus groups</p></li>
-<li><p>analyse social media content</p></li>
-</ul></section><section id="secondary-data" class="level3"><h3 class="anchored" data-anchor-id="secondary-data">Secondary Data</h3>
-<ul>
-<li>Secondary data refers to information that has already been collected, compiled, and published by others for purposes different from the researcher’s current study.</li>
-</ul>
-<p><strong>Methods of collecting secondary data</strong></p>
-<ul>
-<li><p>Online databases: These databases can be categorized into two main types based on their accessibility: commercial and open-access.</p></li>
-<li><p>Government and Institutional Reports</p></li>
-</ul>
-<p><strong>Why Secondary Data?</strong></p>
-<ol type="1">
-<li><p>Cost-Effective (not always)</p></li>
-<li><p>Time-saving</p></li>
-<li><p>Preliminary Research: It serves as a valuable resource for preliminary research or background studies, helping to identify gaps in knowledge, formulate hypotheses, and refine research questions.</p></li>
-<li><p>Historical Analysis: Enables researchers to conduct historical analyses and understand past trends, events, and behaviors, which can inform present and future research directions.</p></li>
-<li><p>Validation: Secondary data can be used to validate findings from primary data</p></li>
-</ol></section></section><section id="observational-studies-vs-experimental-study" class="level2" data-number="2.2"><h2 data-number="2.2" class="anchored" data-anchor-id="observational-studies-vs-experimental-study">
-<span class="header-section-number">2.2</span> Observational Studies vs Experimental Study</h2>
-<section id="observational-study" class="level3"><h3 class="anchored" data-anchor-id="observational-study">Observational Study</h3>
-<p>The researcher observes and collects data without manipulating variables.</p>
-</section><section id="experimental-study" class="level3"><h3 class="anchored" data-anchor-id="experimental-study">Experimental study</h3>
-<p>The researcher manipulates one or more variables (independent variables) and measures the effect on another variable (dependent variable).</p>
-</section><section id="example-for-observational-study-vs-experimental-study" class="level3"><h3 class="anchored" data-anchor-id="example-for-observational-study-vs-experimental-study">Example for observational study vs experimental study</h3>
-<p>Research question: “Investigate the effect of fertilizer A and B on chili crop yield.”</p>
-<p>Following is how two researchers started the data collection to answer the research question.</p>
-</section><section id="researcher-1" class="level3"><h3 class="anchored" data-anchor-id="researcher-1">Researcher 1</h3>
-<p><strong>Step 1:</strong> Population: Identify two groups of chili farmers based on the fertilizer they use.</p>
-<p>Group A: Farmers using fertilizer A.</p>
-<p>Group B: Farmers using fertilizer B.</p>
-<p><strong>Step 2:</strong> Data collection: Collect data on chili crop yield from both groups at the end of the growing season.</p>
-</section><section id="researcher-2" class="level3"><h3 class="anchored" data-anchor-id="researcher-2">Researcher 2</h3>
-<p><strong>Step 1:</strong> Randomization: Randomly assign plots of land to receive either fertilizer A or fertilizer B. Same seed variety is used.</p>
-<p><strong>Step 2:</strong> Control Conditions: Ensure all other conditions (water, sunlight, humidity, soil type) are kept constant across all plots. Use consistent pest management practices and ensure uniform planting and harvesting techniques.</p>
-<p><strong>Step 3:</strong> Data Collection: Measure the chili crop yield from each plot at the end of the growing season.</p>
-<p>Here researcher 1 used observation study to collect data and researcher two use experimental study to collect data.</p>
-</section></section><section id="population" class="level2" data-number="2.3"><h2 data-number="2.3" class="anchored" data-anchor-id="population">
-<span class="header-section-number">2.3</span> Population</h2>
-<p>The <span style="color:red;">complete collection</span> of individuals or objects that are of interest.</p>
+<li>Degrees of freedom approximated by <strong>Welch-Satterthwaite formula</strong>
+</li>
+</ul></section><section id="c-paired-sample-t-test" class="level3"><h3 class="anchored" data-anchor-id="c-paired-sample-t-test">(c) Paired Sample t-test</h3>
+<p><strong>Use when:</strong> - Random sample of <strong>paired observations</strong> (e.g., before-after measurements) - Differences are <strong>normally distributed</strong></p>
+<p><strong>Hypotheses:</strong></p>
+<p><span class="math display">
+H_0: \mu_d = 0 \quad vs \quad H_1: \mu_d \ne 0
+</span></p>
+<p><strong>Test statistic:</strong></p>
+<p><span class="math display">
+t = \frac{\bar{d}}{s_d / \sqrt{n}}, \quad df = n-1
+</span></p>
+</section></section><section id="variance-test-chi-square-test" class="level2" data-number="9.5"><h2 data-number="9.5" class="anchored" data-anchor-id="variance-test-chi-square-test">
+<span class="header-section-number">9.5</span> Variance Test (Chi-Square Test)</h2>
+<p><strong>Use when:</strong> - Random sample - Population is <strong>normally distributed</strong></p>
+<p><strong>Hypotheses:</strong></p>
+<p><span class="math display">
+H_0: \sigma^2 = \sigma_0^2
+</span></p>
+<p><strong>Test statistic:</strong></p>
+<p><span class="math display">
+\chi^2 = \frac{(n-1)s^2}{\sigma_0^2} \sim \chi^2_{n-1}
+</span></p>
+</section><section id="summary-table-of-tests" class="level2" data-number="9.6"><h2 data-number="9.6" class="anchored" data-anchor-id="summary-table-of-tests">
+<span class="header-section-number">9.6</span> Summary Table of Tests</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 14%">
+<col style="width: 23%">
+<col style="width: 61%">
+</colgroup>
+<thead><tr class="header">
+<th>Test</th>
+<th>Use When</th>
+<th>Distribution / Conditions</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td>One-sample mean z-test</td>
+<td>Random sample, σ known, normal population or n≥30</td>
+<td>z</td>
+</tr>
+<tr class="even">
+<td>One-sample mean t-test</td>
+<td>Random sample, σ unknown, normal population or small n</td>
+<td>t, df=n-1</td>
+</tr>
+<tr class="odd">
+<td>One-sample proportion</td>
+<td>Random sample, np0≥5, n(1-p0)≥5</td>
+<td>z (normal approx)</td>
+</tr>
+<tr class="even">
+<td>Two-sample mean (independent)</td>
+<td>Two random independent samples, normal or large n, equal/unequal variances</td>
+<td>t</td>
+</tr>
+<tr class="odd">
+<td>Paired-sample mean</td>
+<td>Random sample of paired differences, normal differences</td>
+<td>t, df=n-1</td>
+</tr>
+<tr class="even">
+<td>Variance test</td>
+<td>Random sample, normal population</td>
+<td>χ², df=n-1</td>
+</tr>
+</tbody>
+</table></section><section id="questions" class="level2" data-number="9.7"><h2 data-number="9.7" class="anchored" data-anchor-id="questions">
+<span class="header-section-number">9.7</span> Questions</h2>
+<section id="question-1" class="level3"><h3 class="anchored" data-anchor-id="question-1">Question 1</h3>
+<p>As reported by the US National Centre for Health Statistics, the mean serum high density (HDL) cholesterol of female 20 - 29 years old is 53. Dr Jack Hall claims that the HDL Cholesterol level of female 20 - 29 years old is greater than 53. He uses the following data, randomly gathered from 22 individuals.</p>
+<p>It is known from past research that the distribution of the HDL cholesterol is normally distributed and the corresponding population variance is 81. Test the claim that the HDL level is greater than 53 at <span class="math inline">\alpha=0.01</span> level of significance.</p>
 <div class="cell">
 <div class="cell-output-display">
-<div>
-<figure class="figure"><p><img src="ip2.png" class="img-fluid figure-img" width="800"></p>
-</figure>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="09-chap9_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="192"></p>
+<figcaption>Distribution of HDL level</figcaption></figure>
 </div>
 </div>
 </div>
-<p>Example</p>
-<p>We’re interested in studying the average height of <span style="color:blue;">all adults in a country</span>, the population is all adult residents of that country.</p>
-</section><section id="unit" class="level2" data-number="2.4"><h2 data-number="2.4" class="anchored" data-anchor-id="unit">
-<span class="header-section-number">2.4</span> Unit</h2>
-<p>A unit is a single member of the population. It could be an individual or an object.</p>
+</section><section id="question-2" class="level3"><h3 class="anchored" data-anchor-id="question-2">Question 2</h3>
+<p>A chemist wants to measure the bias in a pH meter. She uses the meter to measure the pH in 14 neutral substances (pH=7) and obtains the data below.</p>
+<p>Is there sufficient evidence to support the claim that the pH meter is not correctly calibrated at the <span class="math inline">\alpha=0.05</span> level of significance?</p>
+<p>Answer:</p>
 <div class="cell">
 <div class="cell-output-display">
-<div>
-<figure class="figure"><p><img src="ip4.png" class="img-fluid figure-img" width="800"></p>
-</figure>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="09-chap9_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid figure-img" width="288"></p>
+<figcaption>Distribution of pH values</figcaption></figure>
 </div>
 </div>
 </div>
-<p><strong>Example</strong></p>
-<ol type="1">
-<li>Population</li>
+<p>In this case, we have only sixteen observations, meaning that the Central Limit Theorem does not apply. With a small sample, we should only use the t-test if we can reasonably assume that the population is normally distributed. Hence, we must first verify that pH is normally distributed.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="09-chap9_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid figure-img" width="288"></p>
+<figcaption>Normal probability plot of pH values</figcaption></figure>
+</div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+    Shapiro-Wilk normality test
+
+data:  ph.df$pH
+W = 0.91603, p-value = 0.1927</code></pre>
+</div>
+</div>
+<p>Hypothesis to be tested:</p>
+<p>H0: Data are normally distributed.</p>
+<p>H1: Data are not normally distributed.</p>
+<p>According to the Shapiro-Wilk normality test p-value, 0.19 &gt; 0.05. Hence, we do not reject H0 at the 0.05 level of significance. We can conclude data are normally distributed.</p>
+<p>Now we can proceed with the t.test.</p>
+<p>Hypothesis to be tested.</p>
+<p>H0: <span class="math inline">\mu=7</span></p>
+<p>H1: <span class="math inline">\mu \neq 7</span></p>
+<p><span class="math inline">\mu</span> - Population mean pH value (in neutral substances).</p>
+<p><code>t.test</code> syntax</p>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/stats/t.test.html">t.test</a></span><span class="op">(</span><span class="va">x</span>, y <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>       alternative <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"two.sided"</span>, <span class="st">"less"</span>, <span class="st">"greater"</span><span class="op">)</span>,</span>
+<span>       mu <span class="op">=</span> <span class="fl">0</span>, paired <span class="op">=</span> <span class="cn">FALSE</span>, var.equal <span class="op">=</span> <span class="cn">FALSE</span>,</span>
+<span>       conf.level <span class="op">=</span> <span class="fl">0.95</span>, <span class="va">...</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>
+    One Sample t-test
+
+data:  ph.df$pH
+t = 1.1832, df = 13, p-value = 0.2579
+alternative hypothesis: true mean is not equal to 7
+95 percent confidence interval:
+ 6.991742 7.028258
+sample estimates:
+mean of x 
+     7.01 </code></pre>
+</div>
+</div>
+<p>Decision: p-value (0.258) &gt; <span class="math inline">\alpha = 0.05</span>. Hence, we do not reject Ho.</p>
+<p>Conclusion: We do not have enough evidence to conclude that the population mean pH level is different from 7 at the 0.05 level of significance.</p>
+</section><section id="question-3" class="level3"><h3 class="anchored" data-anchor-id="question-3">Question 3</h3>
+</section><section id="approach-1" class="level3"><h3 class="anchored" data-anchor-id="approach-1">Approach 1</h3>
+<p>A dietician hopes to reduce a person’s cholesterol level by using a special diet supplemented with a combination of vitamin pills. Twenty (20) subjects were pre-tested and then placed on diet for two weeks. Their cholesterol levels were checked after the two week period. The results are shown below. Cholesterol levels are measured in milligrams per decilitre.</p>
+<ol type="i">
+<li><p>Test the claim that the Cholesterol level before the special diet is greater than the Cholesterol level after the special diet at <span class="math inline">\alpha=0.01</span> level of significance.</p></li>
+<li><p>Construct 99% confidence interval for the difference in mean cholesterol levels. Assume that the cholesterol levels are normally distributed both before and after.</p></li>
 </ol>
-<p>We’re interested in studying the average height of <span style="color:blue;">all adults in a country</span>, the population is all adult residents of that country.</p>
-<ol start="2" type="1">
-<li>Unit</li>
-</ol>
-<p>In our example of studying adult height, <span style="color:blue;">each adult residing</span> in the country would be a unit.</p>
-</section><section id="sample" class="level2" data-number="2.5"><h2 data-number="2.5" class="anchored" data-anchor-id="sample">
-<span class="header-section-number">2.5</span> Sample</h2>
-<p>A subset of units in a population.</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>  id before after
+1  1    210   190
+2  2    235   170
+3  3    208   210
+4  4    190   188
+5  5    172   173
+6  6    244   195</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 3
+     id type   value
+  &lt;int&gt; &lt;chr&gt;  &lt;dbl&gt;
+1     1 before   210
+2     1 after    190
+3     2 before   235
+4     2 after    170
+5     3 before   208
+6     3 after    210</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="09-chap9_files/figure-html/unnamed-chunk-10-1.png" class="img-fluid figure-img" width="768"></p>
+<figcaption>Distribution of cholesterol levels after and before the special diet</figcaption></figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 2 × 3
+  type    mean    sd
+  &lt;chr&gt;  &lt;dbl&gt; &lt;dbl&gt;
+1 after   207.  21.0
+2 before  219.  29.3</code></pre>
+</div>
+</div>
+</section><section id="testing-for-normality" class="level3"><h3 class="anchored" data-anchor-id="testing-for-normality">2.1.1 Testing for Normality</h3>
 <div class="cell">
 <div class="cell-output-display">
 <div>
-<figure class="figure"><p><img src="ip5.png" class="img-fluid figure-img" width="800"></p>
+<figure class="figure"><p><img src="09-chap9_files/figure-html/unnamed-chunk-12-1.png" class="img-fluid figure-img" width="768"></p>
 </figure>
 </div>
 </div>
 </div>
-</section><section id="sampling" class="level2" data-number="2.6"><h2 data-number="2.6" class="anchored" data-anchor-id="sampling">
-<span class="header-section-number">2.6</span> Sampling</h2>
-<p>Sampling is the <span style="color:red;">process</span> of selecting a subset of individuals or items from a population.</p>
+</section><section id="paired-t-test" class="level3"><h3 class="anchored" data-anchor-id="paired-t-test">2.1.2 Paired t-test</h3>
+<p>Hypothesis:</p>
+<p>H0: <span class="math inline">\mu_{before} \leq \mu_{after}</span></p>
+<p>H1: <span class="math inline">\mu_{before} &gt; \mu_{after}</span></p>
+<p><span class="math inline">\mu_{before}</span> - population mean cholesterol level before the special diet</p>
+<p><span class="math inline">\mu_{after}</span> - population mean cholesterol level after the special diet</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>
+    Paired t-test
+
+data:  before and after
+t = 1.7754, df = 19, p-value = 0.04593
+alternative hypothesis: true mean difference is greater than 0
+95 percent confidence interval:
+ 0.3167385       Inf
+sample estimates:
+mean difference 
+          12.15 </code></pre>
+</div>
+</div>
+<p>Decision: ____________________</p>
+<p>Conclusion: ___________________</p>
+</section><section id="approach-2" class="level3"><h3 class="anchored" data-anchor-id="approach-2">Approach 2</h3>
+</section><section id="testing-for-normality-1" class="level3"><h3 class="anchored" data-anchor-id="testing-for-normality-1">2.1.3 Testing for Normality</h3>
 <div class="cell">
 <div class="cell-output-display">
 <div>
-<figure class="figure"><p><img src="ip7.png" class="img-fluid figure-img" width="800"></p>
+<figure class="figure"><p><img src="09-chap9_files/figure-html/unnamed-chunk-15-1.png" class="img-fluid figure-img" width="768"></p>
 </figure>
 </div>
 </div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+    Shapiro-Wilk normality test
+
+data:  approach2_tbl$diff
+W = 0.93729, p-value = 0.213</code></pre>
 </div>
-</section><section id="statistics" class="level2" data-number="2.7"><h2 data-number="2.7" class="anchored" data-anchor-id="statistics">
-<span class="header-section-number">2.7</span> Statistics</h2>
-<p>A numerical summary of a sample.</p>
-<!--A numerical value summarizing the sample data.-->
+</div>
+<p>H0: <span class="math inline">\mu_{d} \leq 0</span></p>
+<p>H0: <span class="math inline">\mu_{d} &gt; 0</span>,</p>
+<p>where: <span class="math inline">\mu_d = \mu_{before} - \mu_{after}</span></p>
 <div class="cell">
-<div class="cell-output-display">
-<div>
-<figure class="figure"><p><img src="ip8.png" class="img-fluid figure-img" width="800"></p>
-</figure>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+    One Sample t-test
+
+data:  approach2_tbl$diff
+t = 1.7754, df = 19, p-value = 0.04593
+alternative hypothesis: true mean is greater than 0
+95 percent confidence interval:
+ 0.3167385       Inf
+sample estimates:
+mean of x 
+    12.15 </code></pre>
 </div>
 </div>
-</div>
-</section><section id="parameter" class="level2" data-number="2.8"><h2 data-number="2.8" class="anchored" data-anchor-id="parameter">
-<span class="header-section-number">2.8</span> Parameter</h2>
-<p>A numerical summary of a population.</p>
-<div class="cell">
-<div class="cell-output-display">
-<div>
-<figure class="figure"><p><img src="ip9.png" class="img-fluid figure-img" width="800"></p>
-</figure>
-</div>
-</div>
-</div>
-</section><section id="two-branches-of-statistics" class="level2" data-number="2.9"><h2 data-number="2.9" class="anchored" data-anchor-id="two-branches-of-statistics">
-<span class="header-section-number">2.9</span> Two Branches of Statistics</h2>
-<section id="descriptive-statistics" class="level3"><h3 class="anchored" data-anchor-id="descriptive-statistics">1. Descriptive Statistics</h3>
-<p>Describe and summarize the collected data through numerical summaries, tables, and graphs.</p>
-</section><section id="inferential-statistics" class="level3"><h3 class="anchored" data-anchor-id="inferential-statistics">2. Inferential Statistics</h3>
-<p>Statistical inference refers to the methods used to make estimations, decisions, or predictions about a population parameters based on the statistics computed from a sample that was selected from that population.</p>
-<div class="cell">
-<div class="cell-output-display">
-<div>
-<figure class="figure"><p><img src="ip11.png" class="img-fluid figure-img" width="800"></p>
-</figure>
-</div>
-</div>
-</div>
-</section></section><section id="census" class="level2" data-number="2.10"><h2 data-number="2.10" class="anchored" data-anchor-id="census">
-<span class="header-section-number">2.10</span> Census</h2>
-<p>A <span style="color:red;">census</span> involves collecting information from every individual or unit within the entire population of interest.</p>
-</section><section id="sample-survey" class="level2" data-number="2.11"><h2 data-number="2.11" class="anchored" data-anchor-id="sample-survey">
-<span class="header-section-number">2.11</span> Sample Survey</h2>
-<p>A <span style="color:red;">survey</span> involves collecting information from a subset (sample) of the population to estimate characteristics of the entire population.</p>
-</section><section id="notations" class="level2" data-number="2.12"><h2 data-number="2.12" class="anchored" data-anchor-id="notations">
-<span class="header-section-number">2.12</span> Notations</h2>
-<p><span style="color:red;">Parameters</span> are usually denoted by Greek letters</p>
-<p>Example:</p>
-<p><span class="math inline">\mu - \text{population mean}</span></p>
-<p><span class="math inline">\sigma - \text{population variance}</span></p>
-<p><span style="color:blue;">Statistics</span> are denoted by English letters (Capital or Simple? You will learn more of this in the “Statistical Inference” section)</p>
-<p>Eample:</p>
-<p><span class="math inline">\bar{X} - \text{sample mean}</span></p>
-<p><span class="math inline">S^2 - \text{sample variance}</span></p>
-<ul>
-<li><p>The value of the population parameter does not change.</p></li>
-<li><p>Sample statistics vary from sample to sample.</p></li>
-</ul>
+<p>Decision: _________</p>
+<p>Conclusion: ____________</p>
 
 
-</section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+</section></section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
     const mode = bsSheetEl.getAttribute("data-mode");
@@ -821,13 +1028,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script><nav class="page-navigation"><div class="nav-page nav-page-previous">
-      <a href="./01-chap1.html" class="pagination-link" aria-label="Introdiction to Statistics">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introdiction to Statistics</span></span>
+      <a href="./08-chap8.html" class="pagination-link" aria-label="Statistical Inference: Estimation">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Statistical Inference: Estimation</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./03-chap3.html" class="pagination-link" aria-label="Introduction to R programming basics and R studio">
-        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Introduction to R programming basics and R studio</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./refs.html" class="pagination-link" aria-label="Bibliography">
+        <span class="nav-page-text">Bibliography</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

@@ -16,6 +16,7 @@ book:
     - "06-chap6.qmd"
     - "07-chap7.qmd"
     - "08-chap8.qmd"
+    - "09-chap9.qmd"
     - "refs.qmd"
   sidebar:
     style: "docked"
