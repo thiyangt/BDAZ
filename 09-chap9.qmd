@@ -344,7 +344,7 @@ cholesterol_2 |>
 
 ```
 
-### 2.1.1 Testing for Normality
+### Testing for Normality
 
 ```{r, echo=TRUE,  comment=NA, message=FALSE, warning=FALSE}
  ggplot(data = cholesterol_2, aes(sample = value)) +
@@ -355,7 +355,7 @@ cholesterol_2 |>
 ```
 
 
-### 2.1.2 Paired t-test
+### Paired t-test
 
 
 Hypothesis:
@@ -384,7 +384,7 @@ approach2_tbl <- tibble(diff = cholesterol_1$before - cholesterol_1$after)
 ```
 
 
-### 2.1.3 Testing for Normality
+### Testing for Normality
 
 ```{r, echo=TRUE,  comment=NA,  message=FALSE, warning=FALSE}
 ggplot(approach2_tbl, 
