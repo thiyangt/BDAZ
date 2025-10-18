@@ -70,6 +70,49 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 <link href="https://fonts.googleapis.com/css?family=Fira+Sans|Merriweather|Source Code Pro" rel="stylesheet">
 
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -178,6 +221,7 @@ ul.task-list li input[type="checkbox"] {
    
   <ul class="collapse">
   <li><a href="#point-estimation" id="toc-point-estimation" class="nav-link active" data-scroll-target="#point-estimation"><span class="header-section-number">8.1</span> Point Estimation</a></li>
+  <li><a href="#interval-estimation" id="toc-interval-estimation" class="nav-link" data-scroll-target="#interval-estimation"><span class="header-section-number">8.2</span> Interval Estimation</a></li>
   </ul>
 </nav>
     </div>
@@ -231,11 +275,102 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 </tbody>
 </table>
-<blockquote class="blockquote">
 <p><strong>Note:</strong> Each point estimator provides the best single-value estimate of its corresponding population parameter, based on a <strong>random sample</strong>.</p>
-</blockquote>
+<p>Question:</p>
+<p>A zoologist collected data on the <strong>body weight (in kg)</strong> of 6 randomly selected <strong>adult cheetahs</strong> from a wildlife reserve.<br>
+The recorded weights are as follows:</p>
+<p><span class="math display">
+42,\ 47,\ 39,\ 45,\ 44,\ 43
+</span></p>
+<p>Additionally, out of these 6 cheetahs, <strong>4 were identified as healthy</strong> based on veterinary examination.</p>
+<p><strong>Tasks:</strong></p>
+<ol type="1">
+<li>Estimate the <strong>population mean body weight</strong> of adult cheetahs.<br>
+</li>
+<li>Estimate the <strong>population variance</strong> of body weight.<br>
+</li>
+<li>Estimate the <strong>population proportion</strong> of healthy cheetahs.</li>
+</ol>
+</section>
+<section id="interval-estimation" class="level2" data-number="8.2">
+<h2 data-number="8.2" class="anchored" data-anchor-id="interval-estimation"><span class="header-section-number">8.2</span> Interval Estimation</h2>
+<p>While a <strong>point estimate</strong> gives a single best guess for a population parameter, it does not indicate how reliable that estimate is.<br>
+<strong>Interval estimation</strong> provides a <strong>range of plausible values</strong> within which the true population parameter is likely to lie.</p>
+<p>The general form of an interval estimate is as follows:</p>
+<p>The general form of a confidence interval (CI) is:</p>
+<p><span class="math display">
+\text{Point Estimate} \ \pm\ \text{Margin of Error}
+</span></p>
+<section id="confidence-interval-for-the-population-mean-mu" class="level3">
+<h3 class="anchored" data-anchor-id="confidence-interval-for-the-population-mean-mu">Confidence Interval for the Population Mean (<span class="math inline">\mu</span>)</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 19%">
+<col style="width: 47%">
+<col style="width: 32%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Condition</th>
+<th>Confidence Interval Formula</th>
+<th>Distribution Used</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Population standard deviation <span class="math inline">\sigma</span> known</strong></td>
+<td><span class="math display"> \bar{x} \pm z_{\alpha/2} \frac{\sigma}{\sqrt{n}} </span></td>
+<td>Standard Normal ((z))</td>
+</tr>
+<tr class="even">
+<td><strong><span class="math inline">\sigma</span> unknown, population normal</strong></td>
+<td><span class="math display"> \bar{x} \pm t_{\alpha/2,\,df} \frac{s}{\sqrt{n}} </span></td>
+<td>Student’s (t)-distribution (<span class="math inline">df = n-1</span>)</td>
+</tr>
+<tr class="odd">
+<td><strong><span class="math inline">\sigma</span> unknown, large sample</strong></td>
+<td><span class="math display"> \bar{x} \pm t_{\alpha/2,\,df} \frac{s}{\sqrt{n}} </span></td>
+<td>Student’s (t)-distribution or Standard Normal distribution</td>
+</tr>
+<tr class="even">
+<td></td>
+<td><span class="math display"> \bar{x} \pm z_{\alpha/2} \frac{s}{\sqrt{n}} </span></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="confidence-interval-for-the-population-proportion-theta" class="level3">
+<h3 class="anchored" data-anchor-id="confidence-interval-for-the-population-proportion-theta">Confidence Interval for the Population Proportion (<span class="math inline">\theta</span>)</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 19%">
+<col style="width: 47%">
+<col style="width: 32%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Condition</th>
+<th>Confidence Interval Formula</th>
+<th>Distribution Used</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Large sample <span class="math inline">n\hat{p} \ge 5</span>, <span class="math inline">n(1-\hat{p}</span> $</strong></td>
+<td><span class="math display"> \hat{p} \pm z_{\alpha/2} \sqrt{\frac{\hat{p}(1-\hat{p})}{n}} </span></td>
+<td>Standard Normal</td>
+</tr>
+<tr class="even">
+<td><strong>Small sample or extreme proportions</strong></td>
+<td>Use <strong>exact (Clopper–Pearson)</strong> or <strong>Wilson interval</strong> methods</td>
+<td>Binomial-based</td>
+</tr>
+</tbody>
+</table>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

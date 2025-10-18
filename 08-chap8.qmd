@@ -53,14 +53,15 @@ $$
 
 | Condition | Confidence Interval Formula | Distribution Used |
 |------------|-----------------------------|--------------------|
-| **Population standard deviation (\(\sigma\)) known** | $$ \bar{x} \pm z_{\alpha/2} \frac{\sigma}{\sqrt{n}} $$ | Standard Normal (\(z\)) |
-| **\(\sigma\) unknown, population normal** | $$ \bar{x} \pm t_{\alpha/2,\,df} \frac{s}{\sqrt{n}} $$ | Student’s \(t\)-distribution (\(df = n-1\)) |
-| **\(\sigma\) unknown, large sample  (\(n \ge 30\))** | $$ \bar{x} \pm z_{\alpha/2} \frac{s}{\sqrt{n}} $$ | Approx. Standard Normal (\(z\)) |
+| **Population standard deviation $\sigma$ known** | $$ \bar{x} \pm z_{\alpha/2} \frac{\sigma}{\sqrt{n}} $$ | Standard Normal $z$) |
+| **$\sigma$ unknown, population normal** | $$ \bar{x} \pm t_{\alpha/2,\,df} \frac{s}{\sqrt{n}} $$ | Student’s \(t\)-distribution ($df = n-1$) |
+| **$\sigma$ unknown, large sample** | $$ \bar{x} \pm t_{\alpha/2,\,df} \frac{s}{\sqrt{n}} $$ | Student’s \(t\)-distribution or Standard Normal distribution |
+| |$$ \bar{x} \pm z_{\alpha/2} \frac{s}{\sqrt{n}} $$ | |
 
 
 ### Confidence Interval for the Population Proportion ($\theta$)
 
 | Condition | Confidence Interval Formula | Distribution Used |
 |------------|-----------------------------|--------------------|
-| **Large sample (\(n\hat{p} \ge 5\), \(n(1-\hat{p}) \ge 5\))** | $$ \hat{p} \pm z_{\alpha/2} \sqrt{\frac{\hat{p}(1-\hat{p})}{n}} $$ | Standard Normal (\(z\)) |
+| **Large sample $n\hat{p} \ge 5$, $n(1-\hat{p}$ \ge 5$** | $$ \hat{p} \pm z_{\alpha/2} \sqrt{\frac{\hat{p}(1-\hat{p})}{n}} $$ | Standard Normal  |
 | **Small sample or extreme proportions** | Use **exact (Clopper–Pearson)** or **Wilson interval** methods | Binomial-based |
