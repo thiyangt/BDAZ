@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.6.42">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-<title>8&nbsp; Statistical Inference: Estimation – Biostatistics and Data Analysis for Zoologists</title>
+
+
+<title>11&nbsp; Sample Questions – Biostatistics and Data Analysis for Zoologists</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -17,41 +20,8 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
+
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="site_libs/quarto-nav/headroom.min.js"></script>
@@ -60,8 +30,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./09-chap9.html" rel="next">
-<link href="./07-chap7.html" rel="prev">
+<link href="./refs.html" rel="next">
+<link href="./10-chap10.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -70,7 +40,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-47708def744f7d6bf9e6ade08d3fbeef.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-dcaec5c8d80e8fa62fc25e24c15f567a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
+<link href="site_libs/bootstrap/bootstrap-dcaec5c8d80e8fa62fc25e24c15f567a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
   "collapse-after": 3,
@@ -96,65 +67,35 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-submit-button-title": "Submit",
     "search-label": "Search"
   }
-}</script><link href="https://fonts.googleapis.com/css?family=Fira+Sans|Merriweather|Source%20Code%20Pro" rel="stylesheet">
-<script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script><script>document.addEventListener("DOMContentLoaded", function () {
- var mathElements = document.getElementsByClassName("math");
- var macros = [];
- for (var i = 0; i < mathElements.length; i++) {
-  var texText = mathElements[i].firstChild;
-  if (mathElements[i].tagName == "SPAN") {
-   katex.render(texText.data, mathElements[i], {
-    displayMode: mathElements[i].classList.contains('display'),
-    throwOnError: false,
-    macros: macros,
-    fleqn: false
-   });
-}}});
-  </script><script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
+}</script>
+<link href="https://fonts.googleapis.com/css?family=Fira+Sans|Merriweather|Source Code Pro" rel="stylesheet">
+
+
 </head>
+
 <body class="nav-sidebar docked">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top"><nav class="quarto-secondary-nav"><div class="container-fluid d-flex">
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./08-chap8.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Statistical Inference: Estimation</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./11-chap11.html"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Sample Questions</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
-  </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto"><div class="pt-lg-2 mt-2 text-left sidebar-header">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="./">Biostatistics and Data Analysis for Zoologists</a> 
     </div>
@@ -166,7 +107,7 @@ window.Quarto = {
         </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
-<li class="sidebar-item">
+        <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Front matter</span></a>
@@ -216,7 +157,7 @@ window.Quarto = {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./08-chap8.html" class="sidebar-item-text sidebar-link active">
+  <a href="./08-chap8.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Statistical Inference: Estimation</span></span></a>
   </div>
 </li>
@@ -234,7 +175,7 @@ window.Quarto = {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./11-chap11.html" class="sidebar-item-text sidebar-link">
+  <a href="./11-chap11.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Sample Questions</span></span></a>
   </div>
 </li>
@@ -245,22 +186,29 @@ window.Quarto = {
   </div>
 </li>
     </ul>
-</div>
-</nav><div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title"><b>Sections</b></h2>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title"><b>Sections</b></h2>
    
   <ul class="collapse">
-<li><a href="#point-estimation" id="toc-point-estimation" class="nav-link active" data-scroll-target="#point-estimation"><span class="header-section-number">8.1</span> Point Estimation</a></li>
-  <li><a href="#interval-estimation" id="toc-interval-estimation" class="nav-link" data-scroll-target="#interval-estimation"><span class="header-section-number">8.2</span> Interval Estimation</a></li>
-  </ul></nav>
+  <li><a href="#question-1" id="toc-question-1" class="nav-link active" data-scroll-target="#question-1"><span class="header-section-number">11.1</span> Question 1</a></li>
+  <li><a href="#question-2" id="toc-question-2" class="nav-link" data-scroll-target="#question-2"><span class="header-section-number">11.2</span> Question 2</a></li>
+  <li><a href="#question-3" id="toc-question-3" class="nav-link" data-scroll-target="#question-3"><span class="header-section-number">11.3</span> Question 3</a></li>
+  <li><a href="#question-4" id="toc-question-4" class="nav-link" data-scroll-target="#question-4"><span class="header-section-number">11.4</span> Question 4</a></li>
+  <li><a href="#question-5" id="toc-question-5" class="nav-link" data-scroll-target="#question-5"><span class="header-section-number">11.5</span> Question 5</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
-<h1 class="title">
-<span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Statistical Inference: Estimation</span>
-</h1>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Sample Questions</span></h1>
 </div>
 
 
@@ -274,164 +222,99 @@ window.Quarto = {
   
 
 
-</header><p>In this section we discuss how can we use sample data to estimate values of population parameters?</p>
-<p><strong>Point estimation</strong> and <strong>Interval estimation</strong> are the two forms of population parameter estimation based on sample data.</p>
-<section id="point-estimation" class="level2" data-number="8.1"><h2 data-number="8.1" class="anchored" data-anchor-id="point-estimation">
-<span class="header-section-number">8.1</span> Point Estimation</h2>
-<p>Provides a single best guess for the population parameter.</p>
-<p>The statistical properties of point estimators (Unbiased, Efficiency, Consistency) are out of the scope of this book.</p>
-<table class="caption-top table">
-<thead><tr class="header">
-<th>Population Parameter</th>
-<th>Point Estimator</th>
-</tr></thead>
-<tbody>
-<tr class="odd">
-<td>Population Mean</td>
-<td>Sample Mean</td>
-</tr>
-<tr class="even">
-<td>Population Variance</td>
-<td>Sample Variance</td>
-</tr>
-<tr class="odd">
-<td>Population Proportion</td>
-<td>Sample Proportion</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Note:</strong> Each point estimator provides the best single-value estimate of its corresponding population parameter, based on a <strong>random sample</strong>.</p>
-<p>Question:</p>
-<p>A zoologist collected data on the <strong>body weight (in kg)</strong> of 6 randomly selected <strong>adult cheetahs</strong> from a wildlife reserve.<br>
-The recorded weights are as follows:</p>
-<p><span class="math display">
-42,\ 47,\ 39,\ 45,\ 44,\ 43
-</span></p>
-<p>Additionally, out of these 6 cheetahs, <strong>4 were identified as healthy</strong> based on veterinary examination.</p>
-<p><strong>Tasks:</strong></p>
-<ol type="1">
-<li>Estimate the <strong>population mean body weight</strong> of adult cheetahs.<br>
-</li>
-<li>Estimate the <strong>population variance</strong> of body weight.<br>
-</li>
-<li>Estimate the <strong>population proportion</strong> of healthy cheetahs.</li>
-</ol></section><section id="interval-estimation" class="level2" data-number="8.2"><h2 data-number="8.2" class="anchored" data-anchor-id="interval-estimation">
-<span class="header-section-number">8.2</span> Interval Estimation</h2>
-<p>While a <strong>point estimate</strong> gives a single best guess for a population parameter, it does not indicate how reliable that estimate is.<br><strong>Interval estimation</strong> provides a <strong>range of plausible values</strong> within which the true population parameter is likely to lie.</p>
-<p>The general form of an interval estimate is as follows:</p>
-<p>The general form of a confidence interval (CI) is:</p>
-<p><span class="math display">
-\text{Point Estimate} \ \pm\ \text{Margin of Error}
-</span></p>
-<section id="confidence-interval-for-the-population-mean-mu" class="level3"><h3 class="anchored" data-anchor-id="confidence-interval-for-the-population-mean-mu">Confidence Interval for the Population Mean (<span class="math inline">\mu</span>)</h3>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 19%">
-<col style="width: 47%">
-<col style="width: 32%">
-</colgroup>
-<thead><tr class="header">
-<th>Condition</th>
-<th>Confidence Interval Formula</th>
-<th>Distribution Used</th>
-</tr></thead>
-<tbody>
-<tr class="odd">
-<td><strong>Population standard deviation <span class="math inline">\sigma</span> known</strong></td>
-<td><span class="math display"> \bar{x} \pm z_{\alpha/2} \frac{\sigma}{\sqrt{n}} </span></td>
-<td>Standard Normal <span class="math inline">z</span>)</td>
-</tr>
-<tr class="even">
-<td><strong><span class="math inline">\sigma</span> unknown, population normal</strong></td>
-<td><span class="math display"> \bar{x} \pm t_{\alpha/2,\,df} \frac{s}{\sqrt{n}} </span></td>
-<td>Student’s (t)-distribution (<span class="math inline">df = n-1</span>)</td>
-</tr>
-<tr class="odd">
-<td><strong><span class="math inline">\sigma</span> unknown, large sample</strong></td>
-<td><span class="math display"> \bar{x} \pm t_{\alpha/2,\,df} \frac{s}{\sqrt{n}} </span></td>
-<td>Student’s (t)-distribution or Standard Normal distribution</td>
-</tr>
-<tr class="even">
-<td></td>
-<td><span class="math display"> \bar{x} \pm z_{\alpha/2} \frac{s}{\sqrt{n}} </span></td>
-<td></td>
-</tr>
-</tbody>
-</table></section><section id="confidence-interval-for-the-population-proportion-theta" class="level3"><h3 class="anchored" data-anchor-id="confidence-interval-for-the-population-proportion-theta">Confidence Interval for the Population Proportion (<span class="math inline">\theta</span>)</h3>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 19%">
-<col style="width: 47%">
-<col style="width: 32%">
-</colgroup>
-<thead><tr class="header">
-<th>Condition</th>
-<th>Confidence Interval Formula</th>
-<th>Distribution Used</th>
-</tr></thead>
-<tbody>
-<tr class="odd">
-<td><strong>Large sample <span class="math inline">n\hat{p} \ge 5</span>, <span class="math inline">n(1-\hat{p}</span> $</strong></td>
-<td><span class="math display"> \hat{p} \pm z_{\alpha/2} \sqrt{\frac{\hat{p}(1-\hat{p})}{n}} </span></td>
-<td>Standard Normal</td>
-</tr>
-<tr class="even">
-<td><strong>Small sample or extreme proportions</strong></td>
-<td>Use <strong>exact (Clopper–Pearson)</strong> or <strong>Wilson interval</strong> methods</td>
-<td>Binomial-based</td>
-</tr>
-</tbody>
-</table>
-<section id="example" class="level4"><h4 class="anchored" data-anchor-id="example">Example:</h4>
-<p>A zoologist is studying the body length (in cm) of a rare frog species in a rainforest. She randomly captures 10 frogs and measures their lengths:</p>
-<p>Sample data (body lengths in cm):</p>
-<p>7.8, 8.2, 7.5, 8.0, 7.9, 8.1, 7.6, 8.3, 7.7, 8.0</p>
-<p>Assume body lengths are normally distributed. Construct a 95% confidence interval (CI) for the population mean.</p>
-<p><strong>Interpretation:</strong></p>
-<p>We are 95% confident that the true mean body length of this frog species in the rainforest lies between 7.73 cm and 8.09 cm.</p>
-<ul>
-<li><p>This does not mean that 95% of the frogs have lengths in this range. It refers to the population mean.</p></li>
-<li><p>If we repeated this sampling many times, 95% of the calculated confidence intervals would contain the true mean.</p></li>
-</ul>
-<p><strong>Rcode:</strong></p>
-<div class="cell">
-<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Sample data (frog body lengths in cm)</span></span>
-<span><span class="va">frog_lengths</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">7.8</span>, <span class="fl">8.2</span>, <span class="fl">7.5</span>, <span class="fl">8.0</span>, <span class="fl">7.9</span>, <span class="fl">8.1</span>, <span class="fl">7.6</span>, <span class="fl">8.3</span>, <span class="fl">7.7</span>, <span class="fl">8.0</span><span class="op">)</span></span>
-<span><span class="co"># Compute 95% confidence interval using t-distribution</span></span>
-<span><span class="va">t_test_result</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/t.test.html">t.test</a></span><span class="op">(</span><span class="va">frog_lengths</span>, conf.level <span class="op">=</span> <span class="fl">0.95</span><span class="op">)</span></span>
-<span><span class="co"># Display results</span></span>
-<span><span class="va">t_test_result</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>
-    One Sample t-test
+</header>
 
-data:  frog_lengths
-t = 96.159, df = 9, p-value = 7.215e-15
-alternative hypothesis: true mean is not equal to 0
-95 percent confidence interval:
- 7.723916 8.096084
-sample estimates:
-mean of x 
-     7.91 </code></pre>
-</div>
-<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Access CI directly</span></span>
-<span><span class="va">t_test_result</span><span class="op">$</span><span class="va">conf.int</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 7.723916 8.096084
-attr(,"conf.level")
-[1] 0.95</code></pre>
-</div>
-</div>
-</section><section id="question-1" class="level4"><h4 class="anchored" data-anchor-id="question-1">Question 1</h4>
+
+<section id="question-1" class="level2" data-number="11.1">
+<h2 data-number="11.1" class="anchored" data-anchor-id="question-1"><span class="header-section-number">11.1</span> Question 1</h2>
+<p>A team of researchers in Antarctica conducted a study to examine the differences in body characteristics among three penguin species by gender on Alexander Island. Alexander Island is the largest island in Antarctica. The team captured a sample of 200 penguins from various locations across Alexander Island. Table 1 presents the recorded variables for each penguin.</p>
+<table class="caption-top table">
+<caption>Description of variables recorded for each penguin in the study</caption>
+<colgroup>
+<col style="width: 45%">
+<col style="width: 55%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Variable Name</th>
+<th>Variable Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Status</td>
+<td>The health status of the penguin, recorded as either <em>Healthy</em> or <em>Injured</em>.</td>
+</tr>
+<tr class="even">
+<td>Gender</td>
+<td>The gender of the penguin, recorded as either <em>Male</em> or <em>Female</em>.</td>
+</tr>
+<tr class="odd">
+<td>Species</td>
+<td>The penguin species, recorded as <em>Emperor</em>, <em>Adelie</em>, or <em>Gentoo</em>.</td>
+</tr>
+<tr class="even">
+<td>Longitude</td>
+<td>The longitude of the location where the penguin was captured, measured in degrees.</td>
+</tr>
+<tr class="odd">
+<td>Height</td>
+<td>The height of the penguin, recorded in centimeters (cm).</td>
+</tr>
+<tr class="even">
+<td>Flipper length</td>
+<td>The flipper length of the penguin, recorded in centimeters (cm).</td>
+</tr>
+<tr class="odd">
+<td>Weight</td>
+<td>The weight of the penguin, classified into one of three categories: <em>Overweight</em>, <em>Normal</em>, <em>Underweight</em>.</td>
+</tr>
+<tr class="even">
+<td>Injuries</td>
+<td>The number of observable injuries on the penguin body (e.g., 0, 1, 2, …).</td>
+</tr>
+</tbody>
+</table>
+<ol type="i">
+<li><p>Did the study collect its data through a sample survey or a census? Provide reasons for your answer. marks)}</p></li>
+<li><p>What is the population in this study?</p></li>
+<li><p>Write the scale of measurements for each variable.</p></li>
+</ol>
+</section>
+<section id="question-2" class="level2" data-number="11.2">
+<h2 data-number="11.2" class="anchored" data-anchor-id="question-2"><span class="header-section-number">11.2</span> Question 2</h2>
 <p>A researcher measures the wing length (cm) of a random sample of 15 hummingbirds:</p>
 <p>Data: 6.5, 6.7, 6.9, 6.4, 6.8, 6.6, 6.7, 6.5, 6.9, 6.8, 6.6, 6.7, 6.5, 6.8, 6.6</p>
 <p>Construct a 95% confidence interval for the average wing length of hummingbirds. Assume that wing lengths are normally distributed.</p>
-</section><section id="question-2" class="level4"><h4 class="anchored" data-anchor-id="question-2">Question 2</h4>
-<p>A zoologist studies a population of butterflies in a forest. She randomly captures 120 butterflies and finds that 78 of them have blue wings.</p>
-<p>Estimate the population proportion of blue-winged butterflies with a 95% confidence interval. Assume the sample is random and large enough for the normal approximation.</p>
+</section>
+<section id="question-3" class="level2" data-number="11.3">
+<h2 data-number="11.3" class="anchored" data-anchor-id="question-3"><span class="header-section-number">11.3</span> Question 3</h2>
+<p>In a penguin conservation study, researchers screen penguins for a particular flipper injury.</p>
+<ul>
+<li><p>20% of penguins in the population have this injury.</p></li>
+<li><p>If a penguin has the injury, the screening test correctly identifies it 90% of the time.</p></li>
+<li><p>If a penguin does not have the injury, the test incorrectly indicates an injury 10% of the time.</p></li>
+</ul>
+<p>A randomly selected penguin is tested and the result comes back positive.</p>
+</section>
+<section id="question-4" class="level2" data-number="11.4">
+<h2 data-number="11.4" class="anchored" data-anchor-id="question-4"><span class="header-section-number">11.4</span> Question 4</h2>
+<p>What is the probability that the penguin actually has the injury? (Ans: 0.692)</p>
+</section>
+<section id="question-5" class="level2" data-number="11.5">
+<h2 data-number="11.5" class="anchored" data-anchor-id="question-5"><span class="header-section-number">11.5</span> Question 5</h2>
+<p>Explain the following:</p>
+<ol type="1">
+<li><p>Simple Ransom Sampling</p></li>
+<li><p>Parameter</p></li>
+<li><p>Sampling frame</p></li>
+</ol>
 
 
-</section></section></section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
     const mode = bsSheetEl.getAttribute("data-mode");
@@ -847,18 +730,21 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
 });
-</script><nav class="page-navigation"><div class="nav-page nav-page-previous">
-      <a href="./07-chap7.html" class="pagination-link" aria-label="Sampling Techniques">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Sampling Techniques</span></span>
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./10-chap10.html" class="pagination-link" aria-label="Exploratory Data Analysis with R">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Exploratory Data Analysis with R</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./09-chap9.html" class="pagination-link" aria-label="Statistical Inference: Hypothesis Testing">
-        <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Statistical Inference: Hypothesis Testing</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./refs.html" class="pagination-link" aria-label="Bibliography">
+        <span class="nav-page-text">Bibliography</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
 </div> <!-- /content -->
+
 
 
 

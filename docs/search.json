@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Biostatistics and Data Analysis for Zoologists",
     "section": "",
-    "text": "Understanding and interpreting quantitative data is fundamental for modern zoological research. “Biostatistics and Data Analysis for Zoologists (BDAZ)” serves as a comprehensive, practical textbook that introduces statistical concepts and data analysis techniques specifically designed for zoologists, wildlife biologists, and ecology researchers. Each topic in this book includes a practical session using R.\nCopyright notice\nProduced on 19 October 2025.\n© Thiyanga S. Talagala (2025).",
+    "text": "Understanding and interpreting quantitative data is fundamental for modern zoological research. “Biostatistics and Data Analysis for Zoologists (BDAZ)” serves as a comprehensive, practical textbook that introduces statistical concepts and data analysis techniques specifically designed for zoologists, wildlife biologists, and ecology researchers. Each topic in this book includes a practical session using R.\nCopyright notice\nProduced on 3 January 2026.\n© Thiyanga S. Talagala (2026).",
     "crumbs": [
       "Front matter"
     ]
@@ -234,7 +234,7 @@
     "href": "03-chap3.html#r-as-a-calculator",
     "title": "3  Introduction to R programming basics and R studio",
     "section": "\n3.6 R as a calculator",
-    "text": "3.6 R as a calculator\nLet’s type some simple commands. Type these in the console.\n\n1 + 2\n\n[1] 3\n\n\n\n1 * 100\n\n[1] 100\n\n\n\n1 / 100\n\n[1] 0.01\n\n\n\nrnorm(50)\n\n [1]  0.06521904  0.50754255 -0.06477693 -0.98669734 -1.42215540 -1.48852749\n [7] -0.22637503  1.55099347 -0.58918021 -0.62523361 -0.01853335  1.28672051\n[13]  1.42450806 -0.97262293  1.85150313 -0.08619909  0.01711273  2.35371891\n[19] -1.09093500  0.53179014  0.77277099 -1.06019150  0.04141356 -2.08270872\n[25] -0.22883505  0.34937099 -1.35541840 -1.77539082 -0.19191415  0.22090972\n[31] -0.42502865 -0.22344388  0.82308138  0.71276526 -0.02787759  0.63547641\n[37] -0.32422004 -0.02158706  1.38653711  0.31218900  0.41130577 -0.46838963\n[43] -0.09707757  1.46380295 -0.68406538 -0.36138675 -0.28024751 -0.26112586\n[49]  1.32779886  1.15915931\n\n\n\nhist(rnorm(50))\n\n\n\n\n\n\n\nIn R, square brackets [ ] indicate the index or position of an element in a vector, list, or other data structure.",
+    "text": "3.6 R as a calculator\nLet’s type some simple commands. Type these in the console.\n\n1 + 2\n\n[1] 3\n\n\n\n1 * 100\n\n[1] 100\n\n\n\n1 / 100\n\n[1] 0.01\n\n\n\nrnorm(50)\n\n [1] -0.09728826 -0.98593355  0.69509453 -0.96590419  0.71834504  0.10852900\n [7]  2.32080910 -1.08572566 -0.96222228 -0.17018359 -0.93593929  0.99274348\n[13] -0.05202574  0.50332690 -0.50990389  0.70284147  0.35561981 -0.28323538\n[19]  0.05902977  1.52817940  0.10161125  0.19868764 -0.53960309 -0.51767918\n[25]  2.24229343  0.54240239 -2.73675563 -1.39041824  0.25915301  0.78103995\n[31] -0.70725143 -0.84504523  0.92770713 -0.38592518 -1.15356447 -0.59685108\n[37]  0.51091185  1.46126616  1.67485834 -2.85241834  0.78113179  0.02526602\n[43]  0.61431744  0.50223266  0.16243515 -1.39776151 -0.99313462  1.22846277\n[49] -1.90620242  0.23796530\n\n\n\nhist(rnorm(50))\n\n\n\n\n\n\n\nIn R, square brackets [ ] indicate the index or position of an element in a vector, list, or other data structure.",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Introduction to R programming basics and R studio</span>"
     ]
@@ -987,6 +987,76 @@
     "text": "9.7 Questions\nQuestion 1\nAs reported by the US National Centre for Health Statistics, the mean serum high density (HDL) cholesterol of female 20 - 29 years old is 53. Dr Jack Hall claims that the HDL Cholesterol level of female 20 - 29 years old is greater than 53. He uses the following data, randomly gathered from 22 individuals.\n\nHDL &lt;- c(65, 47, 51, 54, 70, 55, 44, 48, 36, 53, 45, 34, 59, 45, 54, 50, 40, 60, 53, 53, 54, 55)\n\nIt is known from past research that the distribution of the HDL cholesterol is normally distributed and the corresponding population variance is 81. Test the claim that the HDL level is greater than 53 at \\alpha=0.01 level of significance.\n\nlibrary(ggplot2)\nHDL.df &lt;- data.frame(HDL=HDL)\nggplot(HDL.df, aes(y=HDL, x=\"\")) + \n  geom_boxplot(outlier.shape = NA, fill=\"forestgreen\", alpha=0.5) +\n  geom_jitter(alpha=0.5) + labs(x = \"\")\n\n\n\nDistribution of HDL level\n\n\n\nQuestion 2\nA chemist wants to measure the bias in a pH meter. She uses the meter to measure the pH in 14 neutral substances (pH=7) and obtains the data below.\n\nph &lt;- c( 7.01, 7.04, 6.97, 7.00, 6.99, 6.97, 7.04, 7.04, 7.01, 7.00, 6.99, 7.04, 7.07, 6.97)\n\nIs there sufficient evidence to support the claim that the pH meter is not correctly calibrated at the \\alpha=0.05 level of significance?\nAnswer:\n\nph.df &lt;- data.frame(pH=ph)\nggplot(ph.df, aes(y=pH, x=\"\")) + \n  geom_boxplot(outlier.shape = NA) + \n  geom_jitter(alpha=0.5) + \n  labs(x = \"\")\n\n\n\nDistribution of pH values\n\n\n\nIn this case, we have only sixteen observations, meaning that the Central Limit Theorem does not apply. With a small sample, we should only use the t-test if we can reasonably assume that the population is normally distributed. Hence, we must first verify that pH is normally distributed.\n\nggplot(ph.df, \n       aes(sample=pH))+\n  stat_qq() + stat_qq_line()+labs(x=\"Theoretical Quantiles\", y=\"Sample Quantiles\")\n\n\n\nNormal probability plot of pH values\n\n\nshapiro.test(ph.df$pH)\n\n\n    Shapiro-Wilk normality test\n\ndata:  ph.df$pH\nW = 0.91603, p-value = 0.1927\n\n\nHypothesis to be tested:\nH0: Data are normally distributed.\nH1: Data are not normally distributed.\nAccording to the Shapiro-Wilk normality test p-value, 0.19 &gt; 0.05. Hence, we do not reject H0 at the 0.05 level of significance. We can conclude data are normally distributed.\nNow we can proceed with the t.test.\nHypothesis to be tested.\nH0: \\mu=7\nH1: \\mu \\neq 7\n\\mu - Population mean pH value (in neutral substances).\nt.test syntax\nt.test(x, y = NULL,\n       alternative = c(\"two.sided\", \"less\", \"greater\"),\n       mu = 0, paired = FALSE, var.equal = FALSE,\n       conf.level = 0.95, ...)\n\nt.test(ph.df$pH, alternative = \"two.sided\", mu=7)\n\n\n    One Sample t-test\n\ndata:  ph.df$pH\nt = 1.1832, df = 13, p-value = 0.2579\nalternative hypothesis: true mean is not equal to 7\n95 percent confidence interval:\n 6.991742 7.028258\nsample estimates:\nmean of x \n     7.01 \n\n\nDecision: p-value (0.258) &gt; \\alpha = 0.05. Hence, we do not reject Ho.\nConclusion: We do not have enough evidence to conclude that the population mean pH level is different from 7 at the 0.05 level of significance.\nQuestion 3\nApproach 1\nA dietician hopes to reduce a person’s cholesterol level by using a special diet supplemented with a combination of vitamin pills. Twenty (20) subjects were pre-tested and then placed on diet for two weeks. Their cholesterol levels were checked after the two week period. The results are shown below. Cholesterol levels are measured in milligrams per decilitre.\n\nTest the claim that the Cholesterol level before the special diet is greater than the Cholesterol level after the special diet at \\alpha=0.01 level of significance.\nConstruct 99% confidence interval for the difference in mean cholesterol levels. Assume that the cholesterol levels are normally distributed both before and after.\n\n\nid &lt;- 1:20\nbefore &lt;- c(210, 235, 208, 190, 172, 244, 211, 235, 210, \n            190, 175, 250, 200, 270, 222, 203, 209, 220, 250, 280)\nafter &lt;- c(190, 170, 210, 188, 173, 195, 228, 200, 210, 184,\n           196, 208, 211, 212, 205, 221, 240, 250, 230, 220)\ncholesterol_1 &lt;- data.frame(id=id, before=before, after=after)\nhead(cholesterol_1)\n\n  id before after\n1  1    210   190\n2  2    235   170\n3  3    208   210\n4  4    190   188\n5  5    172   173\n6  6    244   195\n\n\n\nlibrary(tidyverse)\ncholesterol_2 &lt;- pivot_longer(cholesterol_1, before:after, names_to = \"type\", values_to = \"value\")\nhead(cholesterol_2)\n\n# A tibble: 6 × 3\n     id type   value\n  &lt;int&gt; &lt;chr&gt;  &lt;dbl&gt;\n1     1 before   210\n2     1 after    190\n3     2 before   235\n4     2 after    170\n5     3 before   208\n6     3 after    210\n\n\n\nggplot(data= cholesterol_2, aes(x=type, y=value)) + \n  geom_boxplot(outlier.shape = NA, aes(fill=type), alpha=0.5) + \n  geom_jitter(aes(fill=type)) \n\n\n\nDistribution of cholesterol levels after and before the special diet\n\n\n\n\ncholesterol_2 |&gt;\n  group_by(type) |&gt;\n  summarize(mean = round(mean(value), 2),\n            sd = round(sd(value), 2))\n\n# A tibble: 2 × 3\n  type    mean    sd\n  &lt;chr&gt;  &lt;dbl&gt; &lt;dbl&gt;\n1 after   207.  21.0\n2 before  219.  29.3\n\n\nTesting for Normality\n\n ggplot(data = cholesterol_2, aes(sample = value)) +\n  stat_qq() + \n  stat_qq_line() +\n  facet_grid(. ~ type) \n\n\n\n\n\n\n\nPaired t-test\nHypothesis:\nH0: \\mu_{before} \\leq \\mu_{after}\nH1: \\mu_{before} &gt; \\mu_{after}\n\\mu_{before} - population mean cholesterol level before the special diet\n\\mu_{after} - population mean cholesterol level after the special diet\n\nt.test(before, after, data=cholesterol_1, \"greater\", paired=TRUE)\n\n\n    Paired t-test\n\ndata:  before and after\nt = 1.7754, df = 19, p-value = 0.04593\nalternative hypothesis: true mean difference is greater than 0\n95 percent confidence interval:\n 0.3167385       Inf\nsample estimates:\nmean difference \n          12.15 \n\n\nDecision: ____________________\nConclusion: ___________________\nApproach 2\n\napproach2_tbl &lt;- tibble(diff = cholesterol_1$before - cholesterol_1$after)\n\nTesting for Normality\n\nggplot(approach2_tbl, \n       aes(sample=diff))+\n  stat_qq() + stat_qq_line()+\n  labs(x=\"Theoretical Quantiles\", y=\"Sample Quantiles\")\n\n\n\n\n\n\nshapiro.test(approach2_tbl$diff)\n\n\n    Shapiro-Wilk normality test\n\ndata:  approach2_tbl$diff\nW = 0.93729, p-value = 0.213\n\n\nH0: \\mu_{d} \\leq 0\nH0: \\mu_{d} &gt; 0,\nwhere: \\mu_d = \\mu_{before} - \\mu_{after}\n\nt.test(x = approach2_tbl$diff,  alternative = c(\"greater\"), mu=0)\n\n\n    One Sample t-test\n\ndata:  approach2_tbl$diff\nt = 1.7754, df = 19, p-value = 0.04593\nalternative hypothesis: true mean is greater than 0\n95 percent confidence interval:\n 0.3167385       Inf\nsample estimates:\nmean of x \n    12.15 \n\n\nDecision: _________\nConclusion: ____________",
     "crumbs": [
       "<span class='chapter-number'>9</span>  <span class='chapter-title'>Statistical Inference: Hypothesis Testing</span>"
+    ]
+  },
+  {
+    "objectID": "10-chap10.html",
+    "href": "10-chap10.html",
+    "title": "10  Exploratory Data Analysis with R",
+    "section": "",
+    "text": "library(esquisse)\nesquisser()\nIn-class demo",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Exploratory Data Analysis with R</span>"
+    ]
+  },
+  {
+    "objectID": "11-chap11.html",
+    "href": "11-chap11.html",
+    "title": "11  Sample Questions",
+    "section": "",
+    "text": "11.1 Question 1\nA team of researchers in Antarctica conducted a study to examine the differences in body characteristics among three penguin species by gender on Alexander Island. Alexander Island is the largest island in Antarctica. The team captured a sample of 200 penguins from various locations across Alexander Island. Table 1 presents the recorded variables for each penguin.",
+    "crumbs": [
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Sample Questions</span>"
+    ]
+  },
+  {
+    "objectID": "11-chap11.html#question-1",
+    "href": "11-chap11.html#question-1",
+    "title": "11  Sample Questions",
+    "section": "",
+    "text": "Description of variables recorded for each penguin in the study\n\n\n\n\n\n\nVariable Name\nVariable Description\n\n\n\n\nStatus\nThe health status of the penguin, recorded as either Healthy or Injured.\n\n\nGender\nThe gender of the penguin, recorded as either Male or Female.\n\n\nSpecies\nThe penguin species, recorded as Emperor, Adelie, or Gentoo.\n\n\nLongitude\nThe longitude of the location where the penguin was captured, measured in degrees.\n\n\nHeight\nThe height of the penguin, recorded in centimeters (cm).\n\n\nFlipper length\nThe flipper length of the penguin, recorded in centimeters (cm).\n\n\nWeight\nThe weight of the penguin, classified into one of three categories: Overweight, Normal, Underweight.\n\n\nInjuries\nThe number of observable injuries on the penguin body (e.g., 0, 1, 2, …).\n\n\n\n\nDid the study collect its data through a sample survey or a census? Provide reasons for your answer. marks)}\nWhat is the population in this study?\nWrite the scale of measurements for each variable.",
+    "crumbs": [
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Sample Questions</span>"
+    ]
+  },
+  {
+    "objectID": "11-chap11.html#question-2",
+    "href": "11-chap11.html#question-2",
+    "title": "11  Sample Questions",
+    "section": "11.2 Question 2",
+    "text": "11.2 Question 2\nA researcher measures the wing length (cm) of a random sample of 15 hummingbirds:\nData: 6.5, 6.7, 6.9, 6.4, 6.8, 6.6, 6.7, 6.5, 6.9, 6.8, 6.6, 6.7, 6.5, 6.8, 6.6\nConstruct a 95% confidence interval for the average wing length of hummingbirds. Assume that wing lengths are normally distributed.",
+    "crumbs": [
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Sample Questions</span>"
+    ]
+  },
+  {
+    "objectID": "11-chap11.html#question-3",
+    "href": "11-chap11.html#question-3",
+    "title": "11  Sample Questions",
+    "section": "11.3 Question 3",
+    "text": "11.3 Question 3\nIn a penguin conservation study, researchers screen penguins for a particular flipper injury.\n\n20% of penguins in the population have this injury.\nIf a penguin has the injury, the screening test correctly identifies it 90% of the time.\nIf a penguin does not have the injury, the test incorrectly indicates an injury 10% of the time.\n\nA randomly selected penguin is tested and the result comes back positive.",
+    "crumbs": [
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Sample Questions</span>"
+    ]
+  },
+  {
+    "objectID": "11-chap11.html#question-4",
+    "href": "11-chap11.html#question-4",
+    "title": "11  Sample Questions",
+    "section": "11.4 Question 4",
+    "text": "11.4 Question 4\nWhat is the probability that the penguin actually has the injury? (Ans: 0.692)",
+    "crumbs": [
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Sample Questions</span>"
+    ]
+  },
+  {
+    "objectID": "11-chap11.html#question-5",
+    "href": "11-chap11.html#question-5",
+    "title": "11  Sample Questions",
+    "section": "11.5 Question 5",
+    "text": "11.5 Question 5\nExplain the following:\n\nSimple Ransom Sampling\nParameter\nSampling frame",
+    "crumbs": [
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Sample Questions</span>"
     ]
   }
 ]

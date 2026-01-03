@@ -1,4 +1,4 @@
- # Exploratory Data Analysis with `esquisse`
+# Exploratory Data Analysis with R
 
 
 ```r

@@ -1,0 +1,64 @@
+# Sample Questions
+
+## Question 1
+
+A team of researchers in Antarctica conducted a study to examine the differences in body characteristics among three penguin species by gender on Alexander Island.  Alexander Island is the largest island in Antarctica. The team captured a sample of 200 penguins from various locations across Alexander Island. Table 1 presents the recorded variables for each penguin.
+
+Table: Description of variables recorded for each penguin in the study
+
+| Variable Name     | Variable Description |
+|------------------|----------------------|
+| Status           | The health status of the penguin, recorded as either *Healthy* or *Injured*. |
+| Gender           | The gender of the penguin, recorded as either *Male* or *Female*. |
+| Species          | The penguin species, recorded as *Emperor*, *Adelie*, or *Gentoo*. |
+| Longitude        | The longitude of the location where the penguin was captured, measured in degrees. |
+| Height           | The height of the penguin, recorded in centimeters (cm). |
+| Flipper length   | The flipper length of the penguin, recorded in centimeters (cm). |
+| Weight           | The weight of the penguin, classified into one of three categories: *Overweight*, *Normal*, *Underweight*. |
+| Injuries         | The number of observable injuries on the penguin body (e.g., 0, 1, 2, …). |
+
+
+i. Did the study collect its data through a sample survey or a census? Provide reasons for your answer. marks)}
+
+ii. What is the population in this study? 
+
+iii. Write the scale of measurements for each variable.
+
+
+
+## Question 2
+
+
+A researcher measures the wing length (cm) of a random sample of 15 hummingbirds:
+
+Data: 6.5, 6.7, 6.9, 6.4, 6.8, 6.6, 6.7, 6.5, 6.9, 6.8, 6.6, 6.7, 6.5, 6.8, 6.6
+
+Construct a 95% confidence interval for the average wing length of hummingbirds. Assume that wing lengths are normally distributed.
+
+## Question 3
+
+In a penguin conservation study, researchers screen penguins for a particular flipper injury.
+
+  - 20% of penguins in the population have this injury.
+
+  - If a penguin has the injury, the screening test correctly identifies it 90% of the time.
+
+  - If a penguin does not have the injury, the test incorrectly indicates an injury 10% of the time.
+
+A randomly selected penguin is tested and the result comes back positive.
+
+
+
+## Question 4
+
+What is the probability that the penguin actually has the injury? (Ans: 0.692)
+
+## Question 5
+
+Explain the following:
+
+1. Simple Ransom Sampling
+
+2. Parameter
+
+3. Sampling frame
