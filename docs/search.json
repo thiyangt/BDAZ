@@ -1034,7 +1034,7 @@
     "href": "11-chap11.html#question-3",
     "title": "11  Sample Questions",
     "section": "11.3 Question 3",
-    "text": "11.3 Question 3\nIn a penguin conservation study, researchers screen penguins for a particular flipper injury.\n\n20% of penguins in the population have this injury.\nIf a penguin has the injury, the screening test correctly identifies it 90% of the time.\nIf a penguin does not have the injury, the test incorrectly indicates an injury 10% of the time.\n\nA randomly selected penguin is tested and the result comes back positive.",
+    "text": "11.3 Question 3\nIn a penguin conservation study, researchers screen penguins for a particular flipper injury.\n\n20% of penguins in the population have this injury.\nIf a penguin has the injury, the screening test correctly identifies it 90% of the time.\nIf a penguin does not have the injury, the test incorrectly indicates an injury 10% of the time.\n\nA randomly selected penguin is tested and the result comes back positive.\nWhat is the probability that the penguin actually has the injury?",
     "crumbs": [
       "<span class='chapter-number'>11</span>  <span class='chapter-title'>Sample Questions</span>"
     ]
@@ -1044,7 +1044,7 @@
     "href": "11-chap11.html#question-4",
     "title": "11  Sample Questions",
     "section": "11.4 Question 4",
-    "text": "11.4 Question 4\nWhat is the probability that the penguin actually has the injury? (Ans: 0.692)",
+    "text": "11.4 Question 4\nExplain the following:\n\nSimple Ransom Sampling\nParameter\nSampling frame",
     "crumbs": [
       "<span class='chapter-number'>11</span>  <span class='chapter-title'>Sample Questions</span>"
     ]

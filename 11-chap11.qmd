@@ -48,12 +48,9 @@ In a penguin conservation study, researchers screen penguins for a particular fl
 A randomly selected penguin is tested and the result comes back positive.
 
 
+What is the probability that the penguin actually has the injury? 
 
 ## Question 4
-
-What is the probability that the penguin actually has the injury? (Ans: 0.692)
-
-## Question 5
 
 Explain the following:
 
